@@ -1,6 +1,6 @@
 public class Counterexample {
     public static void main(String[] args) {
-        // case1();
+        case1();
         case2();
     }
 
@@ -11,12 +11,9 @@ public class Counterexample {
 
         arr1[0] = 7719;
         arr2[size-1] = 7719; 
+        arr1[1] = -1;
 
-        // buggy case????
-        // if you look at trace, it does not show entering loop. so it must
-        // have failed the looptest. but index is 0, and array length is
-        // ~7k, so it MUST have passed the loop test.
-        assert(false);
+        assert(!Inverse.Inverse(arr1, arr2));
     }
 
     public static void case2() {

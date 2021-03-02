@@ -1,6 +1,21 @@
 # Notes
 Description of weird cases
 
+# Cardumen
+## Inverse
+### Bug 7
+
+There are multiple traces of issues in the counterexamples. Case 2 is inherently
+a infinitely looping case, so we need to add a JUnit test which checks for 
+completion (based on time).
+
+# jGenProg
+## Binary Search
+### Bug 11
+
+The array size defined by the input case is too large for my system, throws
+array size too large error. May work on another system though.
+
 # Kali-A
 ## StackQueue
 ### Bug 54
