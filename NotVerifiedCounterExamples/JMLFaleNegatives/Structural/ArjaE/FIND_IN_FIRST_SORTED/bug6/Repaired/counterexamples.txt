@@ -1,0 +1,715 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method find_first_in_sorted:  underflow in int sum
+  		int mid=(lo + hi) / 2;
+  		            ^
+
+TRACE of FIND_FIRST_IN_SORTED.find_first_in_sorted(int[],int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:9:  	requires arr != null; 
+			VALUE: arr	 === REF!val!8
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	requires 0 <= arr.length && arr.length <= (Integer.MAX_VALUE / 2) + 1; 
+			VALUE: 0	 === 0
+			VALUE: arr.length	 === 1073741824
+			VALUE: 0 <= arr.length	 === true
+			VALUE: arr.length	 === 1073741824
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: 2	 === 2
+			VALUE: Integer.MAX_VALUE / 2	 === 1073741823
+			VALUE: (Integer.MAX_VALUE / 2)	 === 1073741823
+			VALUE: 1	 === 1
+			VALUE: (Integer.MAX_VALUE / 2) + 1	 === 1073741824
+			VALUE: arr.length <= (Integer.MAX_VALUE / 2) + 1	 === true
+			VALUE: 0 <= arr.length && arr.length <= (Integer.MAX_VALUE / 2) + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	UndefinedNullDeReference assertion: !(arr != null && arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:4:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:10:  	int lo = 0
+			VALUE: 0	 === 0
+			VALUE: lo	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:1:  	if (!(arr != null)) ...
+			VALUE: arr	 === REF!val!8
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+			VALUE: (arr != null)	 === true
+			VALUE: !(arr != null)	 === false
+			VALUE: (!(arr != null))	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:12:  	int hi = arr.length
+			VALUE: arr.length	 === 1073741824
+			VALUE: hi	 === 1073741824
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:12:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	//@ loop_invariant 0 <= lo && lo <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: lo	 === 0
+			VALUE: 0 <= lo	 === true
+			VALUE: lo	 === 0
+			VALUE: arr.length	 === 1073741824
+			VALUE: lo <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	LoopInvariantBeforeLoop assertion: `conditionalResult_35
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	//@ loop_invariant 0 <= hi && hi <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: hi	 === 1073741824
+			VALUE: 0 <= hi	 === true
+			VALUE: hi	 === 1073741824
+			VALUE: arr.length	 === 1073741824
+			VALUE: hi <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	LoopInvariantBeforeLoop assertion: `conditionalResult_41
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	//@ loop_invariant lo <= hi;
+			VALUE: lo	 === 0
+			VALUE: hi	 === 1073741824
+			VALUE: lo <= hi	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	LoopInvariantBeforeLoop assertion: _JML__tmp45
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < lo; arr[i] < x);
+			VALUE: \forall int i; 0 <= i && i < lo; arr[i] < x	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	LoopInvariantBeforeLoop assertion: (_JML__tmp47)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	//@ loop_invariant (\forall int i; hi < i && i < arr.length; x <= arr[i]);
+			VALUE: \forall int i; hi < i && i < arr.length; x <= arr[i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	LoopInvariantBeforeLoop assertion: (_JML__tmp48)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	//@ loop_invariant 0 <= lo && lo <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: lo	 === 1073741824
+			VALUE: 0 <= lo	 === true
+			VALUE: lo	 === 1073741824
+			VALUE: arr.length	 === 1073741824
+			VALUE: lo <= arr.length	 === true
+			VALUE: 0 <= lo && lo <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	//@ loop_invariant 0 <= hi && hi <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: hi	 === 1073741824
+			VALUE: 0 <= hi	 === true
+			VALUE: hi	 === 1073741824
+			VALUE: arr.length	 === 1073741824
+			VALUE: hi <= arr.length	 === true
+			VALUE: 0 <= hi && hi <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	//@ loop_invariant lo <= hi;
+			VALUE: lo	 === 1073741824
+			VALUE: hi	 === 1073741824
+			VALUE: lo <= hi	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < lo; arr[i] < x);
+			VALUE: \forall int i; 0 <= i && i < lo; arr[i] < x	 === true
+			VALUE: (\forall int i; 0 <= i && i < lo; arr[i] < x)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	//@ loop_invariant (\forall int i; hi < i && i < arr.length; x <= arr[i]);
+			VALUE: \forall int i; hi < i && i < arr.length; x <= arr[i]	 === true
+			VALUE: (\forall int i; hi < i && i < arr.length; x <= arr[i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:19:  	Loop test
+			VALUE: lo	 === 1073741824
+			VALUE: hi	 === 1073741824
+			VALUE: lo < hi	 === false
+			VALUE: (lo < hi)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:30:  	Loop test
+			VALUE: lo	 === ( - 2147483648 )
+			VALUE: hi	 === ( - 2147483646 )
+			VALUE: lo < hi	 === true
+			VALUE: (lo < hi)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	int mid = (lo + hi) / 2
+			VALUE: lo	 === ( - 2147483648 )
+			VALUE: hi	 === ( - 2147483646 )
+			VALUE: lo + hi	 === 2
+			VALUE: (lo + hi)	 === 2
+			VALUE: 2	 === 2
+			VALUE: (lo + hi) / 2	 === 1
+			VALUE: mid	 === 2147479819
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	ArithmeticOperationRange assertion: !(0 < lo && 0 < hi) || lo <= 2147483647 - hi
+			VALUE: !(0 < lo_851_1856___65 && 0 < hi_903_1825___64) || lo_851_1856___65 <= 2147483647 - hi_903_1825___64	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	ArithmeticOperationRange assertion: !(lo < 0 && hi < 0) || -2147483648 - hi <= lo
+			VALUE: !(lo_851_1856___65 < 0 && hi_903_1825___64 < 0) || -2147483648 - hi_903_1825___64 <= lo_851_1856___65	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  Invalid assertion (ArithmeticOperationRange)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method find_first_in_sorted:  overflow in int sum
+  		int mid=(lo + hi) / 2;
+  		            ^
+
+TRACE of FIND_FIRST_IN_SORTED.find_first_in_sorted(int[],int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:9:  	requires arr != null; 
+			VALUE: arr	 === REF!val!8
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	requires 0 <= arr.length && arr.length <= (Integer.MAX_VALUE / 2) + 1; 
+			VALUE: 0	 === 0
+			VALUE: arr.length	 === 1073741824
+			VALUE: 0 <= arr.length	 === true
+			VALUE: arr.length	 === 1073741824
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: 2	 === 2
+			VALUE: Integer.MAX_VALUE / 2	 === 1073741823
+			VALUE: (Integer.MAX_VALUE / 2)	 === 1073741823
+			VALUE: 1	 === 1
+			VALUE: (Integer.MAX_VALUE / 2) + 1	 === 1073741824
+			VALUE: arr.length <= (Integer.MAX_VALUE / 2) + 1	 === true
+			VALUE: 0 <= arr.length && arr.length <= (Integer.MAX_VALUE / 2) + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	UndefinedNullDeReference assertion: !(arr != null && arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:4:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:10:  	int lo = 0
+			VALUE: 0	 === 0
+			VALUE: lo	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:1:  	if (!(arr != null)) ...
+			VALUE: arr	 === REF!val!8
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+			VALUE: (arr != null)	 === true
+			VALUE: !(arr != null)	 === false
+			VALUE: (!(arr != null))	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:12:  	int hi = arr.length
+			VALUE: arr.length	 === 1073741824
+			VALUE: hi	 === 1073741824
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:12:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	//@ loop_invariant 0 <= lo && lo <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: lo	 === 0
+			VALUE: 0 <= lo	 === true
+			VALUE: lo	 === 0
+			VALUE: arr.length	 === 1073741824
+			VALUE: lo <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	LoopInvariantBeforeLoop assertion: `conditionalResult_35
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	//@ loop_invariant 0 <= hi && hi <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: hi	 === 1073741824
+			VALUE: 0 <= hi	 === true
+			VALUE: hi	 === 1073741824
+			VALUE: arr.length	 === 1073741824
+			VALUE: hi <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	LoopInvariantBeforeLoop assertion: `conditionalResult_41
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	//@ loop_invariant lo <= hi;
+			VALUE: lo	 === 0
+			VALUE: hi	 === 1073741824
+			VALUE: lo <= hi	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	LoopInvariantBeforeLoop assertion: _JML__tmp45
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < lo; arr[i] < x);
+			VALUE: \forall int i; 0 <= i && i < lo; arr[i] < x	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	LoopInvariantBeforeLoop assertion: (_JML__tmp47)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	//@ loop_invariant (\forall int i; hi < i && i < arr.length; x <= arr[i]);
+			VALUE: \forall int i; hi < i && i < arr.length; x <= arr[i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	LoopInvariantBeforeLoop assertion: (_JML__tmp48)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	//@ loop_invariant 0 <= lo && lo <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: lo	 === 1073741824
+			VALUE: 0 <= lo	 === true
+			VALUE: lo	 === 1073741824
+			VALUE: arr.length	 === 1073741824
+			VALUE: lo <= arr.length	 === true
+			VALUE: 0 <= lo && lo <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	//@ loop_invariant 0 <= hi && hi <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: hi	 === 1073741824
+			VALUE: 0 <= hi	 === true
+			VALUE: hi	 === 1073741824
+			VALUE: arr.length	 === 1073741824
+			VALUE: hi <= arr.length	 === true
+			VALUE: 0 <= hi && hi <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	//@ loop_invariant lo <= hi;
+			VALUE: lo	 === 1073741824
+			VALUE: hi	 === 1073741824
+			VALUE: lo <= hi	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < lo; arr[i] < x);
+			VALUE: \forall int i; 0 <= i && i < lo; arr[i] < x	 === true
+			VALUE: (\forall int i; 0 <= i && i < lo; arr[i] < x)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	//@ loop_invariant (\forall int i; hi < i && i < arr.length; x <= arr[i]);
+			VALUE: \forall int i; hi < i && i < arr.length; x <= arr[i]	 === true
+			VALUE: (\forall int i; hi < i && i < arr.length; x <= arr[i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:19:  	Loop test
+			VALUE: lo	 === 1073741824
+			VALUE: hi	 === 1073741824
+			VALUE: lo < hi	 === false
+			VALUE: (lo < hi)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:30:  	Loop test
+			VALUE: lo	 === 1073741823
+			VALUE: hi	 === 1073741825
+			VALUE: lo < hi	 === true
+			VALUE: (lo < hi)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	int mid = (lo + hi) / 2
+			VALUE: lo	 === 1073741823
+			VALUE: hi	 === 1073741825
+			VALUE: lo + hi	 === ( - 2147483648 )
+			VALUE: (lo + hi)	 === ( - 2147483648 )
+			VALUE: 2	 === 2
+			VALUE: (lo + hi) / 2	 === ( - 1073741824 )
+			VALUE: mid	 === 1073751025
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	ArithmeticOperationRange assertion: !(0 < lo && 0 < hi) || lo <= 2147483647 - hi
+			VALUE: !(0 < lo_851_1856___65 && 0 < hi_903_1825___64) || lo_851_1856___65 <= 2147483647 - hi_903_1825___64	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  Invalid assertion (ArithmeticOperationRange)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32: warning: The prover cannot establish an assertion (PossiblyNegativeIndex) in method find_first_in_sorted
+  		if (x != arr[mid] && (mid == 0 || x != arr[mid - 1])) {
+  		            ^
+
+TRACE of FIND_FIRST_IN_SORTED.find_first_in_sorted(int[],int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:9:  	requires arr != null; 
+			VALUE: arr	 === REF!val!8
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	requires 0 <= arr.length && arr.length <= (Integer.MAX_VALUE / 2) + 1; 
+			VALUE: 0	 === 0
+			VALUE: arr.length	 === 1073741824
+			VALUE: 0 <= arr.length	 === true
+			VALUE: arr.length	 === 1073741824
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: 2	 === 2
+			VALUE: Integer.MAX_VALUE / 2	 === 1073741823
+			VALUE: (Integer.MAX_VALUE / 2)	 === 1073741823
+			VALUE: 1	 === 1
+			VALUE: (Integer.MAX_VALUE / 2) + 1	 === 1073741824
+			VALUE: arr.length <= (Integer.MAX_VALUE / 2) + 1	 === true
+			VALUE: 0 <= arr.length && arr.length <= (Integer.MAX_VALUE / 2) + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	UndefinedNullDeReference assertion: !(arr != null && arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:4:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:10:  	int lo = 0
+			VALUE: 0	 === 0
+			VALUE: lo	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:1:  	if (!(arr != null)) ...
+			VALUE: arr	 === REF!val!8
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+			VALUE: (arr != null)	 === true
+			VALUE: !(arr != null)	 === false
+			VALUE: (!(arr != null))	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:12:  	int hi = arr.length
+			VALUE: arr.length	 === 1073741824
+			VALUE: hi	 === 1073741824
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:12:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	//@ loop_invariant 0 <= lo && lo <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: lo	 === 0
+			VALUE: 0 <= lo	 === true
+			VALUE: lo	 === 0
+			VALUE: arr.length	 === 1073741824
+			VALUE: lo <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	LoopInvariantBeforeLoop assertion: `conditionalResult_35
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	//@ loop_invariant 0 <= hi && hi <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: hi	 === 1073741824
+			VALUE: 0 <= hi	 === true
+			VALUE: hi	 === 1073741824
+			VALUE: arr.length	 === 1073741824
+			VALUE: hi <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	LoopInvariantBeforeLoop assertion: `conditionalResult_41
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	//@ loop_invariant lo <= hi;
+			VALUE: lo	 === 0
+			VALUE: hi	 === 1073741824
+			VALUE: lo <= hi	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	LoopInvariantBeforeLoop assertion: _JML__tmp45
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < lo; arr[i] < x);
+			VALUE: \forall int i; 0 <= i && i < lo; arr[i] < x	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	LoopInvariantBeforeLoop assertion: (_JML__tmp47)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	//@ loop_invariant (\forall int i; hi < i && i < arr.length; x <= arr[i]);
+			VALUE: \forall int i; hi < i && i < arr.length; x <= arr[i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	LoopInvariantBeforeLoop assertion: (_JML__tmp48)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	//@ loop_invariant 0 <= lo && lo <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: lo	 === 1073741824
+			VALUE: 0 <= lo	 === true
+			VALUE: lo	 === 1073741824
+			VALUE: arr.length	 === 1073741824
+			VALUE: lo <= arr.length	 === true
+			VALUE: 0 <= lo && lo <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	//@ loop_invariant 0 <= hi && hi <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: hi	 === 1073741824
+			VALUE: 0 <= hi	 === true
+			VALUE: hi	 === 1073741824
+			VALUE: arr.length	 === 1073741824
+			VALUE: hi <= arr.length	 === true
+			VALUE: 0 <= hi && hi <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	//@ loop_invariant lo <= hi;
+			VALUE: lo	 === 1073741824
+			VALUE: hi	 === 1073741824
+			VALUE: lo <= hi	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < lo; arr[i] < x);
+			VALUE: \forall int i; 0 <= i && i < lo; arr[i] < x	 === true
+			VALUE: (\forall int i; 0 <= i && i < lo; arr[i] < x)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	//@ loop_invariant (\forall int i; hi < i && i < arr.length; x <= arr[i]);
+			VALUE: \forall int i; hi < i && i < arr.length; x <= arr[i]	 === true
+			VALUE: (\forall int i; hi < i && i < arr.length; x <= arr[i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:19:  	Loop test
+			VALUE: lo	 === 1073741824
+			VALUE: hi	 === 1073741824
+			VALUE: lo < hi	 === false
+			VALUE: (lo < hi)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:30:  	Loop test
+			VALUE: lo	 === ( - 2147478555 )
+			VALUE: hi	 === 0
+			VALUE: lo < hi	 === true
+			VALUE: (lo < hi)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	int mid = (lo + hi) / 2
+			VALUE: lo	 === ( - 2147478555 )
+			VALUE: hi	 === 0
+			VALUE: lo + hi	 === ( - 2147478555 )
+			VALUE: (lo + hi)	 === ( - 2147478555 )
+			VALUE: 2	 === 2
+			VALUE: (lo + hi) / 2	 === ( - 1073739277 )
+			VALUE: mid	 === ( - 1073739277 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	ArithmeticOperationRange assertion: !(0 < lo && 0 < hi) || lo <= 2147483647 - hi
+			VALUE: !(0 < lo_851_1856___65 && 0 < hi_903_1825___64) || lo_851_1856___65 <= 2147483647 - hi_903_1825___64	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	ArithmeticOperationRange assertion: !(lo < 0 && hi < 0) || -2147483648 - hi <= lo
+			VALUE: !(lo_851_1856___65 < 0 && hi_903_1825___64 < 0) || -2147483648 - hi_903_1825___64 <= lo_851_1856___65	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	ArithmeticOperationRange assertion: !((_JML__tmp116) == -2147483648 && 2 == -1)
+			VALUE: !((_JML__tmp116) == -2147483648 && 2 == -1)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:1:  	if (x != arr[mid] && (mid == 0 || x != arr[mid - 1])) ...
+			VALUE: x	 === ( - 2147479692 )
+			VALUE: arr	 === REF!val!8
+			VALUE: mid	 === ( - 1073739277 )
+			VALUE: arr[mid]	 === ( - 2147479692 )
+			VALUE: x != arr[mid]	 === false
+			VALUE: x != arr[mid] && (mid == 0 || x != arr[mid - 1])	 === false
+			VALUE: (x != arr[mid] && (mid == 0 || x != arr[mid - 1]))	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	PossiblyNegativeIndex assertion: 0 <= mid
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  Invalid assertion (PossiblyNegativeIndex)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32: warning: The prover cannot establish an assertion (PossiblyTooLargeIndex) in method find_first_in_sorted
+  		if (x != arr[mid] && (mid == 0 || x != arr[mid - 1])) {
+  		            ^
+
+TRACE of FIND_FIRST_IN_SORTED.find_first_in_sorted(int[],int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:9:  	requires arr != null; 
+			VALUE: arr	 === REF!val!8
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	requires 0 <= arr.length && arr.length <= (Integer.MAX_VALUE / 2) + 1; 
+			VALUE: 0	 === 0
+			VALUE: arr.length	 === 6489
+			VALUE: 0 <= arr.length	 === true
+			VALUE: arr.length	 === 6489
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: 2	 === 2
+			VALUE: Integer.MAX_VALUE / 2	 === 1073741823
+			VALUE: (Integer.MAX_VALUE / 2)	 === 1073741823
+			VALUE: 1	 === 1
+			VALUE: (Integer.MAX_VALUE / 2) + 1	 === 1073741824
+			VALUE: arr.length <= (Integer.MAX_VALUE / 2) + 1	 === true
+			VALUE: 0 <= arr.length && arr.length <= (Integer.MAX_VALUE / 2) + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	UndefinedNullDeReference assertion: !(arr != null && arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:4:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:10:  	int lo = 0
+			VALUE: 0	 === 0
+			VALUE: lo	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:1:  	if (!(arr != null)) ...
+			VALUE: arr	 === REF!val!8
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+			VALUE: (arr != null)	 === true
+			VALUE: !(arr != null)	 === false
+			VALUE: (!(arr != null))	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:12:  	int hi = arr.length
+			VALUE: arr.length	 === 6489
+			VALUE: hi	 === 6489
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:12:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	//@ loop_invariant 0 <= lo && lo <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: lo	 === 0
+			VALUE: 0 <= lo	 === true
+			VALUE: lo	 === 0
+			VALUE: arr.length	 === 6489
+			VALUE: lo <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	LoopInvariantBeforeLoop assertion: `conditionalResult_35
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	//@ loop_invariant 0 <= hi && hi <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: hi	 === 6489
+			VALUE: 0 <= hi	 === true
+			VALUE: hi	 === 6489
+			VALUE: arr.length	 === 6489
+			VALUE: hi <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	LoopInvariantBeforeLoop assertion: `conditionalResult_41
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	//@ loop_invariant lo <= hi;
+			VALUE: lo	 === 0
+			VALUE: hi	 === 6489
+			VALUE: lo <= hi	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	LoopInvariantBeforeLoop assertion: _JML__tmp45
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < lo; arr[i] < x);
+			VALUE: \forall int i; 0 <= i && i < lo; arr[i] < x	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	LoopInvariantBeforeLoop assertion: (_JML__tmp47)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	//@ loop_invariant (\forall int i; hi < i && i < arr.length; x <= arr[i]);
+			VALUE: \forall int i; hi < i && i < arr.length; x <= arr[i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	LoopInvariantBeforeLoop assertion: (_JML__tmp48)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	//@ loop_invariant 0 <= lo && lo <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: lo	 === 6488
+			VALUE: 0 <= lo	 === true
+			VALUE: lo	 === 6488
+			VALUE: arr.length	 === 6489
+			VALUE: lo <= arr.length	 === true
+			VALUE: 0 <= lo && lo <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	//@ loop_invariant 0 <= hi && hi <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: hi	 === 6488
+			VALUE: 0 <= hi	 === true
+			VALUE: hi	 === 6488
+			VALUE: arr.length	 === 6489
+			VALUE: hi <= arr.length	 === true
+			VALUE: 0 <= hi && hi <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	//@ loop_invariant lo <= hi;
+			VALUE: lo	 === 6488
+			VALUE: hi	 === 6488
+			VALUE: lo <= hi	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < lo; arr[i] < x);
+			VALUE: \forall int i; 0 <= i && i < lo; arr[i] < x	 === true
+			VALUE: (\forall int i; 0 <= i && i < lo; arr[i] < x)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	//@ loop_invariant (\forall int i; hi < i && i < arr.length; x <= arr[i]);
+			VALUE: \forall int i; hi < i && i < arr.length; x <= arr[i]	 === true
+			VALUE: (\forall int i; hi < i && i < arr.length; x <= arr[i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:19:  	Loop test
+			VALUE: lo	 === 6488
+			VALUE: hi	 === 6488
+			VALUE: lo < hi	 === false
+			VALUE: (lo < hi)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:30:  	Loop test
+			VALUE: lo	 === 6487
+			VALUE: hi	 === 6491
+			VALUE: lo < hi	 === true
+			VALUE: (lo < hi)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	int mid = (lo + hi) / 2
+			VALUE: lo	 === 6487
+			VALUE: hi	 === 6491
+			VALUE: lo + hi	 === 12978
+			VALUE: (lo + hi)	 === 12978
+			VALUE: 2	 === 2
+			VALUE: (lo + hi) / 2	 === 6489
+			VALUE: mid	 === 6489
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	ArithmeticOperationRange assertion: !(0 < lo && 0 < hi) || lo <= 2147483647 - hi
+			VALUE: !(0 < lo_851_1856___65 && 0 < hi_903_1825___64) || lo_851_1856___65 <= 2147483647 - hi_903_1825___64	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	ArithmeticOperationRange assertion: !(lo < 0 && hi < 0) || -2147483648 - hi <= lo
+			VALUE: !(lo_851_1856___65 < 0 && hi_903_1825___64 < 0) || -2147483648 - hi_903_1825___64 <= lo_851_1856___65	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	ArithmeticOperationRange assertion: !((_JML__tmp116) == -2147483648 && 2 == -1)
+			VALUE: !((_JML__tmp116) == -2147483648 && 2 == -1)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:1:  	if (x != arr[mid] && (mid == 0 || x != arr[mid - 1])) ...
+			VALUE: x	 === ( - 2147477488 )
+			VALUE: arr	 === REF!val!8
+			VALUE: mid	 === 6489
+			VALUE: arr[mid]	 === ( - 2147477486 )
+			VALUE: x != arr[mid]	 === true
+			VALUE: mid	 === 6489
+			VALUE: 0	 === 0
+			VALUE: mid == 0	 === false
+			VALUE: x	 === ( - 2147477488 )
+			VALUE: arr	 === REF!val!8
+			VALUE: mid	 === 6489
+			VALUE: 1	 === 1
+			VALUE: mid - 1	 === 6488
+			VALUE: arr[mid - 1]	 === ( - 2147477486 )
+			VALUE: x != arr[mid - 1]	 === true
+			VALUE: mid == 0 || x != arr[mid - 1]	 === false
+			VALUE: (mid == 0 || x != arr[mid - 1])	 === false
+			VALUE: x != arr[mid] && (mid == 0 || x != arr[mid - 1])	 === false
+			VALUE: (x != arr[mid] && (mid == 0 || x != arr[mid - 1]))	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	PossiblyNegativeIndex assertion: 0 <= mid
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	PossiblyTooLargeIndex assertion: arr.length > mid
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  Invalid assertion (PossiblyTooLargeIndex)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:33: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:7: ) in method find_first_in_sorted
+    			return mid;
+    			^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:7: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:33: 
+    //@ ensures 0 <= \result && \result < arr.length ==> arr[\result] == x && (\forall int i; 0 <= i && i < \result; arr[i] != x);
+        ^
+
+TRACE of FIND_FIRST_IN_SORTED.find_first_in_sorted(int[],int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:9:  	requires arr != null; 
+			VALUE: arr	 === REF!val!8
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	requires 0 <= arr.length && arr.length <= (Integer.MAX_VALUE / 2) + 1; 
+			VALUE: 0	 === 0
+			VALUE: arr.length	 === 2503
+			VALUE: 0 <= arr.length	 === true
+			VALUE: arr.length	 === 2503
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: 2	 === 2
+			VALUE: Integer.MAX_VALUE / 2	 === 1073741823
+			VALUE: (Integer.MAX_VALUE / 2)	 === 1073741823
+			VALUE: 1	 === 1
+			VALUE: (Integer.MAX_VALUE / 2) + 1	 === 1073741824
+			VALUE: arr.length <= (Integer.MAX_VALUE / 2) + 1	 === true
+			VALUE: 0 <= arr.length && arr.length <= (Integer.MAX_VALUE / 2) + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:3:  	UndefinedNullDeReference assertion: !(arr != null && arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:4:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:10:  	int lo = 0
+			VALUE: 0	 === 0
+			VALUE: lo	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:1:  	if (!(arr != null)) ...
+			VALUE: arr	 === REF!val!8
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+			VALUE: (arr != null)	 === true
+			VALUE: !(arr != null)	 === false
+			VALUE: (!(arr != null))	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:12:  	int hi = arr.length
+			VALUE: arr.length	 === 2503
+			VALUE: hi	 === 2503
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:12:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	//@ loop_invariant 0 <= lo && lo <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: lo	 === 0
+			VALUE: 0 <= lo	 === true
+			VALUE: lo	 === 0
+			VALUE: arr.length	 === 2503
+			VALUE: lo <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	LoopInvariantBeforeLoop assertion: `conditionalResult_35
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	//@ loop_invariant 0 <= hi && hi <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: hi	 === 2503
+			VALUE: 0 <= hi	 === true
+			VALUE: hi	 === 2503
+			VALUE: arr.length	 === 2503
+			VALUE: hi <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	LoopInvariantBeforeLoop assertion: `conditionalResult_41
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	//@ loop_invariant lo <= hi;
+			VALUE: lo	 === 0
+			VALUE: hi	 === 2503
+			VALUE: lo <= hi	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	LoopInvariantBeforeLoop assertion: _JML__tmp45
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < lo; arr[i] < x);
+			VALUE: \forall int i; 0 <= i && i < lo; arr[i] < x	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	LoopInvariantBeforeLoop assertion: (_JML__tmp47)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	//@ loop_invariant (\forall int i; hi < i && i < arr.length; x <= arr[i]);
+			VALUE: \forall int i; hi < i && i < arr.length; x <= arr[i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	LoopInvariantBeforeLoop assertion: (_JML__tmp48)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	//@ loop_invariant 0 <= lo && lo <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: lo	 === 2502
+			VALUE: 0 <= lo	 === true
+			VALUE: lo	 === 2502
+			VALUE: arr.length	 === 2503
+			VALUE: lo <= arr.length	 === true
+			VALUE: 0 <= lo && lo <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	//@ loop_invariant 0 <= hi && hi <= arr.length;
+			VALUE: 0	 === 0
+			VALUE: hi	 === 2502
+			VALUE: 0 <= hi	 === true
+			VALUE: hi	 === 2502
+			VALUE: arr.length	 === 2503
+			VALUE: hi <= arr.length	 === true
+			VALUE: 0 <= hi && hi <= arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:15:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:16:  	//@ loop_invariant lo <= hi;
+			VALUE: lo	 === 2502
+			VALUE: hi	 === 2502
+			VALUE: lo <= hi	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < lo; arr[i] < x);
+			VALUE: \forall int i; 0 <= i && i < lo; arr[i] < x	 === true
+			VALUE: (\forall int i; 0 <= i && i < lo; arr[i] < x)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:18:  	//@ loop_invariant (\forall int i; hi < i && i < arr.length; x <= arr[i]);
+			VALUE: \forall int i; hi < i && i < arr.length; x <= arr[i]	 === true
+			VALUE: (\forall int i; hi < i && i < arr.length; x <= arr[i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:19:  	Loop test
+			VALUE: lo	 === 2502
+			VALUE: hi	 === 2502
+			VALUE: lo < hi	 === false
+			VALUE: (lo < hi)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:30:  	Loop test
+			VALUE: lo	 === ( - 9573 )
+			VALUE: hi	 === 14577
+			VALUE: lo < hi	 === true
+			VALUE: (lo < hi)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	int mid = (lo + hi) / 2
+			VALUE: lo	 === ( - 9573 )
+			VALUE: hi	 === 14577
+			VALUE: lo + hi	 === 5004
+			VALUE: (lo + hi)	 === 5004
+			VALUE: 2	 === 2
+			VALUE: (lo + hi) / 2	 === 2502
+			VALUE: mid	 === 2502
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	ArithmeticOperationRange assertion: !(0 < lo && 0 < hi) || lo <= 2147483647 - hi
+			VALUE: !(0 < lo_851_1856___65 && 0 < hi_903_1825___64) || lo_851_1856___65 <= 2147483647 - hi_903_1825___64	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	ArithmeticOperationRange assertion: !(lo < 0 && hi < 0) || -2147483648 - hi <= lo
+			VALUE: !(lo_851_1856___65 < 0 && hi_903_1825___64 < 0) || -2147483648 - hi_903_1825___64 <= lo_851_1856___65	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:31:  	ArithmeticOperationRange assertion: !((_JML__tmp116) == -2147483648 && 2 == -1)
+			VALUE: !((_JML__tmp116) == -2147483648 && 2 == -1)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:1:  	if (x != arr[mid] && (mid == 0 || x != arr[mid - 1])) ...
+			VALUE: x	 === ( - 2147479859 )
+			VALUE: arr	 === REF!val!8
+			VALUE: mid	 === 2502
+			VALUE: arr[mid]	 === ( - 2147479860 )
+			VALUE: x != arr[mid]	 === true
+			VALUE: mid	 === 2502
+			VALUE: 0	 === 0
+			VALUE: mid == 0	 === false
+			VALUE: x	 === ( - 2147479859 )
+			VALUE: arr	 === REF!val!8
+			VALUE: mid	 === 2502
+			VALUE: 1	 === 1
+			VALUE: mid - 1	 === 2501
+			VALUE: arr[mid - 1]	 === ( - 2147480277 )
+			VALUE: x != arr[mid - 1]	 === true
+			VALUE: mid == 0 || x != arr[mid - 1]	 === true
+			VALUE: (mid == 0 || x != arr[mid - 1])	 === true
+			VALUE: x != arr[mid] && (mid == 0 || x != arr[mid - 1])	 === true
+			VALUE: (x != arr[mid] && (mid == 0 || x != arr[mid - 1]))	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	PossiblyNegativeIndex assertion: 0 <= mid
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	PossiblyTooLargeIndex assertion: arr.length > mid
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	ArithmeticOperationRange assertion: !(0 < mid && 1 < 0) || mid <= 2147483647 + 1
+			VALUE: !(0 < mid_1685_1685___67 && 1 < 0) || mid_1685_1685___67 <= 2147483647 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	ArithmeticOperationRange assertion: !(mid < 0 && 0 < 1) || -2147483648 + 1 <= mid
+			VALUE: !(mid_1685_1685___67 < 0 && 0 < 1) || -2147483648 + 1 <= mid_1685_1685___67	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	PossiblyNegativeIndex assertion: 0 <= _JML__tmp130
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:32:  	PossiblyTooLargeIndex assertion: arr.length > _JML__tmp130
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:33:  	return mid;
+			VALUE: mid	 === 2502
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:6:  	UndefinedNullDeReference assertion: !(Pre_2 && \old(arr, \Pre) != null) || \old(arr, \Pre) != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:6:  	ensures \result < arr.length; 
+			VALUE: \result	 === 2502
+			VALUE: arr.length	 === 2503
+			VALUE: \result < arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:7:  	UndefinedNullDeReference assertion: !(Pre_2 && \old(arr, \Pre) != null) || \old(arr, \Pre) != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:7:  	UndefinedNullDeReference assertion: !(Pre_2 && `conditionalResult_145 && `conditionalResult_145 && \old(arr, \Pre) != null) || \old(arr, \Pre) != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:7:  	UndefinedNegativeIndex assertion: !(Pre_2 && `conditionalResult_145 && `conditionalResult_145 && \old(arr, \Pre) != null) || 0 <= `result
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:7:  	UndefinedTooLargeIndex assertion: !(Pre_2 && `conditionalResult_145 && `conditionalResult_145 && \old(arr, \Pre) != null) || \old(arr, \Pre).length > `result
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:7:  	ensures 0 <= \result && \result < arr.length ==> arr[\result] == x && (\forall int i; 0 <= i && i < \result; arr[i] != x); 
+			VALUE: 0	 === 0
+			VALUE: \result	 === 2502
+			VALUE: 0 <= \result	 === true
+			VALUE: \result	 === 2502
+			VALUE: arr.length	 === 2503
+			VALUE: \result < arr.length	 === true
+			VALUE: 0 <= \result && \result < arr.length	 === true
+			VALUE: arr	 === REF!val!8
+			VALUE: \result	 === 2502
+			VALUE: arr[\result]	 === ( - 2147479860 )
+			VALUE: x	 === ( - 2147479859 )
+			VALUE: arr[\result] == x	 === false
+			VALUE: arr[\result] == x && (\forall int i; 0 <= i && i < \result; arr[i] != x)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:33:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/FIND_IN_FIRST_SORTED/bug6/Repaired/FIND_FIRST_IN_SORTED.java:7:  Associated location
+
+6 warnings

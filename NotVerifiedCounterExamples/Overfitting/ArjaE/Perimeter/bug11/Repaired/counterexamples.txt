@@ -1,0 +1,43 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:8: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:4: ) in method Perimeter
+	return squarePerimeter + 1;//squarePerimeter;
+	^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:4: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:8: 
+    //@ ensures \result == 4*x;
+        ^
+
+TRACE of Perimeter.Perimeter(short)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:3:  	requires 0 < x && x <= Short.MAX_VALUE; 
+			VALUE: 0	 === 0
+			VALUE: x	 === 1
+			VALUE: 0 < x	 === true
+			VALUE: x	 === 1
+			VALUE: Short.MAX_VALUE	 === 32767
+			VALUE: x <= Short.MAX_VALUE	 === true
+			VALUE: 0 < x && x <= Short.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:7:  	long squarePerimeter = 4 * (long)x
+			VALUE: 4	 === 4
+			VALUE: x	 === 1
+			VALUE: (long)x	 === 1
+			VALUE: 4 * (long)x	 === 4
+			VALUE: squarePerimeter	 === 4
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:7:  	ArithmeticOperationRange assertion: |#mul64ok#|((long)4, _JML__tmp14)
+			VALUE: 4	 === 4
+			VALUE: |#mul64ok#|((long)4, _JML__tmp14)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:8:  	return squarePerimeter + 1;
+			VALUE: squarePerimeter	 === 4
+			VALUE: 1	 === 1
+			VALUE: squarePerimeter + 1	 === 5
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:8:  	ArithmeticOperationRange assertion: !(0L < squarePerimeter && 0L < (long)1) || squarePerimeter <= 9223372036854775807L - (long)1
+			VALUE: !(0L < squarePerimeter_161_161___17 && 0L < (long)1) || squarePerimeter_161_161___17 <= 9223372036854775807L - (long)1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:8:  	ArithmeticOperationRange assertion: !(squarePerimeter < 0L && (long)1 < 0L) || -9223372036854775808L - (long)1 <= squarePerimeter
+			VALUE: !(squarePerimeter_161_161___17 < 0L && (long)1 < 0L) || -9223372036854775808L - (long)1 <= squarePerimeter_161_161___17	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:4:  	ensures \result == 4 * x; 
+			VALUE: \result	 === 5
+			VALUE: 4	 === 4
+			VALUE: x	 === 1
+			VALUE: 4 * x	 === 4
+			VALUE: \result == 4 * x	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:8:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Perimeter/bug11/Repaired/Perimeter.java:4:  Associated location
+
+2 warnings

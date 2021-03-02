@@ -1,0 +1,163 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:14: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method factorial:  long multiply overflow
+  			fact=fact * c;
+  			          ^
+
+TRACE of Factorial.factorial(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:3:  	requires 0 <= n && n <= 20; 
+			VALUE: 0	 === 0
+			VALUE: n	 === 0
+			VALUE: 0 <= n	 === true
+			VALUE: n	 === 0
+			VALUE: 20	 === 20
+			VALUE: n <= 20	 === true
+			VALUE: 0 <= n && n <= 20	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:8:  	int c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:9:  	long fact = 1
+			VALUE: 1	 === 1
+			VALUE: fact	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:11:  	assert Assert spec_factorial(0) == 1;
+			VALUE: 0	 === 0
+			VALUE: Factorial.spec_factorial(0)	 === 1
+			VALUE: 1	 === 1
+			VALUE: Factorial.spec_factorial(0) == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:31:  	requires n > 0 && n <= 20; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:35:  	requires n == 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:35:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__2
+			VALUE: _$CPRE__2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:1:  	if (n == 0) ...
+			VALUE: n	 === 0
+			VALUE: 0	 === 0
+			VALUE: n == 0	 === true
+			VALUE: (n == 0)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:13:  	c = 1
+			VALUE: 1	 === 1
+			VALUE: c = 1	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:13:  	Loop test
+			VALUE: c	 === ( - 2147483136 )
+			VALUE: n	 === 0
+			VALUE: c <= n	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:14:  	fact = fact * c
+			VALUE: fact	 === ( - 9223372036854775808 )
+			VALUE: c	 === ( - 2147483136 )
+			VALUE: fact * c	 === 0
+			VALUE: fact = fact * c	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:14:  	ArithmeticOperationRange assertion: |#mul64ok#|(fact, (long)c)
+			VALUE: |#mul64ok#|(fact_268_371___24, (long)c_250_359___23)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:14:  Invalid assertion (ArithmeticOperationRange)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:16: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:4: ) in method factorial
+              return fact;
+              ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:4: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:16: 
+       //@ ensures \result >= 1 && \result <= Long.MAX_VALUE;
+           ^
+
+TRACE of Factorial.factorial(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:3:  	requires 0 <= n && n <= 20; 
+			VALUE: 0	 === 0
+			VALUE: n	 === 0
+			VALUE: 0 <= n	 === true
+			VALUE: n	 === 0
+			VALUE: 20	 === 20
+			VALUE: n <= 20	 === true
+			VALUE: 0 <= n && n <= 20	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:8:  	int c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:9:  	long fact = 1
+			VALUE: 1	 === 1
+			VALUE: fact	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:11:  	assert Assert spec_factorial(0) == 1;
+			VALUE: 0	 === 0
+			VALUE: Factorial.spec_factorial(0)	 === 1
+			VALUE: 1	 === 1
+			VALUE: Factorial.spec_factorial(0) == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:31:  	requires n > 0 && n <= 20; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:35:  	requires n == 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:35:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__2
+			VALUE: _$CPRE__2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:1:  	if (n == 0) ...
+			VALUE: n	 === 0
+			VALUE: 0	 === 0
+			VALUE: n == 0	 === true
+			VALUE: (n == 0)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:13:  	c = 1
+			VALUE: 1	 === 1
+			VALUE: c = 1	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:13:  	Loop test
+			VALUE: c	 === 21
+			VALUE: n	 === 0
+			VALUE: c <= n	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:16:  	return fact;
+			VALUE: fact	 === ( - 9223372036854775808 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:4:  	ensures \result >= 1 && \result <= Long.MAX_VALUE; 
+			VALUE: \result	 === ( - 9223372036854775808 )
+			VALUE: 1	 === 1
+			VALUE: \result >= 1	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:16:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:4:  Associated location
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:16: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:5: ) in method factorial
+              return fact;
+              ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:5: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:16: 
+       //@ ensures \result == spec_factorial(n);
+           ^
+
+TRACE of Factorial.factorial(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:3:  	requires 0 <= n && n <= 20; 
+			VALUE: 0	 === 0
+			VALUE: n	 === 0
+			VALUE: 0 <= n	 === true
+			VALUE: n	 === 0
+			VALUE: 20	 === 20
+			VALUE: n <= 20	 === true
+			VALUE: 0 <= n && n <= 20	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:8:  	int c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:9:  	long fact = 1
+			VALUE: 1	 === 1
+			VALUE: fact	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:11:  	assert Assert spec_factorial(0) == 1;
+			VALUE: 0	 === 0
+			VALUE: Factorial.spec_factorial(0)	 === 1
+			VALUE: 1	 === 1
+			VALUE: Factorial.spec_factorial(0) == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:31:  	requires n > 0 && n <= 20; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:35:  	requires n == 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:35:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__2
+			VALUE: _$CPRE__2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:1:  	if (n == 0) ...
+			VALUE: n	 === 0
+			VALUE: 0	 === 0
+			VALUE: n == 0	 === true
+			VALUE: (n == 0)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:13:  	c = 1
+			VALUE: 1	 === 1
+			VALUE: c = 1	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:13:  	Loop test
+			VALUE: c	 === 2147483647
+			VALUE: n	 === 0
+			VALUE: c <= n	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:16:  	return fact;
+			VALUE: fact	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:4:  	ensures \result >= 1 && \result <= Long.MAX_VALUE; 
+			VALUE: \result	 === 2
+			VALUE: 1	 === 1
+			VALUE: \result >= 1	 === true
+			VALUE: \result	 === 2
+			VALUE: Long.MAX_VALUE	 === 9223372036854775807
+			VALUE: \result <= Long.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:31:  	requires n > 0 && n <= 20; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:35:  	requires n == 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:31:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__10
+			VALUE: _$CPRE__10	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:5:  	ensures \result == Factorial.spec_factorial(n); 
+			VALUE: \result	 === 2
+			VALUE: n	 === 0
+			VALUE: Factorial.spec_factorial(n)	 === 1
+			VALUE: \result == Factorial.spec_factorial(n)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:16:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/CombinationPermutation/bug3/Repaired/Factorial.java:5:  Associated location
+
+5 warnings

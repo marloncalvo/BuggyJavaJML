@@ -1,0 +1,306 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:129: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:114: ) in method withdraw
+	void withdraw(int amount)
+	     ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:114: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:129: 
+	//@ ensures balance == \old (balance) - amount;
+	    ^
+
+TRACE of BankAccount.withdraw(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:111:  	requires isValid(amount); 
+			VALUE: amount	 === 2773
+			VALUE: isValid(amount)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantLeaveCaller assertion: _JML__tmp255
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp258
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	requires 0 < _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:61:  	requires _amount <= 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__8
+			VALUE: _$CPRE__8	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:112:  	requires isValid(balance, amount); 
+			VALUE: balance	 === 4569
+			VALUE: amount	 === 2773
+			VALUE: isValid(balance, amount)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp276
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:72:  	requires isValid(_amount); 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp281
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	requires 0 < _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:61:  	requires _amount <= 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__10
+			VALUE: _$CPRE__10	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:73:  	requires 0 <= _balance; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:75:  	requires 0 <= _balance - _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:80:  	requires _balance - _amount < 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:75:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__9
+			VALUE: _$CPRE__9	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:119:  	requires isValid(amount); 
+			VALUE: amount	 === 2773
+			VALUE: isValid(amount)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp309
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	requires 0 < _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:61:  	requires _amount <= 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__11
+			VALUE: _$CPRE__11	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:120:  	requires !isValid(balance, amount); 
+			VALUE: balance	 === 4569
+			VALUE: amount	 === 2773
+			VALUE: isValid(balance, amount)	 === true
+			VALUE: !isValid(balance, amount)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp327
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:72:  	requires isValid(_amount); 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp332
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	requires 0 < _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:61:  	requires _amount <= 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__13
+			VALUE: _$CPRE__13	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:73:  	requires 0 <= _balance; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:75:  	requires 0 <= _balance - _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:80:  	requires _balance - _amount < 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:75:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__12
+			VALUE: _$CPRE__12	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:126:  	requires !isValid(amount); 
+			VALUE: amount	 === 2773
+			VALUE: isValid(amount)	 === true
+			VALUE: !isValid(amount)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp361
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	requires 0 < _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:61:  	requires _amount <= 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__14
+			VALUE: _$CPRE__14	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:1:  	if (!isValid(amount)) ...
+			VALUE: amount	 === 2773
+			VALUE: isValid(amount)	 === true
+			VALUE: !isValid(amount)	 === false
+			VALUE: (!isValid(amount))	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantLeaveCaller assertion: _JML__tmp377
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp380
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	requires 0 < _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:61:  	requires _amount <= 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	Precondition assertion: _$CPRE__15
+			VALUE: _$CPRE__15	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 4569
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantExit assertion: _JML__tmp454
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:114:  	ensures balance == \old(balance) - amount; 
+			VALUE: balance	 === 4569
+			VALUE: balance	 === 4569
+			VALUE: \old(balance)	 === 4569
+			VALUE: amount	 === 2773
+			VALUE: \old(balance) - amount	 === 1796
+			VALUE: balance == \old(balance) - amount	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:129:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:114:  Associated location
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:132: warning: The prover cannot establish an assertion (Precondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:83: ) in method withdraw
+			if (isValid(balance, amount)) {
+			           ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:83: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:132: 
+	/*@ spec_public pure @*/ boolean isValid(int _balance, int _amount)
+	                                 ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:72: warning: Precondition conjunct is false: isValid(_amount)
+	//@ requires isValid(_amount);
+	                    ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:80: warning: Precondition conjunct is false: _balance - _amount < 0
+	  //@ requires _balance - _amount < 0;
+	                                  ^
+
+TRACE of BankAccount.withdraw(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:111:  	requires isValid(amount); 
+			VALUE: amount	 === ( - 2147483365 )
+			VALUE: isValid(amount)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantLeaveCaller assertion: _JML__tmp255
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp258
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	requires 0 < _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:61:  	requires _amount <= 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__8
+			VALUE: _$CPRE__8	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:112:  	requires isValid(balance, amount); 
+			VALUE: balance	 === 1
+			VALUE: amount	 === ( - 2147483365 )
+			VALUE: isValid(balance, amount)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:119:  	requires isValid(amount); 
+			VALUE: amount	 === ( - 2147483365 )
+			VALUE: isValid(amount)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp309
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	requires 0 < _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:61:  	requires _amount <= 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__11
+			VALUE: _$CPRE__11	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:120:  	requires !isValid(balance, amount); 
+			VALUE: balance	 === 1
+			VALUE: amount	 === ( - 2147483365 )
+			VALUE: isValid(balance, amount)	 === false
+			VALUE: !isValid(balance, amount)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:126:  	requires !isValid(amount); 
+			VALUE: amount	 === ( - 2147483365 )
+			VALUE: isValid(amount)	 === false
+			VALUE: !isValid(amount)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp361
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	requires 0 < _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:61:  	requires _amount <= 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__14
+			VALUE: _$CPRE__14	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:1:  	if (!isValid(amount)) ...
+			VALUE: amount	 === ( - 2147483365 )
+			VALUE: isValid(amount)	 === false
+			VALUE: !isValid(amount)	 === true
+			VALUE: (!isValid(amount))	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantLeaveCaller assertion: _JML__tmp377
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp380
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	requires 0 < _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:61:  	requires _amount <= 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	Precondition assertion: _$CPRE__15
+			VALUE: _$CPRE__15	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:1:  	if (isValid(balance, amount)) ...
+			VALUE: balance	 === 1
+			VALUE: amount	 === ( - 2147483365 )
+			VALUE: isValid(balance, amount)	 === true
+			VALUE: (isValid(balance, amount))	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantLeaveCaller assertion: _JML__tmp399
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp402
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:72:  	requires isValid(_amount); 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	InvariantEntrance assertion: _JML__tmp407
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	requires 0 < _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:61:  	requires _amount <= 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:56:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__17
+			VALUE: _$CPRE__17	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 1
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:73:  	requires 0 <= _balance; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:75:  	requires 0 <= _balance - _amount; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:80:  	requires _balance - _amount < 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:75:  	Precondition assertion: _$CPRE__16
+			VALUE: _$CPRE__16	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:132:  Invalid assertion (Precondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug16/Repaired/BankAccount.java:83:  Associated location
+
+6 warnings

@@ -1,0 +1,113 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/BubbleSort.java:5: error: cannot find symbol
+	SwapInArray s = new SwapInArray();
+	^
+  symbol:   class SwapInArray
+  location: class BubbleSort
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/BubbleSort.java:5: error: cannot find symbol
+	SwapInArray s = new SwapInArray();
+	                    ^
+  symbol:   class SwapInArray
+  location: class BubbleSort
+2 errors
+a:4: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:6: 
+	  @ ensures \old(array[x]) == array[y] && \old(array[y]) == array[x];
+	    ^
+
+TRACE of SwapInArray.swap(int,int,int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:6:  	requires array != null; 
+			VALUE: array	 === REF!val!15
+			VALUE: null	 === NULL
+			VALUE: array != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:2:  	requires 0 <= x && x < array.length && 0 <= y && y < array.length; 
+			VALUE: 0	 === 0
+			VALUE: x	 === 2438
+			VALUE: 0 <= x	 === true
+			VALUE: x	 === 2438
+			VALUE: array.length	 === 2439
+			VALUE: x < array.length	 === true
+			VALUE: 0 <= x && x < array.length	 === true
+			VALUE: 0	 === 0
+			VALUE: y	 === 2437
+			VALUE: 0 <= y	 === true
+			VALUE: 0 <= x && x < array.length && 0 <= y	 === true
+			VALUE: y	 === 2437
+			VALUE: array.length	 === 2439
+			VALUE: y < array.length	 === true
+			VALUE: 0 <= x && x < array.length && 0 <= y && y < array.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:2:  	UndefinedNullDeReference assertion: !(array != null) || array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:2:  	UndefinedNullDeReference assertion: !(array != null) || array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:7:  	int temp
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:8:  	temp = array[x]
+			VALUE: array	 === REF!val!15
+			VALUE: x	 === 2438
+			VALUE: array[x]	 === 11
+			VALUE: temp = array[x]	 === 11
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:8:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:8:  	PossiblyNegativeIndex assertion: 0 <= x
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:8:  	PossiblyTooLargeIndex assertion: array.length > x
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:9:  	array[y] = temp
+			VALUE: array	 === REF!val!15
+			VALUE: y	 === 2437
+			VALUE: temp	 === 11
+			VALUE: array[y] = temp	 === 11
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:9:  	PossiblyNullDeReference assertion: array != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:9:  	PossiblyNegativeIndex assertion: y >= 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:9:  	PossiblyTooLargeIndex assertion: array.length > y
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:9:  	Assignable assertion: _JML__tmp29 || (!Pre_2 || (_JML__tmp24.`alloc__ > 0 || array == \old(_JML__tmp26, \Old) && \old(_JML__tmp25, \Old) == y || array == \old(_JML__tmp28, \Old) && \old(_JML__tmp27, \Old) == y))
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:10:  	array[x] = array[y]
+			VALUE: array	 === REF!val!15
+			VALUE: x	 === 2438
+			VALUE: array	 === REF!val!15
+			VALUE: y	 === 2437
+			VALUE: array[y]	 === 11
+			VALUE: array[x] = array[y]	 === 11
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:10:  	PossiblyNullDeReference assertion: array != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:10:  	PossiblyNegativeIndex assertion: x >= 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:10:  	PossiblyTooLargeIndex assertion: array.length > x
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:10:  	Assignable assertion: _JML__tmp36 || (!Pre_2 || (_JML__tmp31.`alloc__ > 0 || array == \old(_JML__tmp33, \Old) && \old(_JML__tmp32, \Old) == x || array == \old(_JML__tmp35, \Old) && \old(_JML__tmp34, \Old) == x))
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:10:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:10:  	PossiblyNegativeIndex assertion: 0 <= y
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:10:  	PossiblyTooLargeIndex assertion: array.length > y
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:11:  	array[y] = temp
+			VALUE: array	 === REF!val!15
+			VALUE: y	 === 2437
+			VALUE: temp	 === 11
+			VALUE: array[y] = temp	 === 11
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:11:  	PossiblyNullDeReference assertion: array != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:11:  	PossiblyNegativeIndex assertion: y >= 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:11:  	PossiblyTooLargeIndex assertion: array.length > y
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:11:  	Assignable assertion: _JML__tmp44 || (!Pre_2 || (_JML__tmp39.`alloc__ > 0 || array == \old(_JML__tmp41, \Old) && \old(_JML__tmp40, \Old) == y || array == \old(_JML__tmp43, \Old) && \old(_JML__tmp42, \Old) == y))
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	UndefinedNullDeReference assertion: !(Pre_2 && \old(\old(array, \Pre) != null, \Old)) || \old(\old(array, \Pre) != null, \Old)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	UndefinedNegativeIndex assertion: !(Pre_2 && \old(\old(array, \Pre) != null, \Old)) || \old(0 <= \old(x, \Pre), \Old)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	UndefinedTooLargeIndex assertion: !(Pre_2 && \old(\old(array, \Pre) != null, \Old)) || \old(\old(array, \Pre).length > \old(x, \Pre), \Old)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	UndefinedNullDeReference assertion: !(Pre_2 && \old(\old(array, \Pre) != null, \Old) && \old(array, \Pre) != null) || \old(array, \Pre) != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	UndefinedNegativeIndex assertion: !(Pre_2 && \old(\old(array, \Pre) != null, \Old) && \old(array, \Pre) != null) || 0 <= \old(y, \Pre)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	UndefinedTooLargeIndex assertion: !(Pre_2 && \old(\old(array, \Pre) != null, \Old) && \old(array, \Pre) != null) || \old(array, \Pre).length > \old(y, \Pre)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	UndefinedNullDeReference assertion: !(Pre_2 && \old(\old(array, \Pre) != null, \Old) && \old(array, \Pre) != null && \old(\old(array, \Pre) != null, \Old)) || \old(\old(array, \Pre) != null, \Old)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	UndefinedNegativeIndex assertion: !(Pre_2 && \old(\old(array, \Pre) != null, \Old) && \old(array, \Pre) != null && \old(\old(array, \Pre) != null, \Old)) || \old(0 <= \old(y, \Pre), \Old)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	UndefinedTooLargeIndex assertion: !(Pre_2 && \old(\old(array, \Pre) != null, \Old) && \old(array, \Pre) != null && \old(\old(array, \Pre) != null, \Old)) || \old(\old(array, \Pre).length > \old(y, \Pre), \Old)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	UndefinedNullDeReference assertion: !(Pre_2 && \old(\old(array, \Pre) != null, \Old) && \old(array, \Pre) != null && \old(\old(array, \Pre) != null, \Old) && \old(array, \Pre) != null) || \old(array, \Pre) != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	UndefinedNegativeIndex assertion: !(Pre_2 && \old(\old(array, \Pre) != null, \Old) && \old(array, \Pre) != null && \old(\old(array, \Pre) != null, \Old) && \old(array, \Pre) != null) || 0 <= \old(x, \Pre)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	UndefinedTooLargeIndex assertion: !(Pre_2 && \old(\old(array, \Pre) != null, \Old) && \old(array, \Pre) != null && \old(\old(array, \Pre) != null, \Old) && \old(array, \Pre) != null) || \old(array, \Pre).length > \old(x, \Pre)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  	ensures \old(array[x]) == array[y] && \old(array[y]) == array[x]; 
+			VALUE: array	 === REF!val!15
+			VALUE: x	 === 2438
+			VALUE: \old(array[x])	 === 11
+			VALUE: array	 === REF!val!15
+			VALUE: y	 === 2437
+			VALUE: array[y]	 === 11
+			VALUE: \old(array[x]) == array[y]	 === true
+			VALUE: array	 === REF!val!15
+			VALUE: y	 === 2437
+			VALUE: \old(array[y])	 === 14
+			VALUE: array	 === REF!val!15
+			VALUE: x	 === 2438
+			VALUE: array[x]	 === 11
+			VALUE: \old(array[y]) == array[x]	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:6:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug1/Repaired/SwapInArray.java:4:  Associated location
+
+2 warnings

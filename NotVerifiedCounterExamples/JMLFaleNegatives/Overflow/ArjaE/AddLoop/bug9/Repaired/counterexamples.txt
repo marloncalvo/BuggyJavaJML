@@ -1,0 +1,215 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16: warning: The prover cannot establish an assertion (LoopInvariantBeforeLoop) in method AddLoop
+            //@ maintaining sum == x + y + n && 0 <= n;
+                ^
+
+TRACE of AddLoop.AddLoop(int,int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:2:  	requires Integer.MIN_VALUE <= x + y && x + y <= Integer.MAX_VALUE && y != Integer.MIN_VALUE; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: x	 === 2147483647
+			VALUE: y	 === ( - 2147483647 )
+			VALUE: x + y	 === 0
+			VALUE: Integer.MIN_VALUE <= x + y	 === true
+			VALUE: x	 === 2147483647
+			VALUE: y	 === ( - 2147483647 )
+			VALUE: x + y	 === 0
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: x + y <= Integer.MAX_VALUE	 === true
+			VALUE: Integer.MIN_VALUE <= x + y && x + y <= Integer.MAX_VALUE	 === true
+			VALUE: y	 === ( - 2147483647 )
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: y != Integer.MIN_VALUE	 === true
+			VALUE: Integer.MIN_VALUE <= x + y && x + y <= Integer.MAX_VALUE && y != Integer.MIN_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:5:  	int sum = x
+			VALUE: x	 === 2147483647
+			VALUE: sum	 === 2147483647
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:1:  	if (y > 0) ...
+			VALUE: y	 === ( - 2147483647 )
+			VALUE: 0	 === 0
+			VALUE: y > 0	 === false
+			VALUE: (y > 0)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:15:  	int n = y
+			VALUE: y	 === ( - 2147483647 )
+			VALUE: n	 === ( - 2147483647 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16:  	//@ loop_invariant sum == x + y + n && 0 <= n;
+			VALUE: sum	 === 2147483647
+			VALUE: x	 === 2147483647
+			VALUE: y	 === ( - 2147483647 )
+			VALUE: x + y	 === 0
+			VALUE: n	 === ( - 2147483647 )
+			VALUE: x + y + n	 === ( - 2147483647 )
+			VALUE: sum == x + y + n	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16:  	LoopInvariantBeforeLoop assertion: `conditionalResult_58
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16:  Invalid assertion (LoopInvariantBeforeLoop)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:19: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method AddLoop:  overflow in int sum
+                sum = sum + 1;//sum = sum - 1;
+                          ^
+
+TRACE of AddLoop.AddLoop(int,int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:2:  	requires Integer.MIN_VALUE <= x + y && x + y <= Integer.MAX_VALUE && y != Integer.MIN_VALUE; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: x	 === 2147483646
+			VALUE: y	 === 0
+			VALUE: x + y	 === 2147483646
+			VALUE: Integer.MIN_VALUE <= x + y	 === true
+			VALUE: x	 === 2147483646
+			VALUE: y	 === 0
+			VALUE: x + y	 === 2147483646
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: x + y <= Integer.MAX_VALUE	 === true
+			VALUE: Integer.MIN_VALUE <= x + y && x + y <= Integer.MAX_VALUE	 === true
+			VALUE: y	 === 0
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: y != Integer.MIN_VALUE	 === true
+			VALUE: Integer.MIN_VALUE <= x + y && x + y <= Integer.MAX_VALUE && y != Integer.MIN_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:5:  	int sum = x
+			VALUE: x	 === 2147483646
+			VALUE: sum	 === 2147483646
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:1:  	if (y > 0) ...
+			VALUE: y	 === 0
+			VALUE: 0	 === 0
+			VALUE: y > 0	 === false
+			VALUE: (y > 0)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:15:  	int n = y
+			VALUE: y	 === 0
+			VALUE: n	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16:  	//@ loop_invariant sum == x + y + n && 0 <= n;
+			VALUE: sum	 === 2147483646
+			VALUE: x	 === 2147483646
+			VALUE: y	 === 0
+			VALUE: x + y	 === 2147483646
+			VALUE: n	 === 0
+			VALUE: x + y + n	 === 2147483646
+			VALUE: sum == x + y + n	 === true
+			VALUE: 0	 === 0
+			VALUE: n	 === 0
+			VALUE: 0 <= n	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16:  	LoopInvariantBeforeLoop assertion: `conditionalResult_58
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16:  	//@ loop_invariant sum == x + y + n && 0 <= n;
+			VALUE: sum	 === 2147483647
+			VALUE: x	 === 2147483646
+			VALUE: y	 === 0
+			VALUE: x + y	 === 2147483646
+			VALUE: n	 === 1
+			VALUE: x + y + n	 === 2147483647
+			VALUE: sum == x + y + n	 === true
+			VALUE: 0	 === 0
+			VALUE: n	 === 1
+			VALUE: 0 <= n	 === true
+			VALUE: sum == x + y + n && 0 <= n	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:17:  	//@ loop_decreases n;
+			VALUE: n	 === 1
+				Initial value of Loop Decreases expression = 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:18:  	Loop test
+			VALUE: n	 === 1
+			VALUE: 0	 === 0
+			VALUE: n != 0	 === true
+			VALUE: (n != 0)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp69
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:19:  	sum = sum + 1
+			VALUE: sum	 === 2147483647
+			VALUE: 1	 === 1
+			VALUE: sum + 1	 === ( - 2147483648 )
+			VALUE: sum = sum + 1	 === ( - 2147483648 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:19:  	ArithmeticOperationRange assertion: !(0 < sum && 0 < 1) || sum <= 2147483647 - 1
+			VALUE: !(0 < sum_216_624___45 && 0 < 1) || sum_216_624___45 <= 2147483647 - 1	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:19:  Invalid assertion (ArithmeticOperationRange)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16: warning: The prover cannot establish an assertion (LoopInvariant) in method AddLoop
+            //@ maintaining sum == x + y + n && 0 <= n;
+                ^
+
+TRACE of AddLoop.AddLoop(int,int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:2:  	requires Integer.MIN_VALUE <= x + y && x + y <= Integer.MAX_VALUE && y != Integer.MIN_VALUE; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: x	 === 2147483645
+			VALUE: y	 === 0
+			VALUE: x + y	 === 2147483645
+			VALUE: Integer.MIN_VALUE <= x + y	 === true
+			VALUE: x	 === 2147483645
+			VALUE: y	 === 0
+			VALUE: x + y	 === 2147483645
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: x + y <= Integer.MAX_VALUE	 === true
+			VALUE: Integer.MIN_VALUE <= x + y && x + y <= Integer.MAX_VALUE	 === true
+			VALUE: y	 === 0
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: y != Integer.MIN_VALUE	 === true
+			VALUE: Integer.MIN_VALUE <= x + y && x + y <= Integer.MAX_VALUE && y != Integer.MIN_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:5:  	int sum = x
+			VALUE: x	 === 2147483645
+			VALUE: sum	 === 2147483645
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:1:  	if (y > 0) ...
+			VALUE: y	 === 0
+			VALUE: 0	 === 0
+			VALUE: y > 0	 === false
+			VALUE: (y > 0)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:15:  	int n = y
+			VALUE: y	 === 0
+			VALUE: n	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16:  	//@ loop_invariant sum == x + y + n && 0 <= n;
+			VALUE: sum	 === 2147483645
+			VALUE: x	 === 2147483645
+			VALUE: y	 === 0
+			VALUE: x + y	 === 2147483645
+			VALUE: n	 === 0
+			VALUE: x + y + n	 === 2147483645
+			VALUE: sum == x + y + n	 === true
+			VALUE: 0	 === 0
+			VALUE: n	 === 0
+			VALUE: 0 <= n	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16:  	LoopInvariantBeforeLoop assertion: `conditionalResult_58
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16:  	//@ loop_invariant sum == x + y + n && 0 <= n;
+			VALUE: sum	 === 2147483646
+			VALUE: x	 === 2147483645
+			VALUE: y	 === 0
+			VALUE: x + y	 === 2147483645
+			VALUE: n	 === 1
+			VALUE: x + y + n	 === 2147483646
+			VALUE: sum == x + y + n	 === true
+			VALUE: 0	 === 0
+			VALUE: n	 === 1
+			VALUE: 0 <= n	 === true
+			VALUE: sum == x + y + n && 0 <= n	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:17:  	//@ loop_decreases n;
+			VALUE: n	 === 1
+				Initial value of Loop Decreases expression = 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:18:  	Loop test
+			VALUE: n	 === 1
+			VALUE: 0	 === 0
+			VALUE: n != 0	 === true
+			VALUE: (n != 0)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp69
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:19:  	sum = sum + 1
+			VALUE: sum	 === 2147483646
+			VALUE: 1	 === 1
+			VALUE: sum + 1	 === 2147483647
+			VALUE: sum = sum + 1	 === 2147483647
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:19:  	ArithmeticOperationRange assertion: !(0 < sum && 0 < 1) || sum <= 2147483647 - 1
+			VALUE: !(0 < sum_216_624___45 && 0 < 1) || sum_216_624___45 <= 2147483647 - 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:19:  	ArithmeticOperationRange assertion: !(sum < 0 && 1 < 0) || -2147483648 - 1 <= sum
+			VALUE: !(sum_216_624___45 < 0 && 1 < 0) || -2147483648 - 1 <= sum_216_624___45	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:20:  	n = n - 1
+			VALUE: n	 === 1
+			VALUE: 1	 === 1
+			VALUE: n - 1	 === 0
+			VALUE: n = n - 1	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:20:  	ArithmeticOperationRange assertion: !(0 < n && 1 < 0) || n <= 2147483647 + 1
+			VALUE: !(0 < n_487_671___46 && 1 < 0) || n_487_671___46 <= 2147483647 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:20:  	ArithmeticOperationRange assertion: !(n < 0 && 0 < 1) || -2147483648 + 1 <= n
+			VALUE: !(n_487_671___46 < 0 && 0 < 1) || -2147483648 + 1 <= n_487_671___46	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16:  	//@ loop_invariant sum == x + y + n && 0 <= n;
+			VALUE: sum	 === 2147483647
+			VALUE: x	 === 2147483645
+			VALUE: y	 === 0
+			VALUE: x + y	 === 2147483645
+			VALUE: n	 === 0
+			VALUE: x + y + n	 === 2147483645
+			VALUE: sum == x + y + n	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16:  	LoopInvariant assertion: `conditionalResult_84
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/ArjaE/AddLoop/bug9/Repaired/AddLoop.java:16:  Invalid assertion (LoopInvariant)
+
+3 warnings

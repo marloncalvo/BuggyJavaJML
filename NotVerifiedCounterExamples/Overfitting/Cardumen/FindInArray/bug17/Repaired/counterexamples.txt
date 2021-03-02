@@ -1,0 +1,37 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:81: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:77: ) in method isMoreThanOneKey
+	return 0 <= first;
+	^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:77: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:81: 
+    //@ ensures \result <==> findLast() != findFirst();
+        ^
+
+TRACE of FindInArray.isMoreThanOneKey()
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:79:  	int first = findFirst()
+			VALUE: findFirst()	 === ( - 2 )
+			VALUE: first	 === ( - 2 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:1:  	Precondition assertion: _$CPRE__14
+			VALUE: _$CPRE__14	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:80:  	int last = findLast()
+			VALUE: findLast()	 === ( - 3 )
+			VALUE: last	 === ( - 3 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:1:  	Precondition assertion: _$CPRE__15
+			VALUE: _$CPRE__15	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:81:  	return 0 <= first;
+			VALUE: 0	 === 0
+			VALUE: first	 === ( - 2 )
+			VALUE: 0 <= first	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:3:  	NullField assertion: _JML__tmp558
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__16
+			VALUE: _$CPRE__16	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__17
+			VALUE: _$CPRE__17	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:77:  	ensures \result <==> findLast() != findFirst(); 
+			VALUE: \result	 === false
+			VALUE: findLast()	 === ( - 3 )
+			VALUE: findFirst()	 === ( - 2 )
+			VALUE: findLast() != findFirst()	 === true
+			VALUE: \result <==> findLast() != findFirst()	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:81:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/FindInArray/bug17/Repaired/FindInArray.java:77:  Associated location
+
+2 warnings

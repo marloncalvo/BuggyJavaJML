@@ -1,0 +1,252 @@
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59: warning: The prover cannot establish an assertion (Assignable: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:53: ) in method push:  top
+	           		 arr[++top] = x; 
+	           		     ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:53: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59: 
+	          @ 	assignable \nothing;
+	            	^
+
+TRACE of StackQueue.Stack.push(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 99
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 99
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+			VALUE: -1 <= top && top < MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!18
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:41:  	requires !isFull(); 
+			VALUE: isFull()	 === true
+			VALUE: !isFull()	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 99
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 99
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_182
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!18
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	InvariantLeaveCaller assertion: _JML__tmp190
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 99
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 99
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	InvariantEntrance assertion: `conditionalResult_194
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!18
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	InvariantEntrance assertion: _JML__tmp202
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__4
+			VALUE: _$CPRE__4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 99
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 99
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+			VALUE: -1 <= top && top < MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!18
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:52:  	requires isFull(); 
+			VALUE: isFull()	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 99
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 99
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	InvariantEntrance assertion: `conditionalResult_235
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!18
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	InvariantEntrance assertion: _JML__tmp243
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__5
+			VALUE: _$CPRE__5	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 99
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 99
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+			VALUE: -1 <= top && top < MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!18
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:1:  	if (true) ...
+			VALUE: true	 === true
+			VALUE: (true)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  	arr[++top] = x
+			VALUE: arr	 === REF!val!18
+			VALUE: top	 === 99
+			VALUE: ++top	 === ( - 1 )
+			VALUE: x	 === ( - 2147481366 )
+			VALUE: arr[++top] = x	 === 26
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  	PossiblyNullDeReference assertion: `THIS.arr != null
+			VALUE: `THIS.arr_250_0___6	 === REF!val!18
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  	PossiblyNullDeReference assertion: `THIS != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  	Assignable assertion: _JML__tmp278 || (!Pre_7 || _JML__tmp277.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  Invalid assertion (Assignable)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:53:  Associated location
+
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59: warning: The prover cannot establish an assertion (PossiblyTooLargeIndex) in method push
+	           		 arr[++top] = x; 
+	           		    ^
+
+TRACE of StackQueue.Stack.push(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 99
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 99
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+			VALUE: -1 <= top && top < MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!42
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:41:  	requires !isFull(); 
+			VALUE: isFull()	 === true
+			VALUE: !isFull()	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 99
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 99
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_182
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!42
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	InvariantLeaveCaller assertion: _JML__tmp190
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 99
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 99
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	InvariantEntrance assertion: `conditionalResult_194
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!42
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	InvariantEntrance assertion: _JML__tmp202
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__4
+			VALUE: _$CPRE__4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 99
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 99
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+			VALUE: -1 <= top && top < MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!42
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:52:  	requires isFull(); 
+			VALUE: isFull()	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 99
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 99
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	InvariantEntrance assertion: `conditionalResult_235
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!42
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	InvariantEntrance assertion: _JML__tmp243
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__5
+			VALUE: _$CPRE__5	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:6:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 99
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 99
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+			VALUE: -1 <= top && top < MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!42
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:9:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:1:  	if (true) ...
+			VALUE: true	 === true
+			VALUE: (true)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  	arr[++top] = x
+			VALUE: arr	 === REF!val!42
+			VALUE: top	 === 99
+			VALUE: ++top	 === 100
+			VALUE: x	 === ( - 2147481366 )
+			VALUE: arr[++top] = x	 === 26
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  	PossiblyNullDeReference assertion: `THIS.arr != null
+			VALUE: `THIS.arr_250_0___6	 === REF!val!42
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  	PossiblyNullDeReference assertion: `THIS != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  	Assignable assertion: _JML__tmp278 || (!Pre_7 || _JML__tmp277.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  	ArithmeticOperationRange assertion: !(0 < `THIS.top && 0 < 1) || `THIS.top <= 2147483647 - 1
+			VALUE: !(0 < `THIS.top_155_0___2 && 0 < 1) || `THIS.top_155_0___2 <= 2147483647 - 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  	ArithmeticOperationRange assertion: !(`THIS.top < 0 && 1 < 0) || -2147483648 - 1 <= `THIS.top
+			VALUE: !(`THIS.top_155_0___2 < 0 && 1 < 0) || -2147483648 - 1 <= `THIS.top_155_0___2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  	PossiblyNegativeIndex assertion: _JML__tmp282 >= 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  	PossiblyTooLargeIndex assertion: `THIS.arr.length > _JML__tmp282
+			VALUE: `THIS.arr_250_0___6	 === REF!val!42
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/StackQueue/bug5/Repaired/StackQueue.java:59:  Invalid assertion (PossiblyTooLargeIndex)
+
+3 warnings

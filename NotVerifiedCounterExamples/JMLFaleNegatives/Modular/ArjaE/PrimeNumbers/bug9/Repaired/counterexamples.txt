@@ -1,0 +1,859 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:9: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:7: ) in method div
+        private /*@ spec_public @*/ static boolean div(int n, int d) { return n%d != 0; }
+                                                                       ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:7: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:9: 
+	  @    ensures \result ==> n%d == 0; 
+	       ^
+
+TRACE of PrimeNumbers.div(int,int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:5:  	requires 1 < n; 
+			VALUE: n	 === 2147483647
+			VALUE: 1 < n	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:6:  	requires d != 0; 
+			VALUE: d	 === ( - 2 )
+			VALUE: d != 0	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:9:  	return n % d != 0;
+			VALUE: n	 === 2147483647
+			VALUE: d	 === ( - 2 )
+			VALUE: n % d	 === 1
+			VALUE: 0	 === 0
+			VALUE: n % d != 0	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:9:  	PossiblyDivideByZero assertion: d != 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:7:  	UndefinedDivideByZero assertion: !(Pre_2 && `result && `result) || \old(d, \Pre) != 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:7:  	ensures \result ==> n % d == 0; 
+			VALUE: \result	 === true
+			VALUE: n	 === 2147483647
+			VALUE: d	 === ( - 2 )
+			VALUE: n % d	 === 1
+			VALUE: n % d == 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:9:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:7:  Associated location
+
+
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25: warning: The prover cannot establish an assertion (LoopInvariant) in method primeList
+	    @ maintaining (\forall int i; 0 <= i && i < count-1; (\forall int k;  2 <= k && k <= primeArray[i]/2; !div(primeArray[i],k)));
+	      ^
+
+TRACE of PrimeNumbers.primeList(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:12:  	requires 0 < n && n <= 105102357; 
+			VALUE: 0	 === 0
+			VALUE: n	 === 105097276
+			VALUE: 0 < n	 === true
+			VALUE: n	 === 105097276
+			VALUE: 105102357	 === 105102357
+			VALUE: n <= 105102357	 === true
+			VALUE: 0 < n && n <= 105102357	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int status = 1
+			VALUE: 1	 === 1
+			VALUE: status	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int num = 3
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int count
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int j
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:20:  	primeArray = new int[n]
+			VALUE: new int[n]	 === REF!val!21
+			VALUE: primeArray = new int[n]	 === REF!val!21
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	PossiblyNegativeSize assertion: 0 <= n
+			VALUE: n	 === 105097276
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:20:  	Assignable assertion: _JML__tmp35 || (!Pre_3 || (_JML__tmp34.`alloc__ > 0 || `THIS == `THIS))
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	primeArray[0] = 2
+			VALUE: primeArray	 === REF!val!21
+			VALUE: 0	 === 0
+			VALUE: 2	 === 2
+			VALUE: primeArray[0] = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	PossiblyNullDeReference assertion: `THIS.primeArray != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	PossiblyNegativeIndex assertion: 0 >= 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	PossiblyTooLargeIndex assertion: `THIS.primeArray.length > 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	Assignable assertion: _JML__tmp40 || (!Pre_3 || _JML__tmp39.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:23:  	/*@ ghost */  int maxnumber = Integer.MAX_VALUE
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: maxnumber	 === 2147483647
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:24:  	/*@ ghost */  int count_counter = 2
+			VALUE: 2	 === 2
+			VALUE: count_counter	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:32:  	count = 2
+			VALUE: 2	 === 2
+			VALUE: count = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	LoopInvariantBeforeLoop assertion: (_JML__tmp53)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	LoopInvariantBeforeLoop assertion: (_JML__tmp58)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	LoopInvariantBeforeLoop assertion: (_JML__tmp61)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:28:  	//@ loop_invariant 2 <= count && count <= n + 1 && 3 <= num;
+			VALUE: 2	 === 2
+			VALUE: count	 === 2
+			VALUE: 2 <= count	 === true
+			VALUE: count	 === 2
+			VALUE: n	 === 105097276
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 105097277
+			VALUE: count <= n + 1	 === true
+			VALUE: 2 <= count && count <= n + 1	 === true
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+			VALUE: 3 <= num	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:28:  	LoopInvariantBeforeLoop assertion: `conditionalResult_69
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:29:  	//@ loop_invariant count_counter == count;
+			VALUE: count_counter	 === 2
+			VALUE: count	 === 2
+			VALUE: count_counter == count	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:29:  	LoopInvariantBeforeLoop assertion: _JML__tmp73
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:30:  	//@ loop_invariant status == 1;
+			VALUE: status	 === 1
+			VALUE: 1	 === 1
+			VALUE: status == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:30:  	LoopInvariantBeforeLoop assertion: _JML__tmp75
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k)))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:28:  	//@ loop_invariant 2 <= count && count <= n + 1 && 3 <= num;
+			VALUE: 2	 === 2
+			VALUE: count	 === 105097273
+			VALUE: 2 <= count	 === true
+			VALUE: count	 === 105097273
+			VALUE: n	 === 105097276
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 105097277
+			VALUE: count <= n + 1	 === true
+			VALUE: 2 <= count && count <= n + 1	 === true
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+			VALUE: 3 <= num	 === true
+			VALUE: 2 <= count && count <= n + 1 && 3 <= num	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:29:  	//@ loop_invariant count_counter == count;
+			VALUE: count_counter	 === 105097273
+			VALUE: count	 === 105097273
+			VALUE: count_counter == count	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:30:  	//@ loop_invariant status == 1;
+			VALUE: status	 === 1
+			VALUE: 1	 === 1
+			VALUE: status == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:31:  	//@ loop_decreases maxnumber - num;
+			VALUE: maxnumber	 === 2147483647
+			VALUE: num	 === 3
+			VALUE: maxnumber - num	 === 2147483644
+				Initial value of Loop Decreases expression = 2147483644
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:32:  	Loop test
+			VALUE: count	 === 105097273
+			VALUE: n	 === 105097276
+			VALUE: count <= n	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp109
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	j = 2
+			VALUE: 2	 === 2
+			VALUE: j = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	//@ loop_invariant j > 1 && j <= num / 2 + 1;
+			VALUE: j	 === 2
+			VALUE: 1	 === 1
+			VALUE: j > 1	 === true
+			VALUE: j	 === 2
+			VALUE: num	 === 3
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 1
+			VALUE: 1	 === 1
+			VALUE: num / 2 + 1	 === 2
+			VALUE: j <= num / 2 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	LoopInvariantBeforeLoop assertion: `conditionalResult_116
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	//@ loop_invariant (\forall int k; 0 <= k && k < count - 1; num != primeArray[k]);
+			VALUE: \forall int k; 0 <= k && k < count - 1; num != primeArray[k]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	LoopInvariantBeforeLoop assertion: (_JML__tmp125)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	//@ loop_invariant (\forall int k; 2 <= k && k < j; !div(num, k));
+			VALUE: \forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	LoopInvariantBeforeLoop assertion: (_JML__tmp127)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	//@ loop_invariant j > 1 && j <= num / 2 + 1;
+			VALUE: j	 === 2
+			VALUE: 1	 === 1
+			VALUE: j > 1	 === true
+			VALUE: j	 === 2
+			VALUE: num	 === 3
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 1
+			VALUE: 1	 === 1
+			VALUE: num / 2 + 1	 === 2
+			VALUE: j <= num / 2 + 1	 === true
+			VALUE: j > 1 && j <= num / 2 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	//@ loop_invariant (\forall int k; 0 <= k && k < count - 1; num != primeArray[k]);
+			VALUE: \forall int k; 0 <= k && k < count - 1; num != primeArray[k]	 === true
+			VALUE: (\forall int k; 0 <= k && k < count - 1; num != primeArray[k])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	//@ loop_invariant (\forall int k; 2 <= k && k < j; !div(num, k));
+			VALUE: \forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k)	 === true
+			VALUE: (\forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:37:  	//@ loop_decreases num - j;
+			VALUE: num	 === 3
+			VALUE: j	 === 2
+			VALUE: num - j	 === 1
+				Initial value of Loop Decreases expression = 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	Loop test
+			VALUE: j	 === 2
+			VALUE: num	 === 3
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 1
+			VALUE: j <= num / 2	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	ArithmeticOperationRange assertion: !(num == -2147483648 && 2 == -1)
+			VALUE: !(num_1053_2565___53 == -2147483648 && 2 == -1)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	if (status != 0) ...
+			VALUE: status	 === 0
+			VALUE: 0	 === 0
+			VALUE: status != 0	 === false
+			VALUE: (status != 0)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:54:  	status = 1
+			VALUE: 1	 === 1
+			VALUE: status = 1	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:56:  	num++
+			VALUE: num++	 === 3
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:56:  	ArithmeticOperationRange assertion: !(0 < num && 0 < 1) || num <= 2147483647 - 1
+			VALUE: !(0 < num_1053_2565___53 && 0 < 1) || num_1053_2565___53 <= 2147483647 - 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:56:  	ArithmeticOperationRange assertion: !(num < 0 && 1 < 0) || -2147483648 - 1 <= num
+			VALUE: !(num_1053_2565___53 < 0 && 1 < 0) || -2147483648 - 1 <= num_1053_2565___53	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	LoopInvariant assertion: (_JML__tmp234)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  Invalid assertion (LoopInvariant)
+
+
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26: warning: The prover cannot establish an assertion (LoopInvariant) in method primeList
+	    @ maintaining (\forall int i; 0 <= i && i < count-1; \forall int k; 0 <= k && k < count-1 && i != k;  primeArray[i] != primeArray[k]);
+	      ^
+
+TRACE of PrimeNumbers.primeList(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:12:  	requires 0 < n && n <= 105102357; 
+			VALUE: 0	 === 0
+			VALUE: n	 === 105098808
+			VALUE: 0 < n	 === true
+			VALUE: n	 === 105098808
+			VALUE: 105102357	 === 105102357
+			VALUE: n <= 105102357	 === true
+			VALUE: 0 < n && n <= 105102357	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int status = 1
+			VALUE: 1	 === 1
+			VALUE: status	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int num = 3
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int count
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int j
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:20:  	primeArray = new int[n]
+			VALUE: new int[n]	 === REF!val!21
+			VALUE: primeArray = new int[n]	 === REF!val!21
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	PossiblyNegativeSize assertion: 0 <= n
+			VALUE: n	 === 105098808
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:20:  	Assignable assertion: _JML__tmp35 || (!Pre_3 || (_JML__tmp34.`alloc__ > 0 || `THIS == `THIS))
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	primeArray[0] = 2
+			VALUE: primeArray	 === REF!val!21
+			VALUE: 0	 === 0
+			VALUE: 2	 === 2
+			VALUE: primeArray[0] = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	PossiblyNullDeReference assertion: `THIS.primeArray != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	PossiblyNegativeIndex assertion: 0 >= 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	PossiblyTooLargeIndex assertion: `THIS.primeArray.length > 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	Assignable assertion: _JML__tmp40 || (!Pre_3 || _JML__tmp39.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:23:  	/*@ ghost */  int maxnumber = Integer.MAX_VALUE
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: maxnumber	 === 2147483647
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:24:  	/*@ ghost */  int count_counter = 2
+			VALUE: 2	 === 2
+			VALUE: count_counter	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:32:  	count = 2
+			VALUE: 2	 === 2
+			VALUE: count = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	LoopInvariantBeforeLoop assertion: (_JML__tmp53)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	LoopInvariantBeforeLoop assertion: (_JML__tmp58)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	LoopInvariantBeforeLoop assertion: (_JML__tmp61)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:28:  	//@ loop_invariant 2 <= count && count <= n + 1 && 3 <= num;
+			VALUE: 2	 === 2
+			VALUE: count	 === 2
+			VALUE: 2 <= count	 === true
+			VALUE: count	 === 2
+			VALUE: n	 === 105098808
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 105098809
+			VALUE: count <= n + 1	 === true
+			VALUE: 2 <= count && count <= n + 1	 === true
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+			VALUE: 3 <= num	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:28:  	LoopInvariantBeforeLoop assertion: `conditionalResult_69
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:29:  	//@ loop_invariant count_counter == count;
+			VALUE: count_counter	 === 2
+			VALUE: count	 === 2
+			VALUE: count_counter == count	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:29:  	LoopInvariantBeforeLoop assertion: _JML__tmp73
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:30:  	//@ loop_invariant status == 1;
+			VALUE: status	 === 1
+			VALUE: 1	 === 1
+			VALUE: status == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:30:  	LoopInvariantBeforeLoop assertion: _JML__tmp75
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k)))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:28:  	//@ loop_invariant 2 <= count && count <= n + 1 && 3 <= num;
+			VALUE: 2	 === 2
+			VALUE: count	 === 105098305
+			VALUE: 2 <= count	 === true
+			VALUE: count	 === 105098305
+			VALUE: n	 === 105098808
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 105098809
+			VALUE: count <= n + 1	 === true
+			VALUE: 2 <= count && count <= n + 1	 === true
+			VALUE: 3	 === 3
+			VALUE: num	 === 12124
+			VALUE: 3 <= num	 === true
+			VALUE: 2 <= count && count <= n + 1 && 3 <= num	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:29:  	//@ loop_invariant count_counter == count;
+			VALUE: count_counter	 === 105098305
+			VALUE: count	 === 105098305
+			VALUE: count_counter == count	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:30:  	//@ loop_invariant status == 1;
+			VALUE: status	 === 1
+			VALUE: 1	 === 1
+			VALUE: status == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:31:  	//@ loop_decreases maxnumber - num;
+			VALUE: maxnumber	 === 2147483647
+			VALUE: num	 === 12124
+			VALUE: maxnumber - num	 === 2147471523
+				Initial value of Loop Decreases expression = 2147471523
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:32:  	Loop test
+			VALUE: count	 === 105098305
+			VALUE: n	 === 105098808
+			VALUE: count <= n	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp109
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	j = 2
+			VALUE: 2	 === 2
+			VALUE: j = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	//@ loop_invariant j > 1 && j <= num / 2 + 1;
+			VALUE: j	 === 2
+			VALUE: 1	 === 1
+			VALUE: j > 1	 === true
+			VALUE: j	 === 2
+			VALUE: num	 === 12124
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 6062
+			VALUE: 1	 === 1
+			VALUE: num / 2 + 1	 === 6063
+			VALUE: j <= num / 2 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	LoopInvariantBeforeLoop assertion: `conditionalResult_116
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	//@ loop_invariant (\forall int k; 0 <= k && k < count - 1; num != primeArray[k]);
+			VALUE: \forall int k; 0 <= k && k < count - 1; num != primeArray[k]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	LoopInvariantBeforeLoop assertion: (_JML__tmp125)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	//@ loop_invariant (\forall int k; 2 <= k && k < j; !div(num, k));
+			VALUE: \forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	LoopInvariantBeforeLoop assertion: (_JML__tmp127)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	//@ loop_invariant j > 1 && j <= num / 2 + 1;
+			VALUE: j	 === 6063
+			VALUE: 1	 === 1
+			VALUE: j > 1	 === true
+			VALUE: j	 === 6063
+			VALUE: num	 === 12124
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 6062
+			VALUE: 1	 === 1
+			VALUE: num / 2 + 1	 === 6063
+			VALUE: j <= num / 2 + 1	 === true
+			VALUE: j > 1 && j <= num / 2 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	//@ loop_invariant (\forall int k; 0 <= k && k < count - 1; num != primeArray[k]);
+			VALUE: \forall int k; 0 <= k && k < count - 1; num != primeArray[k]	 === true
+			VALUE: (\forall int k; 0 <= k && k < count - 1; num != primeArray[k])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	//@ loop_invariant (\forall int k; 2 <= k && k < j; !div(num, k));
+			VALUE: \forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k)	 === true
+			VALUE: (\forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:37:  	//@ loop_decreases num - j;
+			VALUE: num	 === 12124
+			VALUE: j	 === 6063
+			VALUE: num - j	 === 6061
+				Initial value of Loop Decreases expression = 6061
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	Loop test
+			VALUE: j	 === 6063
+			VALUE: num	 === 12124
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 6062
+			VALUE: j <= num / 2	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	ArithmeticOperationRange assertion: !(num == -2147483648 && 2 == -1)
+			VALUE: !(num_1053_2565___53 == -2147483648 && 2 == -1)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	if (status != 0) ...
+			VALUE: status	 === 0
+			VALUE: 0	 === 0
+			VALUE: status != 0	 === false
+			VALUE: (status != 0)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:54:  	status = 1
+			VALUE: 1	 === 1
+			VALUE: status = 1	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:56:  	num++
+			VALUE: num++	 === 12124
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:56:  	ArithmeticOperationRange assertion: !(0 < num && 0 < 1) || num <= 2147483647 - 1
+			VALUE: !(0 < num_1053_2565___53 && 0 < 1) || num_1053_2565___53 <= 2147483647 - 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:56:  	ArithmeticOperationRange assertion: !(num < 0 && 1 < 0) || -2147483648 - 1 <= num
+			VALUE: !(num_1053_2565___53 < 0 && 1 < 0) || -2147483648 - 1 <= num_1053_2565___53	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	LoopInvariant assertion: (_JML__tmp234)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	LoopInvariant assertion: (_JML__tmp239)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  Invalid assertion (LoopInvariant)
+
+
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27: warning: The prover cannot establish an assertion (LoopInvariant) in method primeList
+	    @ maintaining (\forall int i; 0 <= i && i < count-1; primeArray[i] < num);
+	      ^
+
+TRACE of PrimeNumbers.primeList(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:12:  	requires 0 < n && n <= 105102357; 
+			VALUE: 0	 === 0
+			VALUE: n	 === 6312
+			VALUE: 0 < n	 === true
+			VALUE: n	 === 6312
+			VALUE: 105102357	 === 105102357
+			VALUE: n <= 105102357	 === true
+			VALUE: 0 < n && n <= 105102357	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int status = 1
+			VALUE: 1	 === 1
+			VALUE: status	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int num = 3
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int count
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int j
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:20:  	primeArray = new int[n]
+			VALUE: new int[n]	 === REF!val!21
+			VALUE: primeArray = new int[n]	 === REF!val!21
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	PossiblyNegativeSize assertion: 0 <= n
+			VALUE: n	 === 6312
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:20:  	Assignable assertion: _JML__tmp35 || (!Pre_3 || (_JML__tmp34.`alloc__ > 0 || `THIS == `THIS))
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	primeArray[0] = 2
+			VALUE: primeArray	 === REF!val!21
+			VALUE: 0	 === 0
+			VALUE: 2	 === 2
+			VALUE: primeArray[0] = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	PossiblyNullDeReference assertion: `THIS.primeArray != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	PossiblyNegativeIndex assertion: 0 >= 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	PossiblyTooLargeIndex assertion: `THIS.primeArray.length > 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	Assignable assertion: _JML__tmp40 || (!Pre_3 || _JML__tmp39.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:23:  	/*@ ghost */  int maxnumber = Integer.MAX_VALUE
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: maxnumber	 === 2147483647
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:24:  	/*@ ghost */  int count_counter = 2
+			VALUE: 2	 === 2
+			VALUE: count_counter	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:32:  	count = 2
+			VALUE: 2	 === 2
+			VALUE: count = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	LoopInvariantBeforeLoop assertion: (_JML__tmp53)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	LoopInvariantBeforeLoop assertion: (_JML__tmp58)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	LoopInvariantBeforeLoop assertion: (_JML__tmp61)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:28:  	//@ loop_invariant 2 <= count && count <= n + 1 && 3 <= num;
+			VALUE: 2	 === 2
+			VALUE: count	 === 2
+			VALUE: 2 <= count	 === true
+			VALUE: count	 === 2
+			VALUE: n	 === 6312
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 6313
+			VALUE: count <= n + 1	 === true
+			VALUE: 2 <= count && count <= n + 1	 === true
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+			VALUE: 3 <= num	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:28:  	LoopInvariantBeforeLoop assertion: `conditionalResult_69
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:29:  	//@ loop_invariant count_counter == count;
+			VALUE: count_counter	 === 2
+			VALUE: count	 === 2
+			VALUE: count_counter == count	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:29:  	LoopInvariantBeforeLoop assertion: _JML__tmp73
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:30:  	//@ loop_invariant status == 1;
+			VALUE: status	 === 1
+			VALUE: 1	 === 1
+			VALUE: status == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:30:  	LoopInvariantBeforeLoop assertion: _JML__tmp75
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k)))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:28:  	//@ loop_invariant 2 <= count && count <= n + 1 && 3 <= num;
+			VALUE: 2	 === 2
+			VALUE: count	 === 6311
+			VALUE: 2 <= count	 === true
+			VALUE: count	 === 6311
+			VALUE: n	 === 6312
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 6313
+			VALUE: count <= n + 1	 === true
+			VALUE: 2 <= count && count <= n + 1	 === true
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+			VALUE: 3 <= num	 === true
+			VALUE: 2 <= count && count <= n + 1 && 3 <= num	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:29:  	//@ loop_invariant count_counter == count;
+			VALUE: count_counter	 === 6311
+			VALUE: count	 === 6311
+			VALUE: count_counter == count	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:30:  	//@ loop_invariant status == 1;
+			VALUE: status	 === 1
+			VALUE: 1	 === 1
+			VALUE: status == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:31:  	//@ loop_decreases maxnumber - num;
+			VALUE: maxnumber	 === 2147483647
+			VALUE: num	 === 3
+			VALUE: maxnumber - num	 === 2147483644
+				Initial value of Loop Decreases expression = 2147483644
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:32:  	Loop test
+			VALUE: count	 === 6311
+			VALUE: n	 === 6312
+			VALUE: count <= n	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp109
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	j = 2
+			VALUE: 2	 === 2
+			VALUE: j = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	//@ loop_invariant j > 1 && j <= num / 2 + 1;
+			VALUE: j	 === 2
+			VALUE: 1	 === 1
+			VALUE: j > 1	 === true
+			VALUE: j	 === 2
+			VALUE: num	 === 3
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 1
+			VALUE: 1	 === 1
+			VALUE: num / 2 + 1	 === 2
+			VALUE: j <= num / 2 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	LoopInvariantBeforeLoop assertion: `conditionalResult_116
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	//@ loop_invariant (\forall int k; 0 <= k && k < count - 1; num != primeArray[k]);
+			VALUE: \forall int k; 0 <= k && k < count - 1; num != primeArray[k]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	LoopInvariantBeforeLoop assertion: (_JML__tmp125)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	//@ loop_invariant (\forall int k; 2 <= k && k < j; !div(num, k));
+			VALUE: \forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	LoopInvariantBeforeLoop assertion: (_JML__tmp127)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	//@ loop_invariant j > 1 && j <= num / 2 + 1;
+			VALUE: j	 === 2
+			VALUE: 1	 === 1
+			VALUE: j > 1	 === true
+			VALUE: j	 === 2
+			VALUE: num	 === 3
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 1
+			VALUE: 1	 === 1
+			VALUE: num / 2 + 1	 === 2
+			VALUE: j <= num / 2 + 1	 === true
+			VALUE: j > 1 && j <= num / 2 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	//@ loop_invariant (\forall int k; 0 <= k && k < count - 1; num != primeArray[k]);
+			VALUE: \forall int k; 0 <= k && k < count - 1; num != primeArray[k]	 === true
+			VALUE: (\forall int k; 0 <= k && k < count - 1; num != primeArray[k])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	//@ loop_invariant (\forall int k; 2 <= k && k < j; !div(num, k));
+			VALUE: \forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k)	 === true
+			VALUE: (\forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:37:  	//@ loop_decreases num - j;
+			VALUE: num	 === 3
+			VALUE: j	 === 2
+			VALUE: num - j	 === 1
+				Initial value of Loop Decreases expression = 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	Loop test
+			VALUE: j	 === 2
+			VALUE: num	 === 3
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 1
+			VALUE: j <= num / 2	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	ArithmeticOperationRange assertion: !(num == -2147483648 && 2 == -1)
+			VALUE: !(num_1053_2565___53 == -2147483648 && 2 == -1)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	if (status != 0) ...
+			VALUE: status	 === 0
+			VALUE: 0	 === 0
+			VALUE: status != 0	 === false
+			VALUE: (status != 0)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:54:  	status = 1
+			VALUE: 1	 === 1
+			VALUE: status = 1	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:56:  	num++
+			VALUE: num++	 === 3
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:56:  	ArithmeticOperationRange assertion: !(0 < num && 0 < 1) || num <= 2147483647 - 1
+			VALUE: !(0 < num_1053_2565___53 && 0 < 1) || num_1053_2565___53 <= 2147483647 - 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:56:  	ArithmeticOperationRange assertion: !(num < 0 && 1 < 0) || -2147483648 - 1 <= num
+			VALUE: !(num_1053_2565___53 < 0 && 1 < 0) || -2147483648 - 1 <= num_1053_2565___53	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	LoopInvariant assertion: (_JML__tmp234)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	LoopInvariant assertion: (_JML__tmp239)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	LoopInvariant assertion: (_JML__tmp242)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  Invalid assertion (LoopInvariant)
+
+
+
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36: warning: The prover cannot establish an assertion (LoopInvariant) in method primeList
+	     //@ maintaining (\forall int k; 2 <= k && k < j; !div(num,k));
+	         ^
+
+TRACE of PrimeNumbers.primeList(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:12:  	requires 0 < n && n <= 105102357; 
+			VALUE: 0	 === 0
+			VALUE: n	 === 5
+			VALUE: 0 < n	 === true
+			VALUE: n	 === 5
+			VALUE: 105102357	 === 105102357
+			VALUE: n <= 105102357	 === true
+			VALUE: 0 < n && n <= 105102357	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int status = 1
+			VALUE: 1	 === 1
+			VALUE: status	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int num = 3
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int count
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:19:  	int j
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:20:  	primeArray = new int[n]
+			VALUE: new int[n]	 === REF!val!16
+			VALUE: primeArray = new int[n]	 === REF!val!16
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	PossiblyNegativeSize assertion: 0 <= n
+			VALUE: n	 === 5
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:20:  	Assignable assertion: _JML__tmp35 || (!Pre_3 || (_JML__tmp34.`alloc__ > 0 || `THIS == `THIS))
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	primeArray[0] = 2
+			VALUE: primeArray	 === REF!val!16
+			VALUE: 0	 === 0
+			VALUE: 2	 === 2
+			VALUE: primeArray[0] = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	PossiblyNullDeReference assertion: `THIS.primeArray != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	PossiblyNegativeIndex assertion: 0 >= 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	PossiblyTooLargeIndex assertion: `THIS.primeArray.length > 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:21:  	Assignable assertion: _JML__tmp40 || (!Pre_3 || _JML__tmp39.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:23:  	/*@ ghost */  int maxnumber = Integer.MAX_VALUE
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: maxnumber	 === 2147483647
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:24:  	/*@ ghost */  int count_counter = 2
+			VALUE: 2	 === 2
+			VALUE: count_counter	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:32:  	count = 2
+			VALUE: 2	 === 2
+			VALUE: count = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	LoopInvariantBeforeLoop assertion: (_JML__tmp53)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	LoopInvariantBeforeLoop assertion: (_JML__tmp58)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	LoopInvariantBeforeLoop assertion: (_JML__tmp61)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:28:  	//@ loop_invariant 2 <= count && count <= n + 1 && 3 <= num;
+			VALUE: 2	 === 2
+			VALUE: count	 === 2
+			VALUE: 2 <= count	 === true
+			VALUE: count	 === 2
+			VALUE: n	 === 5
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 6
+			VALUE: count <= n + 1	 === true
+			VALUE: 2 <= count && count <= n + 1	 === true
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+			VALUE: 3 <= num	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:28:  	LoopInvariantBeforeLoop assertion: `conditionalResult_69
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:29:  	//@ loop_invariant count_counter == count;
+			VALUE: count_counter	 === 2
+			VALUE: count	 === 2
+			VALUE: count_counter == count	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:29:  	LoopInvariantBeforeLoop assertion: _JML__tmp73
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:30:  	//@ loop_invariant status == 1;
+			VALUE: status	 === 1
+			VALUE: 1	 === 1
+			VALUE: status == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:30:  	LoopInvariantBeforeLoop assertion: _JML__tmp75
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:25:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k)))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:28:  	//@ loop_invariant 2 <= count && count <= n + 1 && 3 <= num;
+			VALUE: 2	 === 2
+			VALUE: count	 === 4
+			VALUE: 2 <= count	 === true
+			VALUE: count	 === 4
+			VALUE: n	 === 5
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 6
+			VALUE: count <= n + 1	 === true
+			VALUE: 2 <= count && count <= n + 1	 === true
+			VALUE: 3	 === 3
+			VALUE: num	 === 2147481596
+			VALUE: 3 <= num	 === true
+			VALUE: 2 <= count && count <= n + 1 && 3 <= num	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:29:  	//@ loop_invariant count_counter == count;
+			VALUE: count_counter	 === 4
+			VALUE: count	 === 4
+			VALUE: count_counter == count	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:30:  	//@ loop_invariant status == 1;
+			VALUE: status	 === 1
+			VALUE: 1	 === 1
+			VALUE: status == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:31:  	//@ loop_decreases maxnumber - num;
+			VALUE: maxnumber	 === 2147483647
+			VALUE: num	 === 2147481596
+			VALUE: maxnumber - num	 === 2051
+				Initial value of Loop Decreases expression = 2051
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:32:  	Loop test
+			VALUE: count	 === 4
+			VALUE: n	 === 5
+			VALUE: count <= n	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp109
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	j = 2
+			VALUE: 2	 === 2
+			VALUE: j = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	//@ loop_invariant j > 1 && j <= num / 2 + 1;
+			VALUE: j	 === 2
+			VALUE: 1	 === 1
+			VALUE: j > 1	 === true
+			VALUE: j	 === 2
+			VALUE: num	 === 2147481596
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 1073740798
+			VALUE: 1	 === 1
+			VALUE: num / 2 + 1	 === 1073740799
+			VALUE: j <= num / 2 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	LoopInvariantBeforeLoop assertion: `conditionalResult_116
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	//@ loop_invariant (\forall int k; 0 <= k && k < count - 1; num != primeArray[k]);
+			VALUE: \forall int k; 0 <= k && k < count - 1; num != primeArray[k]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	LoopInvariantBeforeLoop assertion: (_JML__tmp125)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	//@ loop_invariant (\forall int k; 2 <= k && k < j; !div(num, k));
+			VALUE: \forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	LoopInvariantBeforeLoop assertion: (_JML__tmp127)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	//@ loop_invariant j > 1 && j <= num / 2 + 1;
+			VALUE: j	 === 1073740798
+			VALUE: 1	 === 1
+			VALUE: j > 1	 === true
+			VALUE: j	 === 1073740798
+			VALUE: num	 === 2147481596
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 1073740798
+			VALUE: 1	 === 1
+			VALUE: num / 2 + 1	 === 1073740799
+			VALUE: j <= num / 2 + 1	 === true
+			VALUE: j > 1 && j <= num / 2 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	//@ loop_invariant (\forall int k; 0 <= k && k < count - 1; num != primeArray[k]);
+			VALUE: \forall int k; 0 <= k && k < count - 1; num != primeArray[k]	 === true
+			VALUE: (\forall int k; 0 <= k && k < count - 1; num != primeArray[k])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	//@ loop_invariant (\forall int k; 2 <= k && k < j; !div(num, k));
+			VALUE: \forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k)	 === true
+			VALUE: (\forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:37:  	//@ loop_decreases num - j;
+			VALUE: num	 === 2147481596
+			VALUE: j	 === 1073740798
+			VALUE: num - j	 === 1073740798
+				Initial value of Loop Decreases expression = 1073740798
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	Loop test
+			VALUE: j	 === 1073740798
+			VALUE: num	 === 2147481596
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 1073740798
+			VALUE: j <= num / 2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	ArithmeticOperationRange assertion: !(num == -2147483648 && 2 == -1)
+			VALUE: !(num_1053_2565___53 == -2147483648 && 2 == -1)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp147
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:40:  	primeArray[0] = 2
+			VALUE: primeArray	 === REF!val!16
+			VALUE: 0	 === 0
+			VALUE: 2	 === 2
+			VALUE: primeArray[0] = 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:40:  	PossiblyNullDeReference assertion: `THIS.primeArray != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:40:  	PossiblyNegativeIndex assertion: 0 >= 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:40:  	PossiblyTooLargeIndex assertion: `THIS.primeArray.length > 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:40:  	Assignable assertion: _JML__tmp156 || (!Pre_3 || _JML__tmp155.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:1:  	if (!div(num, j)) ...
+			VALUE: num	 === 2147481596
+			VALUE: j	 === 1073740798
+			VALUE: PrimeNumbers.div(num, j)	 === true
+			VALUE: !PrimeNumbers.div(num, j)	 === false
+			VALUE: (!PrimeNumbers.div(num, j))	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:5:  	requires 1 < n; 
+			VALUE: 1	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:6:  	requires d != 0; 
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:6:  	Precondition assertion: _$CPRE__6
+			VALUE: _$CPRE__6	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:7:  	UndefinedDivideByZero assertion: !(_JML__tmp165 && _JML__tmp161 && _JML__tmp161) || _JML__tmp160 != 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	j++
+			VALUE: j++	 === 1073740798
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	ArithmeticOperationRange assertion: !(0 < j && 0 < 1) || j <= 2147483647 - 1
+			VALUE: !(0 < j_1069_2106___68 && 0 < 1) || j_1069_2106___68 <= 2147483647 - 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:38:  	ArithmeticOperationRange assertion: !(j < 0 && 1 < 0) || -2147483648 - 1 <= j
+			VALUE: !(j_1069_2106___68 < 0 && 1 < 0) || -2147483648 - 1 <= j_1069_2106___68	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	//@ loop_invariant j > 1 && j <= num / 2 + 1;
+			VALUE: j	 === 1073740799
+			VALUE: 1	 === 1
+			VALUE: j > 1	 === true
+			VALUE: j	 === 1073740799
+			VALUE: num	 === 2147481596
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 1073740798
+			VALUE: 1	 === 1
+			VALUE: num / 2 + 1	 === 1073740799
+			VALUE: j <= num / 2 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:34:  	LoopInvariant assertion: `conditionalResult_184
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	//@ loop_invariant (\forall int k; 0 <= k && k < count - 1; num != primeArray[k]);
+			VALUE: \forall int k; 0 <= k && k < count - 1; num != primeArray[k]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:35:  	LoopInvariant assertion: (_JML__tmp193)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	//@ loop_invariant (\forall int k; 2 <= k && k < j; !div(num, k));
+			VALUE: \forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  	LoopInvariant assertion: (_JML__tmp198)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/PrimeNumbers/bug9/Repaired/PrimeNumbers.java:36:  Invalid assertion (LoopInvariant)
+
+6 warnings

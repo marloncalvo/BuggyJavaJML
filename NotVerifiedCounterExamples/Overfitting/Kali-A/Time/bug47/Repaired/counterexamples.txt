@@ -1,0 +1,103 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:209: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:203: ) in method equals
+		return true;
+		^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:203: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:209: 
+    /*@    	ensures \result <==> (this.hour == ((Time) o).hour)
+           	^
+
+TRACE of Time.equals(java.lang.Object)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 37
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 37
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 13
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 13
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:109:  	requires this == obj; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:113:  	requires obj != null && \typeof(this) == \type(Object); 
+			VALUE: obj != null && \typeof(this) == \type(Object)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:120:  	requires obj == null; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:206:  	requires o != null; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:199:  	requires !(o instanceof Time); 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:206:  	requires o != null; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:202:  	requires (o instanceof Time); 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:1:  	if (true) ...
+			VALUE: true	 === true
+			VALUE: (true)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:209:  	return true;
+			VALUE: true	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:203:  	UndefinedNullDeReference assertion: !Pre_25 || `THIS != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:203:  	UndefinedBadCast assertion: !(Pre_25 && \old(o, \Pre) != null) || (\old(o, \Pre) == null || \old(o, \Pre) instanceof Time)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:203:  	ensures \result <==> (this.hour == ((Time)o).hour) && (this.minute == ((Time)o).minute) && (this.second == ((Time)o).second); 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:209:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:203:  Associated location
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:209: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:200: ) in method equals
+		return true;
+		^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:200: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:209: 
+    //@    	ensures !\result;
+           	^
+
+TRACE of Time.equals(java.lang.Object)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 2
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 2
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 20
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 20
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 21
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 21
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:109:  	requires this == obj; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:113:  	requires obj != null && \typeof(this) == \type(Object); 
+			VALUE: obj != null && \typeof(this) == \type(Object)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:120:  	requires obj == null; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:206:  	requires o != null; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:199:  	requires !(o instanceof Time); 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:206:  	requires o != null; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:202:  	requires (o instanceof Time); 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:1:  	if (true) ...
+			VALUE: true	 === true
+			VALUE: (true)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:209:  	return true;
+			VALUE: true	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:200:  	ensures !\result; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:209:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug47/Repaired/Time.java:200:  Associated location
+
+4 warnings

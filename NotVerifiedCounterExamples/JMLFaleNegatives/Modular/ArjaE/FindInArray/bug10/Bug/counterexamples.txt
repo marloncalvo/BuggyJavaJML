@@ -1,0 +1,85 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:54: warning: The prover cannot establish an assertion (LoopInvariant) in method findLast
+	//@ maintaining -1 <= index && index < arr.length; 
+	    ^
+
+TRACE of FindInArray.findLast()
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:53:  	int index = size() - 1
+			VALUE: size()	 === 3
+			VALUE: 1	 === 1
+			VALUE: size() - 1	 === 2
+			VALUE: index	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:1:  	Precondition assertion: _$CPRE__8
+			VALUE: _$CPRE__8	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:43:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:53:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp339 && 1 < 0) || _JML__tmp339 <= 2147483647 + 1
+			VALUE: !(0 < _JML__tmp339 && 1 < 0) || _JML__tmp339 <= 2147483647 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:53:  	ArithmeticOperationRange assertion: !(_JML__tmp339 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp339
+			VALUE: !(_JML__tmp339 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp339	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:54:  	//@ loop_invariant -1 <= index && index < arr.length;
+			VALUE: -1	 === ( - 1 )
+			VALUE: index	 === 2
+			VALUE: -1 <= index	 === true
+			VALUE: index	 === 2
+			VALUE: arr	 === REF!val!15
+			VALUE: arr.length	 === 3
+			VALUE: index < arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:54:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:54:  	LoopInvariantBeforeLoop assertion: `conditionalResult_351
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:55:  	//@ loop_invariant (\forall int i; index < i && i < arr.length; arr[i] != key);
+			VALUE: \forall int i; index < i && i < arr.length; arr[i] != key	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:55:  	LoopInvariantBeforeLoop assertion: (_JML__tmp356)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:54:  	//@ loop_invariant -1 <= index && index < arr.length;
+			VALUE: -1	 === ( - 1 )
+			VALUE: index	 === 2
+			VALUE: -1 <= index	 === true
+			VALUE: index	 === 2
+			VALUE: arr	 === REF!val!15
+			VALUE: arr.length	 === 3
+			VALUE: index < arr.length	 === true
+			VALUE: -1 <= index && index < arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:54:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:55:  	//@ loop_invariant (\forall int i; index < i && i < arr.length; arr[i] != key);
+			VALUE: \forall int i; index < i && i < arr.length; arr[i] != key	 === true
+			VALUE: (\forall int i; index < i && i < arr.length; arr[i] != key)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:56:  	Loop test
+			VALUE: 0	 === 0
+			VALUE: index	 === 2
+			VALUE: 0 <= index	 === true
+			VALUE: (0 <= index)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:1:  	if (getArr(index) == getKey()) ...
+			VALUE: index	 === 2
+			VALUE: getArr(index)	 === ( - 2147477795 )
+			VALUE: getKey()	 === ( - 2147477794 )
+			VALUE: getArr(index) == getKey()	 === false
+			VALUE: (getArr(index) == getKey())	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:36:  	requires 0 <= i && i < arr.length; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:36:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:36:  	Precondition assertion: _$CPRE__9
+			VALUE: _$CPRE__9	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:37:  	UndefinedNullDeReference assertion: !_JML__tmp370 || `THIS != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:37:  	UndefinedNullDeReference assertion: !(_JML__tmp370 && _JML__tmp379 != null) || _JML__tmp379 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:37:  	UndefinedNegativeIndex assertion: !(_JML__tmp370 && _JML__tmp379 != null) || 0 <= _JML__tmp368
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:37:  	UndefinedTooLargeIndex assertion: !(_JML__tmp370 && _JML__tmp379 != null) || _JML__tmp379.length > _JML__tmp368
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:1:  	Precondition assertion: _$CPRE__10
+			VALUE: _$CPRE__10	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:1:  	UndefinedNullDeReference assertion: `THIS != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:59:  	index++
+			VALUE: index++	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:59:  	ArithmeticOperationRange assertion: !(0 < index && 0 < 1) || index <= 2147483647 - 1
+			VALUE: !(0 < index_1379_1604___22 && 0 < 1) || index_1379_1604___22 <= 2147483647 - 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:59:  	ArithmeticOperationRange assertion: !(index < 0 && 1 < 0) || -2147483648 - 1 <= index
+			VALUE: !(index_1379_1604___22 < 0 && 1 < 0) || -2147483648 - 1 <= index_1379_1604___22	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:54:  	//@ loop_invariant -1 <= index && index < arr.length;
+			VALUE: -1	 === ( - 1 )
+			VALUE: index	 === 3
+			VALUE: -1 <= index	 === true
+			VALUE: index	 === 3
+			VALUE: arr	 === REF!val!15
+			VALUE: arr.length	 === 3
+			VALUE: index < arr.length	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:54:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:54:  	LoopInvariant assertion: `conditionalResult_394
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Modular/ArjaE/FindInArray/bug10/Bug/FindInArray.java:54:  Invalid assertion (LoopInvariant)
+
+1 warning

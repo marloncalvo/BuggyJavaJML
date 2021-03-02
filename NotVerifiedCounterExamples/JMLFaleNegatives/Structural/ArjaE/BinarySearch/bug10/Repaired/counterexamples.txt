@@ -1,0 +1,180 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:14: warning: The prover cannot establish an assertion (LoopInvariant) in method Binary
+            //@ maintaining 0 <= low && low <= high  && high <= arr.length && mid == low + (high - low) / 2;
+                ^
+
+TRACE of BinarySearch.Binary(int[],int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:6:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:3:  	requires \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j; arr[i] <= arr[j]; 
+			VALUE: \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j; arr[i] <= arr[j]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:1:  	if (arr.length == 0) ...
+			VALUE: arr.length	 === 13856
+			VALUE: 0	 === 0
+			VALUE: arr.length == 0	 === false
+			VALUE: (arr.length == 0)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:7:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:10:  	int low = 0
+			VALUE: 0	 === 0
+			VALUE: low	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:11:  	int high = arr.length
+			VALUE: arr.length	 === 13856
+			VALUE: high	 === 13856
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:11:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:12:  	int mid = high / 2
+			VALUE: high	 === 13856
+			VALUE: 2	 === 2
+			VALUE: high / 2	 === 6928
+			VALUE: mid	 === 6928
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:12:  	ArithmeticOperationRange assertion: !(high == -2147483648 && 2 == -1)
+			VALUE: !(high_471_471___21 == -2147483648 && 2 == -1)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:14:  	//@ loop_invariant 0 <= low && low <= high && high <= arr.length && mid == low + (high - low) / 2;
+			VALUE: 0	 === 0
+			VALUE: low	 === 0
+			VALUE: 0 <= low	 === true
+			VALUE: low	 === 0
+			VALUE: high	 === 13856
+			VALUE: low <= high	 === true
+			VALUE: 0 <= low && low <= high	 === true
+			VALUE: high	 === 13856
+			VALUE: arr.length	 === 13856
+			VALUE: high <= arr.length	 === true
+			VALUE: 0 <= low && low <= high && high <= arr.length	 === true
+			VALUE: mid	 === 6928
+			VALUE: low	 === 0
+			VALUE: high	 === 13856
+			VALUE: low	 === 0
+			VALUE: high - low	 === 13856
+			VALUE: (high - low)	 === 13856
+			VALUE: 2	 === 2
+			VALUE: (high - low) / 2	 === 6928
+			VALUE: low + (high - low) / 2	 === 6928
+			VALUE: mid == low + (high - low) / 2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:14:  	LoopInvariantBeforeLoop assertion: `conditionalResult_31
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:15:  	//@ loop_invariant (\forall int i; 0 <= i && i < low; arr[i] < key);
+			VALUE: \forall int i; 0 <= i && i < low; arr[i] < key	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:15:  	LoopInvariantBeforeLoop assertion: (_JML__tmp39)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:16:  	//@ loop_invariant (\forall int i; high <= i && i < arr.length; key < arr[i]);
+			VALUE: \forall int i; high <= i && i < arr.length; key < arr[i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:16:  	LoopInvariantBeforeLoop assertion: (_JML__tmp40)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:14:  	//@ loop_invariant 0 <= low && low <= high && high <= arr.length && mid == low + (high - low) / 2;
+			VALUE: 0	 === 0
+			VALUE: low	 === 13851
+			VALUE: 0 <= low	 === true
+			VALUE: low	 === 13851
+			VALUE: high	 === 13856
+			VALUE: low <= high	 === true
+			VALUE: 0 <= low && low <= high	 === true
+			VALUE: high	 === 13856
+			VALUE: arr.length	 === 13856
+			VALUE: high <= arr.length	 === true
+			VALUE: 0 <= low && low <= high && high <= arr.length	 === true
+			VALUE: mid	 === 13853
+			VALUE: low	 === 13851
+			VALUE: high	 === 13856
+			VALUE: low	 === 13851
+			VALUE: high - low	 === 5
+			VALUE: (high - low)	 === 5
+			VALUE: 2	 === 2
+			VALUE: (high - low) / 2	 === 2
+			VALUE: low + (high - low) / 2	 === 13853
+			VALUE: mid == low + (high - low) / 2	 === true
+			VALUE: 0 <= low && low <= high && high <= arr.length && mid == low + (high - low) / 2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:15:  	//@ loop_invariant (\forall int i; 0 <= i && i < low; arr[i] < key);
+			VALUE: \forall int i; 0 <= i && i < low; arr[i] < key	 === true
+			VALUE: (\forall int i; 0 <= i && i < low; arr[i] < key)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:16:  	//@ loop_invariant (\forall int i; high <= i && i < arr.length; key < arr[i]);
+			VALUE: \forall int i; high <= i && i < arr.length; key < arr[i]	 === true
+			VALUE: (\forall int i; high <= i && i < arr.length; key < arr[i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:17:  	//@ loop_decreases high - low;
+			VALUE: high	 === 13856
+			VALUE: low	 === 13851
+			VALUE: high - low	 === 5
+				Initial value of Loop Decreases expression = 5
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:18:  	Loop test
+			VALUE: low	 === 13851
+			VALUE: high	 === 13856
+			VALUE: low < high	 === true
+			VALUE: arr	 === REF!val!6
+			VALUE: mid	 === 13853
+			VALUE: arr[mid]	 === ( - 2147480652 )
+			VALUE: key	 === ( - 2147480651 )
+			VALUE: arr[mid] != key	 === true
+			VALUE: low < high && arr[mid] != key	 === true
+			VALUE: (low < high && arr[mid] != key)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:18:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:18:  	PossiblyNegativeIndex assertion: 0 <= mid
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:18:  	PossiblyTooLargeIndex assertion: arr.length > mid
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp61
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:1:  	if (arr[mid] < key || arr.length == 0) ...
+			VALUE: arr	 === REF!val!6
+			VALUE: mid	 === 13853
+			VALUE: arr[mid]	 === ( - 2147480652 )
+			VALUE: key	 === ( - 2147480651 )
+			VALUE: arr[mid] < key	 === true
+			VALUE: arr[mid] < key || arr.length == 0	 === true
+			VALUE: (arr[mid] < key || arr.length == 0)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:19:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:19:  	PossiblyNegativeIndex assertion: 0 <= mid
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:19:  	PossiblyTooLargeIndex assertion: arr.length > mid
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:20:  	low = mid + 1
+			VALUE: mid	 === 13853
+			VALUE: 1	 === 1
+			VALUE: mid + 1	 === 13854
+			VALUE: low = mid + 1	 === 13854
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:20:  	ArithmeticOperationRange assertion: !(0 < mid && 0 < 1) || mid <= 2147483647 - 1
+			VALUE: !(0 < mid_506_1072___36 && 0 < 1) || mid_506_1072___36 <= 2147483647 - 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:20:  	ArithmeticOperationRange assertion: !(mid < 0 && 1 < 0) || -2147483648 - 1 <= mid
+			VALUE: !(mid_506_1072___36 < 0 && 1 < 0) || -2147483648 - 1 <= mid_506_1072___36	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:24:  	mid = low - (low - low) / 2
+			VALUE: low	 === 13854
+			VALUE: low	 === 13854
+			VALUE: low	 === 13854
+			VALUE: low - low	 === 0
+			VALUE: (low - low)	 === 0
+			VALUE: 2	 === 2
+			VALUE: (low - low) / 2	 === 0
+			VALUE: low - (low - low) / 2	 === 13854
+			VALUE: mid = low - (low - low) / 2	 === 13854
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:24:  	ArithmeticOperationRange assertion: !(0 < low && low < 0) || low <= 2147483647 + low
+			VALUE: !(0 < low_446_966___53 && low_446_966___53 < 0) || low_446_966___53 <= 2147483647 + low_446_966___53	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:24:  	ArithmeticOperationRange assertion: !(low < 0 && 0 < low) || -2147483648 + low <= low
+			VALUE: !(low_446_966___53 < 0 && 0 < low_446_966___53) || -2147483648 + low_446_966___53 <= low_446_966___53	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:24:  	ArithmeticOperationRange assertion: !((_JML__tmp81) == -2147483648 && 2 == -1)
+			VALUE: !((_JML__tmp81) == -2147483648 && 2 == -1)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:24:  	ArithmeticOperationRange assertion: !(0 < low && _JML__tmp84 < 0) || low <= 2147483647 + _JML__tmp84
+			VALUE: !(0 < low_446_966___53 && _JML__tmp84 < 0) || low_446_966___53 <= 2147483647 + _JML__tmp84	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:24:  	ArithmeticOperationRange assertion: !(low < 0 && 0 < _JML__tmp84) || -2147483648 + _JML__tmp84 <= low
+			VALUE: !(low_446_966___53 < 0 && 0 < _JML__tmp84) || -2147483648 + _JML__tmp84 <= low_446_966___53	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:14:  	//@ loop_invariant 0 <= low && low <= high && high <= arr.length && mid == low + (high - low) / 2;
+			VALUE: 0	 === 0
+			VALUE: low	 === 13854
+			VALUE: 0 <= low	 === true
+			VALUE: low	 === 13854
+			VALUE: high	 === 13856
+			VALUE: low <= high	 === true
+			VALUE: 0 <= low && low <= high	 === true
+			VALUE: high	 === 13856
+			VALUE: arr.length	 === 13856
+			VALUE: high <= arr.length	 === true
+			VALUE: 0 <= low && low <= high && high <= arr.length	 === true
+			VALUE: mid	 === 13854
+			VALUE: low	 === 13854
+			VALUE: high	 === 13856
+			VALUE: low	 === 13854
+			VALUE: high - low	 === 2
+			VALUE: (high - low)	 === 2
+			VALUE: 2	 === 2
+			VALUE: (high - low) / 2	 === 1
+			VALUE: low + (high - low) / 2	 === 13855
+			VALUE: mid == low + (high - low) / 2	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:14:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:14:  	LoopInvariant assertion: `conditionalResult_97
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/BinarySearch/bug10/Repaired/BinarySearch.java:14:  Invalid assertion (LoopInvariant)
+
+1 warning

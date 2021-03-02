@@ -1,0 +1,114 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:52: warning: The prover cannot establish an assertion (UndefinedTooLargeIndex) in method fibCompute
+                        //@ assume fib[index-2] <  fib[index-1];
+                                                      ^
+
+TRACE of Fibonacci.fibCompute()
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:3:  	//@ public invariant 2 <= fib.length && fib.length <= 93; 
+			VALUE: 2	 === 2
+			VALUE: fib	 === REF!val!17
+			VALUE: fib.length	 === 2
+			VALUE: 2 <= fib.length	 === true
+			VALUE: fib	 === REF!val!17
+			VALUE: fib.length	 === 2
+			VALUE: 93	 === 93
+			VALUE: fib.length <= 93	 === true
+			VALUE: 2 <= fib.length && fib.length <= 93	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:3:  	UndefinedNullDeReference assertion: !(`THIS.fib != null) || `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:3:  	UndefinedNullDeReference assertion: !(`THIS.fib != null && `THIS.fib != null) || `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:37:  	requires fib[0] == 0 && fib[1] == 1; 
+			VALUE: fib	 === REF!val!17
+			VALUE: 0	 === 0
+			VALUE: fib[0]	 === 0
+			VALUE: 0	 === 0
+			VALUE: fib[0] == 0	 === true
+			VALUE: fib	 === REF!val!17
+			VALUE: 1	 === 1
+			VALUE: fib[1]	 === 1
+			VALUE: 1	 === 1
+			VALUE: fib[1] == 1	 === true
+			VALUE: fib[0] == 0 && fib[1] == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:37:  	UndefinedNullDeReference assertion: !(`THIS.fib != null) || `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:37:  	UndefinedTooLargeIndex assertion: !(`THIS.fib != null) || `THIS.fib.length > 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:37:  	UndefinedNullDeReference assertion: !(`THIS.fib != null && `THIS.fib != null) || `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:37:  	UndefinedTooLargeIndex assertion: !(`THIS.fib != null && `THIS.fib != null) || `THIS.fib.length > 1
+			VALUE: 1	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:42:  	int index = 2
+			VALUE: 2	 === 2
+			VALUE: index	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:43:  	//@ loop_invariant 2 <= index && index <= fib.length;
+			VALUE: 2	 === 2
+			VALUE: index	 === 2
+			VALUE: 2 <= index	 === true
+			VALUE: index	 === 2
+			VALUE: fib	 === REF!val!17
+			VALUE: fib.length	 === 2
+			VALUE: index <= fib.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:43:  	UndefinedNullDeReference assertion: !(`THIS.fib != null) || `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:43:  	LoopInvariantBeforeLoop assertion: `conditionalResult_198
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:44:  	//@ loop_invariant (\forall int i; 2 <= i && i < index; fib[i] == fib[i - 1] + fib[i - 2]);
+			VALUE: \forall int i; 2 <= i && i < index; fib[i] == fib[i - 1] + fib[i - 2]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:44:  	LoopInvariantBeforeLoop assertion: (_JML__tmp206)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:45:  	//@ loop_invariant (\forall int i; 2 <= i && i < index; (\forall int j; 2 <= j && j < i; fib[j] < fib[i]));
+			VALUE: \forall int i; 2 <= i && i < index; (\forall int j; 2 <= j && j < i; fib[j] < fib[i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:45:  	LoopInvariantBeforeLoop assertion: (_JML__tmp209)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:43:  	//@ loop_invariant 2 <= index && index <= fib.length;
+			VALUE: 2	 === 2
+			VALUE: index	 === 2
+			VALUE: 2 <= index	 === true
+			VALUE: index	 === 2
+			VALUE: fib	 === REF!val!17
+			VALUE: fib.length	 === 2
+			VALUE: index <= fib.length	 === true
+			VALUE: 2 <= index && index <= fib.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:43:  	UndefinedNullDeReference assertion: !(`THIS.fib != null) || `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:44:  	//@ loop_invariant (\forall int i; 2 <= i && i < index; fib[i] == fib[i - 1] + fib[i - 2]);
+			VALUE: \forall int i; 2 <= i && i < index; fib[i] == fib[i - 1] + fib[i - 2]	 === true
+			VALUE: (\forall int i; 2 <= i && i < index; fib[i] == fib[i - 1] + fib[i - 2])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:45:  	//@ loop_invariant (\forall int i; 2 <= i && i < index; (\forall int j; 2 <= j && j < i; fib[j] < fib[i]));
+			VALUE: \forall int i; 2 <= i && i < index; (\forall int j; 2 <= j && j < i; fib[j] < fib[i])	 === true
+			VALUE: (\forall int i; 2 <= i && i < index; (\forall int j; 2 <= j && j < i; fib[j] < fib[i]))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:46:  	Loop test
+			VALUE: index	 === 2
+			VALUE: fib	 === REF!val!17
+			VALUE: fib.length	 === 2
+			VALUE: index <= fib.length	 === true
+			VALUE: (index <= fib.length)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:46:  	PossiblyNullDeReference assertion: `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:47:  	UndefinedNullDeReference assertion: !(`THIS.fib != null) || `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:47:  	UndefinedNegativeIndex assertion: !(`THIS.fib != null) || 0 <= _JML__tmp231
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:47:  	UndefinedTooLargeIndex assertion: !(`THIS.fib != null) || `THIS.fib.length > _JML__tmp231
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:47:  	UndefinedNullDeReference assertion: !(`THIS.fib != null && `THIS.fib != null) || `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:47:  	UndefinedNegativeIndex assertion: !(`THIS.fib != null && `THIS.fib != null) || 0 <= _JML__tmp234
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:47:  	UndefinedTooLargeIndex assertion: !(`THIS.fib != null && `THIS.fib != null) || `THIS.fib.length > _JML__tmp234
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:48:  	UndefinedNullDeReference assertion: !(`THIS.fib != null) || `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:48:  	UndefinedNegativeIndex assertion: !(`THIS.fib != null) || 0 <= _JML__tmp240
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:48:  	UndefinedTooLargeIndex assertion: !(`THIS.fib != null) || `THIS.fib.length > _JML__tmp240
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:48:  	UndefinedNullDeReference assertion: !(`THIS.fib != null && `THIS.fib != null) || `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:48:  	UndefinedNegativeIndex assertion: !(`THIS.fib != null && `THIS.fib != null) || 0 <= _JML__tmp243
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:48:  	UndefinedTooLargeIndex assertion: !(`THIS.fib != null && `THIS.fib != null) || `THIS.fib.length > _JML__tmp243
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:1:  	if (index < fib.length && index - 2 < fib.length && index - 1 < fib.length) ...
+			VALUE: index	 === 2
+			VALUE: fib	 === REF!val!17
+			VALUE: fib.length	 === 2
+			VALUE: index < fib.length	 === false
+			VALUE: index < fib.length && index - 2 < fib.length	 === false
+			VALUE: index < fib.length && index - 2 < fib.length && index - 1 < fib.length	 === false
+			VALUE: (index < fib.length && index - 2 < fib.length && index - 1 < fib.length)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:49:  	PossiblyNullDeReference assertion: `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:51:  	index++
+			VALUE: index++	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:51:  	ArithmeticOperationRange assertion: !(0 < index && 0 < 1) || index <= 2147483647 - 1
+			VALUE: !(0 < index_1278_1873___25 && 0 < 1) || index_1278_1873___25 <= 2147483647 - 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:51:  	ArithmeticOperationRange assertion: !(index < 0 && 1 < 0) || -2147483648 - 1 <= index
+			VALUE: !(index_1278_1873___25 < 0 && 1 < 0) || -2147483648 - 1 <= index_1278_1873___25	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:52:  	UndefinedNullDeReference assertion: !(`THIS.fib != null) || `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:52:  	UndefinedNegativeIndex assertion: !(`THIS.fib != null) || 0 <= _JML__tmp301
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:52:  	UndefinedTooLargeIndex assertion: !(`THIS.fib != null) || `THIS.fib.length > _JML__tmp301
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:52:  	UndefinedNullDeReference assertion: !(`THIS.fib != null && `THIS.fib != null) || `THIS.fib != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:52:  	UndefinedNegativeIndex assertion: !(`THIS.fib != null && `THIS.fib != null) || 0 <= _JML__tmp304
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:52:  	UndefinedTooLargeIndex assertion: !(`THIS.fib != null && `THIS.fib != null) || `THIS.fib.length > _JML__tmp304
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Fibonacci/bug6/Repaired/Fibonacci.java:52:  Invalid assertion (UndefinedTooLargeIndex)
+
+1 warning

@@ -1,0 +1,306 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:62: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:55: ) in method setMinute
+            return;
+            ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:55: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:62: 
+      @     public exceptional_behavior
+                   ^
+
+TRACE of Time.setMinute(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 37
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 37
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 25
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 25
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 13
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 13
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:51:  	requires 0 <= m && m < 60; 
+			VALUE: m	 === ( - 1 )
+			VALUE: 0 <= m	 === false
+			VALUE: 0 <= m && m < 60	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:56:  	requires m < 0 || 60 <= m; 
+			VALUE: m	 === ( - 1 )
+			VALUE: m < 0	 === true
+			VALUE: m < 0 || 60 <= m	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:1:  	if (m < 0 || 60 > m) ...
+			VALUE: m	 === ( - 1 )
+			VALUE: 0	 === 0
+			VALUE: m < 0	 === true
+			VALUE: m < 0 || 60 > m	 === true
+			VALUE: (m < 0 || 60 > m)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:62:  	return;
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 37
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 37
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:6:  	InvariantExit assertion: `conditionalResult_297
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 25
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 25
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7:  	InvariantExit assertion: `conditionalResult_305
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 13
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 13
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:8:  	InvariantExit assertion: `conditionalResult_313
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:1:  	ensures false; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:62:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:55:  Associated location
+
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:64: warning: The prover cannot establish an assertion (Assignable: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:57: ) in method setMinute:  this.minute
+            this.minute = m;
+                        ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:57: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:64: 
+      @     	assignable \nothing;
+            	^
+
+TRACE of Time.setMinute(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 2
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 2
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 20
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 20
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 21
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 21
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:51:  	requires 0 <= m && m < 60; 
+			VALUE: m	 === 60
+			VALUE: 0 <= m	 === true
+			VALUE: m	 === 60
+			VALUE: m < 60	 === false
+			VALUE: 0 <= m && m < 60	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:56:  	requires m < 0 || 60 <= m; 
+			VALUE: m	 === 60
+			VALUE: m < 0	 === false
+			VALUE: m	 === 60
+			VALUE: 60 <= m	 === true
+			VALUE: m < 0 || 60 <= m	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:1:  	if (m < 0 || 60 > m) ...
+			VALUE: m	 === 60
+			VALUE: 0	 === 0
+			VALUE: m < 0	 === false
+			VALUE: 60	 === 60
+			VALUE: m	 === 60
+			VALUE: 60 > m	 === false
+			VALUE: m < 0 || 60 > m	 === false
+			VALUE: (m < 0 || 60 > m)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:64:  	this.minute = m
+			VALUE: m	 === 60
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:1:  	PossiblyNullDeReference assertion: `THIS != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:64:  	Assignable assertion: _JML__tmp292 || (!Pre_6 || _JML__tmp291.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:64:  Invalid assertion (Assignable)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:57:  Associated location
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:62: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:53: ) in method setMinute
+            return;
+            ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:53: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:62: 
+      @     	ensures this.minute == m;
+            	^
+
+TRACE of Time.setMinute(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 57
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 57
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 48
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 48
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 17
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 17
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:51:  	requires 0 <= m && m < 60; 
+			VALUE: m	 === 59
+			VALUE: 0 <= m	 === true
+			VALUE: m	 === 59
+			VALUE: m < 60	 === true
+			VALUE: 0 <= m && m < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:56:  	requires m < 0 || 60 <= m; 
+			VALUE: m	 === 59
+			VALUE: m < 0	 === false
+			VALUE: m	 === 59
+			VALUE: 60 <= m	 === false
+			VALUE: m < 0 || 60 <= m	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:1:  	if (m < 0 || 60 > m) ...
+			VALUE: m	 === 59
+			VALUE: 0	 === 0
+			VALUE: m < 0	 === false
+			VALUE: 60	 === 60
+			VALUE: m	 === 59
+			VALUE: 60 > m	 === true
+			VALUE: m < 0 || 60 > m	 === true
+			VALUE: (m < 0 || 60 > m)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:62:  	return;
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 57
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 57
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:6:  	InvariantExit assertion: `conditionalResult_297
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 48
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 48
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7:  	InvariantExit assertion: `conditionalResult_305
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 17
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 17
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:8:  	InvariantExit assertion: `conditionalResult_313
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:53:  	UndefinedNullDeReference assertion: !Pre_5 || `THIS != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:53:  	ensures this.minute == m; 
+			VALUE: this.minute	 === 48
+			VALUE: m	 === 59
+			VALUE: this.minute == m	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:62:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:53:  Associated location
+
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:59: warning: The prover cannot establish an assertion (InvariantExit: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7: ) in method setMinute
+    public void setMinute(int m) 
+                ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:59: 
+      public invariant 0 <= minute && minute < 60;
+             ^
+
+TRACE of Time.setMinute(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 3
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 3
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 37
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 37
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 10
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 10
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:51:  	requires 0 <= m && m < 60; 
+			VALUE: m	 === 60
+			VALUE: 0 <= m	 === true
+			VALUE: m	 === 60
+			VALUE: m < 60	 === false
+			VALUE: 0 <= m && m < 60	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:56:  	requires m < 0 || 60 <= m; 
+			VALUE: m	 === 60
+			VALUE: m < 0	 === false
+			VALUE: m	 === 60
+			VALUE: 60 <= m	 === true
+			VALUE: m < 0 || 60 <= m	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:1:  	if (m < 0 || 60 > m) ...
+			VALUE: m	 === 60
+			VALUE: 0	 === 0
+			VALUE: m < 0	 === false
+			VALUE: 60	 === 60
+			VALUE: m	 === 60
+			VALUE: 60 > m	 === false
+			VALUE: m < 0 || 60 > m	 === false
+			VALUE: (m < 0 || 60 > m)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:64:  	this.minute = m
+			VALUE: m	 === 60
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:1:  	PossiblyNullDeReference assertion: `THIS != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:64:  	Assignable assertion: _JML__tmp292 || (!Pre_6 || _JML__tmp291.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 3
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 3
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:6:  	InvariantExit assertion: `conditionalResult_297
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 60
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 60
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7:  	InvariantExit assertion: `conditionalResult_305
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:59:  Invalid assertion (InvariantExit)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Time/bug8/Repaired/Time.java:7:  Associated location
+
+8 warnings

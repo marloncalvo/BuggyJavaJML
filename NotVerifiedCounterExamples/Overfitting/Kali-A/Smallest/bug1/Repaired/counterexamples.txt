@@ -1,0 +1,40 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Smallest/bug1/Repaired/Smallest.java:10: warning: The prover cannot establish an assertion (LoopInvariantBeforeLoop) in method Smallest
+        //@ maintaining 0 <= smallest && smallest < a.length;
+            ^
+
+TRACE of Smallest.Smallest(int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Smallest/bug1/Repaired/Smallest.java:4:  	requires a != null; 
+			VALUE: a	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: a != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Smallest/bug1/Repaired/Smallest.java:1:  	if (false) ...
+			VALUE: false	 === false
+			VALUE: (false)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Smallest/bug1/Repaired/Smallest.java:7:  	int index = 0
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Smallest/bug1/Repaired/Smallest.java:8:  	int smallest = 0
+			VALUE: 0	 === 0
+			VALUE: smallest	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Smallest/bug1/Repaired/Smallest.java:9:  	//@ loop_invariant 0 <= index && index <= a.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: a.length	 === 0
+			VALUE: index <= a.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Smallest/bug1/Repaired/Smallest.java:9:  	UndefinedNullDeReference assertion: !(a != null) || a != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Smallest/bug1/Repaired/Smallest.java:9:  	LoopInvariantBeforeLoop assertion: `conditionalResult_15
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Smallest/bug1/Repaired/Smallest.java:10:  	//@ loop_invariant 0 <= smallest && smallest < a.length;
+			VALUE: 0	 === 0
+			VALUE: smallest	 === 0
+			VALUE: 0 <= smallest	 === true
+			VALUE: smallest	 === 0
+			VALUE: a.length	 === 0
+			VALUE: smallest < a.length	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Smallest/bug1/Repaired/Smallest.java:10:  	UndefinedNullDeReference assertion: !(a != null) || a != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Smallest/bug1/Repaired/Smallest.java:10:  	LoopInvariantBeforeLoop assertion: `conditionalResult_21
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Smallest/bug1/Repaired/Smallest.java:10:  Invalid assertion (LoopInvariantBeforeLoop)
+
+1 warning

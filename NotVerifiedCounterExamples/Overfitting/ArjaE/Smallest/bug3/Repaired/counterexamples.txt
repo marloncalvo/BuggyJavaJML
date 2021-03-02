@@ -1,0 +1,91 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:14: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method Smallest:  overflow in int sum
+        while (a.length + index > 0) {//while (a.length - index > 0) {
+                        ^
+
+TRACE of Smallest.Smallest(int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:4:  	requires a != null; 
+			VALUE: a	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: a != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:1:  	if (a.length == 0) ...
+			VALUE: a.length	 === 2147483647
+			VALUE: 0	 === 0
+			VALUE: a.length == 0	 === false
+			VALUE: (a.length == 0)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:5:  	PossiblyNullDeReference assertion: a != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:7:  	int index = 0
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:8:  	int smallest = 0
+			VALUE: 0	 === 0
+			VALUE: smallest	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:1:  	if (!(a != null)) ...
+			VALUE: a	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: a != null	 === true
+			VALUE: (a != null)	 === true
+			VALUE: !(a != null)	 === false
+			VALUE: (!(a != null))	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:10:  	//@ loop_invariant 0 <= index && index <= a.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: a.length	 === 2147483647
+			VALUE: index <= a.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:10:  	UndefinedNullDeReference assertion: !(a != null) || a != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:10:  	LoopInvariantBeforeLoop assertion: `conditionalResult_21
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:11:  	//@ loop_invariant 0 <= smallest && smallest < a.length;
+			VALUE: 0	 === 0
+			VALUE: smallest	 === 0
+			VALUE: 0 <= smallest	 === true
+			VALUE: smallest	 === 0
+			VALUE: a.length	 === 2147483647
+			VALUE: smallest < a.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:11:  	UndefinedNullDeReference assertion: !(a != null) || a != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:11:  	LoopInvariantBeforeLoop assertion: `conditionalResult_27
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:12:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; a[smallest] <= a[i]);
+			VALUE: \forall int i; 0 <= i && i < index; a[smallest] <= a[i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:12:  	LoopInvariantBeforeLoop assertion: (_JML__tmp32)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:10:  	//@ loop_invariant 0 <= index && index <= a.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 2147477725
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 2147477725
+			VALUE: a.length	 === 2147483647
+			VALUE: index <= a.length	 === true
+			VALUE: 0 <= index && index <= a.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:10:  	UndefinedNullDeReference assertion: !(a != null) || a != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:11:  	//@ loop_invariant 0 <= smallest && smallest < a.length;
+			VALUE: 0	 === 0
+			VALUE: smallest	 === 2
+			VALUE: 0 <= smallest	 === true
+			VALUE: smallest	 === 2
+			VALUE: a.length	 === 2147483647
+			VALUE: smallest < a.length	 === true
+			VALUE: 0 <= smallest && smallest < a.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:11:  	UndefinedNullDeReference assertion: !(a != null) || a != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:12:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; a[smallest] <= a[i]);
+			VALUE: \forall int i; 0 <= i && i < index; a[smallest] <= a[i]	 === true
+			VALUE: (\forall int i; 0 <= i && i < index; a[smallest] <= a[i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:13:  	//@ loop_decreases a.length - index;
+			VALUE: a.length	 === 2147483647
+			VALUE: index	 === 2147477725
+			VALUE: a.length - index	 === 5922
+				Initial value of Loop Decreases expression = 5922
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:13:  	UndefinedNullDeReference assertion: !(a != null) || a != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:14:  	Loop test
+			VALUE: a.length	 === 2147483647
+			VALUE: index	 === 2147477725
+			VALUE: a.length + index	 === ( - 5924 )
+			VALUE: 0	 === 0
+			VALUE: a.length + index > 0	 === false
+			VALUE: (a.length + index > 0)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:14:  	PossiblyNullDeReference assertion: a != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:14:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp50 && 0 < index) || _JML__tmp50 <= 2147483647 - index
+			VALUE: !(0 < _JML__tmp50 && 0 < index_261_869___31) || _JML__tmp50 <= 2147483647 - index_261_869___31	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug3/Repaired/Smallest.java:14:  Invalid assertion (ArithmeticOperationRange)
+
+1 warning

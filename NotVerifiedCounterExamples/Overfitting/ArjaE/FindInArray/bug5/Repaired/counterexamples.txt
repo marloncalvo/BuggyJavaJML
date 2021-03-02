@@ -1,0 +1,67 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:61: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:51: ) in method findLast
+	return -1;
+	^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:51: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:61: 
+      @ ensures \result == -1 ==> (\forall int i; 0 <= i && i < arr.length; arr[i] != key); @*/
+        ^
+
+TRACE of FindInArray.findLast()
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:53:  	int index = size() - 1
+			VALUE: size()	 === 1
+			VALUE: 1	 === 1
+			VALUE: size() - 1	 === 0
+			VALUE: index	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:1:  	Precondition assertion: _$CPRE__8
+			VALUE: _$CPRE__8	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:43:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:53:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp339 && 1 < 0) || _JML__tmp339 <= 2147483647 + 1
+			VALUE: !(0 < _JML__tmp339 && 1 < 0) || _JML__tmp339 <= 2147483647 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:53:  	ArithmeticOperationRange assertion: !(_JML__tmp339 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp339
+			VALUE: !(_JML__tmp339 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp339	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:54:  	//@ loop_invariant -1 <= index && index < arr.length;
+			VALUE: -1	 === ( - 1 )
+			VALUE: index	 === 0
+			VALUE: -1 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: arr	 === REF!val!15
+			VALUE: arr.length	 === 1
+			VALUE: index < arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:54:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:54:  	LoopInvariantBeforeLoop assertion: `conditionalResult_351
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:55:  	//@ loop_invariant (\forall int i; index < i && i < arr.length; arr[i] != key);
+			VALUE: \forall int i; index < i && i < arr.length; arr[i] != key	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:55:  	LoopInvariantBeforeLoop assertion: (_JML__tmp356)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:54:  	//@ loop_invariant -1 <= index && index < arr.length;
+			VALUE: -1	 === ( - 1 )
+			VALUE: index	 === 0
+			VALUE: -1 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: arr	 === REF!val!15
+			VALUE: arr.length	 === 1
+			VALUE: index < arr.length	 === true
+			VALUE: -1 <= index && index < arr.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:54:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:55:  	//@ loop_invariant (\forall int i; index < i && i < arr.length; arr[i] != key);
+			VALUE: \forall int i; index < i && i < arr.length; arr[i] != key	 === true
+			VALUE: (\forall int i; index < i && i < arr.length; arr[i] != key)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:56:  	Loop test
+			VALUE: 1	 === 1
+			VALUE: index	 === 0
+			VALUE: 1 <= index	 === false
+			VALUE: (1 <= index)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:61:  	return -1;
+			VALUE: -1	 === ( - 1 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:3:  	NullField assertion: _JML__tmp403
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:49:  	ensures 0 <= \result && \result < arr.length ==> (arr[\result] == key && (\forall int i; \result < i && i < arr.length; arr[i] != key)); 
+			VALUE: \result	 === ( - 1 )
+			VALUE: 0 <= \result	 === false
+			VALUE: 0 <= \result && \result < arr.length	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:51:  	ensures \result == -1 ==> (\forall int i; 0 <= i && i < arr.length; arr[i] != key); 
+			VALUE: \result	 === ( - 1 )
+			VALUE: \result == -1	 === true
+			VALUE: \forall int i; 0 <= i && i < arr.length; arr[i] != key	 === false
+			VALUE: (\forall int i; 0 <= i && i < arr.length; arr[i] != key)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:61:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInArray/bug5/Repaired/FindInArray.java:51:  Associated location
+
+2 warnings

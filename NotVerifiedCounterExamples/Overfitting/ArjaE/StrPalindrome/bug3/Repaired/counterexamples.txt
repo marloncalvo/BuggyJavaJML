@@ -1,0 +1,216 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:16: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method isPalindrome:  overflow in int sum
+      for (int i = length + 1; 0 <= i; i--) { // for (int i = length - 1; 0 <= i; i--) {
+                          ^
+
+TRACE of StrPalindrome.isPalindrome(java.lang.String)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__25
+			VALUE: _$CPRE__25	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__27
+			VALUE: _$CPRE__27	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__28
+			VALUE: _$CPRE__28	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__29
+			VALUE: _$CPRE__29	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__30
+			VALUE: _$CPRE__30	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__31
+			VALUE: _$CPRE__31	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__32
+			VALUE: _$CPRE__32	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__33
+			VALUE: _$CPRE__33	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__34
+			VALUE: _$CPRE__34	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__35
+			VALUE: _$CPRE__35	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__36
+			VALUE: _$CPRE__36	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__37
+			VALUE: _$CPRE__37	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__38
+			VALUE: _$CPRE__38	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__39
+			VALUE: _$CPRE__39	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__40
+			VALUE: _$CPRE__40	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__41
+			VALUE: _$CPRE__41	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__42
+			VALUE: _$CPRE__42	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__43
+			VALUE: _$CPRE__43	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__44
+			VALUE: _$CPRE__44	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__45
+			VALUE: _$CPRE__45	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__47
+			VALUE: _$CPRE__47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__48
+			VALUE: _$CPRE__48	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__49
+			VALUE: _$CPRE__49	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__50
+			VALUE: _$CPRE__50	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__51
+			VALUE: _$CPRE__51	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__52
+			VALUE: _$CPRE__52	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__53
+			VALUE: _$CPRE__53	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__54
+			VALUE: _$CPRE__54	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__55
+			VALUE: _$CPRE__55	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__56
+			VALUE: _$CPRE__56	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:25:  	//@ public final invariant charArray != null; 
+			VALUE: charArray	 === REF!val!28
+			VALUE: null	 === NULL
+			VALUE: charArray != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:7:  	requires str != null; 
+			VALUE: str	 === REF!val!22
+			VALUE: null	 === NULL
+			VALUE: str != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:4:  	requires (\forall int i; 0 <= i && i < str.length(); (int)Character.MIN_VALUE <= (int)str.charAt(i) && (int)str.charAt(i) <= (int)Character.MAX_VALUE); 
+			VALUE: \forall int i; 0 <= i && i < str.length(); (int)Character.MIN_VALUE <= (int)str.charAt(i) && (int)str.charAt(i) <= (int)Character.MAX_VALUE	 === true
+			VALUE: (\forall int i; 0 <= i && i < str.length(); (int)Character.MIN_VALUE <= (int)str.charAt(i) && (int)str.charAt(i) <= (int)Character.MAX_VALUE)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:9:  	int length = str.length()
+			VALUE: str	 === REF!val!22
+			VALUE: str.length()	 === 2147483647
+			VALUE: length	 === 2147483647
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:9:  	PossiblyNullDeReference assertion: _JML__tmp473 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	Precondition assertion: _$CPRE__83
+			VALUE: _$CPRE__83	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:25:  	UndefinedNullDeReference assertion: !(_JML__tmp473.charArray != null) || _JML__tmp473.charArray != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:11:  	/*@ ghost */  int i_counter
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:12:  	set i_counter = 0
+			VALUE: 0	 === 0
+			VALUE: i_counter = 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:12:  	i_counter = 0
+			VALUE: 0	 === 0
+			VALUE: i_counter = 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:16:  	int i = length + 1
+			VALUE: length	 === 2147483647
+			VALUE: 1	 === 1
+			VALUE: length + 1	 === ( - 2147483648 )
+			VALUE: i	 === ( - 2 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:16:  	ArithmeticOperationRange assertion: !(0 < length && 0 < 1) || length <= 2147483647 - 1
+			VALUE: !(0 < length_421_421___113 && 0 < 1) || length_421_421___113 <= 2147483647 - 1	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:16:  Invalid assertion (ArithmeticOperationRange)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:13: warning: The prover cannot establish an assertion (LoopInvariantBeforeLoop) in method isPalindrome
+      //@ maintaining -1 <= i && i < str.length(); 
+          ^
+
+TRACE of StrPalindrome.isPalindrome(java.lang.String)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__25
+			VALUE: _$CPRE__25	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__27
+			VALUE: _$CPRE__27	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__28
+			VALUE: _$CPRE__28	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__29
+			VALUE: _$CPRE__29	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__30
+			VALUE: _$CPRE__30	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__31
+			VALUE: _$CPRE__31	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__32
+			VALUE: _$CPRE__32	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__33
+			VALUE: _$CPRE__33	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__34
+			VALUE: _$CPRE__34	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__35
+			VALUE: _$CPRE__35	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__36
+			VALUE: _$CPRE__36	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__37
+			VALUE: _$CPRE__37	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__38
+			VALUE: _$CPRE__38	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__39
+			VALUE: _$CPRE__39	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__40
+			VALUE: _$CPRE__40	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__41
+			VALUE: _$CPRE__41	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__42
+			VALUE: _$CPRE__42	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__43
+			VALUE: _$CPRE__43	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__44
+			VALUE: _$CPRE__44	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__45
+			VALUE: _$CPRE__45	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__47
+			VALUE: _$CPRE__47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__48
+			VALUE: _$CPRE__48	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__49
+			VALUE: _$CPRE__49	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__50
+			VALUE: _$CPRE__50	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__51
+			VALUE: _$CPRE__51	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__52
+			VALUE: _$CPRE__52	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__53
+			VALUE: _$CPRE__53	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__54
+			VALUE: _$CPRE__54	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__55
+			VALUE: _$CPRE__55	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__56
+			VALUE: _$CPRE__56	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:25:  	//@ public final invariant charArray != null; 
+			VALUE: charArray	 === REF!val!28
+			VALUE: null	 === NULL
+			VALUE: charArray != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:7:  	requires str != null; 
+			VALUE: str	 === REF!val!22
+			VALUE: null	 === NULL
+			VALUE: str != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:4:  	requires (\forall int i; 0 <= i && i < str.length(); (int)Character.MIN_VALUE <= (int)str.charAt(i) && (int)str.charAt(i) <= (int)Character.MAX_VALUE); 
+			VALUE: \forall int i; 0 <= i && i < str.length(); (int)Character.MIN_VALUE <= (int)str.charAt(i) && (int)str.charAt(i) <= (int)Character.MAX_VALUE	 === true
+			VALUE: (\forall int i; 0 <= i && i < str.length(); (int)Character.MIN_VALUE <= (int)str.charAt(i) && (int)str.charAt(i) <= (int)Character.MAX_VALUE)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:9:  	int length = str.length()
+			VALUE: str	 === REF!val!22
+			VALUE: str.length()	 === 2147483646
+			VALUE: length	 === 2147483646
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:9:  	PossiblyNullDeReference assertion: _JML__tmp473 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	Precondition assertion: _$CPRE__83
+			VALUE: _$CPRE__83	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:25:  	UndefinedNullDeReference assertion: !(_JML__tmp473.charArray != null) || _JML__tmp473.charArray != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:11:  	/*@ ghost */  int i_counter
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:12:  	set i_counter = 0
+			VALUE: 0	 === 0
+			VALUE: i_counter = 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:12:  	i_counter = 0
+			VALUE: 0	 === 0
+			VALUE: i_counter = 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:16:  	int i = length + 1
+			VALUE: length	 === 2147483646
+			VALUE: 1	 === 1
+			VALUE: length + 1	 === 2147483647
+			VALUE: i	 === 2147483647
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:16:  	ArithmeticOperationRange assertion: !(0 < length && 0 < 1) || length <= 2147483647 - 1
+			VALUE: !(0 < length_421_421___113 && 0 < 1) || length_421_421___113 <= 2147483647 - 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:16:  	ArithmeticOperationRange assertion: !(length < 0 && 1 < 0) || -2147483648 - 1 <= length
+			VALUE: !(length_421_421___113 < 0 && 1 < 0) || -2147483648 - 1 <= length_421_421___113	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:13:  	//@ loop_invariant -1 <= i && i < str.length();
+			VALUE: -1	 === ( - 1 )
+			VALUE: i	 === 2147483647
+			VALUE: -1 <= i	 === true
+			VALUE: i	 === 2147483647
+			VALUE: str	 === REF!val!22
+			VALUE: str.length()	 === 2147483646
+			VALUE: i < str.length()	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:13:  	UndefinedNullDeReference assertion: !(str != null) || _JML__tmp491 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__84
+			VALUE: _$CPRE__84	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:25:  	UndefinedNullDeReference assertion: !(_JML__tmp491.charArray != null) || _JML__tmp491.charArray != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:13:  	LoopInvariantBeforeLoop assertion: `conditionalResult_490
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/StrPalindrome/bug3/Repaired/StrPalindrome.java:13:  Invalid assertion (LoopInvariantBeforeLoop)
+
+2 warnings

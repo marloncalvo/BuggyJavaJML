@@ -1,0 +1,250 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:11: warning: The prover cannot establish an assertion (PossiblyNegativeIndex) in method linearSearch
+  		if (array[c] == search) {
+  		         ^
+
+TRACE of LinearSearch.linearSearch(int,int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:8:  	requires array != null; 
+			VALUE: array	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: array != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:9:  	int c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:10:  	c = 0
+			VALUE: 0	 === 0
+			VALUE: c = 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:10:  	Loop test
+			VALUE: c	 === ( - 1 )
+			VALUE: array.length	 === 8856
+			VALUE: c < array.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:10:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:1:  	if (array[c] == search) ...
+			VALUE: array	 === REF!val!6
+			VALUE: c	 === ( - 1 )
+			VALUE: array[c]	 === 0
+			VALUE: search	 === 0
+			VALUE: array[c] == search	 === true
+			VALUE: (array[c] == search)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:11:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:11:  	PossiblyNegativeIndex assertion: 0 <= c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:11:  Invalid assertion (PossiblyNegativeIndex)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:23: warning: The prover cannot establish an assertion (PossiblyNegativeIndex) in method linearSearch
+  			if (array[c] == search) {
+  			         ^
+
+TRACE of LinearSearch.linearSearch(int,int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:8:  	requires array != null; 
+			VALUE: array	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: array != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:9:  	int c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:10:  	c = 0
+			VALUE: 0	 === 0
+			VALUE: c = 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:10:  	Loop test
+			VALUE: c	 === 0
+			VALUE: array.length	 === 450
+			VALUE: c < array.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:10:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:1:  	if (array[c] == search) ...
+			VALUE: array	 === REF!val!6
+			VALUE: c	 === 0
+			VALUE: array[c]	 === 1
+			VALUE: search	 === 1
+			VALUE: array[c] == search	 === true
+			VALUE: (array[c] == search)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:11:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:11:  	PossiblyNegativeIndex assertion: 0 <= c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:11:  	PossiblyTooLargeIndex assertion: array.length > c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:12:  	location = c
+			VALUE: c	 === 0
+			VALUE: location = c	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:13:  	break;
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:19:  	c = 0
+			VALUE: 0	 === 0
+			VALUE: c = 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:16:  	//@ loop_invariant 0 <= c && c <= array.length;
+			VALUE: 0	 === 0
+			VALUE: c	 === 0
+			VALUE: 0 <= c	 === true
+			VALUE: c	 === 0
+			VALUE: array.length	 === 450
+			VALUE: c <= array.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:16:  	UndefinedNullDeReference assertion: !(array != null) || array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:16:  	LoopInvariantBeforeLoop assertion: `conditionalResult_28
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < c; array[i] != search);
+			VALUE: \forall int i; 0 <= i && i < c; array[i] != search	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:17:  	LoopInvariantBeforeLoop assertion: (_JML__tmp33)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:16:  	//@ loop_invariant 0 <= c && c <= array.length;
+			VALUE: 0	 === 0
+			VALUE: c	 === 0
+			VALUE: 0 <= c	 === true
+			VALUE: c	 === 0
+			VALUE: array.length	 === 450
+			VALUE: c <= array.length	 === true
+			VALUE: 0 <= c && c <= array.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:16:  	UndefinedNullDeReference assertion: !(array != null) || array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < c; array[i] != search);
+			VALUE: \forall int i; 0 <= i && i < c; array[i] != search	 === true
+			VALUE: (\forall int i; 0 <= i && i < c; array[i] != search)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:18:  	//@ loop_decreases array.length - c;
+			VALUE: array.length	 === 450
+			VALUE: c	 === 0
+			VALUE: array.length - c	 === 450
+				Initial value of Loop Decreases expression = 450
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:18:  	UndefinedNullDeReference assertion: !(array != null) || array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:19:  	Loop test
+			VALUE: c	 === 0
+			VALUE: array.length	 === 450
+			VALUE: c < array.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:19:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp45
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:1:  	if (array[c] == search) ...
+			VALUE: array	 === REF!val!6
+			VALUE: c	 === 0
+			VALUE: array[c]	 === 1
+			VALUE: search	 === 1
+			VALUE: array[c] == search	 === true
+			VALUE: (array[c] == search)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:20:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:20:  	PossiblyNegativeIndex assertion: 0 <= c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:20:  	PossiblyTooLargeIndex assertion: array.length > c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:22:  	c = 0
+			VALUE: 0	 === 0
+			VALUE: c = 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:22:  	Loop test
+			VALUE: c	 === ( - 1 )
+			VALUE: array.length	 === 450
+			VALUE: c < array.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:22:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:1:  	if (array[c] == search) ...
+			VALUE: array	 === REF!val!6
+			VALUE: c	 === ( - 1 )
+			VALUE: array[c]	 === 1
+			VALUE: search	 === 1
+			VALUE: array[c] == search	 === true
+			VALUE: (array[c] == search)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:23:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:23:  	PossiblyNegativeIndex assertion: 0 <= c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:23:  Invalid assertion (PossiblyNegativeIndex)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:34: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:6: ) in method linearSearch
+       return location;
+       ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:6: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:34: 
+      //@ ensures \result == -1 ==>  (\forall int i; 0 <= i && i < array.length; array[i] != search);
+          ^
+
+TRACE of LinearSearch.linearSearch(int,int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:8:  	requires array != null; 
+			VALUE: array	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: array != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:9:  	int c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:10:  	c = 0
+			VALUE: 0	 === 0
+			VALUE: c = 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:10:  	Loop test
+			VALUE: c	 === 449
+			VALUE: array.length	 === 616
+			VALUE: c < array.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:10:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:1:  	if (array[c] == search) ...
+			VALUE: array	 === REF!val!6
+			VALUE: c	 === 449
+			VALUE: array[c]	 === 1
+			VALUE: search	 === 1
+			VALUE: array[c] == search	 === true
+			VALUE: (array[c] == search)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:11:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:11:  	PossiblyNegativeIndex assertion: 0 <= c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:11:  	PossiblyTooLargeIndex assertion: array.length > c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:12:  	location = c
+			VALUE: c	 === 449
+			VALUE: location = c	 === 449
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:13:  	break;
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:19:  	c = 0
+			VALUE: 0	 === 0
+			VALUE: c = 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:16:  	//@ loop_invariant 0 <= c && c <= array.length;
+			VALUE: 0	 === 0
+			VALUE: c	 === 0
+			VALUE: 0 <= c	 === true
+			VALUE: c	 === 0
+			VALUE: array.length	 === 616
+			VALUE: c <= array.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:16:  	UndefinedNullDeReference assertion: !(array != null) || array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:16:  	LoopInvariantBeforeLoop assertion: `conditionalResult_28
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < c; array[i] != search);
+			VALUE: \forall int i; 0 <= i && i < c; array[i] != search	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:17:  	LoopInvariantBeforeLoop assertion: (_JML__tmp33)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:16:  	//@ loop_invariant 0 <= c && c <= array.length;
+			VALUE: 0	 === 0
+			VALUE: c	 === 168
+			VALUE: 0 <= c	 === true
+			VALUE: c	 === 168
+			VALUE: array.length	 === 616
+			VALUE: c <= array.length	 === true
+			VALUE: 0 <= c && c <= array.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:16:  	UndefinedNullDeReference assertion: !(array != null) || array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < c; array[i] != search);
+			VALUE: \forall int i; 0 <= i && i < c; array[i] != search	 === true
+			VALUE: (\forall int i; 0 <= i && i < c; array[i] != search)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:18:  	//@ loop_decreases array.length - c;
+			VALUE: array.length	 === 616
+			VALUE: c	 === 168
+			VALUE: array.length - c	 === 448
+				Initial value of Loop Decreases expression = 448
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:18:  	UndefinedNullDeReference assertion: !(array != null) || array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:19:  	Loop test
+			VALUE: c	 === 168
+			VALUE: array.length	 === 616
+			VALUE: c < array.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:19:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp45
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:1:  	if (array[c] == search) ...
+			VALUE: array	 === REF!val!6
+			VALUE: c	 === 168
+			VALUE: array[c]	 === 1
+			VALUE: search	 === 1
+			VALUE: array[c] == search	 === true
+			VALUE: (array[c] == search)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:20:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:20:  	PossiblyNegativeIndex assertion: 0 <= c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:20:  	PossiblyTooLargeIndex assertion: array.length > c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:22:  	c = 0
+			VALUE: 0	 === 0
+			VALUE: c = 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:22:  	Loop test
+			VALUE: c	 === 2147483647
+			VALUE: array.length	 === 616
+			VALUE: c < array.length	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:22:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:28:  	break;
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:1:  	if (c >= array.length) ...
+			VALUE: c	 === 2147483647
+			VALUE: array.length	 === 616
+			VALUE: c >= array.length	 === true
+			VALUE: (c >= array.length)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:31:  	PossiblyNullDeReference assertion: array != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:32:  	location = -1
+			VALUE: -1	 === ( - 1 )
+			VALUE: location = -1	 === ( - 1 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:34:  	return location;
+			VALUE: location	 === ( - 1 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:6:  	ensures \result == -1 ==> (\forall int i; 0 <= i && i < array.length; array[i] != search); 
+			VALUE: \result	 === ( - 1 )
+			VALUE: -1	 === ( - 1 )
+			VALUE: \result == -1	 === true
+			VALUE: \forall int i; 0 <= i && i < array.length; array[i] != search	 === false
+			VALUE: (\forall int i; 0 <= i && i < array.length; array[i] != search)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:34:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/LinearSearch/bug4/Repaired/LinearSearch.java:6:  Associated location
+
+4 warnings

@@ -1,0 +1,971 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:219: warning: The prover cannot establish an assertion (InvariantLeaveCaller: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11: ) in method driver:  (Caller: Alphabet.driver(int), Callee: Alphabet.isVowel())
+		result[0] = isVowel();
+		                   ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:219: 
+   //@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z')||('A' <= c && c <='Z'));
+               ^
+
+TRACE of Alphabet.driver(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	//@ private invariant vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')); 
+			VALUE: vowel_set	 === false
+			VALUE: vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	//@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')); 
+			VALUE: alphabetic_set	 === false
+			VALUE: alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:14:  	//@ private invariant digit_set ==> digit == ('0' <= c && c <= '9'); 
+			VALUE: digit_set	 === false
+			VALUE: digit_set ==> digit == ('0' <= c && c <= '9')	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:17:  	//@ private invariant uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z')); 
+			VALUE: uppercase_set	 === false
+			VALUE: uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:20:  	//@ private invariant lowercase_set ==> (lowercase == ('a' <= c && c <= 'z')); 
+			VALUE: lowercase_set	 === false
+			VALUE: lowercase_set ==> (lowercase == ('a' <= c && c <= 'z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 0
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 0
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:193:  	requires op == 0; 
+			VALUE: op	 === 0
+			VALUE: 0	 === 0
+			VALUE: op == 0	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 0
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 0
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:198:  	requires op == 1; 
+			VALUE: op	 === 0
+			VALUE: 1	 === 1
+			VALUE: op == 1	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 0
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 0
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:202:  	requires op == 2; 
+			VALUE: op	 === 0
+			VALUE: 2	 === 2
+			VALUE: op == 2	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 0
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 0
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:206:  	requires op == 3; 
+			VALUE: op	 === 0
+			VALUE: 3	 === 3
+			VALUE: op == 3	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 0
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 0
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:210:  	requires op == 4; 
+			VALUE: op	 === 0
+			VALUE: 4	 === 4
+			VALUE: op == 4	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:215:  	/*@ non_null */  boolean[] result = new boolean[6]
+			VALUE: 6	 === 6
+			VALUE: new boolean[6]	 === REF!val!16
+			VALUE: result	 === REF!val!16
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:215:  	PossiblyNullInitialization assertion: `NEWARRAY_6509 != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:216:  	alphabetic_set = true
+			VALUE: true	 === true
+			VALUE: alphabetic_set = true	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:1:  	switch (op) ...
+			VALUE: op	 === 0
+			VALUE: (op)	 === 0
+				Selection = 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:1:  	case 0:
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:219:  	result[0] = isVowel()
+			VALUE: result	 === REF!val!16
+			VALUE: 0	 === 0
+			VALUE: isVowel()	 === false
+			VALUE: result[0] = isVowel()	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:219:  	PossiblyNullDeReference assertion: result != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:219:  	PossiblyNegativeIndex assertion: 0 >= 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:219:  	PossiblyTooLargeIndex assertion: result.length > 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	//@ private invariant vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')); 
+			VALUE: vowel_set	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	InvariantLeaveCaller assertion: _JML__tmp6512
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	//@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')); 
+			VALUE: alphabetic_set	 === true
+			VALUE: alphabetic	 === true
+			VALUE: 'a'	 === 'a' (97)
+			VALUE: c	 === '{' (123)
+			VALUE: 'a' <= c	 === true
+			VALUE: c	 === '{' (123)
+			VALUE: 'z'	 === 'z' (122)
+			VALUE: c <= 'z'	 === false
+			VALUE: 'a' <= c && c <= 'z'	 === false
+			VALUE: ('a' <= c && c <= 'z')	 === false
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c	 === '{' (123)
+			VALUE: 'A' <= c	 === true
+			VALUE: c	 === '{' (123)
+			VALUE: 'Z'	 === 'Z' (90)
+			VALUE: c <= 'Z'	 === false
+			VALUE: 'A' <= c && c <= 'Z'	 === false
+			VALUE: ('A' <= c && c <= 'Z')	 === false
+			VALUE: ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')	 === false
+			VALUE: (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === false
+			VALUE: alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	InvariantLeaveCaller assertion: _JML__tmp6564
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:219:  Invalid assertion (InvariantLeaveCaller)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  Associated location
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:229: warning: The prover cannot establish an assertion (InvariantLeaveCaller: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11: ) in method driver:  (Caller: Alphabet.driver(int), Callee: Alphabet.isLowercase())
+		result[0] = isLowercase();
+		                       ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:229: 
+   //@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z')||('A' <= c && c <='Z'));
+               ^
+
+TRACE of Alphabet.driver(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	//@ private invariant vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')); 
+			VALUE: vowel_set	 === false
+			VALUE: vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	//@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')); 
+			VALUE: alphabetic_set	 === false
+			VALUE: alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:14:  	//@ private invariant digit_set ==> digit == ('0' <= c && c <= '9'); 
+			VALUE: digit_set	 === true
+			VALUE: digit	 === false
+			VALUE: '0'	 === '0' (48)
+			VALUE: c	 === 'B' (66)
+			VALUE: '0' <= c	 === true
+			VALUE: c	 === 'B' (66)
+			VALUE: '9'	 === '9' (57)
+			VALUE: c <= '9'	 === false
+			VALUE: '0' <= c && c <= '9'	 === false
+			VALUE: ('0' <= c && c <= '9')	 === false
+			VALUE: digit == ('0' <= c && c <= '9')	 === true
+			VALUE: digit_set ==> digit == ('0' <= c && c <= '9')	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:17:  	//@ private invariant uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z')); 
+			VALUE: uppercase_set	 === false
+			VALUE: uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:20:  	//@ private invariant lowercase_set ==> (lowercase == ('a' <= c && c <= 'z')); 
+			VALUE: lowercase_set	 === false
+			VALUE: lowercase_set ==> (lowercase == ('a' <= c && c <= 'z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 2
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 2
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:193:  	requires op == 0; 
+			VALUE: op	 === 2
+			VALUE: 0	 === 0
+			VALUE: op == 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 2
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 2
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:198:  	requires op == 1; 
+			VALUE: op	 === 2
+			VALUE: 1	 === 1
+			VALUE: op == 1	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 2
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 2
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:202:  	requires op == 2; 
+			VALUE: op	 === 2
+			VALUE: 2	 === 2
+			VALUE: op == 2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 2
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 2
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:206:  	requires op == 3; 
+			VALUE: op	 === 2
+			VALUE: 3	 === 3
+			VALUE: op == 3	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 2
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 2
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:210:  	requires op == 4; 
+			VALUE: op	 === 2
+			VALUE: 4	 === 4
+			VALUE: op == 4	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:215:  	/*@ non_null */  boolean[] result = new boolean[6]
+			VALUE: 6	 === 6
+			VALUE: new boolean[6]	 === REF!val!49
+			VALUE: result	 === REF!val!49
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:215:  	PossiblyNullInitialization assertion: `NEWARRAY_6509 != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:216:  	alphabetic_set = true
+			VALUE: true	 === true
+			VALUE: alphabetic_set = true	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:1:  	switch (op) ...
+			VALUE: op	 === 2
+			VALUE: (op)	 === 2
+				Selection = 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:1:  	case 2:
+			VALUE: 2	 === 2
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:229:  	result[0] = isLowercase()
+			VALUE: result	 === REF!val!49
+			VALUE: 0	 === 0
+			VALUE: isLowercase()	 === true
+			VALUE: result[0] = isLowercase()	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:229:  	PossiblyNullDeReference assertion: result != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:229:  	PossiblyNegativeIndex assertion: 0 >= 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:229:  	PossiblyTooLargeIndex assertion: result.length > 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	//@ private invariant vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')); 
+			VALUE: vowel_set	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	InvariantLeaveCaller assertion: _JML__tmp8290
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	//@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')); 
+			VALUE: alphabetic_set	 === true
+			VALUE: alphabetic	 === false
+			VALUE: 'a'	 === 'a' (97)
+			VALUE: c	 === 'B' (66)
+			VALUE: 'a' <= c	 === false
+			VALUE: 'a' <= c && c <= 'z'	 === false
+			VALUE: ('a' <= c && c <= 'z')	 === false
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c	 === 'B' (66)
+			VALUE: 'A' <= c	 === true
+			VALUE: c	 === 'B' (66)
+			VALUE: 'Z'	 === 'Z' (90)
+			VALUE: c <= 'Z'	 === true
+			VALUE: 'A' <= c && c <= 'Z'	 === true
+			VALUE: ('A' <= c && c <= 'Z')	 === true
+			VALUE: ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')	 === true
+			VALUE: (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === true
+			VALUE: alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	InvariantLeaveCaller assertion: _JML__tmp8342
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:229:  Invalid assertion (InvariantLeaveCaller)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  Associated location
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:224: warning: The prover cannot establish an assertion (InvariantLeaveCaller: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11: ) in method driver:  (Caller: Alphabet.driver(int), Callee: Alphabet.isUppercase())
+		result[0] = isUppercase();
+		                       ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:224: 
+   //@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z')||('A' <= c && c <='Z'));
+               ^
+
+TRACE of Alphabet.driver(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	//@ private invariant vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')); 
+			VALUE: vowel_set	 === true
+			VALUE: vowel	 === true
+			VALUE: c	 === 'A' (65)
+			VALUE: 'a'	 === 'a' (97)
+			VALUE: c == 'a'	 === false
+			VALUE: c	 === 'A' (65)
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c == 'A'	 === true
+			VALUE: c == 'a' || c == 'A'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'	 === true
+			VALUE: (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')	 === true
+			VALUE: vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')	 === true
+			VALUE: (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'))	 === true
+			VALUE: vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	//@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')); 
+			VALUE: alphabetic_set	 === false
+			VALUE: alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:14:  	//@ private invariant digit_set ==> digit == ('0' <= c && c <= '9'); 
+			VALUE: digit_set	 === false
+			VALUE: digit_set ==> digit == ('0' <= c && c <= '9')	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:17:  	//@ private invariant uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z')); 
+			VALUE: uppercase_set	 === true
+			VALUE: uppercase	 === true
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c	 === 'A' (65)
+			VALUE: 'A' <= c	 === true
+			VALUE: c	 === 'A' (65)
+			VALUE: 'Z'	 === 'Z' (90)
+			VALUE: c <= 'Z'	 === true
+			VALUE: 'A' <= c && c <= 'Z'	 === true
+			VALUE: ('A' <= c && c <= 'Z')	 === true
+			VALUE: uppercase == ('A' <= c && c <= 'Z')	 === true
+			VALUE: (uppercase == ('A' <= c && c <= 'Z'))	 === true
+			VALUE: uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:20:  	//@ private invariant lowercase_set ==> (lowercase == ('a' <= c && c <= 'z')); 
+			VALUE: lowercase_set	 === false
+			VALUE: lowercase_set ==> (lowercase == ('a' <= c && c <= 'z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 1
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 1
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:193:  	requires op == 0; 
+			VALUE: op	 === 1
+			VALUE: 0	 === 0
+			VALUE: op == 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 1
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 1
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:198:  	requires op == 1; 
+			VALUE: op	 === 1
+			VALUE: 1	 === 1
+			VALUE: op == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 1
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 1
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:202:  	requires op == 2; 
+			VALUE: op	 === 1
+			VALUE: 2	 === 2
+			VALUE: op == 2	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 1
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 1
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:206:  	requires op == 3; 
+			VALUE: op	 === 1
+			VALUE: 3	 === 3
+			VALUE: op == 3	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 1
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 1
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:210:  	requires op == 4; 
+			VALUE: op	 === 1
+			VALUE: 4	 === 4
+			VALUE: op == 4	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:215:  	/*@ non_null */  boolean[] result = new boolean[6]
+			VALUE: 6	 === 6
+			VALUE: new boolean[6]	 === REF!val!16
+			VALUE: result	 === REF!val!16
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:215:  	PossiblyNullInitialization assertion: `NEWARRAY_6509 != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:216:  	alphabetic_set = true
+			VALUE: true	 === true
+			VALUE: alphabetic_set = true	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:1:  	switch (op) ...
+			VALUE: op	 === 1
+			VALUE: (op)	 === 1
+				Selection = 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:1:  	case 1:
+			VALUE: 1	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:224:  	result[0] = isUppercase()
+			VALUE: result	 === REF!val!16
+			VALUE: 0	 === 0
+			VALUE: isUppercase()	 === false
+			VALUE: result[0] = isUppercase()	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:224:  	PossiblyNullDeReference assertion: result != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:224:  	PossiblyNegativeIndex assertion: 0 >= 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:224:  	PossiblyTooLargeIndex assertion: result.length > 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	//@ private invariant vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')); 
+			VALUE: vowel_set	 === true
+			VALUE: vowel	 === true
+			VALUE: c	 === 'A' (65)
+			VALUE: 'a'	 === 'a' (97)
+			VALUE: c == 'a'	 === false
+			VALUE: c	 === 'A' (65)
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c == 'A'	 === true
+			VALUE: c == 'a' || c == 'A'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u'	 === true
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'	 === true
+			VALUE: (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')	 === true
+			VALUE: vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')	 === true
+			VALUE: (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	InvariantLeaveCaller assertion: _JML__tmp7421
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	//@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')); 
+			VALUE: alphabetic_set	 === true
+			VALUE: alphabetic	 === false
+			VALUE: 'a'	 === 'a' (97)
+			VALUE: c	 === 'A' (65)
+			VALUE: 'a' <= c	 === false
+			VALUE: 'a' <= c && c <= 'z'	 === false
+			VALUE: ('a' <= c && c <= 'z')	 === false
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c	 === 'A' (65)
+			VALUE: 'A' <= c	 === true
+			VALUE: c	 === 'A' (65)
+			VALUE: 'Z'	 === 'Z' (90)
+			VALUE: c <= 'Z'	 === true
+			VALUE: 'A' <= c && c <= 'Z'	 === true
+			VALUE: ('A' <= c && c <= 'Z')	 === true
+			VALUE: ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')	 === true
+			VALUE: (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === true
+			VALUE: alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	InvariantLeaveCaller assertion: _JML__tmp7473
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:224:  Invalid assertion (InvariantLeaveCaller)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  Associated location
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:234: warning: The prover cannot establish an assertion (InvariantLeaveCaller: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11: ) in method driver:  (Caller: Alphabet.driver(int), Callee: Alphabet.isDigit())
+		result[0] = isDigit();
+		                   ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:234: 
+   //@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z')||('A' <= c && c <='Z'));
+               ^
+
+TRACE of Alphabet.driver(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	//@ private invariant vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')); 
+			VALUE: vowel_set	 === false
+			VALUE: vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	//@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')); 
+			VALUE: alphabetic_set	 === false
+			VALUE: alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:14:  	//@ private invariant digit_set ==> digit == ('0' <= c && c <= '9'); 
+			VALUE: digit_set	 === true
+			VALUE: digit	 === false
+			VALUE: '0'	 === '0' (48)
+			VALUE: c	 === '{' (123)
+			VALUE: '0' <= c	 === true
+			VALUE: c	 === '{' (123)
+			VALUE: '9'	 === '9' (57)
+			VALUE: c <= '9'	 === false
+			VALUE: '0' <= c && c <= '9'	 === false
+			VALUE: ('0' <= c && c <= '9')	 === false
+			VALUE: digit == ('0' <= c && c <= '9')	 === true
+			VALUE: digit_set ==> digit == ('0' <= c && c <= '9')	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:17:  	//@ private invariant uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z')); 
+			VALUE: uppercase_set	 === false
+			VALUE: uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:20:  	//@ private invariant lowercase_set ==> (lowercase == ('a' <= c && c <= 'z')); 
+			VALUE: lowercase_set	 === false
+			VALUE: lowercase_set ==> (lowercase == ('a' <= c && c <= 'z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 3
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 3
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:193:  	requires op == 0; 
+			VALUE: op	 === 3
+			VALUE: 0	 === 0
+			VALUE: op == 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 3
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 3
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:198:  	requires op == 1; 
+			VALUE: op	 === 3
+			VALUE: 1	 === 1
+			VALUE: op == 1	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 3
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 3
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:202:  	requires op == 2; 
+			VALUE: op	 === 3
+			VALUE: 2	 === 2
+			VALUE: op == 2	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 3
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 3
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:206:  	requires op == 3; 
+			VALUE: op	 === 3
+			VALUE: 3	 === 3
+			VALUE: op == 3	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 3
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 3
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:210:  	requires op == 4; 
+			VALUE: op	 === 3
+			VALUE: 4	 === 4
+			VALUE: op == 4	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:215:  	/*@ non_null */  boolean[] result = new boolean[6]
+			VALUE: 6	 === 6
+			VALUE: new boolean[6]	 === REF!val!16
+			VALUE: result	 === REF!val!16
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:215:  	PossiblyNullInitialization assertion: `NEWARRAY_6509 != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:216:  	alphabetic_set = true
+			VALUE: true	 === true
+			VALUE: alphabetic_set = true	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:1:  	switch (op) ...
+			VALUE: op	 === 3
+			VALUE: (op)	 === 3
+				Selection = 3
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:1:  	case 3:
+			VALUE: 3	 === 3
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:234:  	result[0] = isDigit()
+			VALUE: result	 === REF!val!16
+			VALUE: 0	 === 0
+			VALUE: isDigit()	 === false
+			VALUE: result[0] = isDigit()	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:234:  	PossiblyNullDeReference assertion: result != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:234:  	PossiblyNegativeIndex assertion: 0 >= 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:234:  	PossiblyTooLargeIndex assertion: result.length > 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	//@ private invariant vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')); 
+			VALUE: vowel_set	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	InvariantLeaveCaller assertion: _JML__tmp9159
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	//@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')); 
+			VALUE: alphabetic_set	 === true
+			VALUE: alphabetic	 === true
+			VALUE: 'a'	 === 'a' (97)
+			VALUE: c	 === '{' (123)
+			VALUE: 'a' <= c	 === true
+			VALUE: c	 === '{' (123)
+			VALUE: 'z'	 === 'z' (122)
+			VALUE: c <= 'z'	 === false
+			VALUE: 'a' <= c && c <= 'z'	 === false
+			VALUE: ('a' <= c && c <= 'z')	 === false
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c	 === '{' (123)
+			VALUE: 'A' <= c	 === true
+			VALUE: c	 === '{' (123)
+			VALUE: 'Z'	 === 'Z' (90)
+			VALUE: c <= 'Z'	 === false
+			VALUE: 'A' <= c && c <= 'Z'	 === false
+			VALUE: ('A' <= c && c <= 'Z')	 === false
+			VALUE: ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')	 === false
+			VALUE: (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === false
+			VALUE: alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	InvariantLeaveCaller assertion: _JML__tmp9211
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:234:  Invalid assertion (InvariantLeaveCaller)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  Associated location
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:239: warning: The prover cannot establish an assertion (InvariantLeaveCaller: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11: ) in method driver:  (Caller: Alphabet.driver(int), Callee: Alphabet.isAlphabetic())
+		result[0] = isAlphabetic();
+		                        ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:239: 
+   //@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z')||('A' <= c && c <='Z'));
+               ^
+
+TRACE of Alphabet.driver(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	//@ private invariant vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')); 
+			VALUE: vowel_set	 === false
+			VALUE: vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	//@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')); 
+			VALUE: alphabetic_set	 === false
+			VALUE: alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:14:  	//@ private invariant digit_set ==> digit == ('0' <= c && c <= '9'); 
+			VALUE: digit_set	 === false
+			VALUE: digit_set ==> digit == ('0' <= c && c <= '9')	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:17:  	//@ private invariant uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z')); 
+			VALUE: uppercase_set	 === true
+			VALUE: uppercase	 === false
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c	 === '{' (123)
+			VALUE: 'A' <= c	 === true
+			VALUE: c	 === '{' (123)
+			VALUE: 'Z'	 === 'Z' (90)
+			VALUE: c <= 'Z'	 === false
+			VALUE: 'A' <= c && c <= 'Z'	 === false
+			VALUE: ('A' <= c && c <= 'Z')	 === false
+			VALUE: uppercase == ('A' <= c && c <= 'Z')	 === true
+			VALUE: (uppercase == ('A' <= c && c <= 'Z'))	 === true
+			VALUE: uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:20:  	//@ private invariant lowercase_set ==> (lowercase == ('a' <= c && c <= 'z')); 
+			VALUE: lowercase_set	 === false
+			VALUE: lowercase_set ==> (lowercase == ('a' <= c && c <= 'z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 4
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 4
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:193:  	requires op == 0; 
+			VALUE: op	 === 4
+			VALUE: 0	 === 0
+			VALUE: op == 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 4
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 4
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:198:  	requires op == 1; 
+			VALUE: op	 === 4
+			VALUE: 1	 === 1
+			VALUE: op == 1	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 4
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 4
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:202:  	requires op == 2; 
+			VALUE: op	 === 4
+			VALUE: 2	 === 2
+			VALUE: op == 2	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 4
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 4
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:206:  	requires op == 3; 
+			VALUE: op	 === 4
+			VALUE: 3	 === 3
+			VALUE: op == 3	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:191:  	requires 0 <= op && op <= 4; 
+			VALUE: 0	 === 0
+			VALUE: op	 === 4
+			VALUE: 0 <= op	 === true
+			VALUE: op	 === 4
+			VALUE: 4	 === 4
+			VALUE: op <= 4	 === true
+			VALUE: 0 <= op && op <= 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:210:  	requires op == 4; 
+			VALUE: op	 === 4
+			VALUE: 4	 === 4
+			VALUE: op == 4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:215:  	/*@ non_null */  boolean[] result = new boolean[6]
+			VALUE: 6	 === 6
+			VALUE: new boolean[6]	 === REF!val!16
+			VALUE: result	 === REF!val!16
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:215:  	PossiblyNullInitialization assertion: `NEWARRAY_6509 != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:216:  	alphabetic_set = true
+			VALUE: true	 === true
+			VALUE: alphabetic_set = true	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:1:  	switch (op) ...
+			VALUE: op	 === 4
+			VALUE: (op)	 === 4
+				Selection = 4
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:239:  	result[0] = isAlphabetic()
+			VALUE: result	 === REF!val!16
+			VALUE: 0	 === 0
+			VALUE: isAlphabetic()	 === false
+			VALUE: result[0] = isAlphabetic()	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:239:  	PossiblyNullDeReference assertion: result != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:239:  	PossiblyNegativeIndex assertion: 0 >= 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:239:  	PossiblyTooLargeIndex assertion: result.length > 0
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	//@ private invariant vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')); 
+			VALUE: vowel_set	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	InvariantLeaveCaller assertion: _JML__tmp10027
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	//@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')); 
+			VALUE: alphabetic_set	 === true
+			VALUE: alphabetic	 === true
+			VALUE: 'a'	 === 'a' (97)
+			VALUE: c	 === '{' (123)
+			VALUE: 'a' <= c	 === true
+			VALUE: c	 === '{' (123)
+			VALUE: 'z'	 === 'z' (122)
+			VALUE: c <= 'z'	 === false
+			VALUE: 'a' <= c && c <= 'z'	 === false
+			VALUE: ('a' <= c && c <= 'z')	 === false
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c	 === '{' (123)
+			VALUE: 'A' <= c	 === true
+			VALUE: c	 === '{' (123)
+			VALUE: 'Z'	 === 'Z' (90)
+			VALUE: c <= 'Z'	 === false
+			VALUE: 'A' <= c && c <= 'Z'	 === false
+			VALUE: ('A' <= c && c <= 'Z')	 === false
+			VALUE: ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')	 === false
+			VALUE: (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === false
+			VALUE: alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	InvariantLeaveCaller assertion: _JML__tmp10079
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:239:  Invalid assertion (InvariantLeaveCaller)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  Associated location
+
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:56: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:49: ) in method isAlphabetic
+	return alphabetic;
+	^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:49: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:56: 
+     @   ensures alphabetic_set && \result == alphabetic; 
+         ^
+
+TRACE of Alphabet.isAlphabetic()
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	//@ private invariant vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')); 
+			VALUE: vowel_set	 === true
+			VALUE: vowel	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'a'	 === 'a' (97)
+			VALUE: c == 'a'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c == 'A'	 === false
+			VALUE: c == 'a' || c == 'A'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'e'	 === 'e' (101)
+			VALUE: c == 'e'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'E'	 === 'E' (69)
+			VALUE: c == 'E'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'i'	 === 'i' (105)
+			VALUE: c == 'i'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'I'	 === 'I' (73)
+			VALUE: c == 'I'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'o'	 === 'o' (111)
+			VALUE: c == 'o'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'O'	 === 'O' (79)
+			VALUE: c == 'O'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'u'	 === 'u' (117)
+			VALUE: c == 'u'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'U'	 === 'U' (85)
+			VALUE: c == 'U'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'	 === false
+			VALUE: (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')	 === false
+			VALUE: vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')	 === true
+			VALUE: (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'))	 === true
+			VALUE: vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	//@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')); 
+			VALUE: alphabetic_set	 === false
+			VALUE: alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:14:  	//@ private invariant digit_set ==> digit == ('0' <= c && c <= '9'); 
+			VALUE: digit_set	 === true
+			VALUE: digit	 === false
+			VALUE: '0'	 === '0' (48)
+			VALUE: c	 === '[' (91)
+			VALUE: '0' <= c	 === true
+			VALUE: c	 === '[' (91)
+			VALUE: '9'	 === '9' (57)
+			VALUE: c <= '9'	 === false
+			VALUE: '0' <= c && c <= '9'	 === false
+			VALUE: ('0' <= c && c <= '9')	 === false
+			VALUE: digit == ('0' <= c && c <= '9')	 === true
+			VALUE: digit_set ==> digit == ('0' <= c && c <= '9')	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:17:  	//@ private invariant uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z')); 
+			VALUE: uppercase_set	 === true
+			VALUE: uppercase	 === false
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c	 === '[' (91)
+			VALUE: 'A' <= c	 === true
+			VALUE: c	 === '[' (91)
+			VALUE: 'Z'	 === 'Z' (90)
+			VALUE: c <= 'Z'	 === false
+			VALUE: 'A' <= c && c <= 'Z'	 === false
+			VALUE: ('A' <= c && c <= 'Z')	 === false
+			VALUE: uppercase == ('A' <= c && c <= 'Z')	 === true
+			VALUE: (uppercase == ('A' <= c && c <= 'Z'))	 === true
+			VALUE: uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:20:  	//@ private invariant lowercase_set ==> (lowercase == ('a' <= c && c <= 'z')); 
+			VALUE: lowercase_set	 === true
+			VALUE: lowercase	 === false
+			VALUE: 'a'	 === 'a' (97)
+			VALUE: c	 === '[' (91)
+			VALUE: 'a' <= c	 === false
+			VALUE: 'a' <= c && c <= 'z'	 === false
+			VALUE: ('a' <= c && c <= 'z')	 === false
+			VALUE: lowercase == ('a' <= c && c <= 'z')	 === true
+			VALUE: (lowercase == ('a' <= c && c <= 'z'))	 === true
+			VALUE: lowercase_set ==> (lowercase == ('a' <= c && c <= 'z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:55:  	alphabetic = (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
+			VALUE: 'a'	 === 'a' (97)
+			VALUE: c	 === '[' (91)
+			VALUE: 'a' <= c	 === false
+			VALUE: 'a' <= c && c <= 'z'	 === false
+			VALUE: ('a' <= c && c <= 'z')	 === false
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c	 === '[' (91)
+			VALUE: 'A' <= c	 === true
+			VALUE: c	 === '[' (91)
+			VALUE: 'Z'	 === 'Z' (90)
+			VALUE: c <= 'Z'	 === false
+			VALUE: 'A' <= c && c <= 'Z'	 === false
+			VALUE: ('A' <= c && c <= 'Z')	 === false
+			VALUE: ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')	 === false
+			VALUE: (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === false
+			VALUE: alphabetic = (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:55:  	Assignable assertion: _JML__tmp1194 || (!Pre_5 || (_JML__tmp1193.`alloc__ > 0 || `THIS == `THIS))
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:56:  	return alphabetic;
+			VALUE: alphabetic	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	//@ private invariant vowel_set ==> (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')); 
+			VALUE: vowel_set	 === true
+			VALUE: vowel	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'a'	 === 'a' (97)
+			VALUE: c == 'a'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c == 'A'	 === false
+			VALUE: c == 'a' || c == 'A'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'e'	 === 'e' (101)
+			VALUE: c == 'e'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'E'	 === 'E' (69)
+			VALUE: c == 'E'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'i'	 === 'i' (105)
+			VALUE: c == 'i'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'I'	 === 'I' (73)
+			VALUE: c == 'I'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'o'	 === 'o' (111)
+			VALUE: c == 'o'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'O'	 === 'O' (79)
+			VALUE: c == 'O'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'u'	 === 'u' (117)
+			VALUE: c == 'u'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u'	 === false
+			VALUE: c	 === '[' (91)
+			VALUE: 'U'	 === 'U' (85)
+			VALUE: c == 'U'	 === false
+			VALUE: c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'	 === false
+			VALUE: (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')	 === false
+			VALUE: vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')	 === true
+			VALUE: (vowel == (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:4:  	InvariantExit assertion: _JML__tmp1199
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	//@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')); 
+			VALUE: alphabetic_set	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:11:  	InvariantExit assertion: _JML__tmp1251
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:14:  	//@ private invariant digit_set ==> digit == ('0' <= c && c <= '9'); 
+			VALUE: digit_set	 === true
+			VALUE: digit	 === false
+			VALUE: '0'	 === '0' (48)
+			VALUE: c	 === '[' (91)
+			VALUE: '0' <= c	 === true
+			VALUE: c	 === '[' (91)
+			VALUE: '9'	 === '9' (57)
+			VALUE: c <= '9'	 === false
+			VALUE: '0' <= c && c <= '9'	 === false
+			VALUE: ('0' <= c && c <= '9')	 === false
+			VALUE: digit == ('0' <= c && c <= '9')	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:14:  	InvariantExit assertion: _JML__tmp1273
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:17:  	//@ private invariant uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z')); 
+			VALUE: uppercase_set	 === true
+			VALUE: uppercase	 === false
+			VALUE: 'A'	 === 'A' (65)
+			VALUE: c	 === '[' (91)
+			VALUE: 'A' <= c	 === true
+			VALUE: c	 === '[' (91)
+			VALUE: 'Z'	 === 'Z' (90)
+			VALUE: c <= 'Z'	 === false
+			VALUE: 'A' <= c && c <= 'Z'	 === false
+			VALUE: ('A' <= c && c <= 'Z')	 === false
+			VALUE: uppercase == ('A' <= c && c <= 'Z')	 === true
+			VALUE: (uppercase == ('A' <= c && c <= 'Z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:17:  	InvariantExit assertion: _JML__tmp1285
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:20:  	//@ private invariant lowercase_set ==> (lowercase == ('a' <= c && c <= 'z')); 
+			VALUE: lowercase_set	 === true
+			VALUE: lowercase	 === false
+			VALUE: 'a'	 === 'a' (97)
+			VALUE: c	 === '[' (91)
+			VALUE: 'a' <= c	 === false
+			VALUE: 'a' <= c && c <= 'z'	 === false
+			VALUE: ('a' <= c && c <= 'z')	 === false
+			VALUE: lowercase == ('a' <= c && c <= 'z')	 === true
+			VALUE: (lowercase == ('a' <= c && c <= 'z'))	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:20:  	InvariantExit assertion: _JML__tmp1297
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:49:  	ensures alphabetic_set && \result == alphabetic; 
+			VALUE: alphabetic_set	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:56:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Alphabet/bug3/Repaired/Alphabet.java:49:  Associated location
+
+12 warnings

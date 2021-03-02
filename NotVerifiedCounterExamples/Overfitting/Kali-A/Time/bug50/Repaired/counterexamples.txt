@@ -1,0 +1,2836 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:213: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:203: ) in method equals
+		return true;
+		^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:203: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:213: 
+    /*@    	ensures \result <==> (this.hour == ((Time) o).hour)
+           	^
+
+TRACE of Time.equals(java.lang.Object)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 37
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 37
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 13
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 13
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:109:  	requires this == obj; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:113:  	requires obj != null && \typeof(this) == \type(Object); 
+			VALUE: obj != null && \typeof(this) == \type(Object)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:120:  	requires obj == null; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:206:  	requires o != null; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:199:  	requires !(o instanceof Time); 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:206:  	requires o != null; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:202:  	requires (o instanceof Time); 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	if (!(o instanceof Time)) ...
+			VALUE: o	 === REF!val!16
+			VALUE: o instanceof Time	 === true
+			VALUE: (o instanceof Time)	 === true
+			VALUE: !(o instanceof Time)	 === false
+			VALUE: (!(o instanceof Time))	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:211:  	/*@ non_null */  Time t = (Time)o
+			VALUE: o	 === REF!val!16
+			VALUE: (Time)o	 === REF!val!16
+			VALUE: t	 === REF!val!16
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:211:  	PossiblyBadCast assertion: o == null || o instanceof Time
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:211:  	PossiblyNullInitialization assertion: _JML__tmp4084 != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	if (true) ...
+			VALUE: true	 === true
+			VALUE: (true)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:213:  	return true;
+			VALUE: true	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:203:  	UndefinedNullDeReference assertion: !Pre_25 || `THIS != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:203:  	UndefinedBadCast assertion: !(Pre_25 && \old(o, \Pre) != null) || (\old(o, \Pre) == null || \old(o, \Pre) instanceof Time)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:204:  	UndefinedNullDeReference assertion: !(Pre_25 && \old(o, \Pre) != null) || `THIS != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:204:  	UndefinedBadCast assertion: !(Pre_25 && \old(o, \Pre) != null && \old(o, \Pre) != null) || (\old(o, \Pre) == null || \old(o, \Pre) instanceof Time)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:203:  	ensures \result <==> (this.hour == ((Time)o).hour) && (this.minute == ((Time)o).minute) && (this.second == ((Time)o).second); 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:213:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:203:  Associated location
+
+
+
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:247: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:224: ) in method trustedDifference
+        return(diff);
+        ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:224: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:247: 
+    //@ ensures diff_minutes == \result.minute;
+        ^
+
+TRACE of Time.trustedDifference(Time,Time)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 5
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 5
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 25
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 25
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 13
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 13
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:226:  	requires start != null; 
+			VALUE: start	 === REF!val!14
+			VALUE: start != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:226:  	requires stop != null; 
+			VALUE: stop	 === REF!val!16
+			VALUE: stop != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:217:  	requires stop.later_than(start) || stop.equals(start); 
+			VALUE: stop	 === REF!val!16
+			VALUE: start	 === REF!val!14
+			VALUE: stop.later_than(start)	 === true
+			VALUE: stop.later_than(start) || stop.equals(start)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:217:  	UndefinedNullDeReference assertion: !(stop != null && start != null) || _JML__tmp4201 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4205
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4213
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4221
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4229
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4237
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4245
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4253
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4261
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4269
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_4277
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_4285
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_4293
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:187:  	requires start != null; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:187:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__47
+			VALUE: _$CPRE__47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:184:  	UndefinedNullDeReference assertion: !_JML__tmp4299 || _JML__tmp4201 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:184:  	UndefinedNullDeReference assertion: !(_JML__tmp4299 && _JML__tmp4200 != null) || _JML__tmp4200 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:218:  	old int _stop_minutes = (stop.second < start.second) ? (stop.minute - 1) : stop.minute
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:218:  	UndefinedNullDeReference assertion: !(stop != null) || stop != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:218:  	UndefinedNullDeReference assertion: !(stop != null && start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:218:  	UndefinedNullDeReference assertion: !(stop != null && start != null && stop != null) || stop != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:219:  	old int diff_seconds = (stop.second < start.second) ? (stop.second + 60 - start.second) : (stop.second - start.second)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:219:  	UndefinedNullDeReference assertion: !(stop != null) || stop != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:219:  	UndefinedNullDeReference assertion: !(stop != null && start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:219:  	UndefinedNullDeReference assertion: !(stop != null && start != null && stop != null) || stop != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:219:  	UndefinedNullDeReference assertion: !(stop != null && start != null && stop != null && start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:220:  	old int _stop_hours = (_stop_minutes < start.minute) ? (stop.hour - 1) : stop.hour
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:220:  	UndefinedNullDeReference assertion: !(start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:220:  	UndefinedNullDeReference assertion: !(start != null && stop != null) || stop != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:221:  	old int diff_minutes = (_stop_minutes < start.minute) ? (_stop_minutes + 60 - start.minute) : (_stop_minutes - start.minute)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:221:  	UndefinedNullDeReference assertion: !(start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:221:  	UndefinedNullDeReference assertion: !(start != null && start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:222:  	old int diff_hours = _stop_hours - start.hour
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:222:  	UndefinedNullDeReference assertion: !(start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:228:  	/*@ non_null */  Time diff = new Time()
+			VALUE: new Time()	 === REF!val!24
+			VALUE: diff	 === REF!val!24
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4540
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4548
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4556
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4564
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4572
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4580
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__49
+			VALUE: _$CPRE__49	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 59
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 59
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 59
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 59
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 23
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 23
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:228:  	PossiblyNullInitialization assertion: `NEWOBJECT_6863_4585 != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:229:  	int temp_second = stop.getSecond()
+			VALUE: stop	 === REF!val!16
+			VALUE: stop.getSecond()	 === 21
+			VALUE: temp_second	 === 21
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:229:  	PossiblyNullDeReference assertion: _JML__tmp4620 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4624
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4632
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4640
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4648
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4656
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4664
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4672
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4680
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4688
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_4696
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_4704
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_4712
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__50
+			VALUE: _$CPRE__50	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:230:  	int temp_minute = stop.getMinute()
+			VALUE: stop	 === REF!val!16
+			VALUE: stop.getMinute()	 === 35
+			VALUE: temp_minute	 === 35
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:230:  	PossiblyNullDeReference assertion: _JML__tmp4745 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4749
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4757
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4765
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4773
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4781
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4789
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4797
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4805
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4813
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_4821
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_4829
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_4837
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__51
+			VALUE: _$CPRE__51	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:231:  	int temp_hour = stop.getHour()
+			VALUE: stop	 === REF!val!16
+			VALUE: stop.getHour()	 === 18
+			VALUE: temp_hour	 === 18
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:231:  	PossiblyNullDeReference assertion: _JML__tmp4870 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4874
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4882
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4890
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4898
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4906
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4914
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4922
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4930
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4938
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_4946
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_4954
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_4962
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__52
+			VALUE: _$CPRE__52	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	if (temp_second >= start.getSecond()) ...
+			VALUE: temp_second	 === 21
+			VALUE: start	 === REF!val!14
+			VALUE: start.getSecond()	 === 48
+			VALUE: temp_second >= start.getSecond()	 === false
+			VALUE: (temp_second >= start.getSecond())	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:233:  	PossiblyNullDeReference assertion: _JML__tmp4995 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4999
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5007
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5015
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5023
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5031
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5039
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5047
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5055
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5063
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_5071
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_5079
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_5087
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__53
+			VALUE: _$CPRE__53	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:238:  	diff.second = temp_second - start.getSecond()
+			VALUE: temp_second	 === 21
+			VALUE: start	 === REF!val!14
+			VALUE: start.getSecond()	 === 48
+			VALUE: temp_second - start.getSecond()	 === ( - 27 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:238:  	PossiblyNullDeReference assertion: diff != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:238:  	PossiblyNullDeReference assertion: _JML__tmp5129 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5133
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5141
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5149
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5157
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5165
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5173
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5181
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5189
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5197
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_5205
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_5213
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_5221
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__54
+			VALUE: _$CPRE__54	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:238:  	ArithmeticOperationRange assertion: !(0 < temp_second && _JML__tmp5226 < 0) || temp_second <= 2147483647 + _JML__tmp5226
+			VALUE: !(0 < temp_second_6887_7140___405 && _JML__tmp5226 < 0) || temp_second_6887_7140___405 <= 2147483647 + _JML__tmp5226	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:238:  	ArithmeticOperationRange assertion: !(temp_second < 0 && 0 < _JML__tmp5226) || -2147483648 + _JML__tmp5226 <= temp_second
+			VALUE: !(temp_second_6887_7140___405 < 0 && 0 < _JML__tmp5226) || -2147483648 + _JML__tmp5226 <= temp_second_6887_7140___405	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:238:  	Assignable assertion: _JML__tmp5258 || (!Pre_26 || _JML__tmp5257.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	if (temp_minute < start.getMinute()) ...
+			VALUE: temp_minute	 === 35
+			VALUE: start	 === REF!val!14
+			VALUE: start.getMinute()	 === 46
+			VALUE: temp_minute < start.getMinute()	 === true
+			VALUE: (temp_minute < start.getMinute())	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:240:  	PossiblyNullDeReference assertion: _JML__tmp5260 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5264
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5272
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5280
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5288
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5296
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5304
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5312
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5320
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5328
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_5336
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_5344
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_5352
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__55
+			VALUE: _$CPRE__55	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:241:  	--temp_hour
+			VALUE: --temp_hour	 === 17
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:241:  	ArithmeticOperationRange assertion: !(0 < temp_hour && 1 < 0) || temp_hour <= 2147483647 + 1
+			VALUE: !(0 < temp_hour_6975_6975___355 && 1 < 0) || temp_hour_6975_6975___355 <= 2147483647 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:241:  	ArithmeticOperationRange assertion: !(temp_hour < 0 && 0 < 1) || -2147483648 + 1 <= temp_hour
+			VALUE: !(temp_hour_6975_6975___355 < 0 && 0 < 1) || -2147483648 + 1 <= temp_hour_6975_6975___355	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:242:  	temp_minute += 60
+			VALUE: 60	 === 60
+			VALUE: temp_minute += 60	 === 95
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:242:  	ArithmeticOperationRange assertion: !(0 < temp_minute && 0 < 60) || temp_minute <= 2147483647 - 60
+			VALUE: !(0 < temp_minute_6931_7115___404 && 0 < 60) || temp_minute_6931_7115___404 <= 2147483647 - 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:242:  	ArithmeticOperationRange assertion: !(temp_minute < 0 && 60 < 0) || -2147483648 - 60 <= temp_minute
+			VALUE: !(temp_minute_6931_7115___404 < 0 && 60 < 0) || -2147483648 - 60 <= temp_minute_6931_7115___404	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:245:  	diff.minute = temp_minute - start.getMinute()
+			VALUE: temp_minute	 === 95
+			VALUE: start	 === REF!val!14
+			VALUE: start.getMinute()	 === 46
+			VALUE: temp_minute - start.getMinute()	 === 49
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:245:  	PossiblyNullDeReference assertion: diff != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:245:  	PossiblyNullDeReference assertion: _JML__tmp5394 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5398
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5406
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5414
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5422
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5430
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5438
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5446
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5454
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5462
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_5470
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_5478
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_5486
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__56
+			VALUE: _$CPRE__56	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:245:  	ArithmeticOperationRange assertion: !(0 < temp_minute && _JML__tmp5491 < 0) || temp_minute <= 2147483647 + _JML__tmp5491
+			VALUE: !(0 < temp_minute_6931_7311___506 && _JML__tmp5491 < 0) || temp_minute_6931_7311___506 <= 2147483647 + _JML__tmp5491	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:245:  	ArithmeticOperationRange assertion: !(temp_minute < 0 && 0 < _JML__tmp5491) || -2147483648 + _JML__tmp5491 <= temp_minute
+			VALUE: !(temp_minute_6931_7311___506 < 0 && 0 < _JML__tmp5491) || -2147483648 + _JML__tmp5491 <= temp_minute_6931_7311___506	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:245:  	Assignable assertion: _JML__tmp5523 || (!Pre_26 || _JML__tmp5522.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:246:  	diff.hour = temp_hour - start.getHour()
+			VALUE: temp_hour	 === 17
+			VALUE: start	 === REF!val!14
+			VALUE: start.getHour()	 === 9
+			VALUE: temp_hour - start.getHour()	 === 8
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:246:  	PossiblyNullDeReference assertion: diff != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:246:  	PossiblyNullDeReference assertion: _JML__tmp5525 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5529
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5537
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5545
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5553
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5561
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5569
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 21
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 21
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5577
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 35
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 35
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5585
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 18
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 18
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5593
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_5601
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_5609
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_5617
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__57
+			VALUE: _$CPRE__57	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 48
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 48
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 9
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 9
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:246:  	ArithmeticOperationRange assertion: !(0 < temp_hour && _JML__tmp5622 < 0) || temp_hour <= 2147483647 + _JML__tmp5622
+			VALUE: !(0 < temp_hour_6975_7288___505 && _JML__tmp5622 < 0) || temp_hour_6975_7288___505 <= 2147483647 + _JML__tmp5622	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:246:  	ArithmeticOperationRange assertion: !(temp_hour < 0 && 0 < _JML__tmp5622) || -2147483648 + _JML__tmp5622 <= temp_hour
+			VALUE: !(temp_hour_6975_7288___505 < 0 && 0 < _JML__tmp5622) || -2147483648 + _JML__tmp5622 <= temp_hour_6975_7288___505	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:246:  	Assignable assertion: _JML__tmp5654 || (!Pre_26 || _JML__tmp5653.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:247:  	return (diff);
+			VALUE: diff	 === REF!val!24
+			VALUE: (diff)	 === REF!val!24
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:226:  	ensures \result != null; 
+			VALUE: \result	 === REF!val!24
+			VALUE: \result != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:223:  	ensures diff_hours == \result.hour; 
+			VALUE: diff_hours	 === 8
+			VALUE: \result.hour	 === 8
+			VALUE: diff_hours == \result.hour	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:224:  	ensures diff_minutes == \result.minute; 
+			VALUE: diff_minutes	 === 48
+			VALUE: \result.minute	 === 49
+			VALUE: diff_minutes == \result.minute	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:247:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:224:  Associated location
+
+
+
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:247: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:223: ) in method trustedDifference
+        return(diff);
+        ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:223: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:247: 
+    //@ ensures diff_hours == \result.hour;
+        ^
+
+TRACE of Time.trustedDifference(Time,Time)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 5
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 5
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 25
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 25
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 13
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 13
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:226:  	requires start != null; 
+			VALUE: start	 === REF!val!14
+			VALUE: start != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:226:  	requires stop != null; 
+			VALUE: stop	 === REF!val!16
+			VALUE: stop != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:217:  	requires stop.later_than(start) || stop.equals(start); 
+			VALUE: stop	 === REF!val!16
+			VALUE: start	 === REF!val!14
+			VALUE: stop.later_than(start)	 === true
+			VALUE: stop.later_than(start) || stop.equals(start)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:217:  	UndefinedNullDeReference assertion: !(stop != null && start != null) || _JML__tmp4201 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4205
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4213
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4221
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4229
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4237
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4245
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4253
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4261
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4269
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_4277
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_4285
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_4293
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:187:  	requires start != null; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:187:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__47
+			VALUE: _$CPRE__47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:184:  	UndefinedNullDeReference assertion: !_JML__tmp4299 || _JML__tmp4201 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:184:  	UndefinedNullDeReference assertion: !(_JML__tmp4299 && _JML__tmp4200 != null) || _JML__tmp4200 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:218:  	old int _stop_minutes = (stop.second < start.second) ? (stop.minute - 1) : stop.minute
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:218:  	UndefinedNullDeReference assertion: !(stop != null) || stop != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:218:  	UndefinedNullDeReference assertion: !(stop != null && start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:218:  	UndefinedNullDeReference assertion: !(stop != null && start != null && stop != null) || stop != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:219:  	old int diff_seconds = (stop.second < start.second) ? (stop.second + 60 - start.second) : (stop.second - start.second)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:219:  	UndefinedNullDeReference assertion: !(stop != null) || stop != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:219:  	UndefinedNullDeReference assertion: !(stop != null && start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:219:  	UndefinedNullDeReference assertion: !(stop != null && start != null && stop != null) || stop != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:219:  	UndefinedNullDeReference assertion: !(stop != null && start != null && stop != null && start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:220:  	old int _stop_hours = (_stop_minutes < start.minute) ? (stop.hour - 1) : stop.hour
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:220:  	UndefinedNullDeReference assertion: !(start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:220:  	UndefinedNullDeReference assertion: !(start != null && stop != null) || stop != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:221:  	old int diff_minutes = (_stop_minutes < start.minute) ? (_stop_minutes + 60 - start.minute) : (_stop_minutes - start.minute)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:221:  	UndefinedNullDeReference assertion: !(start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:221:  	UndefinedNullDeReference assertion: !(start != null && start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:222:  	old int diff_hours = _stop_hours - start.hour
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:222:  	UndefinedNullDeReference assertion: !(start != null) || start != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:228:  	/*@ non_null */  Time diff = new Time()
+			VALUE: new Time()	 === REF!val!24
+			VALUE: diff	 === REF!val!24
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4540
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4548
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4556
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4564
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4572
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4580
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__49
+			VALUE: _$CPRE__49	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 59
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 59
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 59
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 59
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 23
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 23
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:228:  	PossiblyNullInitialization assertion: `NEWOBJECT_6863_4585 != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:229:  	int temp_second = stop.getSecond()
+			VALUE: stop	 === REF!val!16
+			VALUE: stop.getSecond()	 === 27
+			VALUE: temp_second	 === 27
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:229:  	PossiblyNullDeReference assertion: _JML__tmp4620 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4624
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4632
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4640
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4648
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4656
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4664
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4672
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4680
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4688
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_4696
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_4704
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_4712
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__50
+			VALUE: _$CPRE__50	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:230:  	int temp_minute = stop.getMinute()
+			VALUE: stop	 === REF!val!16
+			VALUE: stop.getMinute()	 === 46
+			VALUE: temp_minute	 === 46
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:230:  	PossiblyNullDeReference assertion: _JML__tmp4745 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4749
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4757
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4765
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4773
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4781
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4789
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4797
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4805
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4813
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_4821
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_4829
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_4837
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__51
+			VALUE: _$CPRE__51	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:231:  	int temp_hour = stop.getHour()
+			VALUE: stop	 === REF!val!16
+			VALUE: stop.getHour()	 === 16
+			VALUE: temp_hour	 === 16
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:231:  	PossiblyNullDeReference assertion: _JML__tmp4870 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4874
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4882
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4890
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4898
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4906
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4914
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4922
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_4930
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_4938
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_4946
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_4954
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_4962
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__52
+			VALUE: _$CPRE__52	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	if (temp_second >= start.getSecond()) ...
+			VALUE: temp_second	 === 27
+			VALUE: start	 === REF!val!14
+			VALUE: start.getSecond()	 === 42
+			VALUE: temp_second >= start.getSecond()	 === false
+			VALUE: (temp_second >= start.getSecond())	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:233:  	PossiblyNullDeReference assertion: _JML__tmp4995 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_4999
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5007
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5015
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5023
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5031
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5039
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5047
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5055
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5063
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_5071
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_5079
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_5087
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__53
+			VALUE: _$CPRE__53	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:238:  	diff.second = temp_second - start.getSecond()
+			VALUE: temp_second	 === 27
+			VALUE: start	 === REF!val!14
+			VALUE: start.getSecond()	 === 42
+			VALUE: temp_second - start.getSecond()	 === ( - 15 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:238:  	PossiblyNullDeReference assertion: diff != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:238:  	PossiblyNullDeReference assertion: _JML__tmp5129 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5133
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5141
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5149
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5157
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5165
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5173
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5181
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5189
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5197
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_5205
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_5213
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_5221
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__54
+			VALUE: _$CPRE__54	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:238:  	ArithmeticOperationRange assertion: !(0 < temp_second && _JML__tmp5226 < 0) || temp_second <= 2147483647 + _JML__tmp5226
+			VALUE: !(0 < temp_second_6887_7140___405 && _JML__tmp5226 < 0) || temp_second_6887_7140___405 <= 2147483647 + _JML__tmp5226	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:238:  	ArithmeticOperationRange assertion: !(temp_second < 0 && 0 < _JML__tmp5226) || -2147483648 + _JML__tmp5226 <= temp_second
+			VALUE: !(temp_second_6887_7140___405 < 0 && 0 < _JML__tmp5226) || -2147483648 + _JML__tmp5226 <= temp_second_6887_7140___405	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:238:  	Assignable assertion: _JML__tmp5258 || (!Pre_26 || _JML__tmp5257.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	if (temp_minute < start.getMinute()) ...
+			VALUE: temp_minute	 === 46
+			VALUE: start	 === REF!val!14
+			VALUE: start.getMinute()	 === 46
+			VALUE: temp_minute < start.getMinute()	 === false
+			VALUE: (temp_minute < start.getMinute())	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:240:  	PossiblyNullDeReference assertion: _JML__tmp5260 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5264
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5272
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5280
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5288
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5296
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5304
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5312
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5320
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5328
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_5336
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_5344
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_5352
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__55
+			VALUE: _$CPRE__55	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:245:  	diff.minute = temp_minute - start.getMinute()
+			VALUE: temp_minute	 === 46
+			VALUE: start	 === REF!val!14
+			VALUE: start.getMinute()	 === 46
+			VALUE: temp_minute - start.getMinute()	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:245:  	PossiblyNullDeReference assertion: diff != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:245:  	PossiblyNullDeReference assertion: _JML__tmp5394 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5398
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5406
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5414
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5422
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5430
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5438
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5446
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5454
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5462
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_5470
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_5478
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_5486
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__56
+			VALUE: _$CPRE__56	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:245:  	ArithmeticOperationRange assertion: !(0 < temp_minute && _JML__tmp5491 < 0) || temp_minute <= 2147483647 + _JML__tmp5491
+			VALUE: !(0 < temp_minute_6931_7311___506 && _JML__tmp5491 < 0) || temp_minute_6931_7311___506 <= 2147483647 + _JML__tmp5491	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:245:  	ArithmeticOperationRange assertion: !(temp_minute < 0 && 0 < _JML__tmp5491) || -2147483648 + _JML__tmp5491 <= temp_minute
+			VALUE: !(temp_minute_6931_7311___506 < 0 && 0 < _JML__tmp5491) || -2147483648 + _JML__tmp5491 <= temp_minute_6931_7311___506	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:245:  	Assignable assertion: _JML__tmp5523 || (!Pre_26 || _JML__tmp5522.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:246:  	diff.hour = temp_hour - start.getHour()
+			VALUE: temp_hour	 === 16
+			VALUE: start	 === REF!val!14
+			VALUE: start.getHour()	 === 8
+			VALUE: temp_hour - start.getHour()	 === 8
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:246:  	PossiblyNullDeReference assertion: diff != null
+			VALUE: null	 === NULL
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:246:  	PossiblyNullDeReference assertion: _JML__tmp5525 != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5529
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5537
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5545
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5553
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5561
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5569
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 27
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 27
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantLeaveCaller assertion: `conditionalResult_5577
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantLeaveCaller assertion: `conditionalResult_5585
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 16
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 16
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantLeaveCaller assertion: `conditionalResult_5593
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	InvariantEntrance assertion: `conditionalResult_5601
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	InvariantEntrance assertion: `conditionalResult_5609
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	InvariantEntrance assertion: `conditionalResult_5617
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:1:  	Precondition assertion: _$CPRE__57
+			VALUE: _$CPRE__57	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
+			VALUE: 0	 === 0
+			VALUE: second	 === 42
+			VALUE: 0 <= second	 === true
+			VALUE: second	 === 42
+			VALUE: 60	 === 60
+			VALUE: second < 60	 === true
+			VALUE: 0 <= second && second < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:7:  	//@ public invariant 0 <= minute && minute < 60; 
+			VALUE: 0	 === 0
+			VALUE: minute	 === 46
+			VALUE: 0 <= minute	 === true
+			VALUE: minute	 === 46
+			VALUE: 60	 === 60
+			VALUE: minute < 60	 === true
+			VALUE: 0 <= minute && minute < 60	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:8:  	//@ public invariant 0 <= hour && hour < 24; 
+			VALUE: 0	 === 0
+			VALUE: hour	 === 8
+			VALUE: 0 <= hour	 === true
+			VALUE: hour	 === 8
+			VALUE: 24	 === 24
+			VALUE: hour < 24	 === true
+			VALUE: 0 <= hour && hour < 24	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:246:  	ArithmeticOperationRange assertion: !(0 < temp_hour && _JML__tmp5622 < 0) || temp_hour <= 2147483647 + _JML__tmp5622
+			VALUE: !(0 < temp_hour_6975_7288___505 && _JML__tmp5622 < 0) || temp_hour_6975_7288___505 <= 2147483647 + _JML__tmp5622	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:246:  	ArithmeticOperationRange assertion: !(temp_hour < 0 && 0 < _JML__tmp5622) || -2147483648 + _JML__tmp5622 <= temp_hour
+			VALUE: !(temp_hour_6975_7288___505 < 0 && 0 < _JML__tmp5622) || -2147483648 + _JML__tmp5622 <= temp_hour_6975_7288___505	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:246:  	Assignable assertion: _JML__tmp5654 || (!Pre_26 || _JML__tmp5653.`alloc__ > 0)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:247:  	return (diff);
+			VALUE: diff	 === REF!val!24
+			VALUE: (diff)	 === REF!val!24
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:226:  	ensures \result != null; 
+			VALUE: \result	 === REF!val!24
+			VALUE: \result != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:223:  	ensures diff_hours == \result.hour; 
+			VALUE: diff_hours	 === 7
+			VALUE: \result.hour	 === 8
+			VALUE: diff_hours == \result.hour	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:247:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug50/Repaired/Time.java:223:  Associated location
+
+6 warnings

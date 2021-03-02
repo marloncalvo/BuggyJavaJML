@@ -1,0 +1,8 @@
+I believe that there is something wrong with OpenJML's understanding of findFirst()
+and findLast(). If you look at the subexpression output, it denotes the
+output of findFirst() and findLast() to be:
+
+-   findFirst() === -2
+-   findLast() === -3
+
+which is not possible...

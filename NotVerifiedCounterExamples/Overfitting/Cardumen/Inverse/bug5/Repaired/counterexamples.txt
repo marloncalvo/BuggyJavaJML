@@ -1,0 +1,589 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method Inverse:  overflow in int sum
+            if (x[index] != y[x.length - 1 + index]) {//if (x[index] != y[x.length - 1 - index]) {
+                                           ^
+
+TRACE of Inverse.Inverse(int[],int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:4:  	requires x != null; 
+			VALUE: x	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: x != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:4:  	requires y != null; 
+			VALUE: y	 === REF!val!7
+			VALUE: null	 === NULL
+			VALUE: y != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	if (x.length != y.length) ...
+			VALUE: x.length	 === 2147483647
+			VALUE: y.length	 === 2147483647
+			VALUE: x.length != y.length	 === false
+			VALUE: (x.length != y.length)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:5:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:5:  	PossiblyNullDeReference assertion: y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:6:  	int index = 0
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: x.length	 === 2147483647
+			VALUE: index <= x.length	 === true
+			VALUE: 0 <= index && index <= x.length	 === true
+			VALUE: x.length	 === 2147483647
+			VALUE: y.length	 === 2147483647
+			VALUE: x.length == y.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null && y != null) || y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	LoopInvariantBeforeLoop assertion: `conditionalResult_23
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	LoopInvariantBeforeLoop assertion: (_JML__tmp30)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 2
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 2
+			VALUE: x.length	 === 2147483647
+			VALUE: index <= x.length	 === true
+			VALUE: 0 <= index && index <= x.length	 === true
+			VALUE: x.length	 === 2147483647
+			VALUE: y.length	 === 2147483647
+			VALUE: x.length == y.length	 === true
+			VALUE: 0 <= index && index <= x.length && x.length == y.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null && y != null) || y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]	 === true
+			VALUE: (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	//@ loop_decreases x.length - index;
+			VALUE: x.length	 === 2147483647
+			VALUE: index	 === 2
+			VALUE: x.length - index	 === 2147483645
+				Initial value of Loop Decreases expression = 2147483645
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:10:  	Loop test
+			VALUE: index	 === 2
+			VALUE: x.length	 === 2147483647
+			VALUE: index < x.length	 === true
+			VALUE: (index < x.length)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:10:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp47
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	if (x[index] != y[x.length - 1 + index]) ...
+			VALUE: x	 === REF!val!6
+			VALUE: index	 === 2
+			VALUE: x[index]	 === 11
+			VALUE: y	 === REF!val!7
+			VALUE: x.length	 === 2147483647
+			VALUE: 1	 === 1
+			VALUE: x.length - 1	 === 2147483646
+			VALUE: index	 === 2
+			VALUE: x.length - 1 + index	 === ( - 2147483648 )
+			VALUE: y[x.length - 1 + index]	 === 12
+			VALUE: x[index] != y[x.length - 1 + index]	 === true
+			VALUE: (x[index] != y[x.length - 1 + index])	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNegativeIndex assertion: 0 <= index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyTooLargeIndex assertion: x.length > index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp52 && 1 < 0) || _JML__tmp52 <= 2147483647 + 1
+			VALUE: !(0 < _JML__tmp52 && 1 < 0) || _JML__tmp52 <= 2147483647 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(_JML__tmp52 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp52
+			VALUE: !(_JML__tmp52 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp52	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp56 && 0 < index) || _JML__tmp56 <= 2147483647 - index
+			VALUE: !(0 < _JML__tmp56 && 0 < index_385_808___27) || _JML__tmp56 <= 2147483647 - index_385_808___27	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  Invalid assertion (ArithmeticOperationRange)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11: warning: The prover cannot establish an assertion (PossiblyTooLargeIndex) in method Inverse
+            if (x[index] != y[x.length - 1 + index]) {//if (x[index] != y[x.length - 1 - index]) {
+                             ^
+
+TRACE of Inverse.Inverse(int[],int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:4:  	requires x != null; 
+			VALUE: x	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: x != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:4:  	requires y != null; 
+			VALUE: y	 === REF!val!7
+			VALUE: null	 === NULL
+			VALUE: y != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	if (x.length != y.length) ...
+			VALUE: x.length	 === 2439
+			VALUE: y.length	 === 2439
+			VALUE: x.length != y.length	 === false
+			VALUE: (x.length != y.length)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:5:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:5:  	PossiblyNullDeReference assertion: y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:6:  	int index = 0
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: x.length	 === 2439
+			VALUE: index <= x.length	 === true
+			VALUE: 0 <= index && index <= x.length	 === true
+			VALUE: x.length	 === 2439
+			VALUE: y.length	 === 2439
+			VALUE: x.length == y.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null && y != null) || y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	LoopInvariantBeforeLoop assertion: `conditionalResult_23
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	LoopInvariantBeforeLoop assertion: (_JML__tmp30)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 897
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 897
+			VALUE: x.length	 === 2439
+			VALUE: index <= x.length	 === true
+			VALUE: 0 <= index && index <= x.length	 === true
+			VALUE: x.length	 === 2439
+			VALUE: y.length	 === 2439
+			VALUE: x.length == y.length	 === true
+			VALUE: 0 <= index && index <= x.length && x.length == y.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null && y != null) || y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]	 === true
+			VALUE: (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	//@ loop_decreases x.length - index;
+			VALUE: x.length	 === 2439
+			VALUE: index	 === 897
+			VALUE: x.length - index	 === 1542
+				Initial value of Loop Decreases expression = 1542
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:10:  	Loop test
+			VALUE: index	 === 897
+			VALUE: x.length	 === 2439
+			VALUE: index < x.length	 === true
+			VALUE: (index < x.length)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:10:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp47
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	if (x[index] != y[x.length - 1 + index]) ...
+			VALUE: x	 === REF!val!6
+			VALUE: index	 === 897
+			VALUE: x[index]	 === 12
+			VALUE: y	 === REF!val!7
+			VALUE: x.length	 === 2439
+			VALUE: 1	 === 1
+			VALUE: x.length - 1	 === 2438
+			VALUE: index	 === 897
+			VALUE: x.length - 1 + index	 === 3335
+			VALUE: y[x.length - 1 + index]	 === 13
+			VALUE: x[index] != y[x.length - 1 + index]	 === true
+			VALUE: (x[index] != y[x.length - 1 + index])	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNegativeIndex assertion: 0 <= index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyTooLargeIndex assertion: x.length > index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp52 && 1 < 0) || _JML__tmp52 <= 2147483647 + 1
+			VALUE: !(0 < _JML__tmp52 && 1 < 0) || _JML__tmp52 <= 2147483647 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(_JML__tmp52 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp52
+			VALUE: !(_JML__tmp52 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp52	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp56 && 0 < index) || _JML__tmp56 <= 2147483647 - index
+			VALUE: !(0 < _JML__tmp56 && 0 < index_385_808___27) || _JML__tmp56 <= 2147483647 - index_385_808___27	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(_JML__tmp56 < 0 && index < 0) || -2147483648 - index <= _JML__tmp56
+			VALUE: !(_JML__tmp56 < 0 && index_385_808___27 < 0) || -2147483648 - index_385_808___27 <= _JML__tmp56	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNegativeIndex assertion: 0 <= _JML__tmp59
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyTooLargeIndex assertion: y.length > _JML__tmp59
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  Invalid assertion (PossiblyTooLargeIndex)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7: warning: The prover cannot establish an assertion (LoopInvariant) in method Inverse
+        //@ maintaining 0 <= index && index <= x.length && x.length == y.length;
+            ^
+
+TRACE of Inverse.Inverse(int[],int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:4:  	requires x != null; 
+			VALUE: x	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: x != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:4:  	requires y != null; 
+			VALUE: y	 === REF!val!7
+			VALUE: null	 === NULL
+			VALUE: y != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	if (x.length != y.length) ...
+			VALUE: x.length	 === 450
+			VALUE: y.length	 === 450
+			VALUE: x.length != y.length	 === false
+			VALUE: (x.length != y.length)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:5:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:5:  	PossiblyNullDeReference assertion: y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:6:  	int index = 0
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: x.length	 === 450
+			VALUE: index <= x.length	 === true
+			VALUE: 0 <= index && index <= x.length	 === true
+			VALUE: x.length	 === 450
+			VALUE: y.length	 === 450
+			VALUE: x.length == y.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null && y != null) || y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	LoopInvariantBeforeLoop assertion: `conditionalResult_23
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	LoopInvariantBeforeLoop assertion: (_JML__tmp30)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: x.length	 === 450
+			VALUE: index <= x.length	 === true
+			VALUE: 0 <= index && index <= x.length	 === true
+			VALUE: x.length	 === 450
+			VALUE: y.length	 === 450
+			VALUE: x.length == y.length	 === true
+			VALUE: 0 <= index && index <= x.length && x.length == y.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null && y != null) || y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]	 === true
+			VALUE: (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	//@ loop_decreases x.length - index;
+			VALUE: x.length	 === 450
+			VALUE: index	 === 0
+			VALUE: x.length - index	 === 450
+				Initial value of Loop Decreases expression = 450
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:10:  	Loop test
+			VALUE: index	 === 0
+			VALUE: x.length	 === 450
+			VALUE: index < x.length	 === true
+			VALUE: (index < x.length)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:10:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp47
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	if (x[index] != y[x.length - 1 + index]) ...
+			VALUE: x	 === REF!val!6
+			VALUE: index	 === 0
+			VALUE: x[index]	 === ( - 1 )
+			VALUE: y	 === REF!val!7
+			VALUE: x.length	 === 450
+			VALUE: 1	 === 1
+			VALUE: x.length - 1	 === 449
+			VALUE: index	 === 0
+			VALUE: x.length - 1 + index	 === 449
+			VALUE: y[x.length - 1 + index]	 === ( - 1 )
+			VALUE: x[index] != y[x.length - 1 + index]	 === false
+			VALUE: (x[index] != y[x.length - 1 + index])	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNegativeIndex assertion: 0 <= index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyTooLargeIndex assertion: x.length > index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp52 && 1 < 0) || _JML__tmp52 <= 2147483647 + 1
+			VALUE: !(0 < _JML__tmp52 && 1 < 0) || _JML__tmp52 <= 2147483647 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(_JML__tmp52 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp52
+			VALUE: !(_JML__tmp52 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp52	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp56 && 0 < index) || _JML__tmp56 <= 2147483647 - index
+			VALUE: !(0 < _JML__tmp56 && 0 < index_385_808___27) || _JML__tmp56 <= 2147483647 - index_385_808___27	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(_JML__tmp56 < 0 && index < 0) || -2147483648 - index <= _JML__tmp56
+			VALUE: !(_JML__tmp56 < 0 && index_385_808___27 < 0) || -2147483648 - index_385_808___27 <= _JML__tmp56	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNegativeIndex assertion: 0 <= _JML__tmp59
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyTooLargeIndex assertion: y.length > _JML__tmp59
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:14:  	index = x[index]
+			VALUE: x	 === REF!val!6
+			VALUE: index	 === 0
+			VALUE: x[index]	 === ( - 1 )
+			VALUE: index = x[index]	 === ( - 1 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:14:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:14:  	PossiblyNegativeIndex assertion: 0 <= index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:14:  	PossiblyTooLargeIndex assertion: x.length > index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === ( - 1 )
+			VALUE: 0 <= index	 === false
+			VALUE: 0 <= index && index <= x.length	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	LoopInvariant assertion: `conditionalResult_70
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  Invalid assertion (LoopInvariant)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9: warning: The prover cannot establish an assertion (LoopDecreases) in method Inverse
+        //@ decreases x.length - index;
+            ^
+
+TRACE of Inverse.Inverse(int[],int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:4:  	requires x != null; 
+			VALUE: x	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: x != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:4:  	requires y != null; 
+			VALUE: y	 === REF!val!7
+			VALUE: null	 === NULL
+			VALUE: y != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	if (x.length != y.length) ...
+			VALUE: x.length	 === 610
+			VALUE: y.length	 === 610
+			VALUE: x.length != y.length	 === false
+			VALUE: (x.length != y.length)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:5:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:5:  	PossiblyNullDeReference assertion: y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:6:  	int index = 0
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: x.length	 === 610
+			VALUE: index <= x.length	 === true
+			VALUE: 0 <= index && index <= x.length	 === true
+			VALUE: x.length	 === 610
+			VALUE: y.length	 === 610
+			VALUE: x.length == y.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null && y != null) || y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	LoopInvariantBeforeLoop assertion: `conditionalResult_23
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	LoopInvariantBeforeLoop assertion: (_JML__tmp30)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: x.length	 === 610
+			VALUE: index <= x.length	 === true
+			VALUE: 0 <= index && index <= x.length	 === true
+			VALUE: x.length	 === 610
+			VALUE: y.length	 === 610
+			VALUE: x.length == y.length	 === true
+			VALUE: 0 <= index && index <= x.length && x.length == y.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null && y != null) || y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]	 === true
+			VALUE: (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	//@ loop_decreases x.length - index;
+			VALUE: x.length	 === 610
+			VALUE: index	 === 0
+			VALUE: x.length - index	 === 610
+				Initial value of Loop Decreases expression = 610
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:10:  	Loop test
+			VALUE: index	 === 0
+			VALUE: x.length	 === 610
+			VALUE: index < x.length	 === true
+			VALUE: (index < x.length)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:10:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp47
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	if (x[index] != y[x.length - 1 + index]) ...
+			VALUE: x	 === REF!val!6
+			VALUE: index	 === 0
+			VALUE: x[index]	 === 0
+			VALUE: y	 === REF!val!7
+			VALUE: x.length	 === 610
+			VALUE: 1	 === 1
+			VALUE: x.length - 1	 === 609
+			VALUE: index	 === 0
+			VALUE: x.length - 1 + index	 === 609
+			VALUE: y[x.length - 1 + index]	 === 0
+			VALUE: x[index] != y[x.length - 1 + index]	 === false
+			VALUE: (x[index] != y[x.length - 1 + index])	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNegativeIndex assertion: 0 <= index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyTooLargeIndex assertion: x.length > index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp52 && 1 < 0) || _JML__tmp52 <= 2147483647 + 1
+			VALUE: !(0 < _JML__tmp52 && 1 < 0) || _JML__tmp52 <= 2147483647 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(_JML__tmp52 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp52
+			VALUE: !(_JML__tmp52 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp52	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp56 && 0 < index) || _JML__tmp56 <= 2147483647 - index
+			VALUE: !(0 < _JML__tmp56 && 0 < index_385_808___27) || _JML__tmp56 <= 2147483647 - index_385_808___27	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(_JML__tmp56 < 0 && index < 0) || -2147483648 - index <= _JML__tmp56
+			VALUE: !(_JML__tmp56 < 0 && index_385_808___27 < 0) || -2147483648 - index_385_808___27 <= _JML__tmp56	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNegativeIndex assertion: 0 <= _JML__tmp59
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyTooLargeIndex assertion: y.length > _JML__tmp59
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:14:  	index = x[index]
+			VALUE: x	 === REF!val!6
+			VALUE: index	 === 0
+			VALUE: x[index]	 === 0
+			VALUE: index = x[index]	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:14:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:14:  	PossiblyNegativeIndex assertion: 0 <= index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:14:  	PossiblyTooLargeIndex assertion: x.length > index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: x.length	 === 610
+			VALUE: index <= x.length	 === true
+			VALUE: 0 <= index && index <= x.length	 === true
+			VALUE: x.length	 === 610
+			VALUE: y.length	 === 610
+			VALUE: x.length == y.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null && y != null) || y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	LoopInvariant assertion: `conditionalResult_70
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	LoopInvariant assertion: (_JML__tmp77)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	//@ loop_decreases x.length - index;
+			VALUE: x.length	 === 610
+			VALUE: index	 === 0
+			VALUE: x.length - index	 === 610
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	LoopDecreases assertion: _JML__tmp80 < _JML__tmp47
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  Invalid assertion (LoopDecreases)
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8: warning: The prover cannot establish an assertion (LoopInvariant) in method Inverse
+        //@ maintaining (\forall int i; 0 <= i && i < index; x[i] == y[x.length -1 - i]);
+            ^
+
+TRACE of Inverse.Inverse(int[],int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:4:  	requires x != null; 
+			VALUE: x	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: x != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:4:  	requires y != null; 
+			VALUE: y	 === REF!val!7
+			VALUE: null	 === NULL
+			VALUE: y != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	if (x.length != y.length) ...
+			VALUE: x.length	 === 610
+			VALUE: y.length	 === 610
+			VALUE: x.length != y.length	 === false
+			VALUE: (x.length != y.length)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:5:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:5:  	PossiblyNullDeReference assertion: y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:6:  	int index = 0
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: x.length	 === 610
+			VALUE: index <= x.length	 === true
+			VALUE: 0 <= index && index <= x.length	 === true
+			VALUE: x.length	 === 610
+			VALUE: y.length	 === 610
+			VALUE: x.length == y.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null && y != null) || y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	LoopInvariantBeforeLoop assertion: `conditionalResult_23
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	LoopInvariantBeforeLoop assertion: (_JML__tmp30)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: x.length	 === 610
+			VALUE: index <= x.length	 === true
+			VALUE: 0 <= index && index <= x.length	 === true
+			VALUE: x.length	 === 610
+			VALUE: y.length	 === 610
+			VALUE: x.length == y.length	 === true
+			VALUE: 0 <= index && index <= x.length && x.length == y.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null && y != null) || y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]	 === true
+			VALUE: (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i])	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	//@ loop_decreases x.length - index;
+			VALUE: x.length	 === 610
+			VALUE: index	 === 0
+			VALUE: x.length - index	 === 610
+				Initial value of Loop Decreases expression = 610
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:9:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:10:  	Loop test
+			VALUE: index	 === 0
+			VALUE: x.length	 === 610
+			VALUE: index < x.length	 === true
+			VALUE: (index < x.length)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:10:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp47
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:1:  	if (x[index] != y[x.length - 1 + index]) ...
+			VALUE: x	 === REF!val!6
+			VALUE: index	 === 0
+			VALUE: x[index]	 === 41
+			VALUE: y	 === REF!val!7
+			VALUE: x.length	 === 610
+			VALUE: 1	 === 1
+			VALUE: x.length - 1	 === 609
+			VALUE: index	 === 0
+			VALUE: x.length - 1 + index	 === 609
+			VALUE: y[x.length - 1 + index]	 === 41
+			VALUE: x[index] != y[x.length - 1 + index]	 === false
+			VALUE: (x[index] != y[x.length - 1 + index])	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNegativeIndex assertion: 0 <= index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyTooLargeIndex assertion: x.length > index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp52 && 1 < 0) || _JML__tmp52 <= 2147483647 + 1
+			VALUE: !(0 < _JML__tmp52 && 1 < 0) || _JML__tmp52 <= 2147483647 + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(_JML__tmp52 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp52
+			VALUE: !(_JML__tmp52 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp52	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp56 && 0 < index) || _JML__tmp56 <= 2147483647 - index
+			VALUE: !(0 < _JML__tmp56 && 0 < index_385_808___27) || _JML__tmp56 <= 2147483647 - index_385_808___27	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	ArithmeticOperationRange assertion: !(_JML__tmp56 < 0 && index < 0) || -2147483648 - index <= _JML__tmp56
+			VALUE: !(_JML__tmp56 < 0 && index_385_808___27 < 0) || -2147483648 - index_385_808___27 <= _JML__tmp56	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyNegativeIndex assertion: 0 <= _JML__tmp59
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:11:  	PossiblyTooLargeIndex assertion: y.length > _JML__tmp59
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:14:  	index = x[index]
+			VALUE: x	 === REF!val!6
+			VALUE: index	 === 0
+			VALUE: x[index]	 === 41
+			VALUE: index = x[index]	 === 41
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:14:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:14:  	PossiblyNegativeIndex assertion: 0 <= index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:14:  	PossiblyTooLargeIndex assertion: x.length > index
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	//@ loop_invariant 0 <= index && index <= x.length && x.length == y.length;
+			VALUE: 0	 === 0
+			VALUE: index	 === 41
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 41
+			VALUE: x.length	 === 610
+			VALUE: index <= x.length	 === true
+			VALUE: 0 <= index && index <= x.length	 === true
+			VALUE: x.length	 === 610
+			VALUE: y.length	 === 610
+			VALUE: x.length == y.length	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null) || x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	UndefinedNullDeReference assertion: !(x != null && y != null) || y != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:7:  	LoopInvariant assertion: `conditionalResult_70
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] == y[x.length - 1 - i]	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  	LoopInvariant assertion: (_JML__tmp77)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Cardumen/Inverse/bug5/Repaired/Inverse.java:8:  Invalid assertion (LoopInvariant)
+
+5 warnings

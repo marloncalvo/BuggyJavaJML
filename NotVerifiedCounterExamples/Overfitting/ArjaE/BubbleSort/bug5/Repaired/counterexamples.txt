@@ -1,0 +1,11 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug5/Repaired/BubbleSort.java:5: error: cannot find symbol
+	SwapInArray s = new SwapInArray();
+	^
+  symbol:   class SwapInArray
+  location: class BubbleSort
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug5/Repaired/BubbleSort.java:5: error: cannot find symbol
+	SwapInArray s = new SwapInArray();
+	                    ^
+  symbol:   class SwapInArray
+  location: class BubbleSort
+2 errors

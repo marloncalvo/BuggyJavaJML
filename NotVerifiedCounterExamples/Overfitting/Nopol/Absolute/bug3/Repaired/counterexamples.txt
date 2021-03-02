@@ -1,0 +1,42 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Nopol/Absolute/bug3/Repaired/Absolute.java:23: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Nopol/Absolute/bug3/Repaired/Absolute.java:15: ) in method Absolute
+			return -num;
+			^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Nopol/Absolute/bug3/Repaired/Absolute.java:15: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Nopol/Absolute/bug3/Repaired/Absolute.java:23: 
+	  @    ensures \result == num;
+	       ^
+
+TRACE of Absolute.Absolute(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Nopol/Absolute/bug3/Repaired/Absolute.java:14:  	requires 0 <= num && num <= Integer.MAX_VALUE; 
+			VALUE: 0	 === 0
+			VALUE: num	 === 1
+			VALUE: 0 <= num	 === true
+			VALUE: num	 === 1
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num <= Integer.MAX_VALUE	 === true
+			VALUE: 0 <= num && num <= Integer.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Nopol/Absolute/bug3/Repaired/Absolute.java:17:  	requires Integer.MIN_VALUE < num && num < 0; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num	 === 1
+			VALUE: Integer.MIN_VALUE < num	 === true
+			VALUE: num	 === 1
+			VALUE: 0	 === 0
+			VALUE: num < 0	 === false
+			VALUE: Integer.MIN_VALUE < num && num < 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Nopol/Absolute/bug3/Repaired/Absolute.java:1:  	if (1 < num) ...
+			VALUE: 1	 === 1
+			VALUE: num	 === 1
+			VALUE: 1 < num	 === false
+			VALUE: (1 < num)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Nopol/Absolute/bug3/Repaired/Absolute.java:23:  	return -num;
+			VALUE: num	 === 1
+			VALUE: -num	 === ( - 1 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Nopol/Absolute/bug3/Repaired/Absolute.java:23:  	ArithmeticOperationRange assertion: !(num == -2147483648)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Nopol/Absolute/bug3/Repaired/Absolute.java:15:  	ensures \result == num; 
+			VALUE: \result	 === ( - 1 )
+			VALUE: num	 === 1
+			VALUE: \result == num	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Nopol/Absolute/bug3/Repaired/Absolute.java:23:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Nopol/Absolute/bug3/Repaired/Absolute.java:15:  Associated location
+
+2 warnings

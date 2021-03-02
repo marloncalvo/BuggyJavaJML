@@ -1,0 +1,251 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:25: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:5: ) in method factorial
+          return fact;
+          ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:5: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:25: 
+       //@ ensures \result == spec_factorial(n);
+           ^
+
+TRACE of Factorial.factorial(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:3:  	requires 0 <= n && n <= 20; 
+			VALUE: 0	 === 0
+			VALUE: n	 === 19
+			VALUE: 0 <= n	 === true
+			VALUE: n	 === 19
+			VALUE: 20	 === 20
+			VALUE: n <= 20	 === true
+			VALUE: 0 <= n && n <= 20	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:8:  	int c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:9:  	long fact = 1
+			VALUE: 1	 === 1
+			VALUE: fact	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:11:  	assert Assert spec_factorial(0) == 1;
+			VALUE: 0	 === 0
+			VALUE: Factorial.spec_factorial(0)	 === 1
+			VALUE: 1	 === 1
+			VALUE: Factorial.spec_factorial(0) == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:28:  	requires n > 0 && n <= 20; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:32:  	requires n == 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:32:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__2
+			VALUE: _$CPRE__2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:1:  	if (n == 0) ...
+			VALUE: n	 === 19
+			VALUE: 0	 === 0
+			VALUE: n == 0	 === false
+			VALUE: (n == 0)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:21:  	c = 1
+			VALUE: 1	 === 1
+			VALUE: c = 1	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:16:  	//@ loop_invariant c >= 1 && c <= n + 1;
+			VALUE: c	 === 1
+			VALUE: 1	 === 1
+			VALUE: c >= 1	 === true
+			VALUE: c	 === 1
+			VALUE: n	 === 19
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 20
+			VALUE: c <= n + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:16:  	LoopInvariantBeforeLoop assertion: `conditionalResult_39
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:17:  	//@ loop_invariant fact > 0;
+			VALUE: fact	 === 1
+			VALUE: 0	 === 0
+			VALUE: fact > 0	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:17:  	LoopInvariantBeforeLoop assertion: _JML__tmp45
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:18:  	//@ loop_invariant fact <= Long.MAX_VALUE;
+			VALUE: fact	 === 1
+			VALUE: Long.MAX_VALUE	 === 9223372036854775807
+			VALUE: fact <= Long.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:18:  	LoopInvariantBeforeLoop assertion: _JML__tmp46
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:19:  	//@ loop_invariant spec_factorial(c - 1) == fact;
+			VALUE: c	 === 1
+			VALUE: 1	 === 1
+			VALUE: c - 1	 === 0
+			VALUE: Factorial.spec_factorial(c - 1)	 === 1
+			VALUE: fact	 === 1
+			VALUE: Factorial.spec_factorial(c - 1) == fact	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:28:  	requires n > 0 && n <= 20; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:32:  	requires n == 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:28:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__4
+			VALUE: _$CPRE__4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:19:  	LoopInvariantBeforeLoop assertion: _JML__tmp75
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:16:  	//@ loop_invariant c >= 1 && c <= n + 1;
+			VALUE: c	 === 20
+			VALUE: 1	 === 1
+			VALUE: c >= 1	 === true
+			VALUE: c	 === 20
+			VALUE: n	 === 19
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 20
+			VALUE: c <= n + 1	 === true
+			VALUE: c >= 1 && c <= n + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:17:  	//@ loop_invariant fact > 0;
+			VALUE: fact	 === 121645100408832000
+			VALUE: 0	 === 0
+			VALUE: fact > 0	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:18:  	//@ loop_invariant fact <= Long.MAX_VALUE;
+			VALUE: fact	 === 121645100408832000
+			VALUE: Long.MAX_VALUE	 === 9223372036854775807
+			VALUE: fact <= Long.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:19:  	//@ loop_invariant spec_factorial(c - 1) == fact;
+			VALUE: c	 === 20
+			VALUE: 1	 === 1
+			VALUE: c - 1	 === 19
+			VALUE: Factorial.spec_factorial(c - 1)	 === 121645100408832000
+			VALUE: fact	 === 121645100408832000
+			VALUE: Factorial.spec_factorial(c - 1) == fact	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:28:  	requires n > 0 && n <= 20; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:32:  	requires n == 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:28:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__6
+			VALUE: _$CPRE__6	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:20:  	//@ loop_decreases n - c;
+			VALUE: n	 === 19
+			VALUE: c	 === 20
+			VALUE: n - c	 === ( - 1 )
+				Initial value of Loop Decreases expression = ( - 1 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:21:  	Loop test
+			VALUE: c	 === 20
+			VALUE: n	 === 19
+			VALUE: c < n	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:24:  	fact = fact * c
+			VALUE: fact	 === 121645100408832000
+			VALUE: c	 === 20
+			VALUE: fact * c	 === 2432902008176640000
+			VALUE: fact = fact * c	 === 2432902008176640000
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:24:  	ArithmeticOperationRange assertion: |#mul64ok#|(fact, (long)c)
+			VALUE: |#mul64ok#|(fact_269_652___36, (long)c_251_601___35)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:25:  	return fact;
+			VALUE: fact	 === 2432902008176640000
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:4:  	ensures \result >= 1 && \result <= Long.MAX_VALUE; 
+			VALUE: \result	 === 2432902008176640000
+			VALUE: 1	 === 1
+			VALUE: \result >= 1	 === true
+			VALUE: \result	 === 2432902008176640000
+			VALUE: Long.MAX_VALUE	 === 9223372036854775807
+			VALUE: \result <= Long.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:28:  	requires n > 0 && n <= 20; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:32:  	requires n == 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:28:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__10
+			VALUE: _$CPRE__10	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:5:  	ensures \result == Factorial.spec_factorial(n); 
+			VALUE: \result	 === 2432902008176640000
+			VALUE: n	 === 19
+			VALUE: Factorial.spec_factorial(n)	 === 121645100408832000
+			VALUE: \result == Factorial.spec_factorial(n)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:25:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:5:  Associated location
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:24: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method factorial:  long multiply overflow
+	  fact=fact * c;
+	            ^
+
+TRACE of Factorial.factorial(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:3:  	requires 0 <= n && n <= 20; 
+			VALUE: 0	 === 0
+			VALUE: n	 === 20
+			VALUE: 0 <= n	 === true
+			VALUE: n	 === 20
+			VALUE: 20	 === 20
+			VALUE: n <= 20	 === true
+			VALUE: 0 <= n && n <= 20	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:8:  	int c
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:9:  	long fact = 1
+			VALUE: 1	 === 1
+			VALUE: fact	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:11:  	assert Assert spec_factorial(0) == 1;
+			VALUE: 0	 === 0
+			VALUE: Factorial.spec_factorial(0)	 === 1
+			VALUE: 1	 === 1
+			VALUE: Factorial.spec_factorial(0) == 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:28:  	requires n > 0 && n <= 20; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:32:  	requires n == 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:32:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__2
+			VALUE: _$CPRE__2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:1:  	if (n == 0) ...
+			VALUE: n	 === 20
+			VALUE: 0	 === 0
+			VALUE: n == 0	 === false
+			VALUE: (n == 0)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:21:  	c = 1
+			VALUE: 1	 === 1
+			VALUE: c = 1	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:16:  	//@ loop_invariant c >= 1 && c <= n + 1;
+			VALUE: c	 === 1
+			VALUE: 1	 === 1
+			VALUE: c >= 1	 === true
+			VALUE: c	 === 1
+			VALUE: n	 === 20
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 21
+			VALUE: c <= n + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:16:  	LoopInvariantBeforeLoop assertion: `conditionalResult_39
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:17:  	//@ loop_invariant fact > 0;
+			VALUE: fact	 === 1
+			VALUE: 0	 === 0
+			VALUE: fact > 0	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:17:  	LoopInvariantBeforeLoop assertion: _JML__tmp45
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:18:  	//@ loop_invariant fact <= Long.MAX_VALUE;
+			VALUE: fact	 === 1
+			VALUE: Long.MAX_VALUE	 === 9223372036854775807
+			VALUE: fact <= Long.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:18:  	LoopInvariantBeforeLoop assertion: _JML__tmp46
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:19:  	//@ loop_invariant spec_factorial(c - 1) == fact;
+			VALUE: c	 === 1
+			VALUE: 1	 === 1
+			VALUE: c - 1	 === 0
+			VALUE: Factorial.spec_factorial(c - 1)	 === 1
+			VALUE: fact	 === 1
+			VALUE: Factorial.spec_factorial(c - 1) == fact	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:28:  	requires n > 0 && n <= 20; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:32:  	requires n == 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:28:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__4
+			VALUE: _$CPRE__4	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:19:  	LoopInvariantBeforeLoop assertion: _JML__tmp75
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:16:  	//@ loop_invariant c >= 1 && c <= n + 1;
+			VALUE: c	 === 21
+			VALUE: 1	 === 1
+			VALUE: c >= 1	 === true
+			VALUE: c	 === 21
+			VALUE: n	 === 20
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 21
+			VALUE: c <= n + 1	 === true
+			VALUE: c >= 1 && c <= n + 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:17:  	//@ loop_invariant fact > 0;
+			VALUE: fact	 === 2432902008176640000
+			VALUE: 0	 === 0
+			VALUE: fact > 0	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:18:  	//@ loop_invariant fact <= Long.MAX_VALUE;
+			VALUE: fact	 === 2432902008176640000
+			VALUE: Long.MAX_VALUE	 === 9223372036854775807
+			VALUE: fact <= Long.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:19:  	//@ loop_invariant spec_factorial(c - 1) == fact;
+			VALUE: c	 === 21
+			VALUE: 1	 === 1
+			VALUE: c - 1	 === 20
+			VALUE: Factorial.spec_factorial(c - 1)	 === 2432902008176640000
+			VALUE: fact	 === 2432902008176640000
+			VALUE: Factorial.spec_factorial(c - 1) == fact	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:28:  	requires n > 0 && n <= 20; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:32:  	requires n == 0; 
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:28:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__6
+			VALUE: _$CPRE__6	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:20:  	//@ loop_decreases n - c;
+			VALUE: n	 === 20
+			VALUE: c	 === 21
+			VALUE: n - c	 === ( - 1 )
+				Initial value of Loop Decreases expression = ( - 1 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:21:  	Loop test
+			VALUE: c	 === 21
+			VALUE: n	 === 20
+			VALUE: c < n	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:24:  	fact = fact * c
+			VALUE: fact	 === 2432902008176640000
+			VALUE: c	 === 21
+			VALUE: fact * c	 === ( - 4249290049419214848 )
+			VALUE: fact = fact * c	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:24:  	ArithmeticOperationRange assertion: |#mul64ok#|(fact, (long)c)
+			VALUE: |#mul64ok#|(fact_269_652___36, (long)c_251_601___35)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Structural/ArjaE/Factorial/bug2/Repaired/Factorial.java:24:  Invalid assertion (ArithmeticOperationRange)
+
+3 warnings

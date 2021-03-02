@@ -1,0 +1,36 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:5: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:2: ) in method Smallest
+        if (a.length == 0) return -0;
+                           ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:2: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:5: 
+    //@ ensures \result == -1 <==> a.length == 0;
+        ^
+
+TRACE of Smallest.Smallest(int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:4:  	requires a != null; 
+			VALUE: a	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: a != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:1:  	if (a.length == 0) ...
+			VALUE: a.length	 === 0
+			VALUE: 0	 === 0
+			VALUE: a.length == 0	 === true
+			VALUE: (a.length == 0)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:5:  	PossiblyNullDeReference assertion: a != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:5:  	return -0;
+			VALUE: 0	 === 0
+			VALUE: -0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:5:  	ArithmeticOperationRange assertion: !(0 == -2147483648)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:2:  	UndefinedNullDeReference assertion: !(Pre_2 && \old(a, \Pre) != null) || \old(a, \Pre) != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:2:  	ensures \result == -1 <==> a.length == 0; 
+			VALUE: \result	 === 0
+			VALUE: -1	 === ( - 1 )
+			VALUE: \result == -1	 === false
+			VALUE: a.length	 === 0
+			VALUE: 0	 === 0
+			VALUE: a.length == 0	 === true
+			VALUE: \result == -1 <==> a.length == 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:5:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Smallest/bug2/Repaired/Smallest.java:2:  Associated location
+
+2 warnings

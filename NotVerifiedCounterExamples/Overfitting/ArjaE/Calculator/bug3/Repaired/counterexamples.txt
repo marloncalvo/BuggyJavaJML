@@ -1,0 +1,554 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:36: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:7: ) in method calculate
+	if (!(num2 != 0 && num2 != 0)) return 0;
+	                               ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:7: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:36: 
+      @    ensures \result == num1 + num2;
+           ^
+
+TRACE of Calculator.calculate(int,int,char)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '+' (43)
+			VALUE: (int)operator	 === 43
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '+' (43)
+			VALUE: (int)operator	 === 43
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:4:  	requires operator == '+'; 
+			VALUE: operator	 === '+' (43)
+			VALUE: '+'	 === '+' (43)
+			VALUE: operator == '+'	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:5:  	requires num1 + num2 <= Integer.MAX_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 + num2	 === ( - 2147483647 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num1 + num2 <= Integer.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:6:  	requires Integer.MIN_VALUE <= num1 + num2; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 + num2	 === ( - 2147483647 )
+			VALUE: Integer.MIN_VALUE <= num1 + num2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '+' (43)
+			VALUE: (int)operator	 === 43
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '+' (43)
+			VALUE: (int)operator	 === 43
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:9:  	requires operator == '*'; 
+			VALUE: operator	 === '+' (43)
+			VALUE: '*'	 === '*' (42)
+			VALUE: operator == '*'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:10:  	requires num1 * num2 <= Integer.MAX_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 * num2	 === 0
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num1 * num2 <= Integer.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:11:  	requires Integer.MIN_VALUE <= num1 * num2; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 * num2	 === 0
+			VALUE: Integer.MIN_VALUE <= num1 * num2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '+' (43)
+			VALUE: (int)operator	 === 43
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '+' (43)
+			VALUE: (int)operator	 === 43
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:14:  	requires operator == '-'; 
+			VALUE: operator	 === '+' (43)
+			VALUE: '-'	 === '-' (45)
+			VALUE: operator == '-'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:15:  	requires num1 - num2 <= Integer.MAX_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 - num2	 === ( - 2147483647 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num1 - num2 <= Integer.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:16:  	requires Integer.MIN_VALUE <= num1 - num2; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 - num2	 === ( - 2147483647 )
+			VALUE: Integer.MIN_VALUE <= num1 - num2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '+' (43)
+			VALUE: (int)operator	 === 43
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '+' (43)
+			VALUE: (int)operator	 === 43
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:19:  	requires operator == '/'; 
+			VALUE: operator	 === '+' (43)
+			VALUE: '/'	 === '/' (47)
+			VALUE: operator == '/'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:20:  	requires num2 != 0; 
+			VALUE: num2	 === 0
+			VALUE: 0	 === 0
+			VALUE: num2 != 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:21:  	requires num1 / num2 <= Integer.MAX_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 / num2	 === ( div 2147483647 0 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num1 / num2 <= Integer.MAX_VALUE	 === ( <= ( div 2147483647 0 ) 2147483647 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:22:  	requires num1 / num2 != Integer.MIN_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 / num2	 === ( div 2147483647 0 )
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1 / num2 != Integer.MIN_VALUE	 === ( not ( = ( div 2147483647 0 ) ( - 2147483648 ) ) )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '+' (43)
+			VALUE: (int)operator	 === 43
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '+' (43)
+			VALUE: (int)operator	 === 43
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:25:  	requires operator == '%'; 
+			VALUE: operator	 === '+' (43)
+			VALUE: '%'	 === '%' (37)
+			VALUE: operator == '%'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:26:  	requires num2 != 0; 
+			VALUE: num2	 === 0
+			VALUE: 0	 === 0
+			VALUE: num2 != 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:27:  	requires num1 % num2 != Integer.MIN_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 % num2	 === ( - 2147483647 )
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1 % num2 != Integer.MIN_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '+' (43)
+			VALUE: (int)operator	 === 43
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '+' (43)
+			VALUE: (int)operator	 === 43
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:30:  	requires operator != '+' && operator != '*' && operator != '-' && operator != '/' && operator != '%'; 
+			VALUE: operator	 === '+' (43)
+			VALUE: '+'	 === '+' (43)
+			VALUE: operator != '+'	 === false
+			VALUE: operator != '+' && operator != '*'	 === false
+			VALUE: operator != '+' && operator != '*' && operator != '-'	 === false
+			VALUE: operator != '+' && operator != '*' && operator != '-' && operator != '/'	 === false
+			VALUE: operator != '+' && operator != '*' && operator != '-' && operator != '/' && operator != '%'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:35:  	int output
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:1:  	if (!(num2 != 0 && num2 != 0)) ...
+			VALUE: num2	 === 0
+			VALUE: 0	 === 0
+			VALUE: num2 != 0	 === false
+			VALUE: num2 != 0 && num2 != 0	 === false
+			VALUE: (num2 != 0 && num2 != 0)	 === false
+			VALUE: !(num2 != 0 && num2 != 0)	 === true
+			VALUE: (!(num2 != 0 && num2 != 0))	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:36:  	return 0;
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:7:  	ensures \result == num1 + num2; 
+			VALUE: \result	 === 0
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 + num2	 === ( - 2147483647 )
+			VALUE: \result == num1 + num2	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:36:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:7:  Associated location
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:36: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:31: ) in method calculate
+	if (!(num2 != 0 && num2 != 0)) return 0;
+	                               ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:31: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:36: 
+      @    ensures \result == -1;
+           ^
+
+TRACE of Calculator.calculate(int,int,char)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '.' (46)
+			VALUE: (int)operator	 === 46
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '.' (46)
+			VALUE: (int)operator	 === 46
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:4:  	requires operator == '+'; 
+			VALUE: operator	 === '.' (46)
+			VALUE: '+'	 === '+' (43)
+			VALUE: operator == '+'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:5:  	requires num1 + num2 <= Integer.MAX_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 + num2	 === ( - 2147483647 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num1 + num2 <= Integer.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:6:  	requires Integer.MIN_VALUE <= num1 + num2; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 + num2	 === ( - 2147483647 )
+			VALUE: Integer.MIN_VALUE <= num1 + num2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '.' (46)
+			VALUE: (int)operator	 === 46
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '.' (46)
+			VALUE: (int)operator	 === 46
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:9:  	requires operator == '*'; 
+			VALUE: operator	 === '.' (46)
+			VALUE: '*'	 === '*' (42)
+			VALUE: operator == '*'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:10:  	requires num1 * num2 <= Integer.MAX_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 * num2	 === 0
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num1 * num2 <= Integer.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:11:  	requires Integer.MIN_VALUE <= num1 * num2; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 * num2	 === 0
+			VALUE: Integer.MIN_VALUE <= num1 * num2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '.' (46)
+			VALUE: (int)operator	 === 46
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '.' (46)
+			VALUE: (int)operator	 === 46
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:14:  	requires operator == '-'; 
+			VALUE: operator	 === '.' (46)
+			VALUE: '-'	 === '-' (45)
+			VALUE: operator == '-'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:15:  	requires num1 - num2 <= Integer.MAX_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 - num2	 === ( - 2147483647 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num1 - num2 <= Integer.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:16:  	requires Integer.MIN_VALUE <= num1 - num2; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 - num2	 === ( - 2147483647 )
+			VALUE: Integer.MIN_VALUE <= num1 - num2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '.' (46)
+			VALUE: (int)operator	 === 46
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '.' (46)
+			VALUE: (int)operator	 === 46
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:19:  	requires operator == '/'; 
+			VALUE: operator	 === '.' (46)
+			VALUE: '/'	 === '/' (47)
+			VALUE: operator == '/'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:20:  	requires num2 != 0; 
+			VALUE: num2	 === 0
+			VALUE: 0	 === 0
+			VALUE: num2 != 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:21:  	requires num1 / num2 <= Integer.MAX_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 / num2	 === ( div 2147483647 0 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num1 / num2 <= Integer.MAX_VALUE	 === ( <= ( div 2147483647 0 ) 2147483647 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:22:  	requires num1 / num2 != Integer.MIN_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 / num2	 === ( div 2147483647 0 )
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1 / num2 != Integer.MIN_VALUE	 === ( not ( = ( div 2147483647 0 ) ( - 2147483648 ) ) )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '.' (46)
+			VALUE: (int)operator	 === 46
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '.' (46)
+			VALUE: (int)operator	 === 46
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:25:  	requires operator == '%'; 
+			VALUE: operator	 === '.' (46)
+			VALUE: '%'	 === '%' (37)
+			VALUE: operator == '%'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:26:  	requires num2 != 0; 
+			VALUE: num2	 === 0
+			VALUE: 0	 === 0
+			VALUE: num2 != 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:27:  	requires num1 % num2 != Integer.MIN_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 % num2	 === ( - 2147483647 )
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1 % num2 != Integer.MIN_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '.' (46)
+			VALUE: (int)operator	 === 46
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '.' (46)
+			VALUE: (int)operator	 === 46
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:30:  	requires operator != '+' && operator != '*' && operator != '-' && operator != '/' && operator != '%'; 
+			VALUE: operator	 === '.' (46)
+			VALUE: '+'	 === '+' (43)
+			VALUE: operator != '+'	 === true
+			VALUE: operator	 === '.' (46)
+			VALUE: '*'	 === '*' (42)
+			VALUE: operator != '*'	 === true
+			VALUE: operator != '+' && operator != '*'	 === true
+			VALUE: operator	 === '.' (46)
+			VALUE: '-'	 === '-' (45)
+			VALUE: operator != '-'	 === true
+			VALUE: operator != '+' && operator != '*' && operator != '-'	 === true
+			VALUE: operator	 === '.' (46)
+			VALUE: '/'	 === '/' (47)
+			VALUE: operator != '/'	 === true
+			VALUE: operator != '+' && operator != '*' && operator != '-' && operator != '/'	 === true
+			VALUE: operator	 === '.' (46)
+			VALUE: '%'	 === '%' (37)
+			VALUE: operator != '%'	 === true
+			VALUE: operator != '+' && operator != '*' && operator != '-' && operator != '/' && operator != '%'	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:35:  	int output
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:1:  	if (!(num2 != 0 && num2 != 0)) ...
+			VALUE: num2	 === 0
+			VALUE: 0	 === 0
+			VALUE: num2 != 0	 === false
+			VALUE: num2 != 0 && num2 != 0	 === false
+			VALUE: (num2 != 0 && num2 != 0)	 === false
+			VALUE: !(num2 != 0 && num2 != 0)	 === true
+			VALUE: (!(num2 != 0 && num2 != 0))	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:36:  	return 0;
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:31:  	ensures \result == -1; 
+			VALUE: \result	 === 0
+			VALUE: -1	 === ( - 1 )
+			VALUE: \result == -1	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:36:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:31:  Associated location
+
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:36: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:17: ) in method calculate
+	if (!(num2 != 0 && num2 != 0)) return 0;
+	                               ^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:17: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:36: 
+      @    ensures \result == num1 - num2;
+           ^
+
+TRACE of Calculator.calculate(int,int,char)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '-' (45)
+			VALUE: (int)operator	 === 45
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '-' (45)
+			VALUE: (int)operator	 === 45
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:4:  	requires operator == '+'; 
+			VALUE: operator	 === '-' (45)
+			VALUE: '+'	 === '+' (43)
+			VALUE: operator == '+'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:5:  	requires num1 + num2 <= Integer.MAX_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 + num2	 === ( - 2147483647 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num1 + num2 <= Integer.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:6:  	requires Integer.MIN_VALUE <= num1 + num2; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 + num2	 === ( - 2147483647 )
+			VALUE: Integer.MIN_VALUE <= num1 + num2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '-' (45)
+			VALUE: (int)operator	 === 45
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '-' (45)
+			VALUE: (int)operator	 === 45
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:9:  	requires operator == '*'; 
+			VALUE: operator	 === '-' (45)
+			VALUE: '*'	 === '*' (42)
+			VALUE: operator == '*'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:10:  	requires num1 * num2 <= Integer.MAX_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 * num2	 === 0
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num1 * num2 <= Integer.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:11:  	requires Integer.MIN_VALUE <= num1 * num2; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 * num2	 === 0
+			VALUE: Integer.MIN_VALUE <= num1 * num2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '-' (45)
+			VALUE: (int)operator	 === 45
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '-' (45)
+			VALUE: (int)operator	 === 45
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:14:  	requires operator == '-'; 
+			VALUE: operator	 === '-' (45)
+			VALUE: '-'	 === '-' (45)
+			VALUE: operator == '-'	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:15:  	requires num1 - num2 <= Integer.MAX_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 - num2	 === ( - 2147483647 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num1 - num2 <= Integer.MAX_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:16:  	requires Integer.MIN_VALUE <= num1 - num2; 
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 - num2	 === ( - 2147483647 )
+			VALUE: Integer.MIN_VALUE <= num1 - num2	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '-' (45)
+			VALUE: (int)operator	 === 45
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '-' (45)
+			VALUE: (int)operator	 === 45
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:19:  	requires operator == '/'; 
+			VALUE: operator	 === '-' (45)
+			VALUE: '/'	 === '/' (47)
+			VALUE: operator == '/'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:20:  	requires num2 != 0; 
+			VALUE: num2	 === 0
+			VALUE: 0	 === 0
+			VALUE: num2 != 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:21:  	requires num1 / num2 <= Integer.MAX_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 / num2	 === ( div 2147483647 0 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: num1 / num2 <= Integer.MAX_VALUE	 === ( <= ( div 2147483647 0 ) 2147483647 )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:22:  	requires num1 / num2 != Integer.MIN_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 / num2	 === ( div 2147483647 0 )
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1 / num2 != Integer.MIN_VALUE	 === ( not ( = ( div 2147483647 0 ) ( - 2147483648 ) ) )
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '-' (45)
+			VALUE: (int)operator	 === 45
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '-' (45)
+			VALUE: (int)operator	 === 45
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:25:  	requires operator == '%'; 
+			VALUE: operator	 === '-' (45)
+			VALUE: '%'	 === '%' (37)
+			VALUE: operator == '%'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:26:  	requires num2 != 0; 
+			VALUE: num2	 === 0
+			VALUE: 0	 === 0
+			VALUE: num2 != 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:27:  	requires num1 % num2 != Integer.MIN_VALUE; 
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 % num2	 === ( - 2147483647 )
+			VALUE: Integer.MIN_VALUE	 === ( - 2147483648 )
+			VALUE: num1 % num2 != Integer.MIN_VALUE	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:2:  	requires 37 <= (int)operator && (int)operator <= 47; 
+			VALUE: 37	 === 37
+			VALUE: operator	 === '-' (45)
+			VALUE: (int)operator	 === 45
+			VALUE: 37 <= (int)operator	 === true
+			VALUE: operator	 === '-' (45)
+			VALUE: (int)operator	 === 45
+			VALUE: 47	 === 47
+			VALUE: (int)operator <= 47	 === true
+			VALUE: 37 <= (int)operator && (int)operator <= 47	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:30:  	requires operator != '+' && operator != '*' && operator != '-' && operator != '/' && operator != '%'; 
+			VALUE: operator	 === '-' (45)
+			VALUE: '+'	 === '+' (43)
+			VALUE: operator != '+'	 === true
+			VALUE: operator	 === '-' (45)
+			VALUE: '*'	 === '*' (42)
+			VALUE: operator != '*'	 === true
+			VALUE: operator != '+' && operator != '*'	 === true
+			VALUE: operator	 === '-' (45)
+			VALUE: '-'	 === '-' (45)
+			VALUE: operator != '-'	 === false
+			VALUE: operator != '+' && operator != '*' && operator != '-'	 === false
+			VALUE: operator != '+' && operator != '*' && operator != '-' && operator != '/'	 === false
+			VALUE: operator != '+' && operator != '*' && operator != '-' && operator != '/' && operator != '%'	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:35:  	int output
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:1:  	if (!(num2 != 0 && num2 != 0)) ...
+			VALUE: num2	 === 0
+			VALUE: 0	 === 0
+			VALUE: num2 != 0	 === false
+			VALUE: num2 != 0 && num2 != 0	 === false
+			VALUE: (num2 != 0 && num2 != 0)	 === false
+			VALUE: !(num2 != 0 && num2 != 0)	 === true
+			VALUE: (!(num2 != 0 && num2 != 0))	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:36:  	return 0;
+			VALUE: 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:17:  	ensures \result == num1 - num2; 
+			VALUE: \result	 === 0
+			VALUE: num1	 === ( - 2147483647 )
+			VALUE: num2	 === 0
+			VALUE: num1 - num2	 === ( - 2147483647 )
+			VALUE: \result == num1 - num2	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:36:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/Calculator/bug3/Repaired/Calculator.java:17:  Associated location
+
+6 warnings

@@ -1,0 +1,33 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/jMutRepair/BankAccount/bug6/Repaired/BankAccount.java:66: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/jMutRepair/BankAccount/bug6/Repaired/BankAccount.java:62: ) in method isValid
+			return true;
+			^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/jMutRepair/BankAccount/bug6/Repaired/BankAccount.java:62: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/jMutRepair/BankAccount/bug6/Repaired/BankAccount.java:66: 
+	//@ ensures !\result;
+	    ^
+
+TRACE of BankAccount.isValid(int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/jMutRepair/BankAccount/bug6/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 8855
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/jMutRepair/BankAccount/bug6/Repaired/BankAccount.java:56:  	requires 0 < _amount; 
+			VALUE: _amount	 === 0
+			VALUE: 0 < _amount	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/jMutRepair/BankAccount/bug6/Repaired/BankAccount.java:61:  	requires _amount <= 0; 
+			VALUE: _amount	 === 0
+			VALUE: _amount <= 0	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/jMutRepair/BankAccount/bug6/Repaired/BankAccount.java:1:  	if (_amount >= 0) ...
+			VALUE: _amount	 === 0
+			VALUE: 0	 === 0
+			VALUE: _amount >= 0	 === true
+			VALUE: (_amount >= 0)	 === true
+				Condition = true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/jMutRepair/BankAccount/bug6/Repaired/BankAccount.java:66:  	return true;
+			VALUE: true	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/jMutRepair/BankAccount/bug6/Repaired/BankAccount.java:62:  	ensures !\result; 
+			VALUE: \result	 === true
+			VALUE: !\result	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/jMutRepair/BankAccount/bug6/Repaired/BankAccount.java:66:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/jMutRepair/BankAccount/bug6/Repaired/BankAccount.java:62:  Associated location
+
+2 warnings

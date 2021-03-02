@@ -1,0 +1,40 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:12: warning: The prover cannot establish an assertion (LoopInvariantBeforeLoop) in method FindFirstZero
+            		//@ maintaining (\forall int i; 0 <= i && i < index; x[i] != 0);
+            		    ^
+
+TRACE of FindFirstZero.FindFirstZero(int[])
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:5:  	requires x != null; 
+			VALUE: x	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: x != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:6:  	assert x.length >= 0;
+			VALUE: x.length	 === 2147483645
+			VALUE: 0	 === 0
+			VALUE: x.length >= 0	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:6:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:6:  	Assert assertion: _JML__tmp10
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:1:  	if (x.length == 0) ...
+			VALUE: x.length	 === 2147483645
+			VALUE: 0	 === 0
+			VALUE: x.length == 0	 === false
+			VALUE: (x.length == 0)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:7:  	PossiblyNullDeReference assertion: x != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:10:  	int index = 0
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:11:  	index = index + 1
+			VALUE: index	 === 0
+			VALUE: 1	 === 1
+			VALUE: index + 1	 === 1
+			VALUE: index = index + 1	 === 1
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:11:  	ArithmeticOperationRange assertion: !(0 < index && 0 < 1) || index <= 2147483647 - 1
+			VALUE: !(0 < index_459_459___15 && 0 < 1) || index_459_459___15 <= 2147483647 - 1	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:11:  	ArithmeticOperationRange assertion: !(index < 0 && 1 < 0) || -2147483648 - 1 <= index
+			VALUE: !(index_459_459___15 < 0 && 1 < 0) || -2147483648 - 1 <= index_459_459___15	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:12:  	//@ loop_invariant (\forall int i; 0 <= i && i < index; x[i] != 0);
+			VALUE: \forall int i; 0 <= i && i < index; x[i] != 0	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:12:  	LoopInvariantBeforeLoop assertion: (_JML__tmp23)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/FindFirstZero/bug8/Repaired/FindFirstZero.java:12:  Invalid assertion (LoopInvariantBeforeLoop)
+
+1 warning

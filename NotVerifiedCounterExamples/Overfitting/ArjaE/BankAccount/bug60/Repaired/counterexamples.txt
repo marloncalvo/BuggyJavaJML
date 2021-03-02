@@ -1,0 +1,82 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:357: warning: The prover cannot establish an assertion (Postcondition: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:329: ) in method interestAfterYear
+		return interest;
+		^
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:329: warning: Associated declaration: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:357: 
+	//@ ensures \result == (balance/100)*3;
+	    ^
+
+TRACE of BankAccount.interestAfterYear()
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:5:  	//@ invariant 0 <= balance; 
+			VALUE: 0	 === 0
+			VALUE: balance	 === 300000
+			VALUE: 0 <= balance	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:318:  	requires balance <= 20000; 
+			VALUE: balance	 === 300000
+			VALUE: balance <= 20000	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:323:  	requires 20000 < balance && balance <= 160000; 
+			VALUE: balance	 === 300000
+			VALUE: 20000 < balance	 === true
+			VALUE: balance	 === 300000
+			VALUE: balance <= 160000	 === false
+			VALUE: 20000 < balance && balance <= 160000	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:328:  	requires 160000 < balance && balance <= 300000; 
+			VALUE: balance	 === 300000
+			VALUE: 160000 < balance	 === true
+			VALUE: balance	 === 300000
+			VALUE: balance <= 300000	 === true
+			VALUE: 160000 < balance && balance <= 300000	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:333:  	requires 300000 < balance && balance <= Integer.MAX_VALUE; 
+			VALUE: balance	 === 300000
+			VALUE: 300000 < balance	 === false
+			VALUE: 300000 < balance && balance <= Integer.MAX_VALUE	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:337:  	int interest
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:338:  	interest = 0
+			VALUE: 0	 === 0
+			VALUE: interest = 0	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:1:  	if (balance <= 20000) ...
+			VALUE: balance	 === 300000
+			VALUE: 20000	 === 20000
+			VALUE: balance <= 20000	 === false
+			VALUE: (balance <= 20000)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:1:  	if (balance <= 160000) ...
+			VALUE: balance	 === 300000
+			VALUE: 160000	 === 160000
+			VALUE: balance <= 160000	 === false
+			VALUE: (balance <= 160000)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:1:  	if (balance < 300000) ...
+			VALUE: balance	 === 300000
+			VALUE: 300000	 === 300000
+			VALUE: balance < 300000	 === false
+			VALUE: (balance < 300000)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:353:  	int _interest
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:354:  	_interest = balance / 100
+			VALUE: balance	 === 300000
+			VALUE: 100	 === 100
+			VALUE: balance / 100	 === 3000
+			VALUE: _interest = balance / 100	 === 3000
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:354:  	ArithmeticOperationRange assertion: !(`THIS.balance == -2147483648 && 100 == -1)
+			VALUE: !(`THIS.balance_33_0___6 == -2147483648 && 100 == -1)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:355:  	interest = _interest * 4
+			VALUE: _interest	 === 3000
+			VALUE: 4	 === 4
+			VALUE: _interest * 4	 === 12000
+			VALUE: interest = _interest * 4	 === 12000
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:355:  	ArithmeticOperationRange assertion: |#mul32ok#|(_interest, 4)
+			VALUE: 4	 === 4
+			VALUE: |#mul32ok#|(_interest_8846_8860___38, 4)	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:357:  	return interest;
+			VALUE: interest	 === 12000
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:329:  	ensures \result == (balance / 100) * 3; 
+			VALUE: \result	 === 12000
+			VALUE: balance	 === 300000
+			VALUE: balance / 100	 === 3000
+			VALUE: (balance / 100)	 === 3000
+			VALUE: (balance / 100) * 3	 === 9000
+			VALUE: \result == (balance / 100) * 3	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:357:  Invalid assertion (Postcondition)
+: /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/ArjaE/BankAccount/bug60/Repaired/BankAccount.java:329:  Associated location
+
+2 warnings

@@ -1,0 +1,36 @@
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/jGenProg/BinarySearch/bug2/Repaired/BinarySearch.java:12: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method Binary:  int multiply overflow
+            int mid =  high * 2;//int mid =  high / 2;
+                            ^
+
+TRACE of BinarySearch.Binary(int[],int)
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/jGenProg/BinarySearch/bug2/Repaired/BinarySearch.java:6:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/jGenProg/BinarySearch/bug2/Repaired/BinarySearch.java:3:  	requires \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j; arr[i] <= arr[j]; 
+			VALUE: \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j; arr[i] <= arr[j]	 === true
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/jGenProg/BinarySearch/bug2/Repaired/BinarySearch.java:1:  	if (arr.length == 0) ...
+			VALUE: arr.length	 === 1073741824
+			VALUE: 0	 === 0
+			VALUE: arr.length == 0	 === false
+			VALUE: (arr.length == 0)	 === false
+				Condition = false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/jGenProg/BinarySearch/bug2/Repaired/BinarySearch.java:7:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/jGenProg/BinarySearch/bug2/Repaired/BinarySearch.java:10:  	int low = 0
+			VALUE: 0	 === 0
+			VALUE: low	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/jGenProg/BinarySearch/bug2/Repaired/BinarySearch.java:11:  	int high = arr.length
+			VALUE: arr.length	 === 1073741824
+			VALUE: high	 === 1073741824
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/jGenProg/BinarySearch/bug2/Repaired/BinarySearch.java:11:  	PossiblyNullDeReference assertion: arr != null
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/jGenProg/BinarySearch/bug2/Repaired/BinarySearch.java:12:  	int mid = high * 2
+			VALUE: high	 === 1073741824
+			VALUE: 2	 === 2
+			VALUE: high * 2	 === ( - 2147483648 )
+			VALUE: mid	 === 0
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/jGenProg/BinarySearch/bug2/Repaired/BinarySearch.java:12:  	ArithmeticOperationRange assertion: |#mul32ok#|(high, 2)
+			VALUE: 2	 === 2
+			VALUE: |#mul32ok#|(high_471_471___21, 2)	 === false
+/home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/JMLFaleNegatives/Overflow/jGenProg/BinarySearch/bug2/Repaired/BinarySearch.java:12:  Invalid assertion (ArithmeticOperationRange)
+
+1 warning
