@@ -1,3 +1,5 @@
+package Structural.ArjaE.PrimeNumbers.bug10.Repaired;
+
 //105,102,357 prime numbers exist between 1 to Integer.MAX_VALUE. Also, the Integer.MAX_VALUE is a prime number. 
     public class PrimeNumbers
     {

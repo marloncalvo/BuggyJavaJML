@@ -1,3 +1,5 @@
+package Cardumen.BinarySearch.bug12.Repaired;
+
 
 public class BinarySearch {
     //@ requires \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j ;arr[i] <= arr[j];

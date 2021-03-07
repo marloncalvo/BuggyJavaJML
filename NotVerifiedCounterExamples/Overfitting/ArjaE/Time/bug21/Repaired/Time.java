@@ -1,3 +1,5 @@
+package ArjaE.Time.bug21.Repaired;
+
 public class Time {
     private /*@ spec_public @*/ int second;
     private /*@ spec_public @*/ int minute;

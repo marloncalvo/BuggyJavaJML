@@ -1,3 +1,5 @@
+package Structural.ArjaE.CombinationPermutation.bug3.Repaired;
+
 public class Factorial
     {
        //@ requires 0 <= n && n <= 20;

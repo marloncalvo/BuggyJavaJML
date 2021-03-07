@@ -1,3 +1,5 @@
+package jMutRepair.BankAccount.bug6.Repaired;
+
 public class BankAccount 
 {
 	int balance;

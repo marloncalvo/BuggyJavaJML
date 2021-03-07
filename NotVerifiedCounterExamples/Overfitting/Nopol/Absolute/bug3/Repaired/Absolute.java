@@ -1,3 +1,5 @@
+package Nopol.Absolute.bug3.Repaired;
+
 public class Absolute {
 	/*@    requires 0 <= num && num <= Short.MAX_VALUE;
 	  @    ensures \result == num;

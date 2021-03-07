@@ -1,3 +1,5 @@
+package Nopol.Absolute.bug3.Repaired;
+
 public class AbsoluteDriver {
 	/*@ spec_public*/ int i;
 	/*@ spec_public*/ short sh;

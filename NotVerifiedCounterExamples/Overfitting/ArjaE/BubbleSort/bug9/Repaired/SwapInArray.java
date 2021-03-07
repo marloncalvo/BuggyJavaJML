@@ -1,3 +1,5 @@
+package ArjaE.BubbleSort.bug9.Repaired;
+
    public class SwapInArray {
         /*@ requires 0 <= x && x < array.length && 0 <= y && y < array.length; 
 	  @ assignable array[x], array[y]; 

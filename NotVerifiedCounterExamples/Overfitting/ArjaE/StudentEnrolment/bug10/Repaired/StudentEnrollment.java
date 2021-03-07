@@ -1,3 +1,5 @@
+package ArjaE.StudentEnrolment.bug10.Repaired;
+
 public class StudentEnrollment {
     public static final int costPerCredit = 200;  
     public static final int totalCredits = 120;

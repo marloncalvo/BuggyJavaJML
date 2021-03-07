@@ -1,3 +1,5 @@
+package ArjaE.BankAccount.bug48.Repaired;
+
 public class BankAccount 
 {
 	int balance;

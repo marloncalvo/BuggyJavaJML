@@ -1,3 +1,5 @@
+package Cardumen.BankAccount.bug25.Repaired;
+
 public class BankAccount 
 {
 	int balance;

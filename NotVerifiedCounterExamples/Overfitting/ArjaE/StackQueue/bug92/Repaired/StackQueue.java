@@ -1,3 +1,5 @@
+package ArjaE.StackQueue.bug92.Repaired;
+
 public class StackQueue {
 	public class Stack { 
 	 	public static final int MAX = 100;   // Maximum size of Stack 

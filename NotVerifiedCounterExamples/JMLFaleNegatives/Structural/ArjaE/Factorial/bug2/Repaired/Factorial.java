@@ -1,3 +1,5 @@
+package Structural.ArjaE.Factorial.bug2.Repaired;
+
 public class Factorial
     {
        //@ requires 0 <= n && n <= 20;

@@ -1,3 +1,5 @@
+package Structural.ArjaE.LinearSearch.bug4.Repaired;
+
     
   public class LinearSearch {
      private static /*@ spec_public*/ int location;

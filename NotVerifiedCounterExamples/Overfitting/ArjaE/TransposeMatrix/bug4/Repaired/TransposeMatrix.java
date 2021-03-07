@@ -1,3 +1,5 @@
+package ArjaE.TransposeMatrix.bug4.Repaired;
+
 
 public class TransposeMatrix {
        //@ requires 0 < matrix.length && matrix.length <= Integer.MAX_VALUE;

@@ -1,3 +1,5 @@
+package Structural.ArjaE.FIND_IN_FIRST_SORTED.bug6.Repaired;
+
 //arr.length should be less than half of Integer.MAX_VALUE. Array size greater than ((Integer.MAX_VALUE/2)+1) can lead to sum overfllowing  for "int mid = (lo + hi) / 2;". When argument "X" is not in the array and it is value is larger than all numbers in the array. 
 public class FIND_FIRST_IN_SORTED {
     //@ requires 0 <= arr.length && arr.length <= (Integer.MAX_VALUE/2)+1; 

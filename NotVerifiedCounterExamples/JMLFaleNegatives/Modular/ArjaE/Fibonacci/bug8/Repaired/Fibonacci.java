@@ -1,3 +1,5 @@
+package Modular.ArjaE.Fibonacci.bug8.Repaired;
+
 public class Fibonacci {
    	private /*@ spec_public @*/ long fib[];
 	//@ public invariant 2 <= fib.length && fib.length <= 93; // 93 < size ==> Long Overflow 

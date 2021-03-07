@@ -1,3 +1,5 @@
+package ArjaE.FindFirstZero.bug5.Repaired;
+
 public class FindFirstZero {
 	 //@ ensures x.length == 0 ==> \result == -1;
    	 //@ ensures 0 <= \result && \result < x.length ==> x[\result] == 0 && (\forall int i; 0 <= i && i < \result; x[i] != 0);

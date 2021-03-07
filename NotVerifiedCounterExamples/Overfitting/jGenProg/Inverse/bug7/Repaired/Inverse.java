@@ -1,3 +1,5 @@
+package jGenProg.Inverse.bug7.Repaired;
+
 public class Inverse {
     //@ ensures !\result ==> ((x.length != y.length) || (\exists int i; 0 <= i && i < x.length; x[i] != y[x.length - 1 -i]));
     //@ ensures \result ==> x.length == y.length && (\forall int i; 0 <= i && i < x.length; x[i] == y[x.length - 1 - i]);

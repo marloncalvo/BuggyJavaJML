@@ -1,3 +1,5 @@
+package Structural.ArjaE.Fibonacci.bug6.Repaired;
+
 import java.util.Scanner;
 
 public class FibonacciMain{

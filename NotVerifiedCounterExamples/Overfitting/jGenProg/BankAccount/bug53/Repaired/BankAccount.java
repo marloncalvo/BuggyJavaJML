@@ -1,3 +1,5 @@
+package jGenProg.BankAccount.bug53.Repaired;
+
 public class BankAccount 
 {
 	int balance;

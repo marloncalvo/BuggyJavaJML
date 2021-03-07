@@ -1,3 +1,5 @@
+package ArjaE.Alphabet.bug1.Repaired;
+
 public class Alphabet {
    private boolean vowel_set = false;
    private boolean vowel;

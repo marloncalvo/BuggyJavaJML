@@ -1,3 +1,5 @@
+package Nopol.FindFirstZero.bug9.Repaired;
+
 public class Counterexample {
     public static void main(String[] args) {
         int [] arr = new int[1];

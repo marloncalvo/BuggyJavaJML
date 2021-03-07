@@ -1,3 +1,5 @@
+package Structural.ArjaE.CombinationPermutation.bug3.Repaired;
+
 public class CombinationPermutation {
 	//@ requires 0 <= n && n <= 20 && 0 <= r && r <= n;
 	//@ old Factorial fac_spec = new Factorial();

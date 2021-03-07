@@ -1,3 +1,5 @@
+package ArjaE.PrimeCheck.bug8.Repaired;
+
 class PrimeCheck {
    /*@ public normal_behavior     
      @    requires d != 0;

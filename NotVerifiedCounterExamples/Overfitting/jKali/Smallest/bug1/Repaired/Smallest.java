@@ -1,3 +1,5 @@
+package jKali.Smallest.bug1.Repaired;
+
 public class Smallest {
     //@ ensures \result == -1 <==> a.length == 0;
     //@ ensures -1 < \result ==> (\forall int i; 0 <= i && i < a.length; a[\result] <= a[i]);

@@ -1,3 +1,5 @@
+package ArjaE.StrPalindrome.bug3.Repaired;
+
 public class StrPalindrome {
    private /*@ spec_public @*/ String reverse = "";
    /*@ public normal_behavior

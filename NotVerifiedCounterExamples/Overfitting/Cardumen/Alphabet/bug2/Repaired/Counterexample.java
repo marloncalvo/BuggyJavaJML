@@ -1,3 +1,5 @@
+package Cardumen.Alphabet.bug2.Repaired;
+
 public class Counterexample {
 
     public static void main(String [] args) {

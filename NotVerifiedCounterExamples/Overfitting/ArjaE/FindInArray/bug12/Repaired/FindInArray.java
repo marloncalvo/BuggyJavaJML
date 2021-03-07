@@ -1,3 +1,5 @@
+package ArjaE.FindInArray.bug12.Repaired;
+
 class FindInArray {
     private /*@ spec_public @*/ int key;
     private /*@ spec_public @*/ int arr[];
