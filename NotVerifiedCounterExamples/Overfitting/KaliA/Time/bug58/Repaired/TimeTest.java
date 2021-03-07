@@ -1,4 +1,4 @@
-package KaliA.Time.bug54.Repaired;
+package KaliA.Time.bug58.Repaired;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,10 +11,10 @@ class TimeTest {
 
 	@Test
 	void case1() {
-		Time time = new Time(13, 35, 37);
+		Time time = new Time(13, 37, 35);
 		assertFalse(time.equals(null));
 	}
-
+	
 	@Test
 	void case2() {
 		Time time = new Time(21, 20, 2);
@@ -23,15 +23,15 @@ class TimeTest {
 	
 	@Test
 	void case3() {
-		Time time = new Time(21, 37, 25);
-		Time start = new Time(6, 33, 51);
-		Time stop = new Time(9, 34, 49);
+		Time time = new Time(21, 37, 7);
+		Time start = new Time(7, 17, 44);
+		Time stop = new Time(10, 16, 26);
 		Time res = time.difference(start, stop);
 		
 		assertAll(
-				() -> {assertEquals(res.getHour(), 3);},
-				() -> {assertEquals(res.getMinute(), 0);},
-				() -> {assertEquals(res.getSecond(), 58);});
+				() -> {assertEquals(res.getHour(), 2);},
+				() -> {assertEquals(res.getMinute(), 58);},
+				() -> {assertEquals(res.getSecond(), 42);});
 		
 	}
 	

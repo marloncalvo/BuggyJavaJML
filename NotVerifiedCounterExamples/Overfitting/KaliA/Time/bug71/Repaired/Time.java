@@ -292,7 +292,9 @@ public class Time {
 	} else if (sel == 2) {
 		timer();
 	} else if (sel == 3) {
+		System.out.println(start.equals(stop));
 		if (!start.equals(stop)) { //if (start.equals(stop)) {
+			System.out.println("ok");
 			start.reset();
 			return start.getTime();
 		}

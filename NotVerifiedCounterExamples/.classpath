@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="**/Bug/*" including="**/Repaired/*" kind="src" path="Overfitting">
+	<classpathentry excluding="**/Bug/*" including="**/Repaired/*" kind="src" output="overfitted_tests" path="Overfitting">
+		<attributes>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**/Bug/*" including="**/Repaired/*" kind="src" output="negatives_tests" path="JMLFaleNegatives">
 		<attributes>
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="var" path="OPENJML_RUNTIME_LIBRARY"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

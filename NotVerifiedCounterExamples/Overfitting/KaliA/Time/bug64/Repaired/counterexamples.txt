@@ -2952,7 +2952,7 @@ TRACE of Time.timeOptions(Time,Time,int)
       @		ensures  start.hour == 0 && start.minute == 0 && start.second == 0;
        		^
 
-TRACE of Time.timeOptions(Time,Time,int)
+0 of Time.timeOptions(Time,Time,int)
 /home/marloncalvo/workspace/buggyjavajml/NotVerifiedCounterExamples/Overfitting/Kali-A/Time/bug64/Repaired/Time.java:6:  	//@ public invariant 0 <= second && second < 60; 
 			VALUE: 0	 === 0
 			VALUE: second	 === 1
