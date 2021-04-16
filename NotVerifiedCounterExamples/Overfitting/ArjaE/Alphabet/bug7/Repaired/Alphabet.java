@@ -17,7 +17,7 @@ public class Alphabet {
    private boolean uppercase_set = false;
    private boolean uppercase;
    //@ private invariant uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z'));
-   private boolean lowercase_set = false;
+   protected boolean lowercase_set = false;
    private boolean lowercase;
    //@ private invariant lowercase_set ==> (lowercase == ('a' <= c && c <= 'z'));
 

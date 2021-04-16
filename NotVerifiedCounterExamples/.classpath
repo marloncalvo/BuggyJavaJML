@@ -5,7 +5,7 @@
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry excluding="**/Bug/*" including="**/Repaired/*" kind="src" output="negatives_tests" path="JMLFaleNegatives">
+	<classpathentry excluding="**/Bug/*" including="**/Repaired/*" kind="src" output="negatives_tests" path="JMLFalseNegatives">
 		<attributes>
 			<attribute name="test" value="true"/>
 		</attributes>

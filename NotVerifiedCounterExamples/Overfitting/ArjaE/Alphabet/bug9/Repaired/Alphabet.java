@@ -11,7 +11,7 @@ public class Alphabet {
    private boolean alphabetic_set = false;
    private boolean alphabetic;
    //@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z')||('A' <= c && c <='Z'));
-   private boolean digit_set = false;
+   protected boolean digit_set = false;
    private boolean digit;
    //@ private invariant digit_set ==> digit == ('0' <= c && c <= '9');
    private boolean uppercase_set = false;

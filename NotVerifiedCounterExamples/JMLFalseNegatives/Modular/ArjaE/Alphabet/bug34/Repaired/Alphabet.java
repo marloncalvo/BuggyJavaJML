@@ -1,4 +1,4 @@
-package ArjaE.Alphabet.bug3.Repaired;
+package Modular.ArjaE.Alphabet.bug34.Repaired;
 
 public class Alphabet {
    private boolean vowel_set = false;
@@ -9,13 +9,13 @@ public class Alphabet {
 			       || c == 'O' || c == 'u' || c == 'U')); @*/
 
    private boolean alphabetic_set = false;
-   protected boolean alphabetic; // for test case creation
+   private boolean alphabetic;
    //@ private invariant alphabetic_set ==> alphabetic == (('a' <= c && c <= 'z')||('A' <= c && c <='Z'));
    private boolean digit_set = false;
    private boolean digit;
    //@ private invariant digit_set ==> digit == ('0' <= c && c <= '9');
    private boolean uppercase_set = false;
-   private boolean uppercase;
+   protected boolean uppercase;
    //@ private invariant uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z'));
    private boolean lowercase_set = false;
    private boolean lowercase;
@@ -53,8 +53,8 @@ public class Alphabet {
      @   ensures \result == ('a' <= c && c <= 'z')||('A' <= c && c <='Z'); @*/
    public boolean isAlphabetic() 
    {
-	// setAlphabetic();
-	alphabetic=(('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'));
+	setAlphabetic();
+	uppercase=('A' <= c && c <= 'Z');
 	return alphabetic;
    }
 
@@ -180,7 +180,7 @@ public class Alphabet {
      @   ensures \result == vowel_set; @*/
    public /*@ pure @*/ boolean getVowel_set()
    {
-	return vowel_set;
+	return vowel_set; // return !vowel_set; // return vowel_set;
    }
 
    /*@ private normal_behavior
@@ -215,7 +215,6 @@ public class Alphabet {
    public boolean[] driver(int op) 
    {
 	boolean[] result = new boolean[6];
-	alphabetic_set=true;
 	switch (op) {
 		case 0 :
 		result[0] = isVowel();
@@ -230,6 +229,7 @@ public class Alphabet {
 		case 2 :
 		result[0] = isLowercase();
 		result[3] = getLowercase_set();
+		result[5]=getAlphabetic_set();
 		break;
 
 		case 3 :
@@ -242,7 +242,6 @@ public class Alphabet {
 		result[5] = getAlphabetic_set();
 		break;
 	}
-	result[5]=getAlphabetic_set();
 	return result;
    }
 }
