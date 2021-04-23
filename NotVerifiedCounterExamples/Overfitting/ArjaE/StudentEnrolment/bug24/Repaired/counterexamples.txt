@@ -1,3 +1,2027 @@
-openjml: invalid flag: <bound
-Usage: openjml <options> <source files>
-use -help for a list of possible options
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187: warning: The prover cannot establish an assertion (Assignable: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:179: ) in method lateEnrollment:  tuitionBalance
+        	tuitionBalance = getTuition() + cost;
+        	               ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:179: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187: 
+      @   	assignable \nothing;
+          	^
+
+TRACE of ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment.lateEnrollment()
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:171:  	old int latePerCredit = (costPerCredit / 100) * 6
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:172:  	requires registrationPermission(); 
+			VALUE: registrationPermission()	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_2781
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp2798
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_2802
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp2819
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__388
+			VALUE: _$CPRE__388	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:173:  	requires this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit <= Integer.MAX_VALUE; 
+			VALUE: this.tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit	 === 4001
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: latePerCredit	 === 12
+			VALUE: maxSemesterCredits * latePerCredit	 === 240
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit	 === 4241
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit <= Integer.MAX_VALUE	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:178:  	requires !registrationPermission(); 
+			VALUE: registrationPermission()	 === false
+			VALUE: !registrationPermission()	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_2861
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp2878
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__389
+			VALUE: _$CPRE__389	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	if (!registrationPermission() || 0 <= passedCredits) ...
+			VALUE: registrationPermission()	 === false
+			VALUE: !registrationPermission()	 === true
+			VALUE: !registrationPermission() || 0 <= passedCredits	 === true
+			VALUE: (!registrationPermission() || 0 <= passedCredits)	 === true
+				Condition = true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_2910
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp2927
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_2931
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp2948
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__390
+			VALUE: _$CPRE__390	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:184:  	int latePerCredit = (costPerCredit / 100) * 6
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: latePerCredit	 === 12
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:184:  	ArithmeticOperationRange assertion: !(ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment.costPerCredit == -2147483648 && 100 == -1)
+			VALUE: !(ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment_costPerCredit == -2147483648 && 100 == -1)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:184:  	ArithmeticOperationRange assertion: |#mul32ok#|((_JML__tmp2986), 6)
+			VALUE: 6	 === 6
+			VALUE: |#mul32ok#|((_JML__tmp2986), 6)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:185:  	int cost
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	cost = getEnrollmentCredits() * costPerCredit + getEnrollmentCredits() * latePerCredit ...
+			VALUE: getEnrollmentCredits()	 === 0
+			VALUE: costPerCredit	 === 200
+			VALUE: getEnrollmentCredits() * costPerCredit	 === 0
+			VALUE: getEnrollmentCredits()	 === 0
+			VALUE: latePerCredit	 === 12
+			VALUE: getEnrollmentCredits() * latePerCredit	 === 0
+			VALUE: getEnrollmentCredits() * costPerCredit + getEnrollmentCredits() * latePerCredit	 === 0
+			VALUE: cost = getEnrollmentCredits() * costPerCredit + getEnrollmentCredits() * latePerCredit	 === 0
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_2993
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp3010
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_3014
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp3031
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__391
+			VALUE: _$CPRE__391	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:3:  	UndefinedNullDeReference assertion: `THIS != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	ArithmeticOperationRange assertion: |#mul32ok#|(_JML__tmp3032, ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment.costPerCredit)
+			VALUE: |#mul32ok#|(_JML__tmp3032, ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment_costPerCredit)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_3064
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp3081
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_3085
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp3102
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__392
+			VALUE: _$CPRE__392	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:3:  	UndefinedNullDeReference assertion: `THIS != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	ArithmeticOperationRange assertion: |#mul32ok#|(_JML__tmp3103, latePerCredit)
+			VALUE: |#mul32ok#|(_JML__tmp3103, latePerCredit_7125_7125___57)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp3060 && 0 < _JML__tmp3130) || _JML__tmp3060 <= 2147483647 - _JML__tmp3130
+			VALUE: !(0 < _JML__tmp3060 && 0 < _JML__tmp3130) || _JML__tmp3060 <= 2147483647 - _JML__tmp3130	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	ArithmeticOperationRange assertion: !(_JML__tmp3060 < 0 && _JML__tmp3130 < 0) || -2147483648 - _JML__tmp3130 <= _JML__tmp3060
+			VALUE: !(_JML__tmp3060 < 0 && _JML__tmp3130 < 0) || -2147483648 - _JML__tmp3130 <= _JML__tmp3060	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  	tuitionBalance = getTuition() + cost
+			VALUE: getTuition()	 === 1
+			VALUE: cost	 === 0
+			VALUE: getTuition() + cost	 === 1
+			VALUE: tuitionBalance = getTuition() + cost	 === 1
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_3138
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp3155
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_3159
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp3176
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__393
+			VALUE: _$CPRE__393	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:3:  	UndefinedNullDeReference assertion: `THIS != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp3177 && 0 < cost) || _JML__tmp3177 <= 2147483647 - cost
+			VALUE: !(0 < _JML__tmp3177 && 0 < cost_7178_7194___79) || _JML__tmp3177 <= 2147483647 - cost_7178_7194___79	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  	ArithmeticOperationRange assertion: !(_JML__tmp3177 < 0 && cost < 0) || -2147483648 - cost <= _JML__tmp3177
+			VALUE: !(_JML__tmp3177 < 0 && cost_7178_7194___79 < 0) || -2147483648 - cost_7178_7194___79 <= _JML__tmp3177	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  	Assignable assertion: _JML__tmp3209 || (!Pre_20 || _JML__tmp3208.`alloc__ > 0)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  Invalid assertion (Assignable)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:179:  Associated location
+
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:181: warning: The prover cannot establish an assertion (Postcondition: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:177: ) in method lateEnrollment
+    public void lateEnrollment() 
+                ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:177: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:181: 
+      @      public exceptional_behavior
+                    ^
+
+TRACE of ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment.lateEnrollment()
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:171:  	old int latePerCredit = (costPerCredit / 100) * 6
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:172:  	requires registrationPermission(); 
+			VALUE: registrationPermission()	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_2781
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp2798
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_2802
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp2819
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__388
+			VALUE: _$CPRE__388	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:173:  	requires this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit <= Integer.MAX_VALUE; 
+			VALUE: this.tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit	 === 4001
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: latePerCredit	 === 12
+			VALUE: maxSemesterCredits * latePerCredit	 === 240
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit	 === 4241
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit <= Integer.MAX_VALUE	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:178:  	requires !registrationPermission(); 
+			VALUE: registrationPermission()	 === false
+			VALUE: !registrationPermission()	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_2861
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp2878
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__389
+			VALUE: _$CPRE__389	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	if (!registrationPermission() || 0 <= passedCredits) ...
+			VALUE: registrationPermission()	 === false
+			VALUE: !registrationPermission()	 === true
+			VALUE: !registrationPermission() || 0 <= passedCredits	 === true
+			VALUE: (!registrationPermission() || 0 <= passedCredits)	 === true
+				Condition = true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_2910
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp2927
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_2931
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp2948
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__390
+			VALUE: _$CPRE__390	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:184:  	int latePerCredit = (costPerCredit / 100) * 6
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: latePerCredit	 === 12
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:184:  	ArithmeticOperationRange assertion: !(ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment.costPerCredit == -2147483648 && 100 == -1)
+			VALUE: !(ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment_costPerCredit == -2147483648 && 100 == -1)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:184:  	ArithmeticOperationRange assertion: |#mul32ok#|((_JML__tmp2986), 6)
+			VALUE: 6	 === 6
+			VALUE: |#mul32ok#|((_JML__tmp2986), 6)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:185:  	int cost
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	cost = getEnrollmentCredits() * costPerCredit + getEnrollmentCredits() * latePerCredit ...
+			VALUE: getEnrollmentCredits()	 === 0
+			VALUE: costPerCredit	 === 200
+			VALUE: getEnrollmentCredits() * costPerCredit	 === 0
+			VALUE: getEnrollmentCredits()	 === 0
+			VALUE: latePerCredit	 === 12
+			VALUE: getEnrollmentCredits() * latePerCredit	 === 0
+			VALUE: getEnrollmentCredits() * costPerCredit + getEnrollmentCredits() * latePerCredit	 === 0
+			VALUE: cost = getEnrollmentCredits() * costPerCredit + getEnrollmentCredits() * latePerCredit	 === 0
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_2993
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp3010
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_3014
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp3031
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__391
+			VALUE: _$CPRE__391	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:3:  	UndefinedNullDeReference assertion: `THIS != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	ArithmeticOperationRange assertion: |#mul32ok#|(_JML__tmp3032, ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment.costPerCredit)
+			VALUE: |#mul32ok#|(_JML__tmp3032, ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment_costPerCredit)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_3064
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp3081
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_3085
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp3102
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__392
+			VALUE: _$CPRE__392	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:3:  	UndefinedNullDeReference assertion: `THIS != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	ArithmeticOperationRange assertion: |#mul32ok#|(_JML__tmp3103, latePerCredit)
+			VALUE: |#mul32ok#|(_JML__tmp3103, latePerCredit_7125_7125___57)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp3060 && 0 < _JML__tmp3130) || _JML__tmp3060 <= 2147483647 - _JML__tmp3130
+			VALUE: !(0 < _JML__tmp3060 && 0 < _JML__tmp3130) || _JML__tmp3060 <= 2147483647 - _JML__tmp3130	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	ArithmeticOperationRange assertion: !(_JML__tmp3060 < 0 && _JML__tmp3130 < 0) || -2147483648 - _JML__tmp3130 <= _JML__tmp3060
+			VALUE: !(_JML__tmp3060 < 0 && _JML__tmp3130 < 0) || -2147483648 - _JML__tmp3130 <= _JML__tmp3060	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  	tuitionBalance = getTuition() + cost
+			VALUE: getTuition()	 === 1
+			VALUE: cost	 === 0
+			VALUE: getTuition() + cost	 === 1
+			VALUE: tuitionBalance = getTuition() + cost	 === 1
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_3138
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp3155
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_3159
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp3176
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__393
+			VALUE: _$CPRE__393	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:3:  	UndefinedNullDeReference assertion: `THIS != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp3177 && 0 < cost) || _JML__tmp3177 <= 2147483647 - cost
+			VALUE: !(0 < _JML__tmp3177 && 0 < cost_7178_7194___79) || _JML__tmp3177 <= 2147483647 - cost_7178_7194___79	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  	ArithmeticOperationRange assertion: !(_JML__tmp3177 < 0 && cost < 0) || -2147483648 - cost <= _JML__tmp3177
+			VALUE: !(_JML__tmp3177 < 0 && cost_7178_7194___79 < 0) || -2147483648 - cost_7178_7194___79 <= _JML__tmp3177	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  	Assignable assertion: _JML__tmp3209 || (!Pre_20 || _JML__tmp3208.`alloc__ > 0)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantExit assertion: `conditionalResult_3243
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantExit assertion: _JML__tmp3260
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:8:  	NullField assertion: _JML__tmp3284
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:9:  	NullField assertion: _JML__tmp3288
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	ensures false; 
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:181:  Invalid assertion (Postcondition)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:177:  Associated location
+
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:181: warning: The prover cannot establish an assertion (InvariantExit: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14: ) in method lateEnrollment
+    public void lateEnrollment() 
+                ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:181: 
+    /*@ public invariant tuitionBalance <= 
+               ^
+
+TRACE of ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment.lateEnrollment()
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:171:  	old int latePerCredit = (costPerCredit / 100) * 6
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:172:  	requires registrationPermission(); 
+			VALUE: registrationPermission()	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_2781
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp2798
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_2802
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp2819
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__388
+			VALUE: _$CPRE__388	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:173:  	requires this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit <= Integer.MAX_VALUE; 
+			VALUE: this.tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit	 === 8240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: latePerCredit	 === 12
+			VALUE: maxSemesterCredits * latePerCredit	 === 240
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit	 === 8480
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit <= Integer.MAX_VALUE	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:178:  	requires !registrationPermission(); 
+			VALUE: registrationPermission()	 === false
+			VALUE: !registrationPermission()	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_2861
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp2878
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__389
+			VALUE: _$CPRE__389	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	if (!registrationPermission() || 0 <= passedCredits) ...
+			VALUE: registrationPermission()	 === false
+			VALUE: !registrationPermission()	 === true
+			VALUE: !registrationPermission() || 0 <= passedCredits	 === true
+			VALUE: (!registrationPermission() || 0 <= passedCredits)	 === true
+				Condition = true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_2910
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp2927
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_2931
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp2948
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__390
+			VALUE: _$CPRE__390	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:184:  	int latePerCredit = (costPerCredit / 100) * 6
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: latePerCredit	 === 12
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:184:  	ArithmeticOperationRange assertion: !(ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment.costPerCredit == -2147483648 && 100 == -1)
+			VALUE: !(ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment_costPerCredit == -2147483648 && 100 == -1)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:184:  	ArithmeticOperationRange assertion: |#mul32ok#|((_JML__tmp2986), 6)
+			VALUE: 6	 === 6
+			VALUE: |#mul32ok#|((_JML__tmp2986), 6)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:185:  	int cost
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	cost = getEnrollmentCredits() * costPerCredit + getEnrollmentCredits() * latePerCredit ...
+			VALUE: getEnrollmentCredits()	 === 1
+			VALUE: costPerCredit	 === 200
+			VALUE: getEnrollmentCredits() * costPerCredit	 === 200
+			VALUE: getEnrollmentCredits()	 === 1
+			VALUE: latePerCredit	 === 12
+			VALUE: getEnrollmentCredits() * latePerCredit	 === 12
+			VALUE: getEnrollmentCredits() * costPerCredit + getEnrollmentCredits() * latePerCredit	 === 212
+			VALUE: cost = getEnrollmentCredits() * costPerCredit + getEnrollmentCredits() * latePerCredit	 === 212
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_2993
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp3010
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_3014
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp3031
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__391
+			VALUE: _$CPRE__391	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:3:  	UndefinedNullDeReference assertion: `THIS != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	ArithmeticOperationRange assertion: |#mul32ok#|(_JML__tmp3032, ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment.costPerCredit)
+			VALUE: |#mul32ok#|(_JML__tmp3032, ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment_costPerCredit)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_3064
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp3081
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_3085
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp3102
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__392
+			VALUE: _$CPRE__392	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:3:  	UndefinedNullDeReference assertion: `THIS != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	ArithmeticOperationRange assertion: |#mul32ok#|(_JML__tmp3103, latePerCredit)
+			VALUE: |#mul32ok#|(_JML__tmp3103, latePerCredit_7125_7125___57)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp3060 && 0 < _JML__tmp3130) || _JML__tmp3060 <= 2147483647 - _JML__tmp3130
+			VALUE: !(0 < _JML__tmp3060 && 0 < _JML__tmp3130) || _JML__tmp3060 <= 2147483647 - _JML__tmp3130	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:186:  	ArithmeticOperationRange assertion: !(_JML__tmp3060 < 0 && _JML__tmp3130 < 0) || -2147483648 - _JML__tmp3130 <= _JML__tmp3060
+			VALUE: !(_JML__tmp3060 < 0 && _JML__tmp3130 < 0) || -2147483648 - _JML__tmp3130 <= _JML__tmp3060	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  	tuitionBalance = getTuition() + cost
+			VALUE: getTuition()	 === 4240
+			VALUE: cost	 === 212
+			VALUE: getTuition() + cost	 === 4452
+			VALUE: tuitionBalance = getTuition() + cost	 === 4452
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_3138
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp3155
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_3159
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp3176
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__393
+			VALUE: _$CPRE__393	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:3:  	UndefinedNullDeReference assertion: `THIS != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp3177 && 0 < cost) || _JML__tmp3177 <= 2147483647 - cost
+			VALUE: !(0 < _JML__tmp3177 && 0 < cost_7178_7194___79) || _JML__tmp3177 <= 2147483647 - cost_7178_7194___79	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  	ArithmeticOperationRange assertion: !(_JML__tmp3177 < 0 && cost < 0) || -2147483648 - cost <= _JML__tmp3177
+			VALUE: !(_JML__tmp3177 < 0 && cost_7178_7194___79 < 0) || -2147483648 - cost_7178_7194___79 <= _JML__tmp3177	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:187:  	Assignable assertion: _JML__tmp3209 || (!Pre_20 || _JML__tmp3208.`alloc__ > 0)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantExit assertion: `conditionalResult_3243
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 4452
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantExit assertion: _JML__tmp3260
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:181:  Invalid assertion (InvariantExit)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  Associated location
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:189: warning: The prover cannot establish an assertion (ExceptionalPostcondition: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:170: ) in method lateEnrollment
+		throw new IllegalArgumentException();
+		^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:170: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:189: 
+    /*@      public normal_behavior
+                    ^
+
+TRACE of ArjaE.StudentEnrolment.bug24.Repaired.StudentEnrollment.lateEnrollment()
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 2
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 2
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147482760 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:171:  	old int latePerCredit = (costPerCredit / 100) * 6
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:172:  	requires registrationPermission(); 
+			VALUE: registrationPermission()	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 2
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 2
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_2781
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147482760 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp2798
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 2
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 2
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_2802
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147482760 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp2819
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__388
+			VALUE: _$CPRE__388	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 2
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 2
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147482760 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:173:  	requires this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit <= Integer.MAX_VALUE; 
+			VALUE: this.tuitionBalance	 === ( - 2147482760 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit	 === ( - 2147478760 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: latePerCredit	 === 12
+			VALUE: maxSemesterCredits * latePerCredit	 === 240
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit	 === ( - 2147478520 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit <= Integer.MAX_VALUE	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:3:  	UndefinedNullDeReference assertion: `THIS != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:178:  	requires !registrationPermission(); 
+			VALUE: registrationPermission()	 === true
+			VALUE: !registrationPermission()	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 2
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 2
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_2861
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147482760 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp2878
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__389
+			VALUE: _$CPRE__389	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 2
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 2
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147482760 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	if (!registrationPermission() || 0 <= passedCredits) ...
+			VALUE: registrationPermission()	 === true
+			VALUE: !registrationPermission()	 === false
+			VALUE: 0	 === 0
+			VALUE: passedCredits	 === ( - 2147475879 )
+			VALUE: 0 <= passedCredits	 === false
+			VALUE: !registrationPermission() || 0 <= passedCredits	 === false
+			VALUE: (!registrationPermission() || 0 <= passedCredits)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 2
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 2
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: `conditionalResult_2910
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147482760 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantLeaveCaller assertion: _JML__tmp2927
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 2
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 2
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantEntrance assertion: `conditionalResult_2931
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147482760 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantEntrance assertion: _JML__tmp2948
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__390
+			VALUE: _$CPRE__390	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 2
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 2
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147482760 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:189:  	throw new IllegalArgumentException();
+			VALUE: new IllegalArgumentException()	 === REF!val!40
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__394
+			VALUE: _$CPRE__394	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__395
+			VALUE: _$CPRE__395	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:52:  	UndefinedNullDeReference assertion: !(_JML__tmp3213._throwables != null) || _JML__tmp3213._throwables != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 2
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 2
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:12:  	InvariantExceptionExit assertion: `conditionalResult_3264
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147482760 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:14:  	InvariantExceptionExit assertion: _JML__tmp3281
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:170:  	Terminated with exception
+			VALUE: `exception	 === REF!val!40
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:1:  	signals () false; 
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:170:  	ExceptionalPostcondition assertion: !Pre_19 || false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:189:  Invalid assertion (ExceptionalPostcondition)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug24/Repaired/StudentEnrollment.java:170:  Associated location
+
+8 warnings

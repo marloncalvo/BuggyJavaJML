@@ -1,3 +1,48 @@
-openjml: invalid flag: <bound
-Usage: openjml <options> <source files>
-use -help for a list of possible options
+PrimeCheck.java:16: warning: The prover cannot establish an assertion (Postcondition: PrimeCheck.java:12: ) in method isPrime
+	if (div(a,i) == 0) return false;
+	                   ^
+PrimeCheck.java:12: warning: Associated declaration: PrimeCheck.java:16: 
+   //@ ensures !\result ==> (\exists int k; 1 < k && k <= a/2; div(a,k) == 0); 
+       ^
+
+TRACE of ArjaE.PrimeCheck.bug8.Repaired.PrimeCheck.isPrime(int)
+PrimeCheck.java:10:  	requires 1 < a; 
+			VALUE: 1	 === 1
+			VALUE: a	 === 2
+			VALUE: 1 < a	 === true
+PrimeCheck.java:14:  	int i = 2
+			VALUE: 2	 === 2
+			VALUE: i	 === 2
+PrimeCheck.java:15:  	int mid = a / 2
+			VALUE: a	 === 2
+			VALUE: 2	 === 2
+			VALUE: a / 2	 === 1
+			VALUE: mid	 === 1
+PrimeCheck.java:15:  	ArithmeticOperationRange assertion: !(a == -2147483648 && 2 == -1)
+			VALUE: !(a_464_464___10 == -2147483648 && 2 == -1)	 === true
+PrimeCheck.java:1:  	if (div(a, i) == 0) ...
+			VALUE: a	 === 2
+			VALUE: i	 === 2
+			VALUE: ArjaE.PrimeCheck.bug8.Repaired.PrimeCheck.div(a, i)	 === 0
+			VALUE: 0	 === 0
+			VALUE: ArjaE.PrimeCheck.bug8.Repaired.PrimeCheck.div(a, i) == 0	 === true
+			VALUE: (ArjaE.PrimeCheck.bug8.Repaired.PrimeCheck.div(a, i) == 0)	 === true
+				Condition = true
+PrimeCheck.java:5:  	requires d != 0; 
+			VALUE: 0	 === 0
+PrimeCheck.java:5:  	Precondition assertion: _$CPRE__2
+			VALUE: _$CPRE__2	 === true
+PrimeCheck.java:6:  	UndefinedDivideByZero assertion: !_JML__tmp24 || _JML__tmp22 != 0
+PrimeCheck.java:16:  	return false;
+			VALUE: false	 === false
+PrimeCheck.java:11:  	ensures \result ==> (\forall int k; 1 < k && k <= a / 2; ArjaE.PrimeCheck.bug8.Repaired.PrimeCheck.div(a, k) != 0); 
+			VALUE: \result	 === false
+PrimeCheck.java:12:  	ensures !\result ==> (\exists int k; 1 < k && k <= a / 2; ArjaE.PrimeCheck.bug8.Repaired.PrimeCheck.div(a, k) == 0); 
+			VALUE: \result	 === false
+			VALUE: !\result	 === true
+			VALUE: \exists int k; 1 < k && k <= a / 2; ArjaE.PrimeCheck.bug8.Repaired.PrimeCheck.div(a, k) == 0	 === false
+			VALUE: (\exists int k; 1 < k && k <= a / 2; ArjaE.PrimeCheck.bug8.Repaired.PrimeCheck.div(a, k) == 0)	 === false
+PrimeCheck.java:16:  Invalid assertion (Postcondition)
+: PrimeCheck.java:12:  Associated location
+
+2 warnings

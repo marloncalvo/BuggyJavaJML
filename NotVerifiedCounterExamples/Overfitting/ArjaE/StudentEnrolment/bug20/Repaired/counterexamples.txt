@@ -1,3 +1,51 @@
-openjml: invalid flag: <bound
-Usage: openjml <options> <source files>
-use -help for a list of possible options
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug20/Repaired/StudentEnrollment.java:147: warning: The prover cannot establish an assertion (Postcondition: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug20/Repaired/StudentEnrollment.java:144: ) in method validPayment
+        return !(0 == payment); // return (0 < payment);
+        ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug20/Repaired/StudentEnrollment.java:144: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug20/Repaired/StudentEnrollment.java:147: 
+    //@   ensures \result <==> (0 < payment);
+          ^
+
+TRACE of ArjaE.StudentEnrolment.bug20.Repaired.StudentEnrollment.validPayment(int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug20/Repaired/StudentEnrollment.java:12:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 16
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 16
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug20/Repaired/StudentEnrollment.java:14:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147474793 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug20/Repaired/StudentEnrollment.java:147:  	return !(0 == payment);
+			VALUE: 0	 === 0
+			VALUE: payment	 === ( - 1 )
+			VALUE: 0 == payment	 === false
+			VALUE: (0 == payment)	 === false
+			VALUE: !(0 == payment)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug20/Repaired/StudentEnrollment.java:8:  	NullField assertion: _JML__tmp2171
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug20/Repaired/StudentEnrollment.java:9:  	NullField assertion: _JML__tmp2175
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug20/Repaired/StudentEnrollment.java:144:  	ensures \result <==> (0 < payment); 
+			VALUE: \result	 === true
+			VALUE: payment	 === ( - 1 )
+			VALUE: 0 < payment	 === false
+			VALUE: (0 < payment)	 === false
+			VALUE: \result <==> (0 < payment)	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug20/Repaired/StudentEnrollment.java:147:  Invalid assertion (Postcondition)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StudentEnrolment/bug20/Repaired/StudentEnrollment.java:144:  Associated location
+
+2 warnings
