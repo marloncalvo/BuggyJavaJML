@@ -207,7 +207,7 @@ public class StudentEnrollment {
     public void enroll() 
     {
         if (getLateRegistrations()) {
-            //lateEnrollment(); 
+//            lateEnrollment(); 
         } else {
             regularEnrollment();
 	}
