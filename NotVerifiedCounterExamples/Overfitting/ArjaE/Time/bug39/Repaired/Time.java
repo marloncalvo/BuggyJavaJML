@@ -30,7 +30,7 @@ public class Time {
         hour = h;
         minute = m;
         second = s;
-    }
+    } 
     /*@      public normal_behavior
       @     	requires 0 <= s && s < 60;
       @     	assignable this.second;
