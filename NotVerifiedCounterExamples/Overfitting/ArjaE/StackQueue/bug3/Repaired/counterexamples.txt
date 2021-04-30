@@ -1,3 +1,43 @@
-openjml: invalid flag: <bound
-Usage: openjml <options> <source files>
-use -help for a list of possible options
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:31: warning: The prover cannot establish an assertion (Postcondition: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:27: ) in method isEmpty
+	        	return (top == MAX - 1);//return (getTop() >= 0); //return (getTop() < 0); 
+	        	^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:27: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:31: 
+	    	//@   ensures \result <==> top < 0;
+	    	      ^
+
+TRACE of ArjaE.StackQueue.bug3.Repaired.StackQueue.Stack.isEmpty()
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:8:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === ( - 1 )
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === ( - 1 )
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+			VALUE: -1 <= top && top < MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:11:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!15
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:11:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:31:  	return (top == MAX - 1);
+			VALUE: top	 === ( - 1 )
+			VALUE: MAX	 === 100
+			VALUE: 1	 === 1
+			VALUE: MAX - 1	 === 99
+			VALUE: top == MAX - 1	 === false
+			VALUE: (top == MAX - 1)	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:31:  	ArithmeticOperationRange assertion: !(0 < ArjaE.StackQueue.bug3.Repaired.StackQueue.Stack.MAX && 1 < 0) || ArjaE.StackQueue.bug3.Repaired.StackQueue.Stack.MAX <= 2147483647 + 1
+			VALUE: !(0 < ArjaE.StackQueue.bug3.Repaired.StackQueue.Stack_MAX && 1 < 0) || ArjaE.StackQueue.bug3.Repaired.StackQueue.Stack_MAX <= 2147483647 + 1	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:31:  	ArithmeticOperationRange assertion: !(ArjaE.StackQueue.bug3.Repaired.StackQueue.Stack.MAX < 0 && 0 < 1) || -2147483648 + 1 <= ArjaE.StackQueue.bug3.Repaired.StackQueue.Stack.MAX
+			VALUE: !(ArjaE.StackQueue.bug3.Repaired.StackQueue.Stack_MAX < 0 && 0 < 1) || -2147483648 + 1 <= ArjaE.StackQueue.bug3.Repaired.StackQueue.Stack_MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:10:  	NullField assertion: _JML__tmp78
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:27:  	ensures \result <==> top < 0; 
+			VALUE: \result	 === false
+			VALUE: top	 === ( - 1 )
+			VALUE: top < 0	 === true
+			VALUE: \result <==> top < 0	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:31:  Invalid assertion (Postcondition)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug3/Repaired/StackQueue.java:27:  Associated location
+
+2 warnings

@@ -1,3 +1,100 @@
-openjml: invalid flag: <bound
-Usage: openjml <options> <source files>
-use -help for a list of possible options
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:294: warning: The prover cannot establish an assertion (Postcondition: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:290: ) in method isFull
+    		        	return true;
+    		        	^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:290: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:294: 
+    		//@   ensures \result <==>  MAX == rear;
+    		      ^
+
+TRACE of ArjaE.StackQueue.bug52.Repaired.StackQueue.Queue.isFull()
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:162:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:163:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:164:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!15
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:164:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:1:  	if (MAX != getRear()) ...
+			VALUE: MAX	 === 100
+			VALUE: getRear()	 === 99
+			VALUE: MAX != getRear()	 === true
+			VALUE: (MAX != getRear())	 === true
+				Condition = true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:162:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:162:  	InvariantLeaveCaller assertion: `conditionalResult_2520
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:163:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:163:  	InvariantLeaveCaller assertion: _JML__tmp2527
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:164:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!15
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:164:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:164:  	InvariantLeaveCaller assertion: _JML__tmp2531
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:162:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:162:  	InvariantEntrance assertion: `conditionalResult_2535
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:163:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:163:  	InvariantEntrance assertion: _JML__tmp2542
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:164:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!15
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:164:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:164:  	InvariantEntrance assertion: _JML__tmp2546
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:1:  	Precondition assertion: _$CPRE__44
+			VALUE: _$CPRE__44	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:162:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:163:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:164:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!15
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:164:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:294:  	return true;
+			VALUE: true	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:161:  	NullField assertion: _JML__tmp2572
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:290:  	ensures \result <==> MAX == rear; 
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:294:  Invalid assertion (Postcondition)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug52/Repaired/StackQueue.java:290:  Associated location
+
+2 warnings

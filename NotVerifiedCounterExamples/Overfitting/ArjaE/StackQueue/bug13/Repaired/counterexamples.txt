@@ -1,3 +1,67 @@
-openjml: invalid flag: <bound
-Usage: openjml <options> <source files>
-use -help for a list of possible options
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:122: warning: The prover cannot establish an assertion (Postcondition: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:110: ) in method search
+        		return -1;
+        		^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:110: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:122: 
+    	   	//@ 	ensures \result == -1 ==> \forall int i; 0 <= i && i <= top; arr[i] != key; 
+    	   	    	^
+
+TRACE of ArjaE.StackQueue.bug13.Repaired.StackQueue.Stack.search(int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:8:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 1
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 1
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+			VALUE: -1 <= top && top < MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:11:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!15
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:11:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:113:  	int index = top
+			VALUE: top	 === 1
+			VALUE: index	 === 1
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:114:  	//@ loop_invariant -1 <= index && index <= top;
+			VALUE: -1	 === ( - 1 )
+			VALUE: index	 === 1
+			VALUE: -1 <= index	 === true
+			VALUE: index	 === 1
+			VALUE: top	 === 1
+			VALUE: index <= top	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:114:  	LoopInvariantBeforeLoop assertion: `conditionalResult_863
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:115:  	//@ loop_invariant (\forall int i; index < i && i <= top; arr[i] != key);
+			VALUE: \forall int i; index < i && i <= top; arr[i] != key	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:115:  	LoopInvariantBeforeLoop assertion: (_JML__tmp867)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:114:  	//@ loop_invariant -1 <= index && index <= top;
+			VALUE: -1	 === ( - 1 )
+			VALUE: index	 === 0
+			VALUE: -1 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: top	 === 1
+			VALUE: index <= top	 === true
+			VALUE: -1 <= index && index <= top	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:115:  	//@ loop_invariant (\forall int i; index < i && i <= top; arr[i] != key);
+			VALUE: \forall int i; index < i && i <= top; arr[i] != key	 === true
+			VALUE: (\forall int i; index < i && i <= top; arr[i] != key)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:116:  	Loop test
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 < index	 === false
+			VALUE: (0 < index)	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:122:  	return -1;
+			VALUE: -1	 === ( - 1 )
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:10:  	NullField assertion: _JML__tmp944
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:109:  	ensures 0 <= \result && \result <= top ==> arr[\result] == key; 
+			VALUE: \result	 === ( - 1 )
+			VALUE: 0 <= \result	 === false
+			VALUE: 0 <= \result && \result <= top	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:110:  	ensures \result == -1 ==> \forall int i; 0 <= i && i <= top; arr[i] != key; 
+			VALUE: \result	 === ( - 1 )
+			VALUE: \result == -1	 === true
+			VALUE: \forall int i; 0 <= i && i <= top; arr[i] != key	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:122:  Invalid assertion (Postcondition)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug13/Repaired/StackQueue.java:110:  Associated location
+
+2 warnings

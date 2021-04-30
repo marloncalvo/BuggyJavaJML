@@ -1,3 +1,40 @@
-openjml: invalid flag: <bound
-Usage: openjml <options> <source files>
-use -help for a list of possible options
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug22/Repaired/StackQueue.java:132: warning: The prover cannot establish an assertion (LoopInvariantBeforeLoop) in method isContain
+        		//@ maintaining -1 <= index && index <= top; 
+        		    ^
+
+TRACE of ArjaE.StackQueue.bug22.Repaired.StackQueue.Stack.isContain(int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug22/Repaired/StackQueue.java:8:  	//@ public invariant -1 <= top && top < MAX; 
+			VALUE: -1	 === ( - 1 )
+			VALUE: top	 === 42
+			VALUE: -1 <= top	 === true
+			VALUE: top	 === 42
+			VALUE: MAX	 === 100
+			VALUE: top < MAX	 === true
+			VALUE: -1 <= top && top < MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug22/Repaired/StackQueue.java:11:  	//@ public invariant arr.length == MAX; 
+			VALUE: arr	 === REF!val!13
+			VALUE: arr.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: arr.length == MAX	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug22/Repaired/StackQueue.java:11:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug22/Repaired/StackQueue.java:130:  	int index = top
+			VALUE: top	 === 42
+			VALUE: index	 === 42
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug22/Repaired/StackQueue.java:131:  	index++
+			VALUE: index	 === 42
+			VALUE: index++	 === 42
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug22/Repaired/StackQueue.java:131:  	ArithmeticOperationRange assertion: !(0 < index && 0 < 1) || index <= 2147483647 - 1
+			VALUE: !(0 < index_4106_4106___20 && 0 < 1) || index_4106_4106___20 <= 2147483647 - 1	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug22/Repaired/StackQueue.java:131:  	ArithmeticOperationRange assertion: !(index < 0 && 1 < 0) || -2147483648 - 1 <= index
+			VALUE: !(index_4106_4106___20 < 0 && 1 < 0) || -2147483648 - 1 <= index_4106_4106___20	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug22/Repaired/StackQueue.java:132:  	//@ loop_invariant -1 <= index && index <= top;
+			VALUE: -1	 === ( - 1 )
+			VALUE: index	 === 43
+			VALUE: -1 <= index	 === true
+			VALUE: index	 === 43
+			VALUE: top	 === 42
+			VALUE: index <= top	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug22/Repaired/StackQueue.java:132:  	LoopInvariantBeforeLoop assertion: `conditionalResult_984
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/StackQueue/bug22/Repaired/StackQueue.java:132:  Invalid assertion (LoopInvariantBeforeLoop)
+
+1 warning
