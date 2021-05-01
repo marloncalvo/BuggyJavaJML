@@ -1,3 +1,846 @@
-openjml: invalid flag: <bound
-Usage: openjml <options> <source files>
-use -help for a list of possible options
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method binsearch:  overflow in int difference
+        int mid = start - (end - x) / 2; // int mid = start + (end - start) / 2;
+                               ^
+
+TRACE of ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(int[],int,int,int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: start	 === 2437
+			VALUE: 0 <= start	 === true
+			VALUE: end	 === 2438
+			VALUE: 0 <= end	 === true
+			VALUE: 0 <= start && 0 <= end	 === true
+			VALUE: start	 === 2437
+			VALUE: end	 === 2438
+			VALUE: start <= end	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end	 === true
+			VALUE: end	 === 2438
+			VALUE: arr.length	 === 2439
+			VALUE: end <= arr.length	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end && end <= arr.length	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 2437
+			VALUE: end	 === 2438
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 2437
+			VALUE: end	 === 2438
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	int mid = start - (end - x) / 2
+			VALUE: start	 === 2437
+			VALUE: end	 === 2438
+			VALUE: x	 === ( - 2147481210 )
+			VALUE: end - x	 === ( - 2147483648 )
+			VALUE: (end - x)	 === ( - 2147483648 )
+			VALUE: 2	 === 2
+			VALUE: (end - x) / 2	 === ( - 1073741824 )
+			VALUE: start - (end - x) / 2	 === 1073744261
+			VALUE: mid	 === 4294969733
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < end && x < 0) || end <= 2147483647 + x
+			VALUE: !(0 < end_781_781___17 && x_763_763___15 < 0) || end_781_781___17 <= 2147483647 + x_763_763___15	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  Invalid assertion (ArithmeticOperationRange)
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22: warning: The prover cannot establish an assertion (PossiblyTooLargeIndex) in method binsearch
+        if (x < arr[mid]) {
+                   ^
+
+TRACE of ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(int[],int,int,int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: start	 === 2446
+			VALUE: 0 <= start	 === true
+			VALUE: end	 === 715828670
+			VALUE: 0 <= end	 === true
+			VALUE: 0 <= start && 0 <= end	 === true
+			VALUE: start	 === 2446
+			VALUE: end	 === 715828670
+			VALUE: start <= end	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end	 === true
+			VALUE: end	 === 715828670
+			VALUE: arr.length	 === 715828672
+			VALUE: end <= arr.length	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end && end <= arr.length	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 2446
+			VALUE: end	 === 715828670
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 2446
+			VALUE: end	 === 715828670
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	int mid = start - (end - x) / 2
+			VALUE: start	 === 2446
+			VALUE: end	 === 715828670
+			VALUE: x	 === 2147481125
+			VALUE: end - x	 === ( - 1431652455 )
+			VALUE: (end - x)	 === ( - 1431652455 )
+			VALUE: 2	 === 2
+			VALUE: (end - x) / 2	 === ( - 715826227 )
+			VALUE: start - (end - x) / 2	 === 715828673
+			VALUE: mid	 === 715828673
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < end && x < 0) || end <= 2147483647 + x
+			VALUE: !(0 < end_781_781___17 && x_763_763___15 < 0) || end_781_781___17 <= 2147483647 + x_763_763___15	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(end < 0 && 0 < x) || -2147483648 + x <= end
+			VALUE: !(end_781_781___17 < 0 && 0 < x_763_763___15) || -2147483648 + x_763_763___15 <= end_781_781___17	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !((_JML__tmp32) == -2147483648 && 2 == -1)
+			VALUE: !((_JML__tmp32) == -2147483648 && 2 == -1)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < start && _JML__tmp35 < 0) || start <= 2147483647 + _JML__tmp35
+			VALUE: !(0 < start_770_770___16 && _JML__tmp35 < 0) || start_770_770___16 <= 2147483647 + _JML__tmp35	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(start < 0 && 0 < _JML__tmp35) || -2147483648 + _JML__tmp35 <= start
+			VALUE: !(start_770_770___16 < 0 && 0 < _JML__tmp35) || -2147483648 + _JML__tmp35 <= start_770_770___16	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (x < arr[mid]) ...
+			VALUE: x	 === 2147481125
+			VALUE: arr	 === REF!val!6
+			VALUE: mid	 === 715828673
+			VALUE: arr[mid]	 === 2147481125
+			VALUE: x < arr[mid]	 === false
+			VALUE: (x < arr[mid])	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyNullDeReference assertion: arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyNegativeIndex assertion: 0 <= mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyTooLargeIndex assertion: arr.length > mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  Invalid assertion (PossiblyTooLargeIndex)
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22: warning: The prover cannot establish an assertion (PossiblyNegativeIndex) in method binsearch
+        if (x < arr[mid]) {
+                   ^
+
+TRACE of ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(int[],int,int,int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: start	 === 1908
+			VALUE: 0 <= start	 === true
+			VALUE: end	 === 7579
+			VALUE: 0 <= end	 === true
+			VALUE: 0 <= start && 0 <= end	 === true
+			VALUE: start	 === 1908
+			VALUE: end	 === 7579
+			VALUE: start <= end	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end	 === true
+			VALUE: end	 === 7579
+			VALUE: arr.length	 === 1073741829
+			VALUE: end <= arr.length	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end && end <= arr.length	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 1908
+			VALUE: end	 === 7579
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 1908
+			VALUE: end	 === 7579
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	int mid = start - (end - x) / 2
+			VALUE: start	 === 1908
+			VALUE: end	 === 7579
+			VALUE: x	 === 3757
+			VALUE: end - x	 === 3822
+			VALUE: (end - x)	 === 3822
+			VALUE: 2	 === 2
+			VALUE: (end - x) / 2	 === 1911
+			VALUE: start - (end - x) / 2	 === ( - 3 )
+			VALUE: mid	 === ( - 3 )
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < end && x < 0) || end <= 2147483647 + x
+			VALUE: !(0 < end_781_781___17 && x_763_763___15 < 0) || end_781_781___17 <= 2147483647 + x_763_763___15	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(end < 0 && 0 < x) || -2147483648 + x <= end
+			VALUE: !(end_781_781___17 < 0 && 0 < x_763_763___15) || -2147483648 + x_763_763___15 <= end_781_781___17	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !((_JML__tmp32) == -2147483648 && 2 == -1)
+			VALUE: !((_JML__tmp32) == -2147483648 && 2 == -1)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < start && _JML__tmp35 < 0) || start <= 2147483647 + _JML__tmp35
+			VALUE: !(0 < start_770_770___16 && _JML__tmp35 < 0) || start_770_770___16 <= 2147483647 + _JML__tmp35	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(start < 0 && 0 < _JML__tmp35) || -2147483648 + _JML__tmp35 <= start
+			VALUE: !(start_770_770___16 < 0 && 0 < _JML__tmp35) || -2147483648 + _JML__tmp35 <= start_770_770___16	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (x < arr[mid]) ...
+			VALUE: x	 === 3757
+			VALUE: arr	 === REF!val!6
+			VALUE: mid	 === ( - 3 )
+			VALUE: arr[mid]	 === 3757
+			VALUE: x < arr[mid]	 === false
+			VALUE: (x < arr[mid])	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyNullDeReference assertion: arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyNegativeIndex assertion: 0 <= mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  Invalid assertion (PossiblyNegativeIndex)
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:23: warning: The prover cannot establish an assertion (Postcondition: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:10: ) in method binsearch
+            return binsearch(arr, x, start, mid);
+            ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:10: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:23: 
+      @ ensures \result < end;
+        ^
+
+TRACE of ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(int[],int,int,int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: start	 === 4770
+			VALUE: 0 <= start	 === true
+			VALUE: end	 === 4771
+			VALUE: 0 <= end	 === true
+			VALUE: 0 <= start && 0 <= end	 === true
+			VALUE: start	 === 4770
+			VALUE: end	 === 4771
+			VALUE: start <= end	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end	 === true
+			VALUE: end	 === 4771
+			VALUE: arr.length	 === 1073739030
+			VALUE: end <= arr.length	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end && end <= arr.length	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 4770
+			VALUE: end	 === 4771
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 4770
+			VALUE: end	 === 4771
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	int mid = start - (end - x) / 2
+			VALUE: start	 === 4770
+			VALUE: end	 === 4771
+			VALUE: x	 === 4778
+			VALUE: end - x	 === ( - 7 )
+			VALUE: (end - x)	 === ( - 7 )
+			VALUE: 2	 === 2
+			VALUE: (end - x) / 2	 === ( - 3 )
+			VALUE: start - (end - x) / 2	 === 4773
+			VALUE: mid	 === 4773
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < end && x < 0) || end <= 2147483647 + x
+			VALUE: !(0 < end_781_781___17 && x_763_763___15 < 0) || end_781_781___17 <= 2147483647 + x_763_763___15	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(end < 0 && 0 < x) || -2147483648 + x <= end
+			VALUE: !(end_781_781___17 < 0 && 0 < x_763_763___15) || -2147483648 + x_763_763___15 <= end_781_781___17	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !((_JML__tmp32) == -2147483648 && 2 == -1)
+			VALUE: !((_JML__tmp32) == -2147483648 && 2 == -1)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < start && _JML__tmp35 < 0) || start <= 2147483647 + _JML__tmp35
+			VALUE: !(0 < start_770_770___16 && _JML__tmp35 < 0) || start_770_770___16 <= 2147483647 + _JML__tmp35	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(start < 0 && 0 < _JML__tmp35) || -2147483648 + _JML__tmp35 <= start
+			VALUE: !(start_770_770___16 < 0 && 0 < _JML__tmp35) || -2147483648 + _JML__tmp35 <= start_770_770___16	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (x < arr[mid]) ...
+			VALUE: x	 === 4778
+			VALUE: arr	 === REF!val!6
+			VALUE: mid	 === 4773
+			VALUE: arr[mid]	 === 4779
+			VALUE: x < arr[mid]	 === true
+			VALUE: (x < arr[mid])	 === true
+				Condition = true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyNullDeReference assertion: arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyNegativeIndex assertion: 0 <= mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyTooLargeIndex assertion: arr.length > mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:23:  	return binsearch(arr, x, start, mid);
+			VALUE: arr	 === REF!val!6
+			VALUE: x	 === 4778
+			VALUE: start	 === 4770
+			VALUE: mid	 === 4773
+			VALUE: ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(arr, x, start, mid)	 === 4771
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: start	 === 4770
+			VALUE: 0 <= start	 === true
+			VALUE: end	 === 4771
+			VALUE: 0 <= end	 === true
+			VALUE: 0 <= start && 0 <= end	 === true
+			VALUE: start	 === 4770
+			VALUE: end	 === 4771
+			VALUE: start <= end	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end	 === true
+			VALUE: end	 === 4771
+			VALUE: arr.length	 === 1073739030
+			VALUE: end <= arr.length	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end && end <= arr.length	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	UndefinedNullDeReference assertion: !(_JML__tmp41 != null) || _JML__tmp41 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	Precondition assertion: _$CPRE__2
+			VALUE: _$CPRE__2	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedNullDeReference assertion: !(_JML__tmp63 && _JML__tmp41 != null) || _JML__tmp41 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedNullDeReference assertion: !(_JML__tmp63 && (`conditionalResult_70) && (`conditionalResult_70) && _JML__tmp41 != null) || _JML__tmp41 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedNegativeIndex assertion: !(_JML__tmp63 && (`conditionalResult_70) && (`conditionalResult_70) && _JML__tmp41 != null) || 0 <= _JML__tmp45
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedTooLargeIndex assertion: !(_JML__tmp63 && (`conditionalResult_70) && (`conditionalResult_70) && _JML__tmp41 != null) || _JML__tmp41.length > _JML__tmp45
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNullDeReference assertion: !(_JML__tmp63 && (`conditionalResult_81) && (`conditionalResult_81) && _JML__tmp41 != null) || _JML__tmp41 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNegativeIndex assertion: !(_JML__tmp63 && (`conditionalResult_81) && (`conditionalResult_81) && _JML__tmp41 != null) || 0 <= _JML__tmp43
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedTooLargeIndex assertion: !(_JML__tmp63 && (`conditionalResult_81) && (`conditionalResult_81) && _JML__tmp41 != null) || _JML__tmp41.length > _JML__tmp43
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNullDeReference assertion: !(_JML__tmp63 && (`conditionalResult_81) && (`conditionalResult_81) && _JML__tmp41 != null && _JML__tmp41 != null) || _JML__tmp41 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNegativeIndex assertion: !(_JML__tmp63 && (`conditionalResult_81) && (`conditionalResult_81) && _JML__tmp41 != null && _JML__tmp41 != null) || 0 <= _JML__tmp45
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedTooLargeIndex assertion: !(_JML__tmp63 && (`conditionalResult_81) && (`conditionalResult_81) && _JML__tmp41 != null && _JML__tmp41 != null) || _JML__tmp41.length > _JML__tmp45
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNullDeReference assertion: !(_JML__tmp63 && (`conditionalResult_81) && (`conditionalResult_81) && _JML__tmp41 != null && _JML__tmp41 != null && _JML__tmp41 != null) || _JML__tmp41 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNegativeIndex assertion: !(_JML__tmp63 && (`conditionalResult_81) && (`conditionalResult_81) && _JML__tmp41 != null && _JML__tmp41 != null && _JML__tmp41 != null) || 0 <= _JML__tmp45
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedTooLargeIndex assertion: !(_JML__tmp63 && (`conditionalResult_81) && (`conditionalResult_81) && _JML__tmp41 != null && _JML__tmp41 != null && _JML__tmp41 != null) || _JML__tmp41.length > _JML__tmp45
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNullDeReference assertion: !(_JML__tmp63 && (`conditionalResult_81) && (`conditionalResult_81) && _JML__tmp41 != null && _JML__tmp41 != null && _JML__tmp41 != null && _JML__tmp41 != null) || _JML__tmp41 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNegativeIndex assertion: !(_JML__tmp63 && (`conditionalResult_81) && (`conditionalResult_81) && _JML__tmp41 != null && _JML__tmp41 != null && _JML__tmp41 != null && _JML__tmp41 != null) || 0 <= _JML__tmp88
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedTooLargeIndex assertion: !(_JML__tmp63 && (`conditionalResult_81) && (`conditionalResult_81) && _JML__tmp41 != null && _JML__tmp41 != null && _JML__tmp41 != null && _JML__tmp41 != null) || _JML__tmp41.length > _JML__tmp88
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedNullDeReference assertion: !(Pre_2 && \old(arr, \Pre) != null) || \old(arr, \Pre) != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedNullDeReference assertion: !(Pre_2 && (`conditionalResult_166) && (`conditionalResult_166) && \old(arr, \Pre) != null) || \old(arr, \Pre) != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedNegativeIndex assertion: !(Pre_2 && (`conditionalResult_166) && (`conditionalResult_166) && \old(arr, \Pre) != null) || 0 <= `result
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedTooLargeIndex assertion: !(Pre_2 && (`conditionalResult_166) && (`conditionalResult_166) && \old(arr, \Pre) != null) || \old(arr, \Pre).length > `result
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	ensures (0 <= \result && \result < arr.length) ==> arr[\result] == x; 
+			VALUE: \result	 === 4771
+			VALUE: 0 <= \result	 === true
+			VALUE: \result	 === 4771
+			VALUE: arr.length	 === 1073739030
+			VALUE: \result < arr.length	 === true
+			VALUE: 0 <= \result && \result < arr.length	 === true
+			VALUE: (0 <= \result && \result < arr.length)	 === true
+			VALUE: arr	 === REF!val!6
+			VALUE: \result	 === 4771
+			VALUE: arr[\result]	 === 4778
+			VALUE: x	 === 4778
+			VALUE: arr[\result] == x	 === true
+			VALUE: (0 <= \result && \result < arr.length) ==> arr[\result] == x	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:8:  	ensures (start < end && 0 <= \result && \result < end) ==> (arr[start] <= arr[\result] && arr[\result] <= arr[end - 1]); 
+			VALUE: start	 === 4770
+			VALUE: end	 === 4773
+			VALUE: start < end	 === true
+			VALUE: \result	 === 4771
+			VALUE: 0 <= \result	 === true
+			VALUE: start < end && 0 <= \result	 === true
+			VALUE: \result	 === 4771
+			VALUE: end	 === 4773
+			VALUE: \result < end	 === true
+			VALUE: start < end && 0 <= \result && \result < end	 === true
+			VALUE: (start < end && 0 <= \result && \result < end)	 === true
+			VALUE: arr	 === REF!val!6
+			VALUE: start	 === 4770
+			VALUE: arr[start]	 === 4777
+			VALUE: arr	 === REF!val!6
+			VALUE: \result	 === 4771
+			VALUE: arr[\result]	 === 4778
+			VALUE: arr[start] <= arr[\result]	 === true
+			VALUE: arr	 === REF!val!6
+			VALUE: \result	 === 4771
+			VALUE: arr[\result]	 === 4778
+			VALUE: arr	 === REF!val!6
+			VALUE: end	 === 4773
+			VALUE: end - 1	 === 4772
+			VALUE: arr[end - 1]	 === 4779
+			VALUE: arr[\result] <= arr[end - 1]	 === true
+			VALUE: arr[start] <= arr[\result] && arr[\result] <= arr[end - 1]	 === true
+			VALUE: (arr[start] <= arr[\result] && arr[\result] <= arr[end - 1])	 === true
+			VALUE: (start < end && 0 <= \result && \result < end) ==> (arr[start] <= arr[\result] && arr[\result] <= arr[end - 1])	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:10:  	ensures \result < end; 
+			VALUE: \result	 === 4771
+			VALUE: end	 === 4773
+			VALUE: \result < end	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:23:  Invalid assertion (Postcondition)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:10:  Associated location
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:25: warning: The prover cannot establish an assertion (Precondition: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14: ) in method binsearch
+            return binsearch(arr, x, mid+1, end);
+                            ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:25: 
+    int binsearch(int[] arr, int x, int start, int end) {
+        ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4: warning: Precondition conjunct is false: start <= end
+    /*@ requires  0 <= start && 0 <= end && start <= end && end <= arr.length;
+                                                  ^
+
+TRACE of ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(int[],int,int,int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: start	 === 0
+			VALUE: 0 <= start	 === true
+			VALUE: end	 === 635
+			VALUE: 0 <= end	 === true
+			VALUE: 0 <= start && 0 <= end	 === true
+			VALUE: start	 === 0
+			VALUE: end	 === 635
+			VALUE: start <= end	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end	 === true
+			VALUE: end	 === 635
+			VALUE: arr.length	 === 6655
+			VALUE: end <= arr.length	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end && end <= arr.length	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 0
+			VALUE: end	 === 635
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 0
+			VALUE: end	 === 635
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	int mid = start - (end - x) / 2
+			VALUE: start	 === 0
+			VALUE: end	 === 635
+			VALUE: x	 === 1905
+			VALUE: end - x	 === ( - 1270 )
+			VALUE: (end - x)	 === ( - 1270 )
+			VALUE: 2	 === 2
+			VALUE: (end - x) / 2	 === ( - 635 )
+			VALUE: start - (end - x) / 2	 === 635
+			VALUE: mid	 === 635
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < end && x < 0) || end <= 2147483647 + x
+			VALUE: !(0 < end_781_781___17 && x_763_763___15 < 0) || end_781_781___17 <= 2147483647 + x_763_763___15	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(end < 0 && 0 < x) || -2147483648 + x <= end
+			VALUE: !(end_781_781___17 < 0 && 0 < x_763_763___15) || -2147483648 + x_763_763___15 <= end_781_781___17	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !((_JML__tmp32) == -2147483648 && 2 == -1)
+			VALUE: !((_JML__tmp32) == -2147483648 && 2 == -1)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < start && _JML__tmp35 < 0) || start <= 2147483647 + _JML__tmp35
+			VALUE: !(0 < start_770_770___16 && _JML__tmp35 < 0) || start_770_770___16 <= 2147483647 + _JML__tmp35	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(start < 0 && 0 < _JML__tmp35) || -2147483648 + _JML__tmp35 <= start
+			VALUE: !(start_770_770___16 < 0 && 0 < _JML__tmp35) || -2147483648 + _JML__tmp35 <= start_770_770___16	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (x < arr[mid]) ...
+			VALUE: x	 === 1905
+			VALUE: arr	 === REF!val!6
+			VALUE: mid	 === 635
+			VALUE: arr[mid]	 === 1904
+			VALUE: x < arr[mid]	 === false
+			VALUE: (x < arr[mid])	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyNullDeReference assertion: arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyNegativeIndex assertion: 0 <= mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyTooLargeIndex assertion: arr.length > mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (x > arr[mid]) ...
+			VALUE: x	 === 1905
+			VALUE: arr	 === REF!val!6
+			VALUE: mid	 === 635
+			VALUE: arr[mid]	 === 1904
+			VALUE: x > arr[mid]	 === true
+			VALUE: (x > arr[mid])	 === true
+				Condition = true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:24:  	PossiblyNullDeReference assertion: arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:24:  	PossiblyNegativeIndex assertion: 0 <= mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:24:  	PossiblyTooLargeIndex assertion: arr.length > mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:25:  	return binsearch(arr, x, mid + 1, end);
+			VALUE: arr	 === REF!val!6
+			VALUE: x	 === 1905
+			VALUE: mid	 === 635
+			VALUE: 1	 === 1
+			VALUE: mid + 1	 === 636
+			VALUE: end	 === 635
+			VALUE: ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(arr, x, mid + 1, end)	 === ( - 2147479462 )
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:25:  	ArithmeticOperationRange assertion: !(0 < mid && 0 < 1) || mid <= 2147483647 - 1
+			VALUE: !(0 < mid_907_907___36 && 0 < 1) || mid_907_907___36 <= 2147483647 - 1	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:25:  	ArithmeticOperationRange assertion: !(mid < 0 && 1 < 0) || -2147483648 - 1 <= mid
+			VALUE: !(mid_907_907___36 < 0 && 1 < 0) || -2147483648 - 1 <= mid_907_907___36	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: start	 === 0
+			VALUE: 0 <= start	 === true
+			VALUE: end	 === 635
+			VALUE: 0 <= end	 === true
+			VALUE: 0 <= start && 0 <= end	 === true
+			VALUE: start	 === 0
+			VALUE: end	 === 635
+			VALUE: start <= end	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end	 === true
+			VALUE: end	 === 635
+			VALUE: arr.length	 === 6655
+			VALUE: end <= arr.length	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end && end <= arr.length	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	Precondition assertion: _$CPRE__3
+			VALUE: _$CPRE__3	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:25:  Invalid assertion (Precondition)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  Associated location
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:23: warning: The prover cannot establish an assertion (Precondition: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14: ) in method binsearch
+            return binsearch(arr, x, start, mid);
+                            ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:23: 
+    int binsearch(int[] arr, int x, int start, int end) {
+        ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4: warning: Precondition conjunct is false: start <= end
+    /*@ requires  0 <= start && 0 <= end && start <= end && end <= arr.length;
+                                                  ^
+
+TRACE of ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(int[],int,int,int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: start	 === 2147483643
+			VALUE: 0 <= start	 === true
+			VALUE: end	 === 2147483646
+			VALUE: 0 <= end	 === true
+			VALUE: 0 <= start && 0 <= end	 === true
+			VALUE: start	 === 2147483643
+			VALUE: end	 === 2147483646
+			VALUE: start <= end	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end	 === true
+			VALUE: end	 === 2147483646
+			VALUE: arr.length	 === 2147483646
+			VALUE: end <= arr.length	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end && end <= arr.length	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 2147483643
+			VALUE: end	 === 2147483646
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 2147483643
+			VALUE: end	 === 2147483646
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	int mid = start - (end - x) / 2
+			VALUE: start	 === 2147483643
+			VALUE: end	 === 2147483646
+			VALUE: x	 === 2147483642
+			VALUE: end - x	 === 4
+			VALUE: (end - x)	 === 4
+			VALUE: 2	 === 2
+			VALUE: (end - x) / 2	 === 2
+			VALUE: start - (end - x) / 2	 === 2147483641
+			VALUE: mid	 === 2147483641
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < end && x < 0) || end <= 2147483647 + x
+			VALUE: !(0 < end_781_781___17 && x_763_763___15 < 0) || end_781_781___17 <= 2147483647 + x_763_763___15	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(end < 0 && 0 < x) || -2147483648 + x <= end
+			VALUE: !(end_781_781___17 < 0 && 0 < x_763_763___15) || -2147483648 + x_763_763___15 <= end_781_781___17	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !((_JML__tmp32) == -2147483648 && 2 == -1)
+			VALUE: !((_JML__tmp32) == -2147483648 && 2 == -1)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < start && _JML__tmp35 < 0) || start <= 2147483647 + _JML__tmp35
+			VALUE: !(0 < start_770_770___16 && _JML__tmp35 < 0) || start_770_770___16 <= 2147483647 + _JML__tmp35	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(start < 0 && 0 < _JML__tmp35) || -2147483648 + _JML__tmp35 <= start
+			VALUE: !(start_770_770___16 < 0 && 0 < _JML__tmp35) || -2147483648 + _JML__tmp35 <= start_770_770___16	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (x < arr[mid]) ...
+			VALUE: x	 === 2147483642
+			VALUE: arr	 === REF!val!6
+			VALUE: mid	 === 2147483641
+			VALUE: arr[mid]	 === 2147483643
+			VALUE: x < arr[mid]	 === true
+			VALUE: (x < arr[mid])	 === true
+				Condition = true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyNullDeReference assertion: arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyNegativeIndex assertion: 0 <= mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyTooLargeIndex assertion: arr.length > mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:23:  	return binsearch(arr, x, start, mid);
+			VALUE: arr	 === REF!val!6
+			VALUE: x	 === 2147483642
+			VALUE: start	 === 2147483643
+			VALUE: mid	 === 2147483641
+			VALUE: ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(arr, x, start, mid)	 === 7567
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: start	 === 2147483643
+			VALUE: 0 <= start	 === true
+			VALUE: end	 === 2147483646
+			VALUE: 0 <= end	 === true
+			VALUE: 0 <= start && 0 <= end	 === true
+			VALUE: start	 === 2147483643
+			VALUE: end	 === 2147483646
+			VALUE: start <= end	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end	 === true
+			VALUE: end	 === 2147483646
+			VALUE: arr.length	 === 2147483646
+			VALUE: end <= arr.length	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end && end <= arr.length	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	Precondition assertion: _$CPRE__2
+			VALUE: _$CPRE__2	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:23:  Invalid assertion (Precondition)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  Associated location
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:25: warning: The prover cannot establish an assertion (Postcondition: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:8: ) in method binsearch
+            return binsearch(arr, x, mid+1, end);
+            ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:8: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:25: 
+      @ ensures (start < end && 0 <= \result && \result < end) 
+        ^
+
+TRACE of ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(int[],int,int,int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: start	 === 16911
+			VALUE: 0 <= start	 === true
+			VALUE: end	 === 1073750310
+			VALUE: 0 <= end	 === true
+			VALUE: 0 <= start && 0 <= end	 === true
+			VALUE: start	 === 16911
+			VALUE: end	 === 1073750310
+			VALUE: start <= end	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end	 === true
+			VALUE: end	 === 1073750310
+			VALUE: arr.length	 === 1073750310
+			VALUE: end <= arr.length	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end && end <= arr.length	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 16911
+			VALUE: end	 === 1073750310
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (start == end) ...
+			VALUE: start	 === 16911
+			VALUE: end	 === 1073750310
+			VALUE: start == end	 === false
+			VALUE: (start == end)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	int mid = start - (end - x) / 2
+			VALUE: start	 === 16911
+			VALUE: end	 === 1073750310
+			VALUE: x	 === 1073730109
+			VALUE: end - x	 === 20201
+			VALUE: (end - x)	 === 20201
+			VALUE: 2	 === 2
+			VALUE: (end - x) / 2	 === 10100
+			VALUE: start - (end - x) / 2	 === 6811
+			VALUE: mid	 === 6811
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < end && x < 0) || end <= 2147483647 + x
+			VALUE: !(0 < end_781_781___17 && x_763_763___15 < 0) || end_781_781___17 <= 2147483647 + x_763_763___15	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(end < 0 && 0 < x) || -2147483648 + x <= end
+			VALUE: !(end_781_781___17 < 0 && 0 < x_763_763___15) || -2147483648 + x_763_763___15 <= end_781_781___17	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !((_JML__tmp32) == -2147483648 && 2 == -1)
+			VALUE: !((_JML__tmp32) == -2147483648 && 2 == -1)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(0 < start && _JML__tmp35 < 0) || start <= 2147483647 + _JML__tmp35
+			VALUE: !(0 < start_770_770___16 && _JML__tmp35 < 0) || start_770_770___16 <= 2147483647 + _JML__tmp35	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:21:  	ArithmeticOperationRange assertion: !(start < 0 && 0 < _JML__tmp35) || -2147483648 + _JML__tmp35 <= start
+			VALUE: !(start_770_770___16 < 0 && 0 < _JML__tmp35) || -2147483648 + _JML__tmp35 <= start_770_770___16	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (x < arr[mid]) ...
+			VALUE: x	 === 1073730109
+			VALUE: arr	 === REF!val!6
+			VALUE: mid	 === 6811
+			VALUE: arr[mid]	 === 1073730108
+			VALUE: x < arr[mid]	 === false
+			VALUE: (x < arr[mid])	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyNullDeReference assertion: arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyNegativeIndex assertion: 0 <= mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:22:  	PossiblyTooLargeIndex assertion: arr.length > mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:1:  	if (x > arr[mid]) ...
+			VALUE: x	 === 1073730109
+			VALUE: arr	 === REF!val!6
+			VALUE: mid	 === 6811
+			VALUE: arr[mid]	 === 1073730108
+			VALUE: x > arr[mid]	 === true
+			VALUE: (x > arr[mid])	 === true
+				Condition = true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:24:  	PossiblyNullDeReference assertion: arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:24:  	PossiblyNegativeIndex assertion: 0 <= mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:24:  	PossiblyTooLargeIndex assertion: arr.length > mid
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:25:  	return binsearch(arr, x, mid + 1, end);
+			VALUE: arr	 === REF!val!6
+			VALUE: x	 === 1073730109
+			VALUE: mid	 === 6811
+			VALUE: 1	 === 1
+			VALUE: mid + 1	 === 6812
+			VALUE: end	 === 1073750310
+			VALUE: ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(arr, x, mid + 1, end)	 === 12589
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:25:  	ArithmeticOperationRange assertion: !(0 < mid && 0 < 1) || mid <= 2147483647 - 1
+			VALUE: !(0 < mid_907_907___36 && 0 < 1) || mid_907_907___36 <= 2147483647 - 1	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:25:  	ArithmeticOperationRange assertion: !(mid < 0 && 1 < 0) || -2147483648 - 1 <= mid
+			VALUE: !(mid_907_907___36 < 0 && 1 < 0) || -2147483648 - 1 <= mid_907_907___36	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: start	 === 16911
+			VALUE: 0 <= start	 === true
+			VALUE: end	 === 1073750310
+			VALUE: 0 <= end	 === true
+			VALUE: 0 <= start && 0 <= end	 === true
+			VALUE: start	 === 16911
+			VALUE: end	 === 1073750310
+			VALUE: start <= end	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end	 === true
+			VALUE: end	 === 1073750310
+			VALUE: arr.length	 === 1073750310
+			VALUE: end <= arr.length	 === true
+			VALUE: 0 <= start && 0 <= end && start <= end && end <= arr.length	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	UndefinedNullDeReference assertion: !(_JML__tmp102 != null) || _JML__tmp102 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+			VALUE: \forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])	 === true
+			VALUE: (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j]))	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	Precondition assertion: _$CPRE__3
+			VALUE: _$CPRE__3	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedNullDeReference assertion: !(_JML__tmp127 && _JML__tmp102 != null) || _JML__tmp102 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedNullDeReference assertion: !(_JML__tmp127 && (`conditionalResult_134) && (`conditionalResult_134) && _JML__tmp102 != null) || _JML__tmp102 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedNegativeIndex assertion: !(_JML__tmp127 && (`conditionalResult_134) && (`conditionalResult_134) && _JML__tmp102 != null) || 0 <= _JML__tmp109
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedTooLargeIndex assertion: !(_JML__tmp127 && (`conditionalResult_134) && (`conditionalResult_134) && _JML__tmp102 != null) || _JML__tmp102.length > _JML__tmp109
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNullDeReference assertion: !(_JML__tmp127 && (`conditionalResult_145) && (`conditionalResult_145) && _JML__tmp102 != null) || _JML__tmp102 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNegativeIndex assertion: !(_JML__tmp127 && (`conditionalResult_145) && (`conditionalResult_145) && _JML__tmp102 != null) || 0 <= _JML__tmp107
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedTooLargeIndex assertion: !(_JML__tmp127 && (`conditionalResult_145) && (`conditionalResult_145) && _JML__tmp102 != null) || _JML__tmp102.length > _JML__tmp107
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNullDeReference assertion: !(_JML__tmp127 && (`conditionalResult_145) && (`conditionalResult_145) && _JML__tmp102 != null && _JML__tmp102 != null) || _JML__tmp102 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNegativeIndex assertion: !(_JML__tmp127 && (`conditionalResult_145) && (`conditionalResult_145) && _JML__tmp102 != null && _JML__tmp102 != null) || 0 <= _JML__tmp109
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedTooLargeIndex assertion: !(_JML__tmp127 && (`conditionalResult_145) && (`conditionalResult_145) && _JML__tmp102 != null && _JML__tmp102 != null) || _JML__tmp102.length > _JML__tmp109
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNullDeReference assertion: !(_JML__tmp127 && (`conditionalResult_145) && (`conditionalResult_145) && _JML__tmp102 != null && _JML__tmp102 != null && _JML__tmp102 != null) || _JML__tmp102 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNegativeIndex assertion: !(_JML__tmp127 && (`conditionalResult_145) && (`conditionalResult_145) && _JML__tmp102 != null && _JML__tmp102 != null && _JML__tmp102 != null) || 0 <= _JML__tmp109
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedTooLargeIndex assertion: !(_JML__tmp127 && (`conditionalResult_145) && (`conditionalResult_145) && _JML__tmp102 != null && _JML__tmp102 != null && _JML__tmp102 != null) || _JML__tmp102.length > _JML__tmp109
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNullDeReference assertion: !(_JML__tmp127 && (`conditionalResult_145) && (`conditionalResult_145) && _JML__tmp102 != null && _JML__tmp102 != null && _JML__tmp102 != null && _JML__tmp102 != null) || _JML__tmp102 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNegativeIndex assertion: !(_JML__tmp127 && (`conditionalResult_145) && (`conditionalResult_145) && _JML__tmp102 != null && _JML__tmp102 != null && _JML__tmp102 != null && _JML__tmp102 != null) || 0 <= _JML__tmp152
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedTooLargeIndex assertion: !(_JML__tmp127 && (`conditionalResult_145) && (`conditionalResult_145) && _JML__tmp102 != null && _JML__tmp102 != null && _JML__tmp102 != null && _JML__tmp102 != null) || _JML__tmp102.length > _JML__tmp152
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedNullDeReference assertion: !(Pre_2 && \old(arr, \Pre) != null) || \old(arr, \Pre) != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedNullDeReference assertion: !(Pre_2 && (`conditionalResult_166) && (`conditionalResult_166) && \old(arr, \Pre) != null) || \old(arr, \Pre) != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedNegativeIndex assertion: !(Pre_2 && (`conditionalResult_166) && (`conditionalResult_166) && \old(arr, \Pre) != null) || 0 <= `result
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	UndefinedTooLargeIndex assertion: !(Pre_2 && (`conditionalResult_166) && (`conditionalResult_166) && \old(arr, \Pre) != null) || \old(arr, \Pre).length > `result
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:7:  	ensures (0 <= \result && \result < arr.length) ==> arr[\result] == x; 
+			VALUE: \result	 === ( - 2 )
+			VALUE: 0 <= \result	 === false
+			VALUE: 0 <= \result && \result < arr.length	 === false
+			VALUE: (0 <= \result && \result < arr.length)	 === false
+			VALUE: (0 <= \result && \result < arr.length) ==> arr[\result] == x	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNullDeReference assertion: !(Pre_2 && (`conditionalResult_177) && (`conditionalResult_177) && \old(arr, \Pre) != null) || \old(arr, \Pre) != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNegativeIndex assertion: !(Pre_2 && (`conditionalResult_177) && (`conditionalResult_177) && \old(arr, \Pre) != null) || 0 <= \old(start, \Pre)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedTooLargeIndex assertion: !(Pre_2 && (`conditionalResult_177) && (`conditionalResult_177) && \old(arr, \Pre) != null) || \old(arr, \Pre).length > \old(start, \Pre)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNullDeReference assertion: !(Pre_2 && (`conditionalResult_177) && (`conditionalResult_177) && \old(arr, \Pre) != null && \old(arr, \Pre) != null) || \old(arr, \Pre) != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedNegativeIndex assertion: !(Pre_2 && (`conditionalResult_177) && (`conditionalResult_177) && \old(arr, \Pre) != null && \old(arr, \Pre) != null) || 0 <= `result
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:9:  	UndefinedTooLargeIndex assertion: !(Pre_2 && (`conditionalResult_177) && (`conditionalResult_177) && \old(arr, \Pre) != null && \old(arr, \Pre) != null) || \old(arr, \Pre).length > `result
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:8:  	ensures (start < end && 0 <= \result && \result < end) ==> (arr[start] <= arr[\result] && arr[\result] <= arr[end - 1]); 
+			VALUE: start	 === 16911
+			VALUE: end	 === 6811
+			VALUE: start < end	 === false
+			VALUE: start < end && 0 <= \result	 === true
+			VALUE: \result	 === ( - 2 )
+			VALUE: end	 === 6811
+			VALUE: \result < end	 === true
+			VALUE: start < end && 0 <= \result && \result < end	 === true
+			VALUE: (start < end && 0 <= \result && \result < end)	 === true
+			VALUE: arr	 === REF!val!6
+			VALUE: start	 === 16911
+			VALUE: arr[start]	 === 1073730110
+			VALUE: arr	 === REF!val!6
+			VALUE: \result	 === ( - 2 )
+			VALUE: arr[\result]	 === 1073730109
+			VALUE: arr[start] <= arr[\result]	 === false
+			VALUE: arr[start] <= arr[\result] && arr[\result] <= arr[end - 1]	 === false
+			VALUE: (arr[start] <= arr[\result] && arr[\result] <= arr[end - 1])	 === false
+			VALUE: (start < end && 0 <= \result && \result < end) ==> (arr[start] <= arr[\result] && arr[\result] <= arr[end - 1])	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:25:  Invalid assertion (Postcondition)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:8:  Associated location
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:35: warning: The prover cannot establish an assertion (Precondition: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14: ) in method find_in_sorted
+        return binsearch(arr, x, 0, x);
+                        ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:35: 
+    int binsearch(int[] arr, int x, int start, int end) {
+        ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4: warning: Precondition conjunct is false: end <= arr.length
+    /*@ requires  0 <= start && 0 <= end && start <= end && end <= arr.length;
+                                                                ^
+
+TRACE of ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.find_in_sorted(int[],int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:34:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:31:  	requires \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j; arr[i] <= arr[j]; 
+			VALUE: \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j; arr[i] <= arr[j]	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:35:  	return binsearch(arr, x, 0, x);
+			VALUE: arr	 === REF!val!6
+			VALUE: x	 === 2147481851
+			VALUE: 0	 === 0
+			VALUE: x	 === 2147481851
+			VALUE: ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(arr, x, 0, x)	 === ( - 2 )
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: null	 === NULL
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: 0	 === 0
+			VALUE: 0	 === 0
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	UndefinedNullDeReference assertion: !(_JML__tmp203 != null) || _JML__tmp203 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	Precondition assertion: _$CPRE__4
+			VALUE: _$CPRE__4	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:35:  Invalid assertion (Precondition)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  Associated location
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:35: warning: The prover cannot establish an assertion (Postcondition: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:33: ) in method find_in_sorted
+        return binsearch(arr, x, 0, x);
+        ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:33: warning: Associated declaration: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:35: 
+    //@ ensures \result == -1 ==> (\forall int i; 0 <= i && i < arr.length; arr[i] != x);
+        ^
+
+TRACE of ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.find_in_sorted(int[],int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:34:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:31:  	requires \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j; arr[i] <= arr[j]; 
+			VALUE: \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j; arr[i] <= arr[j]	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:35:  	return binsearch(arr, x, 0, x);
+			VALUE: arr	 === REF!val!6
+			VALUE: x	 === 5854
+			VALUE: 0	 === 0
+			VALUE: x	 === 5854
+			VALUE: ArjaE.FindInSorted.bug5.Repaired.FIND_IN_SORTED.binsearch(arr, x, 0, x)	 === ( - 1 )
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:14:  	requires arr != null; 
+			VALUE: null	 === NULL
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	requires 0 <= start && 0 <= end && start <= end && end <= arr.length; 
+			VALUE: 0	 === 0
+			VALUE: 0	 === 0
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:4:  	UndefinedNullDeReference assertion: !(_JML__tmp203 != null) || _JML__tmp203 != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	requires (\forall int j; 0 <= j && j < arr.length; (\forall int i; 0 <= i && i < j; arr[i] <= arr[j])); 
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:5:  	Precondition assertion: _$CPRE__4
+			VALUE: _$CPRE__4	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:32:  	ensures 0 <= \result && \result < arr.length ==> arr[\result] == x; 
+			VALUE: 0	 === 0
+			VALUE: \result	 === ( - 1 )
+			VALUE: 0 <= \result	 === false
+			VALUE: 0 <= \result && \result < arr.length	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:33:  	ensures \result == -1 ==> (\forall int i; 0 <= i && i < arr.length; arr[i] != x); 
+			VALUE: \result	 === ( - 1 )
+			VALUE: -1	 === ( - 1 )
+			VALUE: \result == -1	 === true
+			VALUE: \forall int i; 0 <= i && i < arr.length; arr[i] != x	 === false
+			VALUE: (\forall int i; 0 <= i && i < arr.length; arr[i] != x)	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:35:  Invalid assertion (Postcondition)
+: /mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/FindInSorted/bug5/Repaired/FIND_IN_SORTED.java:33:  Associated location
+
+18 warnings
