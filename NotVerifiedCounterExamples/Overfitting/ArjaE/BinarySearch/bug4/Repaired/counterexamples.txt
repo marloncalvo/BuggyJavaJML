@@ -1,3 +1,120 @@
-openjml: invalid flag: <bound
-Usage: openjml <options> <source files>
-use -help for a list of possible options
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:16: warning: The prover cannot establish an assertion (LoopInvariantBeforeLoop) in method Binary
+            //@ maintaining 0 <= low && low <= high  && high <= arr.length && mid == low + (high - low) / 2;
+                ^
+
+TRACE of ArjaE.BinarySearch.bug4.Repaired.BinarySearch.Binary(int[],int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:8:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:5:  	requires \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j; arr[i] <= arr[j]; 
+			VALUE: \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j; arr[i] <= arr[j]	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:1:  	if (arr.length == 0) ...
+			VALUE: arr.length	 === 11811
+			VALUE: 0	 === 0
+			VALUE: arr.length == 0	 === false
+			VALUE: (arr.length == 0)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:9:  	PossiblyNullDeReference assertion: arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:12:  	int low = 1
+			VALUE: 1	 === 1
+			VALUE: low	 === 1
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:13:  	int high = arr.length
+			VALUE: arr.length	 === 11811
+			VALUE: high	 === 11811
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:13:  	PossiblyNullDeReference assertion: arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:14:  	int mid = high / 2
+			VALUE: high	 === 11811
+			VALUE: 2	 === 2
+			VALUE: high / 2	 === 5905
+			VALUE: mid	 === 5905
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:14:  	ArithmeticOperationRange assertion: !(high == -2147483648 && 2 == -1)
+			VALUE: !(high_524_524___21 == -2147483648 && 2 == -1)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:16:  	//@ loop_invariant 0 <= low && low <= high && high <= arr.length && mid == low + (high - low) / 2;
+			VALUE: 0	 === 0
+			VALUE: low	 === 1
+			VALUE: 0 <= low	 === true
+			VALUE: low	 === 1
+			VALUE: high	 === 11811
+			VALUE: low <= high	 === true
+			VALUE: 0 <= low && low <= high	 === true
+			VALUE: high	 === 11811
+			VALUE: arr.length	 === 11811
+			VALUE: high <= arr.length	 === true
+			VALUE: 0 <= low && low <= high && high <= arr.length	 === true
+			VALUE: mid	 === 5905
+			VALUE: low	 === 1
+			VALUE: high	 === 11811
+			VALUE: low	 === 1
+			VALUE: high - low	 === 11810
+			VALUE: (high - low)	 === 11810
+			VALUE: 2	 === 2
+			VALUE: (high - low) / 2	 === 5905
+			VALUE: low + (high - low) / 2	 === 5906
+			VALUE: mid == low + (high - low) / 2	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:16:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:16:  	LoopInvariantBeforeLoop assertion: `conditionalResult_31
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:16:  Invalid assertion (LoopInvariantBeforeLoop)
+
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:17: warning: The prover cannot establish an assertion (LoopInvariantBeforeLoop) in method Binary
+            //@ maintaining (\forall int i; 0 <= i && i < low; arr[i] < key);
+                ^
+
+TRACE of ArjaE.BinarySearch.bug4.Repaired.BinarySearch.Binary(int[],int)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:8:  	requires arr != null; 
+			VALUE: arr	 === REF!val!6
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:5:  	requires \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j; arr[i] <= arr[j]; 
+			VALUE: \forall int j; 0 <= j && j < arr.length; \forall int i; 0 <= i && i < j; arr[i] <= arr[j]	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:1:  	if (arr.length == 0) ...
+			VALUE: arr.length	 === 2147483526
+			VALUE: 0	 === 0
+			VALUE: arr.length == 0	 === false
+			VALUE: (arr.length == 0)	 === false
+				Condition = false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:9:  	PossiblyNullDeReference assertion: arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:12:  	int low = 1
+			VALUE: 1	 === 1
+			VALUE: low	 === 1
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:13:  	int high = arr.length
+			VALUE: arr.length	 === 2147483526
+			VALUE: high	 === 2147483526
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:13:  	PossiblyNullDeReference assertion: arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:14:  	int mid = high / 2
+			VALUE: high	 === 2147483526
+			VALUE: 2	 === 2
+			VALUE: high / 2	 === 1073741763
+			VALUE: mid	 === 1073741763
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:14:  	ArithmeticOperationRange assertion: !(high == -2147483648 && 2 == -1)
+			VALUE: !(high_524_524___21 == -2147483648 && 2 == -1)	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:16:  	//@ loop_invariant 0 <= low && low <= high && high <= arr.length && mid == low + (high - low) / 2;
+			VALUE: 0	 === 0
+			VALUE: low	 === 1
+			VALUE: 0 <= low	 === true
+			VALUE: low	 === 1
+			VALUE: high	 === 2147483526
+			VALUE: low <= high	 === true
+			VALUE: 0 <= low && low <= high	 === true
+			VALUE: high	 === 2147483526
+			VALUE: arr.length	 === 2147483526
+			VALUE: high <= arr.length	 === true
+			VALUE: 0 <= low && low <= high && high <= arr.length	 === true
+			VALUE: mid	 === 1073741763
+			VALUE: low	 === 1
+			VALUE: high	 === 2147483526
+			VALUE: low	 === 1
+			VALUE: high - low	 === 2147483525
+			VALUE: (high - low)	 === 2147483525
+			VALUE: 2	 === 2
+			VALUE: (high - low) / 2	 === 1073741762
+			VALUE: low + (high - low) / 2	 === 1073741763
+			VALUE: mid == low + (high - low) / 2	 === true
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:16:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:16:  	LoopInvariantBeforeLoop assertion: `conditionalResult_31
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:17:  	//@ loop_invariant (\forall int i; 0 <= i && i < low; arr[i] < key);
+			VALUE: \forall int i; 0 <= i && i < low; arr[i] < key	 === false
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:17:  	LoopInvariantBeforeLoop assertion: (_JML__tmp39)
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BinarySearch/bug4/Repaired/BinarySearch.java:17:  Invalid assertion (LoopInvariantBeforeLoop)
+
+2 warnings

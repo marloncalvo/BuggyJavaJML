@@ -1,11 +1,492 @@
-/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug5/Repaired/BubbleSort.java:7: error: cannot find symbol
-	SwapInArray s = new SwapInArray();
-	^
-  symbol:   class SwapInArray
-  location: class BubbleSort
-/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/ArjaE/BubbleSort/bug5/Repaired/BubbleSort.java:7: error: cannot find symbol
-	SwapInArray s = new SwapInArray();
-	                    ^
-  symbol:   class SwapInArray
-  location: class BubbleSort
-2 errors
+BubbleSort.java:24: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method bubbleSort:  overflow in int sum
+            for (int j = 0; j < n+i-1; j++) { // for (int j = 0; j < n-i-1; j++) {
+                                 ^
+
+TRACE of ArjaE.BubbleSort.bug5.Repaired.BubbleSort.bubbleSort(int[])
+BubbleSort.java:6:  	requires arr != null; 
+			VALUE: arr	 === REF!val!16
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+BubbleSort.java:4:  	requires 0 < arr.length; 
+			VALUE: 0	 === 0
+			VALUE: arr.length	 === 1073741948
+			VALUE: 0 < arr.length	 === true
+BubbleSort.java:4:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+BubbleSort.java:7:  	/*@ non_null */  SwapInArray s = new SwapInArray()
+			VALUE: new SwapInArray()	 === REF!val!20
+			VALUE: s	 === REF!val!20
+BubbleSort.java:1:  	Precondition assertion: _$CPRE__2
+			VALUE: _$CPRE__2	 === true
+BubbleSort.java:7:  	PossiblyNullInitialization assertion: `NEWOBJECT_291_12 != null
+			VALUE: null	 === NULL
+BubbleSort.java:1:  	if (!(arr != null)) ...
+			VALUE: arr	 === REF!val!16
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+			VALUE: (arr != null)	 === true
+			VALUE: !(arr != null)	 === false
+			VALUE: (!(arr != null))	 === false
+				Condition = false
+BubbleSort.java:9:  	int n = arr.length
+			VALUE: arr.length	 === 1073741948
+			VALUE: n	 === 1073741948
+BubbleSort.java:9:  	PossiblyNullDeReference assertion: arr != null
+BubbleSort.java:17:  	int i = 0
+			VALUE: 0	 === 0
+			VALUE: i	 === 0
+BubbleSort.java:11:  	//@ loop_invariant n == arr.length;
+			VALUE: n	 === 1073741948
+			VALUE: arr.length	 === 1073741948
+			VALUE: n == arr.length	 === true
+BubbleSort.java:11:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+BubbleSort.java:11:  	LoopInvariantBeforeLoop assertion: _JML__tmp22
+BubbleSort.java:12:  	//@ loop_invariant 0 <= i && i < n;
+			VALUE: 0	 === 0
+			VALUE: i	 === 0
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 0
+			VALUE: n	 === 1073741948
+			VALUE: i < n	 === true
+BubbleSort.java:12:  	LoopInvariantBeforeLoop assertion: `conditionalResult_25
+BubbleSort.java:13:  	//@ loop_invariant 0 < i ==> (\forall int k; 0 <= k && k < n - i; arr[k] <= arr[n - i]);
+			VALUE: 0	 === 0
+			VALUE: i	 === 0
+			VALUE: 0 < i	 === false
+BubbleSort.java:13:  	LoopInvariantBeforeLoop assertion: _JML__tmp30
+BubbleSort.java:14:  	//@ loop_invariant (\forall int t; n - i <= t && t < n; arr[n - i] <= arr[t]);
+			VALUE: \forall int t; n - i <= t && t < n; arr[n - i] <= arr[t]	 === true
+BubbleSort.java:14:  	LoopInvariantBeforeLoop assertion: (_JML__tmp33)
+BubbleSort.java:15:  	//@ loop_invariant 0 < i ==> (\forall int h; n - i <= h && h < n; (\forall int p; n - i <= p && p < n && p <= h; arr[p] <= arr[h]));
+			VALUE: 0	 === 0
+			VALUE: i	 === 0
+			VALUE: 0 < i	 === false
+BubbleSort.java:15:  	LoopInvariantBeforeLoop assertion: _JML__tmp36
+BubbleSort.java:11:  	//@ loop_invariant n == arr.length;
+			VALUE: n	 === 1073741948
+			VALUE: arr.length	 === 1073741948
+			VALUE: n == arr.length	 === true
+BubbleSort.java:11:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+BubbleSort.java:12:  	//@ loop_invariant 0 <= i && i < n;
+			VALUE: 0	 === 0
+			VALUE: i	 === 1073741700
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 1073741700
+			VALUE: n	 === 1073741948
+			VALUE: i < n	 === true
+			VALUE: 0 <= i && i < n	 === true
+BubbleSort.java:13:  	//@ loop_invariant 0 < i ==> (\forall int k; 0 <= k && k < n - i; arr[k] <= arr[n - i]);
+			VALUE: 0	 === 0
+			VALUE: i	 === 1073741700
+			VALUE: 0 < i	 === true
+			VALUE: \forall int k; 0 <= k && k < n - i; arr[k] <= arr[n - i]	 === true
+			VALUE: (\forall int k; 0 <= k && k < n - i; arr[k] <= arr[n - i])	 === true
+			VALUE: 0 < i ==> (\forall int k; 0 <= k && k < n - i; arr[k] <= arr[n - i])	 === true
+BubbleSort.java:14:  	//@ loop_invariant (\forall int t; n - i <= t && t < n; arr[n - i] <= arr[t]);
+			VALUE: \forall int t; n - i <= t && t < n; arr[n - i] <= arr[t]	 === true
+			VALUE: (\forall int t; n - i <= t && t < n; arr[n - i] <= arr[t])	 === true
+BubbleSort.java:15:  	//@ loop_invariant 0 < i ==> (\forall int h; n - i <= h && h < n; (\forall int p; n - i <= p && p < n && p <= h; arr[p] <= arr[h]));
+			VALUE: 0	 === 0
+			VALUE: i	 === 1073741700
+			VALUE: 0 < i	 === true
+			VALUE: \forall int h; n - i <= h && h < n; (\forall int p; n - i <= p && p < n && p <= h; arr[p] <= arr[h])	 === true
+			VALUE: (\forall int h; n - i <= h && h < n; (\forall int p; n - i <= p && p < n && p <= h; arr[p] <= arr[h]))	 === true
+			VALUE: 0 < i ==> (\forall int h; n - i <= h && h < n; (\forall int p; n - i <= p && p < n && p <= h; arr[p] <= arr[h]))	 === true
+BubbleSort.java:16:  	//@ loop_decreases n - i;
+			VALUE: n	 === 1073741948
+			VALUE: i	 === 1073741700
+			VALUE: n - i	 === 248
+				Initial value of Loop Decreases expression = 248
+BubbleSort.java:17:  	Loop test
+			VALUE: i	 === 1073741700
+			VALUE: n	 === 1073741948
+			VALUE: 1	 === 1
+			VALUE: n - 1	 === 1073741947
+			VALUE: i < n - 1	 === true
+BubbleSort.java:17:  	ArithmeticOperationRange assertion: !(0 < n && 1 < 0) || n <= 2147483647 + 1
+			VALUE: !(0 < n_357_357___27 && 1 < 0) || n_357_357___27 <= 2147483647 + 1	 === true
+BubbleSort.java:17:  	ArithmeticOperationRange assertion: !(n < 0 && 0 < 1) || -2147483648 + 1 <= n
+			VALUE: !(n_357_357___27 < 0 && 0 < 1) || -2147483648 + 1 <= n_357_357___27	 === true
+BubbleSort.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp56
+BubbleSort.java:24:  	int j = 0
+			VALUE: 0	 === 0
+			VALUE: j	 === 0
+BubbleSort.java:18:  	//@ loop_invariant 0 <= i && i < n - 1;
+			VALUE: 0	 === 0
+			VALUE: i	 === 1073741700
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 1073741700
+			VALUE: n	 === 1073741948
+			VALUE: 1	 === 1
+			VALUE: n - 1	 === 1073741947
+			VALUE: i < n - 1	 === true
+BubbleSort.java:18:  	LoopInvariantBeforeLoop assertion: `conditionalResult_67
+BubbleSort.java:19:  	//@ loop_invariant 0 <= j && j < n - i;
+			VALUE: 0	 === 0
+			VALUE: j	 === 0
+			VALUE: 0 <= j	 === true
+			VALUE: j	 === 0
+			VALUE: n	 === 1073741948
+			VALUE: i	 === 1073741700
+			VALUE: n - i	 === 248
+			VALUE: j < n - i	 === true
+BubbleSort.java:19:  	LoopInvariantBeforeLoop assertion: `conditionalResult_74
+BubbleSort.java:20:  	//@ loop_invariant 0 < j ==> arr[j - 1] <= arr[j];
+			VALUE: 0	 === 0
+			VALUE: j	 === 0
+			VALUE: 0 < j	 === false
+BubbleSort.java:20:  	LoopInvariantBeforeLoop assertion: _JML__tmp80
+BubbleSort.java:21:  	//@ loop_invariant (\forall int k; 0 <= k && k < j; arr[k] <= arr[j]);
+			VALUE: \forall int k; 0 <= k && k < j; arr[k] <= arr[j]	 === true
+BubbleSort.java:21:  	LoopInvariantBeforeLoop assertion: (_JML__tmp85)
+BubbleSort.java:22:  	//@ loop_invariant 0 < j && j < n - i ==> (\forall int t; n - i <= t && t < n; arr[j] <= arr[t]);
+			VALUE: 0	 === 0
+			VALUE: j	 === 0
+			VALUE: 0 < j	 === false
+			VALUE: 0 < j && j < n - i	 === false
+BubbleSort.java:22:  	LoopInvariantBeforeLoop assertion: _JML__tmp92
+BubbleSort.java:18:  	//@ loop_invariant 0 <= i && i < n - 1;
+			VALUE: 0	 === 0
+			VALUE: i	 === 1073741700
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 1073741700
+			VALUE: n	 === 1073741948
+			VALUE: 1	 === 1
+			VALUE: n - 1	 === 1073741947
+			VALUE: i < n - 1	 === true
+			VALUE: 0 <= i && i < n - 1	 === true
+BubbleSort.java:19:  	//@ loop_invariant 0 <= j && j < n - i;
+			VALUE: 0	 === 0
+			VALUE: j	 === 0
+			VALUE: 0 <= j	 === true
+			VALUE: j	 === 0
+			VALUE: n	 === 1073741948
+			VALUE: i	 === 1073741700
+			VALUE: n - i	 === 248
+			VALUE: j < n - i	 === true
+			VALUE: 0 <= j && j < n - i	 === true
+BubbleSort.java:20:  	//@ loop_invariant 0 < j ==> arr[j - 1] <= arr[j];
+			VALUE: 0	 === 0
+			VALUE: j	 === 0
+			VALUE: 0 < j	 === false
+			VALUE: 0 < j ==> arr[j - 1] <= arr[j]	 === true
+BubbleSort.java:21:  	//@ loop_invariant (\forall int k; 0 <= k && k < j; arr[k] <= arr[j]);
+			VALUE: \forall int k; 0 <= k && k < j; arr[k] <= arr[j]	 === true
+			VALUE: (\forall int k; 0 <= k && k < j; arr[k] <= arr[j])	 === true
+BubbleSort.java:22:  	//@ loop_invariant 0 < j && j < n - i ==> (\forall int t; n - i <= t && t < n; arr[j] <= arr[t]);
+			VALUE: 0	 === 0
+			VALUE: j	 === 0
+			VALUE: 0 < j	 === false
+			VALUE: 0 < j && j < n - i	 === false
+			VALUE: 0 < j && j < n - i ==> (\forall int t; n - i <= t && t < n; arr[j] <= arr[t])	 === true
+BubbleSort.java:23:  	//@ loop_decreases n - j;
+			VALUE: n	 === 1073741948
+			VALUE: j	 === 0
+			VALUE: n - j	 === 1073741948
+				Initial value of Loop Decreases expression = 1073741948
+BubbleSort.java:24:  	Loop test
+			VALUE: j	 === 0
+			VALUE: n	 === 1073741948
+			VALUE: i	 === 1073741700
+			VALUE: n + i	 === ( - 2147483648 )
+			VALUE: 1	 === 1
+			VALUE: n + i - 1	 === 2147483647
+			VALUE: j < n + i - 1	 === true
+BubbleSort.java:24:  	ArithmeticOperationRange assertion: !(0 < n && 0 < i) || n <= 2147483647 - i
+			VALUE: !(0 < n_357_357___27 && 0 < i_776_792___34) || n_357_357___27 <= 2147483647 - i_776_792___34	 === false
+BubbleSort.java:24:  Invalid assertion (ArithmeticOperationRange)
+
+BubbleSort.java:19: warning: The prover cannot establish an assertion (LoopInvariant) in method bubbleSort
+	    //@ maintaining 0 <= j && j < n - i;
+	        ^
+
+TRACE of ArjaE.BubbleSort.bug5.Repaired.BubbleSort.bubbleSort(int[])
+BubbleSort.java:6:  	requires arr != null; 
+			VALUE: arr	 === REF!val!16
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+BubbleSort.java:4:  	requires 0 < arr.length; 
+			VALUE: 0	 === 0
+			VALUE: arr.length	 === 13868
+			VALUE: 0 < arr.length	 === true
+BubbleSort.java:4:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+BubbleSort.java:7:  	/*@ non_null */  SwapInArray s = new SwapInArray()
+			VALUE: new SwapInArray()	 === REF!val!18
+			VALUE: s	 === REF!val!18
+BubbleSort.java:1:  	Precondition assertion: _$CPRE__2
+			VALUE: _$CPRE__2	 === true
+BubbleSort.java:7:  	PossiblyNullInitialization assertion: `NEWOBJECT_291_12 != null
+			VALUE: null	 === NULL
+BubbleSort.java:1:  	if (!(arr != null)) ...
+			VALUE: arr	 === REF!val!16
+			VALUE: null	 === NULL
+			VALUE: arr != null	 === true
+			VALUE: (arr != null)	 === true
+			VALUE: !(arr != null)	 === false
+			VALUE: (!(arr != null))	 === false
+				Condition = false
+BubbleSort.java:9:  	int n = arr.length
+			VALUE: arr.length	 === 13868
+			VALUE: n	 === 13868
+BubbleSort.java:9:  	PossiblyNullDeReference assertion: arr != null
+BubbleSort.java:17:  	int i = 0
+			VALUE: 0	 === 0
+			VALUE: i	 === 0
+BubbleSort.java:11:  	//@ loop_invariant n == arr.length;
+			VALUE: n	 === 13868
+			VALUE: arr.length	 === 13868
+			VALUE: n == arr.length	 === true
+BubbleSort.java:11:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+BubbleSort.java:11:  	LoopInvariantBeforeLoop assertion: _JML__tmp22
+BubbleSort.java:12:  	//@ loop_invariant 0 <= i && i < n;
+			VALUE: 0	 === 0
+			VALUE: i	 === 0
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 0
+			VALUE: n	 === 13868
+			VALUE: i < n	 === true
+BubbleSort.java:12:  	LoopInvariantBeforeLoop assertion: `conditionalResult_25
+BubbleSort.java:13:  	//@ loop_invariant 0 < i ==> (\forall int k; 0 <= k && k < n - i; arr[k] <= arr[n - i]);
+			VALUE: 0	 === 0
+			VALUE: i	 === 0
+			VALUE: 0 < i	 === false
+BubbleSort.java:13:  	LoopInvariantBeforeLoop assertion: _JML__tmp30
+BubbleSort.java:14:  	//@ loop_invariant (\forall int t; n - i <= t && t < n; arr[n - i] <= arr[t]);
+			VALUE: \forall int t; n - i <= t && t < n; arr[n - i] <= arr[t]	 === true
+BubbleSort.java:14:  	LoopInvariantBeforeLoop assertion: (_JML__tmp33)
+BubbleSort.java:15:  	//@ loop_invariant 0 < i ==> (\forall int h; n - i <= h && h < n; (\forall int p; n - i <= p && p < n && p <= h; arr[p] <= arr[h]));
+			VALUE: 0	 === 0
+			VALUE: i	 === 0
+			VALUE: 0 < i	 === false
+BubbleSort.java:15:  	LoopInvariantBeforeLoop assertion: _JML__tmp36
+BubbleSort.java:11:  	//@ loop_invariant n == arr.length;
+			VALUE: n	 === 13868
+			VALUE: arr.length	 === 13868
+			VALUE: n == arr.length	 === true
+BubbleSort.java:11:  	UndefinedNullDeReference assertion: !(arr != null) || arr != null
+BubbleSort.java:12:  	//@ loop_invariant 0 <= i && i < n;
+			VALUE: 0	 === 0
+			VALUE: i	 === 3
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 3
+			VALUE: n	 === 13868
+			VALUE: i < n	 === true
+			VALUE: 0 <= i && i < n	 === true
+BubbleSort.java:13:  	//@ loop_invariant 0 < i ==> (\forall int k; 0 <= k && k < n - i; arr[k] <= arr[n - i]);
+			VALUE: 0	 === 0
+			VALUE: i	 === 3
+			VALUE: 0 < i	 === true
+			VALUE: \forall int k; 0 <= k && k < n - i; arr[k] <= arr[n - i]	 === true
+			VALUE: (\forall int k; 0 <= k && k < n - i; arr[k] <= arr[n - i])	 === true
+			VALUE: 0 < i ==> (\forall int k; 0 <= k && k < n - i; arr[k] <= arr[n - i])	 === true
+BubbleSort.java:14:  	//@ loop_invariant (\forall int t; n - i <= t && t < n; arr[n - i] <= arr[t]);
+			VALUE: \forall int t; n - i <= t && t < n; arr[n - i] <= arr[t]	 === true
+			VALUE: (\forall int t; n - i <= t && t < n; arr[n - i] <= arr[t])	 === true
+BubbleSort.java:15:  	//@ loop_invariant 0 < i ==> (\forall int h; n - i <= h && h < n; (\forall int p; n - i <= p && p < n && p <= h; arr[p] <= arr[h]));
+			VALUE: 0	 === 0
+			VALUE: i	 === 3
+			VALUE: 0 < i	 === true
+			VALUE: \forall int h; n - i <= h && h < n; (\forall int p; n - i <= p && p < n && p <= h; arr[p] <= arr[h])	 === true
+			VALUE: (\forall int h; n - i <= h && h < n; (\forall int p; n - i <= p && p < n && p <= h; arr[p] <= arr[h]))	 === true
+			VALUE: 0 < i ==> (\forall int h; n - i <= h && h < n; (\forall int p; n - i <= p && p < n && p <= h; arr[p] <= arr[h]))	 === true
+BubbleSort.java:16:  	//@ loop_decreases n - i;
+			VALUE: n	 === 13868
+			VALUE: i	 === 3
+			VALUE: n - i	 === 13865
+				Initial value of Loop Decreases expression = 13865
+BubbleSort.java:17:  	Loop test
+			VALUE: i	 === 3
+			VALUE: n	 === 13868
+			VALUE: 1	 === 1
+			VALUE: n - 1	 === 13867
+			VALUE: i < n - 1	 === true
+BubbleSort.java:17:  	ArithmeticOperationRange assertion: !(0 < n && 1 < 0) || n <= 2147483647 + 1
+			VALUE: !(0 < n_357_357___27 && 1 < 0) || n_357_357___27 <= 2147483647 + 1	 === true
+BubbleSort.java:17:  	ArithmeticOperationRange assertion: !(n < 0 && 0 < 1) || -2147483648 + 1 <= n
+			VALUE: !(n_357_357___27 < 0 && 0 < 1) || -2147483648 + 1 <= n_357_357___27	 === true
+BubbleSort.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp56
+BubbleSort.java:24:  	int j = 0
+			VALUE: 0	 === 0
+			VALUE: j	 === 0
+BubbleSort.java:18:  	//@ loop_invariant 0 <= i && i < n - 1;
+			VALUE: 0	 === 0
+			VALUE: i	 === 3
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 3
+			VALUE: n	 === 13868
+			VALUE: 1	 === 1
+			VALUE: n - 1	 === 13867
+			VALUE: i < n - 1	 === true
+BubbleSort.java:18:  	LoopInvariantBeforeLoop assertion: `conditionalResult_67
+BubbleSort.java:19:  	//@ loop_invariant 0 <= j && j < n - i;
+			VALUE: 0	 === 0
+			VALUE: j	 === 0
+			VALUE: 0 <= j	 === true
+			VALUE: j	 === 0
+			VALUE: n	 === 13868
+			VALUE: i	 === 3
+			VALUE: n - i	 === 13865
+			VALUE: j < n - i	 === true
+BubbleSort.java:19:  	LoopInvariantBeforeLoop assertion: `conditionalResult_74
+BubbleSort.java:20:  	//@ loop_invariant 0 < j ==> arr[j - 1] <= arr[j];
+			VALUE: 0	 === 0
+			VALUE: j	 === 0
+			VALUE: 0 < j	 === false
+BubbleSort.java:20:  	LoopInvariantBeforeLoop assertion: _JML__tmp80
+BubbleSort.java:21:  	//@ loop_invariant (\forall int k; 0 <= k && k < j; arr[k] <= arr[j]);
+			VALUE: \forall int k; 0 <= k && k < j; arr[k] <= arr[j]	 === true
+BubbleSort.java:21:  	LoopInvariantBeforeLoop assertion: (_JML__tmp85)
+BubbleSort.java:22:  	//@ loop_invariant 0 < j && j < n - i ==> (\forall int t; n - i <= t && t < n; arr[j] <= arr[t]);
+			VALUE: 0	 === 0
+			VALUE: j	 === 0
+			VALUE: 0 < j	 === false
+			VALUE: 0 < j && j < n - i	 === false
+BubbleSort.java:22:  	LoopInvariantBeforeLoop assertion: _JML__tmp92
+BubbleSort.java:18:  	//@ loop_invariant 0 <= i && i < n - 1;
+			VALUE: 0	 === 0
+			VALUE: i	 === 3
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 3
+			VALUE: n	 === 13868
+			VALUE: 1	 === 1
+			VALUE: n - 1	 === 13867
+			VALUE: i < n - 1	 === true
+			VALUE: 0 <= i && i < n - 1	 === true
+BubbleSort.java:19:  	//@ loop_invariant 0 <= j && j < n - i;
+			VALUE: 0	 === 0
+			VALUE: j	 === 13864
+			VALUE: 0 <= j	 === true
+			VALUE: j	 === 13864
+			VALUE: n	 === 13868
+			VALUE: i	 === 3
+			VALUE: n - i	 === 13865
+			VALUE: j < n - i	 === true
+			VALUE: 0 <= j && j < n - i	 === true
+BubbleSort.java:20:  	//@ loop_invariant 0 < j ==> arr[j - 1] <= arr[j];
+			VALUE: 0	 === 0
+			VALUE: j	 === 13864
+			VALUE: 0 < j	 === true
+			VALUE: arr	 === REF!val!16
+			VALUE: j	 === 13864
+			VALUE: 1	 === 1
+			VALUE: j - 1	 === 13863
+			VALUE: arr[j - 1]	 === ( - 6666 )
+			VALUE: arr	 === REF!val!16
+			VALUE: j	 === 13864
+			VALUE: arr[j]	 === ( - 6661 )
+			VALUE: arr[j - 1] <= arr[j]	 === true
+			VALUE: 0 < j ==> arr[j - 1] <= arr[j]	 === true
+BubbleSort.java:20:  	UndefinedNullDeReference assertion: !(_JML__tmp108 && _JML__tmp108 && arr != null) || arr != null
+BubbleSort.java:20:  	UndefinedNegativeIndex assertion: !(_JML__tmp108 && _JML__tmp108 && arr != null) || 0 <= _JML__tmp111
+BubbleSort.java:20:  	UndefinedTooLargeIndex assertion: !(_JML__tmp108 && _JML__tmp108 && arr != null) || arr.length > _JML__tmp111
+BubbleSort.java:20:  	UndefinedNullDeReference assertion: !(_JML__tmp108 && _JML__tmp108 && arr != null && arr != null) || arr != null
+BubbleSort.java:20:  	UndefinedNegativeIndex assertion: !(_JML__tmp108 && _JML__tmp108 && arr != null && arr != null) || 0 <= j
+BubbleSort.java:20:  	UndefinedTooLargeIndex assertion: !(_JML__tmp108 && _JML__tmp108 && arr != null && arr != null) || arr.length > j
+BubbleSort.java:21:  	//@ loop_invariant (\forall int k; 0 <= k && k < j; arr[k] <= arr[j]);
+			VALUE: \forall int k; 0 <= k && k < j; arr[k] <= arr[j]	 === true
+			VALUE: (\forall int k; 0 <= k && k < j; arr[k] <= arr[j])	 === true
+BubbleSort.java:22:  	//@ loop_invariant 0 < j && j < n - i ==> (\forall int t; n - i <= t && t < n; arr[j] <= arr[t]);
+			VALUE: 0	 === 0
+			VALUE: j	 === 13864
+			VALUE: 0 < j	 === true
+			VALUE: j	 === 13864
+			VALUE: n	 === 13868
+			VALUE: i	 === 3
+			VALUE: n - i	 === 13865
+			VALUE: j < n - i	 === true
+			VALUE: 0 < j && j < n - i	 === true
+			VALUE: \forall int t; n - i <= t && t < n; arr[j] <= arr[t]	 === true
+			VALUE: (\forall int t; n - i <= t && t < n; arr[j] <= arr[t])	 === true
+			VALUE: 0 < j && j < n - i ==> (\forall int t; n - i <= t && t < n; arr[j] <= arr[t])	 === true
+BubbleSort.java:23:  	//@ loop_decreases n - j;
+			VALUE: n	 === 13868
+			VALUE: j	 === 13864
+			VALUE: n - j	 === 4
+				Initial value of Loop Decreases expression = 4
+BubbleSort.java:24:  	Loop test
+			VALUE: j	 === 13864
+			VALUE: n	 === 13868
+			VALUE: i	 === 3
+			VALUE: n + i	 === 13871
+			VALUE: 1	 === 1
+			VALUE: n + i - 1	 === 13870
+			VALUE: j < n + i - 1	 === true
+BubbleSort.java:24:  	ArithmeticOperationRange assertion: !(0 < n && 0 < i) || n <= 2147483647 - i
+			VALUE: !(0 < n_357_357___27 && 0 < i_776_792___34) || n_357_357___27 <= 2147483647 - i_776_792___34	 === true
+BubbleSort.java:24:  	ArithmeticOperationRange assertion: !(n < 0 && i < 0) || -2147483648 - i <= n
+			VALUE: !(n_357_357___27 < 0 && i_776_792___34 < 0) || -2147483648 - i_776_792___34 <= n_357_357___27	 === true
+BubbleSort.java:24:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp127 && 1 < 0) || _JML__tmp127 <= 2147483647 + 1
+			VALUE: !(0 < _JML__tmp127 && 1 < 0) || _JML__tmp127 <= 2147483647 + 1	 === true
+BubbleSort.java:24:  	ArithmeticOperationRange assertion: !(_JML__tmp127 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp127
+			VALUE: !(_JML__tmp127 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp127	 === true
+BubbleSort.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp124
+BubbleSort.java:1:  	if (!(j + 1 < arr.length && j < arr.length)) ...
+			VALUE: j	 === 13864
+			VALUE: 1	 === 1
+			VALUE: j + 1	 === 13865
+			VALUE: arr.length	 === 13868
+			VALUE: j + 1 < arr.length	 === true
+			VALUE: j	 === 13864
+			VALUE: arr.length	 === 13868
+			VALUE: j < arr.length	 === true
+			VALUE: j + 1 < arr.length && j < arr.length	 === true
+			VALUE: (j + 1 < arr.length && j < arr.length)	 === true
+			VALUE: !(j + 1 < arr.length && j < arr.length)	 === false
+			VALUE: (!(j + 1 < arr.length && j < arr.length))	 === false
+				Condition = false
+BubbleSort.java:25:  	ArithmeticOperationRange assertion: !(0 < j && 0 < 1) || j <= 2147483647 - 1
+			VALUE: !(0 < j_1161_1179___52 && 0 < 1) || j_1161_1179___52 <= 2147483647 - 1	 === true
+BubbleSort.java:25:  	ArithmeticOperationRange assertion: !(j < 0 && 1 < 0) || -2147483648 - 1 <= j
+			VALUE: !(j_1161_1179___52 < 0 && 1 < 0) || -2147483648 - 1 <= j_1161_1179___52	 === true
+BubbleSort.java:25:  	PossiblyNullDeReference assertion: arr != null
+BubbleSort.java:25:  	PossiblyNullDeReference assertion: arr != null
+BubbleSort.java:1:  	if (arr[j + 1] < arr[j]) ...
+			VALUE: arr	 === REF!val!16
+			VALUE: j	 === 13864
+			VALUE: 1	 === 1
+			VALUE: j + 1	 === 13865
+			VALUE: arr[j + 1]	 === ( - 6660 )
+			VALUE: arr	 === REF!val!16
+			VALUE: j	 === 13864
+			VALUE: arr[j]	 === ( - 6661 )
+			VALUE: arr[j + 1] < arr[j]	 === false
+			VALUE: (arr[j + 1] < arr[j])	 === false
+				Condition = false
+BubbleSort.java:26:  	PossiblyNullDeReference assertion: arr != null
+BubbleSort.java:26:  	ArithmeticOperationRange assertion: !(0 < j && 0 < 1) || j <= 2147483647 - 1
+			VALUE: !(0 < j_1161_1179___52 && 0 < 1) || j_1161_1179___52 <= 2147483647 - 1	 === true
+BubbleSort.java:26:  	ArithmeticOperationRange assertion: !(j < 0 && 1 < 0) || -2147483648 - 1 <= j
+			VALUE: !(j_1161_1179___52 < 0 && 1 < 0) || -2147483648 - 1 <= j_1161_1179___52	 === true
+BubbleSort.java:26:  	PossiblyNegativeIndex assertion: 0 <= _JML__tmp148
+BubbleSort.java:26:  	PossiblyTooLargeIndex assertion: arr.length > _JML__tmp148
+BubbleSort.java:26:  	PossiblyNullDeReference assertion: arr != null
+BubbleSort.java:26:  	PossiblyNegativeIndex assertion: 0 <= j
+BubbleSort.java:26:  	PossiblyTooLargeIndex assertion: arr.length > j
+BubbleSort.java:24:  	j++
+			VALUE: j++	 === 13864
+BubbleSort.java:24:  	ArithmeticOperationRange assertion: !(0 < j && 0 < 1) || j <= 2147483647 - 1
+			VALUE: !(0 < j_1161_1179___52 && 0 < 1) || j_1161_1179___52 <= 2147483647 - 1	 === true
+BubbleSort.java:24:  	ArithmeticOperationRange assertion: !(j < 0 && 1 < 0) || -2147483648 - 1 <= j
+			VALUE: !(j_1161_1179___52 < 0 && 1 < 0) || -2147483648 - 1 <= j_1161_1179___52	 === true
+BubbleSort.java:18:  	//@ loop_invariant 0 <= i && i < n - 1;
+			VALUE: 0	 === 0
+			VALUE: i	 === 3
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 3
+			VALUE: n	 === 13868
+			VALUE: 1	 === 1
+			VALUE: n - 1	 === 13867
+			VALUE: i < n - 1	 === true
+BubbleSort.java:18:  	LoopInvariant assertion: `conditionalResult_211
+BubbleSort.java:19:  	//@ loop_invariant 0 <= j && j < n - i;
+			VALUE: 0	 === 0
+			VALUE: j	 === 13865
+			VALUE: 0 <= j	 === true
+			VALUE: j	 === 13865
+			VALUE: n	 === 13868
+			VALUE: i	 === 3
+			VALUE: n - i	 === 13865
+			VALUE: j < n - i	 === false
+BubbleSort.java:19:  	LoopInvariant assertion: `conditionalResult_218
+BubbleSort.java:19:  Invalid assertion (LoopInvariant)
+
+2 warnings
