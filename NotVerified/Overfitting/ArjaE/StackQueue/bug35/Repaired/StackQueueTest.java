@@ -42,10 +42,9 @@ public class StackQueueTest {
 			oldQueue.enter(0);
 		}, 95);
 		int[] resArray = { -1 };
-		assertDoesNotThrow(() -> {
+		
 			resArray[0] = queue.delete();
-		});
-		int res = resArray[0];
+				int res = resArray[0];
 		assertEquals(97, queue.getRear());
 		assertEquals(0, res);
 		for (int i = 0; i < 98; i++) {

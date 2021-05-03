@@ -7,9 +7,8 @@ public class TimeTest {
 	@Test
 	void case1() {
 		Time time = new Time(22, 37, 35);
-		assertDoesNotThrow(() -> {
+		
 			assertFalse(time.equals(null));
-		});
-	}
+			}
 
 }

@@ -21,10 +21,9 @@ public class StackQueueTest {
 		int oldFront = queue.getFront();
 		int oldRear = queue.getRear();
 		int[] res = { -1 };
-		assertDoesNotThrow(() -> {
+		
 			res[0] = queue.peek();
-		});
-		assertEquals(-2147483610, res[0]);
+				assertEquals(-2147483610, res[0]);
 		assertEquals(oldRear, queue.getRear());
 	}
 
@@ -44,10 +43,9 @@ public class StackQueueTest {
 		int oldFront = queue.getFront();
 		int oldRear = queue.getRear();
 		int[] res = { -1 };
-		assertDoesNotThrow(() -> {
+		
 			res[0] = queue.peek();
-		});
-		assertEquals(-2147483610, res[0]);
+				assertEquals(-2147483610, res[0]);
 		assertEquals(oldRear, queue.getRear());
 	}
 
@@ -67,10 +65,9 @@ public class StackQueueTest {
 		int oldFront = queue.getFront();
 		int oldRear = queue.getRear();
 		int[] res = { -1 };
-		assertDoesNotThrow(() -> {
+		
 			res[0] = queue.peek();
-		});
-		assertEquals(-2147483610, res[0]);
+				assertEquals(-2147483610, res[0]);
 		assertEquals(oldRear, queue.getRear());
 	}
 
@@ -90,10 +87,9 @@ public class StackQueueTest {
 		int oldFront = queue.getFront();
 		int oldRear = queue.getRear();
 		int[] res = { -1 };
-		assertDoesNotThrow(() -> {
+		
 			res[0] = queue.peek();
-		});
-		assertEquals(21, res[0]);
+				assertEquals(21, res[0]);
 		assertEquals(oldRear, queue.getRear());
 	}
 

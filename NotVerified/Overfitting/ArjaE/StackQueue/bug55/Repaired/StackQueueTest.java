@@ -20,10 +20,9 @@ public class StackQueueTest {
 		}, 99);
 		int oldRear = queue.getRear();
 		int oldFront = queue.getFront();
-		assertDoesNotThrow(() -> {
+		
 			queue.enter(-2147481366);
-		});
-		assertEquals(100, queue.getRear());
+				assertEquals(100, queue.getRear());
 		assertEquals(-2147481366, queue.getElem(99));
 		assertEquals(oldRear + 1, queue.getRear());
 		assertEquals(oldFront, queue.getFront());

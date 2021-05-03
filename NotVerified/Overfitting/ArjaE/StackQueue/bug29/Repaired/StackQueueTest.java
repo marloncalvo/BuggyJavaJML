@@ -57,14 +57,13 @@ public class StackQueueTest {
 		repeat(() -> {
 			oldQueue.enter(0);
 		}, 97);
-		assertDoesNotThrow(() -> {
+		
 			int res = queue.delete();
 			assertEquals(99, queue.getRear());
 			assertEquals(0, res);
 			for (int i = 0; i < 100; i++) {
 				assertEquals(oldQueue.getElem(i + 1), queue.getElem(i));
 			}
-		});
-	}
+			}
 
 }

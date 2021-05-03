@@ -24,12 +24,11 @@ public class StackQueueTest {
 		StackQueue queueStackQueue = new StackQueue();
 		StackQueue.Queue queue = queueStackQueue.new Queue();
 
-		assertDoesNotThrow(() -> {
+		
 			queue.enter(-12321);
 			assertEquals(1, queue.getRear());
 			assertEquals(-12321, queue.getElem(0));
-		});
-	}
+			}
 
 	/*
 	

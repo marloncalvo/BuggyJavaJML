@@ -29,10 +29,9 @@ public class TimeTest {
     @Test
     void test3() {
         Time time = new Time(-1, -1, -1);
-        assertDoesNotThrow(() -> {
+        
             time.setSecond(59);
-        });
-        assertEquals(59, time.getSecond());
+                assertEquals(59, time.getSecond());
     }
     
     @Test

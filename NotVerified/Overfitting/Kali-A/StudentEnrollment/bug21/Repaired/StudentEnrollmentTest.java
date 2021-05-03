@@ -1,11 +1,11 @@
 
 import static org.junit.Assert.*;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.Before;
 import org.junit.Test;
 public class StudentEnrollmentTest {
 	StudentEnrollment se;
 	
-	@BeforeEach
+	@Before
 	void setUp() throws Exception {
 		se = new StudentEnrollment("", "");
 	}

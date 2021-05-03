@@ -24,12 +24,10 @@ public class TimeTest {
 		assertEquals(time.convertToSeconds(), 0);
 	}
 	
-	@Test
+	@Test(timeout = 1000)
 	void case4() {
 		Time time = new Time(0, 0, 0);
-		assertTimeoutPreemptively(Duration.ofSeconds(1), () -> {
-			time.timer();
-			assertEquals(time.convertToSeconds(), 0);
-		});
+		time.timer();
+		assertEquals(time.convertToSeconds(), 0);
 	}
 }

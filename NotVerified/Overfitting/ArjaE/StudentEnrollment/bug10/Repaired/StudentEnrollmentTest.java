@@ -39,9 +39,8 @@ public class StudentEnrollmentTest {
 		student.setEnrollmentCredits(enrollmentCredits);
 		student.setTuitionBalance(tutionBalance);
 		student.setPassedCredits(passedCredits);
-		assertDoesNotThrow(() -> {
+		
 			student.setEnrollmentCredits(_enrollmentCredits);
-		});
-		assertEquals(_enrollmentCredits, student.getEnrollmentCredits());
+				assertEquals(_enrollmentCredits, student.getEnrollmentCredits());
 	}
 }

@@ -5,10 +5,9 @@ public class TimeTest {
 	@Test
 	void test() {
 		Time time = new Time(-1, -1, -1);
-		assertDoesNotThrow(() -> {
+		
 			time.setHour(0);
-		});
-		assertEquals(0, time.getHour());
+				assertEquals(0, time.getHour());
 	}
 
 	@Test

@@ -10,10 +10,9 @@ public class StudentEnrollmentTest {
 		StudentEnrollment student = new StudentEnrollment("", "");
 		student.setTuitionBalance(tuitionBalance);
 		student.setEnrollmentCredits(enrollmentCredits);
-		assertDoesNotThrow(() -> {
+		
 			student.setTuitionBalance(_tuitionBalance);			
-		});
-		assertEquals(_tuitionBalance, student.getTuition());
+				assertEquals(_tuitionBalance, student.getTuition());
 	}
 
 }

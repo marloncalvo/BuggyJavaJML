@@ -3,8 +3,7 @@ import static org.junit.Assert.*;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.Test;import org.junit.jupiter.api.Timeout;
+import org.junit.Test;
 
 public class InverseTest {
 	@Test
@@ -23,8 +22,7 @@ public class InverseTest {
         assertTrue(Inverse.Inverse(arr, arr2));
     }
 
-	@Test
-	@Timeout(value = 5, unit = TimeUnit.SECONDS)
+	@Test(timeout = 5000)
     public void case2() {
         int size = 8366;
         int [] arr = new int[size];
@@ -37,9 +35,7 @@ public class InverseTest {
 
         // hangs forever because of zeroes in arr/arr2
         // test case is supposed to show that @decreases does not hold
-        Assertions.assertTimeoutPreemptively(Duration.ofSeconds(1), () -> {
-            assertTrue(Inverse.Inverse(arr, arr2));
-        });
+        assertTrue(Inverse.Inverse(arr, arr2));
     }
 
 	@Test

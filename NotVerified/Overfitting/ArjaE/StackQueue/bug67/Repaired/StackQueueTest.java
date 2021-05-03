@@ -31,12 +31,11 @@ public class StackQueueTest {
 		repeat(() -> {
 			stack.push(0);
 		}, 100);
-		assertDoesNotThrow(() -> {
+		
 			repeat(() -> {
 				assertEquals(0, stack.peek());
 			}, 1);
-		});
-		assertEquals(99, stack.getTop());
+				assertEquals(99, stack.getTop());
 	}
 
 }

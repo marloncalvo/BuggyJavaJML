@@ -18,12 +18,11 @@ public class StackQueueTest {
 		repeat(() -> {
 			stack.push(14);
 		}, 1);
-		assertDoesNotThrow(() -> {
+		
 			repeat(() -> {
 				assertEquals(14, stack.peek());
 			}, 1);
-		});
-		assertEquals(99, stack.getTop());
+				assertEquals(99, stack.getTop());
 	}
 
 //==============================================================================
@@ -41,12 +40,11 @@ public class StackQueueTest {
 		repeat(() -> {
 			stack.push(14);
 		}, 1);
-		assertDoesNotThrow(() -> {
+		
 			repeat(() -> {
 				assertEquals(14, stack.peek());
 			}, 2);
-		});
-		assertEquals(99, stack.getTop());
+				assertEquals(99, stack.getTop());
 	}
 
 //==============================================================================
@@ -58,12 +56,11 @@ public class StackQueueTest {
 		repeat(() -> {
 			stack.push(11);
 		}, 100);
-		assertDoesNotThrow(() -> {
+		
 			repeat(() -> {
 				assertEquals(11, stack.peek());
 			}, 101);
-		});
-		assertEquals(99, stack.getTop());
+				assertEquals(99, stack.getTop());
 	}
 
 //==============================================================================

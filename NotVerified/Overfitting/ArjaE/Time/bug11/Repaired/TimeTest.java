@@ -24,10 +24,9 @@ public class TimeTest {
 	void test1() {
 		int h = 23;
 		Time time = new Time();
-		assertDoesNotThrow(() -> {
-			time.setHour(h);
-		});
 		
+			time.setHour(h);
+				
 		assertEquals(h, time.getHour());
 	}
 

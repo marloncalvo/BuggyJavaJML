@@ -18,11 +18,9 @@ public class TimeTest {
 		Time stop = new Time(21, 47, 58);
 		Time res = time.difference(start, stop);
 		
-		assertAll(
-				() -> {assertEquals(res.getHour(), 0);},
-				() -> {assertEquals(res.getMinute(), 0);},
-				() -> {assertEquals(res.getSecond(), 0);});
-		
+		assertEquals(res.getHour(), 0);
+		assertEquals(res.getMinute(), 0);
+		assertEquals(res.getSecond(), 0);
 	}
 	
 	@Test
@@ -31,11 +29,10 @@ public class TimeTest {
 		Time start = new Time(18, 30, 58);
 		Time stop = new Time(18, 38, 58);
 		Time res = time.difference(start, stop);
-		
-		assertAll(
-				() -> {assertEquals(res.getHour(), 0);},
-				() -> {assertEquals(res.getMinute(), 8);},
-				() -> {assertEquals(res.getSecond(), 0);});
+
+		assertEquals(res.getHour(), 0);
+		assertEquals(res.getMinute(), 8);
+		assertEquals(res.getSecond(), 0);
 	}
 	
 }

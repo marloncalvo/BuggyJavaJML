@@ -40,10 +40,9 @@ public class StackQueueTest {
 			oldStack.push(0);
 		}, 100);
 		int[] res = { -1 };
-		assertDoesNotThrow(() -> {
+		
 			res[0] = stack.pop();
-		});
-		assertEquals(oldStack.getTop() - 1, stack.getTop());
+				assertEquals(oldStack.getTop() - 1, stack.getTop());
 		assertEquals(oldStack.getElem(oldStack.getTop()), res[0]);
 		for (int i = 0; i < 100; i++) {
 			assertEquals(oldStack.getElem(i), stack.getElem(i));
