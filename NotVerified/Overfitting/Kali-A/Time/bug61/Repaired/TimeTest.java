@@ -12,10 +12,10 @@ public class TimeTest {
 		Time stop = new Time(14, 0, 58);
 		Time res = time.difference(start, stop);
 		
-		assertAll(
-				() -> {assertEquals(res.getHour(), 0);},
-				() -> {assertEquals(res.getMinute(), 0);},
-				() -> {assertEquals(res.getSecond(), 1);});
+		
+		assertEquals(res.getHour(), 0);
+		assertEquals(res.getMinute(), 0);
+		assertEquals(res.getSecond(), 1);
 		
 	}
 	

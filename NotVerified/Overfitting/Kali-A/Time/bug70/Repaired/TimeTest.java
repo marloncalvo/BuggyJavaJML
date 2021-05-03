@@ -23,10 +23,10 @@ public class TimeTest {
 		
 		Time res = time.timeOptions(start, stop, sel);
 		
-		assertAll(
-				() -> {assertEquals(res.getHour(), 23);},
-				() -> {assertEquals(res.getMinute(), 0);},
-				() -> {assertEquals(res.getSecond(), 1);});
+
+		assertEquals(res.getHour(), 23);
+		assertEquals(res.getMinute(), 0);
+		assertEquals(res.getSecond(), 1);
 		
 	}
 	
@@ -43,10 +43,10 @@ public class TimeTest {
 		
 		Time res = time.timeOptions(start, stop, sel);
 		
-		assertAll(
-				() -> {assertEquals(res.getHour(), hour);},
-				() -> {assertEquals(res.getMinute(), min);},
-				() -> {assertEquals(res.getSecond(), sec);});
+
+		assertEquals(res.getHour(), hour);
+		assertEquals(res.getMinute(), min);
+		assertEquals(res.getSecond(), sec);
 		
 	}
 	
@@ -59,10 +59,10 @@ public class TimeTest {
 		
 		Time res = time.timeOptions(start, stop, sel);
 		
-		assertAll(
-				() -> {assertEquals(res.getHour(), 0);},
-				() -> {assertEquals(res.getMinute(), 0);},
-				() -> {assertEquals(res.getSecond(), 0);});
+
+		assertEquals(res.getHour(), 0);
+		assertEquals(res.getMinute(), 0);
+		assertEquals(res.getSecond(), 0);
 		
 	}
 	

@@ -22,10 +22,10 @@ public class TimeTest {
         
         Time res = time.timeOptions(start, end, 3);
         
-		assertAll(
-				() -> {assertEquals(res.getHour(), 0);},
-				() -> {assertEquals(res.getMinute(), 0);},
-				() -> {assertEquals(res.getSecond(), 0);});
+
+		assertEquals(res.getHour(), 0);
+		assertEquals(res.getMinute(), 0);
+		assertEquals(res.getSecond(), 0);
     }
 		
 }

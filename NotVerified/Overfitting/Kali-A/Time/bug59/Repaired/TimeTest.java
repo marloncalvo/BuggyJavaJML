@@ -19,10 +19,10 @@ public class TimeTest {
 		Time stop = new Time(23, 30, 48);
 		Time res = time.difference(start, stop);
 		
-		assertAll(
-				() -> {assertEquals(res.getHour(), 2);},
-				() -> {assertEquals(res.getMinute(), 58);},
-				() -> {assertEquals(res.getSecond(), 45);});
+		
+		assertEquals(res.getHour(), 2);
+		assertEquals(res.getMinute(), 58);
+		assertEquals(res.getSecond(), 45);
 		
 	}
 	
