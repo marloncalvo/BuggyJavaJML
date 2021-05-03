@@ -66,3 +66,21 @@ def get_index(key, array):
             idx = -1
 
     return idx
+
+
+def get_last_index(key, array):
+    for i in reversed(range(len(array))):
+        if array[i] == key:
+            return i
+    return -1
+
+
+def get_bs_index(key, array, low, high):
+    if low >= high: return -1
+    mid = (high + low) // 2
+    if key < array[mid]:
+        return get_bs_index(key, array, low, mid)
+    elif key > array[mid]:
+        return get_bs_index(key, array, mid+1, high)
+    
+    return mid

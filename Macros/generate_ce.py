@@ -14,7 +14,7 @@ def run_process(path):
     print(f'finished: {path.absolute()}')
 
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
-    regex = join('*/Repaired','*.java')
+    regex = join('Repaired','*.java')
     futures = []
     for path in Path('./').rglob(regex):
         futures.append(executor.submit(run_process, path))

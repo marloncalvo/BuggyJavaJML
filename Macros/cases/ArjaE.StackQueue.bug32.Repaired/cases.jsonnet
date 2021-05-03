@@ -2,10 +2,18 @@
     test_cases:
     [
         {
-            method: "stack_isEmpty",
+            method: "queue_delete",
             input:
             {
-                array: [],
+                array: [30] + std.repeat([0], 99),
+            },
+        },
+        {
+            method: "queue_delete",
+            comment: "OpenJML false negative",
+            input:
+            {
+                array: [23] + std.repeat([0], 51),
             },
         },
     ],

@@ -2,7 +2,7 @@ from array import array
 import json
 import argparse
 import _jsonnet
-from util import get_index, test_case_body
+from util import get_bs_index, get_index, get_last_index, test_case_body
 
 
 def __get_key(expected_mid, high, array):
@@ -61,7 +61,7 @@ def __default_alloca(var, init):
     return var
 
 
-def swap(x, y, array, galloc=__default_alloca):
+def swap(x, y, array, galloc):
     old_x = array[x]
     old_y = array[y]
     get_arr = galloc("array", __build_java_array_fun, array);
@@ -74,7 +74,7 @@ def swap(x, y, array, galloc=__default_alloca):
     assertEquals({old_y}, array[x]);"""
 
 
-def find_first_sorted(x, array, galloc=__default_alloca):
+def find_first_sorted(x, array, galloc):
     idx = get_index(x, array)
     get_arr = galloc("array", __build_java_array_fun, array)
     return f"""int [] arr = {get_arr}();
@@ -83,11 +83,33 @@ def find_first_sorted(x, array, galloc=__default_alloca):
     assertEquals({idx}, res);"""
 
 
-def find_first_zero(array, galloc=__default_alloca):
+def find_first_zero(array, galloc):
     idx = get_index(0, array)
     get_arr = galloc("array", __build_java_array_fun, array)
     return f"""int [] arr = {get_arr}();
     int res = FindFirstZero.FindFirstZero(arr);
+    assertEquals({idx}, res);"""
+
+
+def find_last(key, array, galloc):
+    idx = get_last_index(key, array)
+    get_arr = galloc("array", __build_java_array_fun, array)
+    return f"""
+    int [] array = {get_arr}();
+    int key = {key};
+    FindInArray fia = new FindInArray(array, key);
+    assertEquals({idx}, fia.findLast());"""
+
+
+def binsearch(start, end, x, array, galloc):
+    get_arr = galloc("array", __build_java_array_fun, array)
+    idx = get_bs_index(x, array, start, end)
+
+    return f"""int [] array = {get_arr}();
+    int start = {start};
+    int end = {end};
+    int x = {x};
+    int res = FIND_IN_SORTED.binsearch(array, x, start, end);
     assertEquals({idx}, res);"""
 
 

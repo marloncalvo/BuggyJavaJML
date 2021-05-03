@@ -1,0 +1,17 @@
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/KaliA/StackQueue/bug27/Repaired/StackQueueTest.java:3: error: package org.junit.jupiter.api does not exist
+import static org.junit.jupiter.api.Assertions.*;
+                                   ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/KaliA/StackQueue/bug27/Repaired/StackQueueTest.java:5: error: package org.junit.jupiter.api does not exist
+import org.junit.jupiter.api.Test;
+                            ^
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/KaliA/StackQueue/bug27/Repaired/StackQueueTest.java:9: error: cannot find symbol
+	@Test
+	 ^
+  symbol:   class Test
+  location: class StackQueueTest
+/mnt/c/Users/marloncalvo/workspace/BuggyJavaJML/NotVerifiedCounterExamples/Overfitting/KaliA/StackQueue/bug27/Repaired/StackQueueTest.java:11: error: cannot find symbol
+		fail("Not yet implemented");
+		^
+  symbol:   method fail(String)
+  location: class StackQueueTest
+4 errors

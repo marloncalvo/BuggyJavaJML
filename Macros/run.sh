@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 search.py $1 | clip.exe
+python3 stackqueue.py $1 | clip.exe
