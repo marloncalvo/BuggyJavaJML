@@ -1,11 +1,7 @@
-package Modular.ArjaE.PrimeNumbers.bug9.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class PrimeNumbersTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class PrimeNumbersTest {
 	@Test
 	void case1() {
 		int n = 2147483647;

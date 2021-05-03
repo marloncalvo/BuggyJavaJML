@@ -1,11 +1,7 @@
-package Modular.ArjaE.Fibonacci.bug8.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class FibonacciTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class FibonacciTest {
 	@Test
 	void test() {
 		Fibonacci fib = new Fibonacci();

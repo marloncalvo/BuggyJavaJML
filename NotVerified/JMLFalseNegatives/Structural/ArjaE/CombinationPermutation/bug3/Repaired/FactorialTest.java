@@ -1,11 +1,7 @@
-package Structural.ArjaE.CombinationPermutation.bug3.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class FactorialTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class FactorialTest {
 	@Test
 	void test() {
 		int n = 0;

@@ -1,11 +1,7 @@
-package ArjaE.BubbleSort.bug1.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class SwapInArrayTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class SwapInArrayTest {
 	/*
 	
 	*/

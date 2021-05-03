@@ -1,11 +1,7 @@
-package Overflow.ArjaE.AddLoop.bug9.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class AddLoopTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class AddLoopTest {
 	@Test
 	void test() {
 		int x = 2147483647;

@@ -1,11 +1,7 @@
-package Cardumen.BinarySearch.bug11.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class BinarySearchTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class BinarySearchTest {
 	@Test
 	void test() {
 		int [] arr = {0};

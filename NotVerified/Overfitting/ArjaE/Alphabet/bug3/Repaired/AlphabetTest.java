@@ -1,16 +1,12 @@
-package ArjaE.Alphabet.bug3.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
+import static org.junit.Assert.*;
+import org.junit.Test;
 /**
  * Had to set alphabetic to protected for visibility
  * @author marloncalvo
  *
  */
-class AlphabetTest {
-
+public class AlphabetTest {
 	@Test
 	void case1() {
 		char c = '{';

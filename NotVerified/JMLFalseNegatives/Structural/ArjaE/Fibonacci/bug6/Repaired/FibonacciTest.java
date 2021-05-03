@@ -1,11 +1,7 @@
-package Structural.ArjaE.Fibonacci.bug6.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class FibonacciTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class FibonacciTest {
 	@Test
 	/**
 	 * Weird case, since it only fails to verify within the fibCompute.

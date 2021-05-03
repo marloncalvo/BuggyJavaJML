@@ -1,11 +1,7 @@
-package Structural.ArjaE.PrimeNumbers.bug3.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class PrimeNumbersTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class PrimeNumbersTest {
 	@Test
 	/**
 	 * Somehow the check for div(4,2) is not being performed, so status is not changed

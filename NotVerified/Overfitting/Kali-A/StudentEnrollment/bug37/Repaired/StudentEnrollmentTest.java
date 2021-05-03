@@ -1,12 +1,8 @@
-package KaliA.StudentEnrollment.bug37.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import static org.junit.Assert.*;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-class StudentEnrollmentTest {
-
+import org.junit.Test;
+public class StudentEnrollmentTest {
 	StudentEnrollment se;
 	
 	@BeforeEach

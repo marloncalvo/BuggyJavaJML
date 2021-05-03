@@ -1,11 +1,7 @@
-package ArjaE.FindFirstZero.bug5.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class FindFirstZeroTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class FindFirstZeroTest {
 	/*
 	
 	*/

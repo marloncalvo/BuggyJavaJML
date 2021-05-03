@@ -1,13 +1,9 @@
-package ArjaE.Smallest.bug2.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
+import static org.junit.Assert.*;
+import org.junit.Test;
 import ArjaE.Smallest.bug1.Repaired.Smallest;
 
-class SmallestTest {
-
+public class SmallestTest {
 	@Test
 	void test() {
 		int[] array = {};

@@ -1,11 +1,7 @@
-package jGenProg.Inverse.bug2.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class InverseTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class InverseTest {
 	@Test
 	void case1() {
 		int len = 7719;

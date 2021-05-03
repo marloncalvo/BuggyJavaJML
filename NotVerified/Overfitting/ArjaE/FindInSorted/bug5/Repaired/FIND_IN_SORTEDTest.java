@@ -1,11 +1,7 @@
-package ArjaE.FindInSorted.bug5.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class FIND_IN_SORTEDTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class FIND_IN_SORTEDTest {
 	/*
 	
 	*/

@@ -1,11 +1,7 @@
-package Structural.ArjaE.FIND_IN_FIRST_SORTED.bug6.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class FIND_FIRST_IN_SORTEDTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class FIND_FIRST_IN_SORTEDTest {
 	@Test
 	/**
 	 * Changes values for low and high while entering second while loop... weird.

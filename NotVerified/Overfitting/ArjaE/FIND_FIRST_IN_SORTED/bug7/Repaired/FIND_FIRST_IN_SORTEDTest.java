@@ -1,11 +1,7 @@
-package ArjaE.FIND_FIRST_IN_SORTED.bug7.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class FIND_FIRST_IN_SORTEDTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class FIND_FIRST_IN_SORTEDTest {
 	/*
 	 * OpenJML false negative
 	 */

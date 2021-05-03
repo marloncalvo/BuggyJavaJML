@@ -1,11 +1,7 @@
-package Structural.ArjaE.PrimeNumbers.bug10.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class PrimeNumbersTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class PrimeNumbersTest {
 	@Test
 	/**
 	 * Counter example says that j == 0 when calling div(num, j) which is not possible

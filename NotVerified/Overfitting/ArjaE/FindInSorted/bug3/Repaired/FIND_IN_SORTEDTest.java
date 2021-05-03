@@ -1,11 +1,7 @@
-package ArjaE.FindInSorted.bug3.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class FIND_IN_SORTEDTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class FIND_IN_SORTEDTest {
 	/*
 	 * With the input provided, it will not fail since it will perform linear search
 	 * after it encounters x > arr[mid] situation. This linear search will then only

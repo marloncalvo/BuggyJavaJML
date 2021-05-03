@@ -1,11 +1,7 @@
-package ArjaE.Alphabet.bug26.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class AlphabetTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class AlphabetTest {
 	@Test
 	/**
 	 * Although a bug, it does not run into issues because in lowercase_set,

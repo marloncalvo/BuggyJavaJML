@@ -1,11 +1,7 @@
-package ArjaE.Smallest.bug3.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class SmallestTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class SmallestTest {
 	/*
 	 * Counterexample array is too large.
 	 */

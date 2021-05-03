@@ -1,11 +1,7 @@
-package Overflow.ArjaE.Perimeter.bug3.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class PerimeterDriverTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class PerimeterDriverTest {
 	@Test
 	void test() {
 		PerimeterDriver driver = new PerimeterDriver();

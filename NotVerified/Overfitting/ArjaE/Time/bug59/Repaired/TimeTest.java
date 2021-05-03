@@ -1,11 +1,7 @@
-package ArjaE.Time.bug59.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class TimeTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class TimeTest {
     @Test
     void test() {
         fail("The function equals() is not testable for this case");

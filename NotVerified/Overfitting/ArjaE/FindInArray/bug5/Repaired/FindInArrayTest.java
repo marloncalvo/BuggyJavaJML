@@ -1,11 +1,7 @@
-package ArjaE.FindInArray.bug5.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class FindInArrayTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class FindInArrayTest {
 	/*
 	
 	*/

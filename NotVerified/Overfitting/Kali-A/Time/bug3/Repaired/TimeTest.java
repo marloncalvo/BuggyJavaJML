@@ -1,11 +1,7 @@
-package KaliA.Time.bug3.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class TimeTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class TimeTest {
 	@Test
 	void case1() {
 		Time time = new Time(13, 35, 25);

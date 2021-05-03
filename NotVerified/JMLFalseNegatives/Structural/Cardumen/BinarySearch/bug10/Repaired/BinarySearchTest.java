@@ -1,13 +1,9 @@
-package Structural.Cardumen.BinarySearch.bug10.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import static org.junit.Assert.*;
 import java.util.Arrays;
 
-import org.junit.jupiter.api.Test;
-
-class BinarySearchTest {
-
+import org.junit.Test;
+public class BinarySearchTest {
 	@Test
 	/**
 	 * Not testable since the failed assertion is dealing with internal assume 

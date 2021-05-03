@@ -1,11 +1,7 @@
-package Nopol.Absolute.bug3.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class AbsoluteTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class AbsoluteTest {
 	@Test
 	void case1() {
 		Absolute abs = new Absolute();

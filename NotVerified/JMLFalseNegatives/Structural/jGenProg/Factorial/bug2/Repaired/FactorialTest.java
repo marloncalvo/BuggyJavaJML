@@ -1,11 +1,7 @@
-package Structural.jGenProg.Factorial.bug2.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class FactorialTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class FactorialTest {
 	@Test
 	/**
 	 * C blows up to integer max value for no reason.

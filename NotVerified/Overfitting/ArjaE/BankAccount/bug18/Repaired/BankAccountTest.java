@@ -1,11 +1,7 @@
-package ArjaE.BankAccount.bug18.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class BankAccountTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class BankAccountTest {
 	@Test
 	void test() {
 		int option = 2;

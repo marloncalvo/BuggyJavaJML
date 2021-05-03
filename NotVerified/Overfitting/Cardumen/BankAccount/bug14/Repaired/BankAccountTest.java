@@ -1,11 +1,7 @@
-package Cardumen.BankAccount.bug14.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class BankAccountTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class BankAccountTest {
 	@Test
 	void case1() {
 		int balance = 1797;

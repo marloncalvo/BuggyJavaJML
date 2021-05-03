@@ -1,15 +1,12 @@
-package KaliA.StackQueue.bug4.Repaired;
 
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import org.junit.jupiter.api.Test;
-
+import org.junit.Test;
 import KaliA.StackQueue.bug4.Repaired.StackQueue.Queue;
 import KaliA.StackQueue.bug4.Repaired.StackQueue.Stack;
 
-class StackQueueTest {
-	
+public class StackQueueTest {	
 	@Test
 	void case1() {
 		StackQueue sq = new StackQueue();

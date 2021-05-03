@@ -1,11 +1,7 @@
-package Modular.ArjaE.FindInArray.bug10.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class FindInArrayTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class FindInArrayTest {
 	@Test
 	/**
 	 * Counterexample information stops after invalid assertion of `setKey` in

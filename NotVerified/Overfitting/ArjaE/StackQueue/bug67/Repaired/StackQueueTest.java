@@ -1,11 +1,7 @@
-package ArjaE.StackQueue.bug67.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class StackQueueTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class StackQueueTest {
 	void repeat(Runnable r, int times) {
 		for (int i = 0; i < times; i++) {
 			r.run();

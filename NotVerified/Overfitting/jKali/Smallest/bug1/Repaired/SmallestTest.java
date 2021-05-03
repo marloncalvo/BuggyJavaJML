@@ -1,11 +1,7 @@
-package jKali.Smallest.bug1.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class SmallestTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class SmallestTest {
 	@Test
 	void test() {
         int [] arr = new int[0];

@@ -1,11 +1,7 @@
-package ArjaE.Alphabet.bug1.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class Counterexample {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class Counterexample {
 	@Test
 	/**
 	 * It seems that it only complains for this case, since case2 fails.

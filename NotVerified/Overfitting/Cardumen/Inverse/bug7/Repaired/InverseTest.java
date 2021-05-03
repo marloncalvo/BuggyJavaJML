@@ -1,16 +1,12 @@
-package Cardumen.Inverse.bug7.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import static org.junit.Assert.*;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
+import org.junit.Test;import org.junit.jupiter.api.Timeout;
 
-class InverseTest {
-
+public class InverseTest {
 	@Test
 	public void case1() {
         int size = 1000000; // supposed to be 2147481851

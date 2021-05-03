@@ -1,13 +1,9 @@
-package Structural.ArjaE.BinarySearch.bug10.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import static org.junit.Assert.*;
 import java.util.Arrays;
 
-import org.junit.jupiter.api.Test;
-
-class BinarySearchTest {
-
+import org.junit.Test;
+public class BinarySearchTest {
 	@Test
 	/**
 	 * Correct output, but its peforming linear search.

@@ -1,11 +1,7 @@
-package ArjaE.Time.bug12.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class TimeTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class TimeTest {
 	@Test
 	void test() {
 		int h = 24;

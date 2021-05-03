@@ -1,11 +1,7 @@
-package ArjaE.Perimeter.bug11.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class PerimeterTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class PerimeterTest {
 	@Test
 	void test() {
 		short x = 1;

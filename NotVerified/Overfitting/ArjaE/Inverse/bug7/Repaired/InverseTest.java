@@ -1,11 +1,7 @@
-package ArjaE.Inverse.bug7.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class InverseTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class InverseTest {
 	/*
 	 * Counterexample array is too large
 	 */

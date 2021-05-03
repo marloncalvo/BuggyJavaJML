@@ -1,11 +1,7 @@
-package Cardumen.BankAccount.bug20.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class BankAccountTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class BankAccountTest {
 	@Test
 	/**
 	 * Technically, this test case has no failing input since the counterexample

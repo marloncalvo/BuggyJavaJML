@@ -1,11 +1,7 @@
-package ArjaE.StudentEnrolment.bug7.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class StudentEnrollmentTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class StudentEnrollmentTest {
 	// Test cases uses out of bounds passedCredits #, chose one at random for all cases.
 	
 	@Test

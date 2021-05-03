@@ -1,15 +1,11 @@
-package KaliA.StackQueue.bug5.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import static org.junit.Assert.*;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
+import org.junit.Test;
 import KaliA.StackQueue.bug5.Repaired.StackQueue.Queue;
 import KaliA.StackQueue.bug5.Repaired.StackQueue.Stack;
 
-class StackQueueTest {
-
+public class StackQueueTest {
 	Stack stack;
 	Queue queue;
 	

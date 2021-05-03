@@ -1,11 +1,7 @@
-package ArjaE.StudentEnrolment.bug8.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class StudentEnrollmentTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class StudentEnrollmentTest {
 	@Test
 	void test() {
 		int enrollmentCredits = 21;

@@ -1,11 +1,7 @@
-package ArjaE.PrimeCheck.bug8.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class PrimeCheckTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class PrimeCheckTest {
 	@Test
 	void test() {
 		int a = 2;

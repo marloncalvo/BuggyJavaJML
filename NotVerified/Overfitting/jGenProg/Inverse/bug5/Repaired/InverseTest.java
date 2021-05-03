@@ -1,11 +1,7 @@
-package jGenProg.Inverse.bug5.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class InverseTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class InverseTest {
 	@Test
 	/**
 	 * Array too big.

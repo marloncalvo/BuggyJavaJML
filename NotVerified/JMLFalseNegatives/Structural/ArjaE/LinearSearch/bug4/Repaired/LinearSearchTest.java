@@ -1,11 +1,7 @@
-package Structural.ArjaE.LinearSearch.bug4.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class LinearSearchTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class LinearSearchTest {
 	@Test
 	/**
 	 * Counter example shows c == -1 when checking maintaining clause at 18.

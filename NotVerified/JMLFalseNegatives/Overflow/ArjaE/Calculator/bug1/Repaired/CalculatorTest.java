@@ -1,11 +1,7 @@
-package Overflow.ArjaE.Calculator.bug1.Repaired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-class CalculatorTest {
-
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class CalculatorTest {
 	@Test
 	void test() {
 		int num1 = -2147483647;
