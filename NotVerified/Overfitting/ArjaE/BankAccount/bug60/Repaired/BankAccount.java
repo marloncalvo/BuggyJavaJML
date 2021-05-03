@@ -344,7 +344,7 @@ public class BankAccount
 			_interest = balance/100;
 			interest = _interest*2;
 		}
-		else if (balance < 300000) {//else if (balance <= 300000) {
+		else if (balance < 300000) { // else if (balance <= 300000) {
 			int _interest;
 			_interest = balance/100;
 			interest = _interest*3;
