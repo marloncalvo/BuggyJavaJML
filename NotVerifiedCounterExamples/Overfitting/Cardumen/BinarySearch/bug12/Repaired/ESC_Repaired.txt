@@ -1,4 +1,0 @@
-BinarySearch.java:26: warning: The prover cannot establish an assertion (PossiblyTooLargeIndex) in method Binary
-           if (arr[mid] != key) {
-                  ^
-1 warning

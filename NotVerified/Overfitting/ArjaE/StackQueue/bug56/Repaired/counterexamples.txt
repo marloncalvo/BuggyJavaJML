@@ -1,0 +1,947 @@
+StackQueue.java:216: warning: The prover cannot establish an assertion (UndefinedTooLargeIndex) in method delete
+                			//@ assume queue[i+1] == temp[i+1];
+                			                ^
+
+TRACE of StackQueue.Queue.delete()
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 100
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 100
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:193:  	requires !isEmpty(); 
+			VALUE: isEmpty()	 === false
+			VALUE: !isEmpty()	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 100
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 100
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+StackQueue.java:160:  	InvariantLeaveCaller assertion: `conditionalResult_1490
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:161:  	InvariantLeaveCaller assertion: _JML__tmp1497
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:162:  	InvariantLeaveCaller assertion: _JML__tmp1501
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 100
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 100
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+StackQueue.java:160:  	InvariantEntrance assertion: `conditionalResult_1505
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:161:  	InvariantEntrance assertion: _JML__tmp1512
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:162:  	InvariantEntrance assertion: _JML__tmp1516
+StackQueue.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__28
+			VALUE: _$CPRE__28	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 100
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 100
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:194:  	old /*@ non_null */  int[] tempQ = queue.clone()
+StackQueue.java:194:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || _JML__tmp1541 != null
+StackQueue.java:108:  	requires this instanceof Cloneable; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof Cloneable	 === true
+StackQueue.java:133:  	requires this instanceof Object[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof Object[]	 === false
+StackQueue.java:134:  	requires !(this instanceof boolean[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof boolean[]	 === false
+			VALUE: (this instanceof boolean[])	 === false
+			VALUE: !(this instanceof boolean[])	 === true
+StackQueue.java:137:  	requires !(this instanceof byte[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof byte[]	 === false
+			VALUE: (this instanceof byte[])	 === false
+			VALUE: !(this instanceof byte[])	 === true
+StackQueue.java:140:  	requires !(this instanceof short[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof short[]	 === false
+			VALUE: (this instanceof short[])	 === false
+			VALUE: !(this instanceof short[])	 === true
+StackQueue.java:141:  	requires !(this instanceof char[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof char[]	 === false
+			VALUE: (this instanceof char[])	 === false
+			VALUE: !(this instanceof char[])	 === true
+StackQueue.java:142:  	requires !(this instanceof int[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof int[]	 === true
+			VALUE: (this instanceof int[])	 === true
+			VALUE: !(this instanceof int[])	 === false
+StackQueue.java:144:  	requires !(this instanceof long[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof long[]	 === false
+			VALUE: (this instanceof long[])	 === false
+			VALUE: !(this instanceof long[])	 === true
+StackQueue.java:157:  	requires this instanceof int[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof int[]	 === true
+StackQueue.java:165:  	requires this instanceof long[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof long[]	 === false
+StackQueue.java:176:  	requires this instanceof short[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof short[]	 === false
+StackQueue.java:188:  	requires this instanceof byte[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof byte[]	 === false
+StackQueue.java:198:  	requires this instanceof boolean[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof boolean[]	 === false
+StackQueue.java:210:  	requires this instanceof char[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof char[]	 === false
+StackQueue.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__29
+			VALUE: _$CPRE__29	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 100
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 100
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:194:  	PossiblyNullAssignment assertion: _JML__tmp1542 != null
+StackQueue.java:203:  	requires isEmpty(); 
+			VALUE: isEmpty()	 === false
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 100
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 100
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+StackQueue.java:160:  	InvariantEntrance assertion: `conditionalResult_1670
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:161:  	InvariantEntrance assertion: _JML__tmp1677
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:162:  	InvariantEntrance assertion: _JML__tmp1681
+StackQueue.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__31
+			VALUE: _$CPRE__31	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 100
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 100
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:1:  	if (!isEmpty()) ...
+			VALUE: isEmpty()	 === false
+			VALUE: !isEmpty()	 === true
+			VALUE: (!isEmpty())	 === true
+				Condition = true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 100
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 100
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+StackQueue.java:160:  	InvariantLeaveCaller assertion: `conditionalResult_1706
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:161:  	InvariantLeaveCaller assertion: _JML__tmp1713
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:162:  	InvariantLeaveCaller assertion: _JML__tmp1717
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 100
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 100
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+StackQueue.java:160:  	InvariantEntrance assertion: `conditionalResult_1721
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:161:  	InvariantEntrance assertion: _JML__tmp1728
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:162:  	InvariantEntrance assertion: _JML__tmp1732
+StackQueue.java:1:  	Precondition assertion: _$CPRE__32
+			VALUE: _$CPRE__32	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 100
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 100
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:209:  	int poll = queue[front]
+			VALUE: queue	 === REF!val!22
+			VALUE: front	 === 0
+			VALUE: queue[front]	 === ( - 2147482412 )
+			VALUE: poll	 === ( - 2147482412 )
+StackQueue.java:209:  	PossiblyNullDeReference assertion: `THIS.queue != null
+StackQueue.java:209:  	PossiblyNegativeIndex assertion: 0 <= `THIS.front
+StackQueue.java:209:  	PossiblyTooLargeIndex assertion: `THIS.queue.length > `THIS.front
+StackQueue.java:210:  	/*@ ghost */ /*@ non_null */  int[] temp = queue.clone()
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.clone()	 === REF!val!34
+			VALUE: temp	 === REF!val!34
+StackQueue.java:210:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || _JML__tmp1760 != null
+StackQueue.java:108:  	requires this instanceof Cloneable; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof Cloneable	 === true
+StackQueue.java:133:  	requires this instanceof Object[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof Object[]	 === false
+StackQueue.java:134:  	requires !(this instanceof boolean[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof boolean[]	 === false
+			VALUE: (this instanceof boolean[])	 === false
+			VALUE: !(this instanceof boolean[])	 === true
+StackQueue.java:137:  	requires !(this instanceof byte[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof byte[]	 === false
+			VALUE: (this instanceof byte[])	 === false
+			VALUE: !(this instanceof byte[])	 === true
+StackQueue.java:140:  	requires !(this instanceof short[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof short[]	 === false
+			VALUE: (this instanceof short[])	 === false
+			VALUE: !(this instanceof short[])	 === true
+StackQueue.java:141:  	requires !(this instanceof char[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof char[]	 === false
+			VALUE: (this instanceof char[])	 === false
+			VALUE: !(this instanceof char[])	 === true
+StackQueue.java:142:  	requires !(this instanceof int[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof int[]	 === true
+			VALUE: (this instanceof int[])	 === true
+			VALUE: !(this instanceof int[])	 === false
+StackQueue.java:144:  	requires !(this instanceof long[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof long[]	 === false
+			VALUE: (this instanceof long[])	 === false
+			VALUE: !(this instanceof long[])	 === true
+StackQueue.java:157:  	requires this instanceof int[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof int[]	 === true
+StackQueue.java:165:  	requires this instanceof long[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof long[]	 === false
+StackQueue.java:176:  	requires this instanceof short[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof short[]	 === false
+StackQueue.java:188:  	requires this instanceof byte[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof byte[]	 === false
+StackQueue.java:198:  	requires this instanceof boolean[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof boolean[]	 === false
+StackQueue.java:210:  	requires this instanceof char[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof char[]	 === false
+StackQueue.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__33
+			VALUE: _$CPRE__33	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 100
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 100
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:210:  	PossiblyNullInitialization assertion: _JML__tmp1761 != null
+			VALUE: null	 === NULL
+StackQueue.java:211:  	int i = 0
+			VALUE: 0	 === 0
+			VALUE: i	 === 0
+StackQueue.java:212:  	//@ loop_invariant (\forall int j; 0 <= j && j < i; queue[j] == temp[j + 1]);
+			VALUE: \forall int j; 0 <= j && j < i; queue[j] == temp[j + 1]	 === true
+StackQueue.java:212:  	LoopInvariantBeforeLoop assertion: (_JML__tmp1883)
+StackQueue.java:213:  	//@ loop_invariant 0 <= i && i < rear;
+			VALUE: 0	 === 0
+			VALUE: i	 === 0
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 0
+			VALUE: rear	 === 100
+			VALUE: i < rear	 === true
+StackQueue.java:213:  	LoopInvariantBeforeLoop assertion: `conditionalResult_1886
+StackQueue.java:212:  	//@ loop_invariant (\forall int j; 0 <= j && j < i; queue[j] == temp[j + 1]);
+			VALUE: \forall int j; 0 <= j && j < i; queue[j] == temp[j + 1]	 === true
+			VALUE: (\forall int j; 0 <= j && j < i; queue[j] == temp[j + 1])	 === true
+StackQueue.java:213:  	//@ loop_invariant 0 <= i && i < rear;
+			VALUE: 0	 === 0
+			VALUE: i	 === 99
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 99
+			VALUE: rear	 === 100
+			VALUE: i < rear	 === true
+			VALUE: 0 <= i && i < rear	 === true
+StackQueue.java:215:  	Loop test
+			VALUE: i	 === 99
+			VALUE: rear	 === 100
+			VALUE: 0	 === 0
+			VALUE: rear - 0	 === 100
+			VALUE: i < rear - 0	 === true
+			VALUE: (i < rear - 0)	 === true
+StackQueue.java:215:  	ArithmeticOperationRange assertion: !(0 < `THIS.rear && 0 < 0) || `THIS.rear <= 2147483647 + 0
+			VALUE: !(0 < `THIS.rear_4969_0___1 && 0 < 0) || `THIS.rear_4969_0___1 <= 2147483647 + 0	 === true
+StackQueue.java:215:  	ArithmeticOperationRange assertion: !(`THIS.rear < 0 && 0 < 0) || -2147483648 + 0 <= `THIS.rear
+			VALUE: !(`THIS.rear_4969_0___1 < 0 && 0 < 0) || -2147483648 + 0 <= `THIS.rear_4969_0___1	 === true
+StackQueue.java:216:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:216:  	UndefinedNegativeIndex assertion: !(`THIS.queue != null) || 0 <= _JML__tmp1909
+StackQueue.java:216:  	UndefinedTooLargeIndex assertion: !(`THIS.queue != null) || `THIS.queue.length > _JML__tmp1909
+StackQueue.java:216:  Invalid assertion (UndefinedTooLargeIndex)
+
+
+StackQueue.java:213: warning: The prover cannot establish an assertion (LoopInvariant) in method delete
+              		  	@ maintaining 0 <= i && i < rear;
+              		  	  ^
+
+TRACE of StackQueue.Queue.delete()
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:193:  	requires !isEmpty(); 
+			VALUE: isEmpty()	 === false
+			VALUE: !isEmpty()	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+StackQueue.java:160:  	InvariantLeaveCaller assertion: `conditionalResult_1490
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:161:  	InvariantLeaveCaller assertion: _JML__tmp1497
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:162:  	InvariantLeaveCaller assertion: _JML__tmp1501
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+StackQueue.java:160:  	InvariantEntrance assertion: `conditionalResult_1505
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:161:  	InvariantEntrance assertion: _JML__tmp1512
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:162:  	InvariantEntrance assertion: _JML__tmp1516
+StackQueue.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__28
+			VALUE: _$CPRE__28	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:194:  	old /*@ non_null */  int[] tempQ = queue.clone()
+StackQueue.java:194:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || _JML__tmp1541 != null
+StackQueue.java:108:  	requires this instanceof Cloneable; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof Cloneable	 === false
+StackQueue.java:133:  	requires this instanceof Object[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof Object[]	 === false
+StackQueue.java:134:  	requires !(this instanceof boolean[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof boolean[]	 === false
+			VALUE: (this instanceof boolean[])	 === false
+			VALUE: !(this instanceof boolean[])	 === true
+StackQueue.java:137:  	requires !(this instanceof byte[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof byte[]	 === false
+			VALUE: (this instanceof byte[])	 === false
+			VALUE: !(this instanceof byte[])	 === true
+StackQueue.java:140:  	requires !(this instanceof short[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof short[]	 === false
+			VALUE: (this instanceof short[])	 === false
+			VALUE: !(this instanceof short[])	 === true
+StackQueue.java:141:  	requires !(this instanceof char[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof char[]	 === false
+			VALUE: (this instanceof char[])	 === false
+			VALUE: !(this instanceof char[])	 === true
+StackQueue.java:142:  	requires !(this instanceof int[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof int[]	 === true
+			VALUE: (this instanceof int[])	 === true
+			VALUE: !(this instanceof int[])	 === false
+StackQueue.java:144:  	requires !(this instanceof long[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof long[]	 === false
+			VALUE: (this instanceof long[])	 === false
+			VALUE: !(this instanceof long[])	 === true
+StackQueue.java:157:  	requires this instanceof int[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof int[]	 === true
+StackQueue.java:165:  	requires this instanceof long[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof long[]	 === false
+StackQueue.java:176:  	requires this instanceof short[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof short[]	 === false
+StackQueue.java:188:  	requires this instanceof byte[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof byte[]	 === false
+StackQueue.java:198:  	requires this instanceof boolean[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof boolean[]	 === false
+StackQueue.java:210:  	requires this instanceof char[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof char[]	 === false
+StackQueue.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__29
+			VALUE: _$CPRE__29	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:194:  	PossiblyNullAssignment assertion: _JML__tmp1542 != null
+StackQueue.java:203:  	requires isEmpty(); 
+			VALUE: isEmpty()	 === false
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+StackQueue.java:160:  	InvariantEntrance assertion: `conditionalResult_1670
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:161:  	InvariantEntrance assertion: _JML__tmp1677
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:162:  	InvariantEntrance assertion: _JML__tmp1681
+StackQueue.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__31
+			VALUE: _$CPRE__31	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:1:  	if (!isEmpty()) ...
+			VALUE: isEmpty()	 === false
+			VALUE: !isEmpty()	 === true
+			VALUE: (!isEmpty())	 === true
+				Condition = true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+StackQueue.java:160:  	InvariantLeaveCaller assertion: `conditionalResult_1706
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:161:  	InvariantLeaveCaller assertion: _JML__tmp1713
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:162:  	InvariantLeaveCaller assertion: _JML__tmp1717
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+StackQueue.java:160:  	InvariantEntrance assertion: `conditionalResult_1721
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:161:  	InvariantEntrance assertion: _JML__tmp1728
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:162:  	InvariantEntrance assertion: _JML__tmp1732
+StackQueue.java:1:  	Precondition assertion: _$CPRE__32
+			VALUE: _$CPRE__32	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:209:  	int poll = queue[front]
+			VALUE: queue	 === REF!val!22
+			VALUE: front	 === 0
+			VALUE: queue[front]	 === 29
+			VALUE: poll	 === 29
+StackQueue.java:209:  	PossiblyNullDeReference assertion: `THIS.queue != null
+StackQueue.java:209:  	PossiblyNegativeIndex assertion: 0 <= `THIS.front
+StackQueue.java:209:  	PossiblyTooLargeIndex assertion: `THIS.queue.length > `THIS.front
+StackQueue.java:210:  	/*@ ghost */ /*@ non_null */  int[] temp = queue.clone()
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.clone()	 === REF!val!34
+			VALUE: temp	 === REF!val!34
+StackQueue.java:210:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || _JML__tmp1760 != null
+StackQueue.java:108:  	requires this instanceof Cloneable; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof Cloneable	 === false
+StackQueue.java:133:  	requires this instanceof Object[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof Object[]	 === false
+StackQueue.java:134:  	requires !(this instanceof boolean[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof boolean[]	 === false
+			VALUE: (this instanceof boolean[])	 === false
+			VALUE: !(this instanceof boolean[])	 === true
+StackQueue.java:137:  	requires !(this instanceof byte[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof byte[]	 === false
+			VALUE: (this instanceof byte[])	 === false
+			VALUE: !(this instanceof byte[])	 === true
+StackQueue.java:140:  	requires !(this instanceof short[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof short[]	 === false
+			VALUE: (this instanceof short[])	 === false
+			VALUE: !(this instanceof short[])	 === true
+StackQueue.java:141:  	requires !(this instanceof char[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof char[]	 === false
+			VALUE: (this instanceof char[])	 === false
+			VALUE: !(this instanceof char[])	 === true
+StackQueue.java:142:  	requires !(this instanceof int[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof int[]	 === true
+			VALUE: (this instanceof int[])	 === true
+			VALUE: !(this instanceof int[])	 === false
+StackQueue.java:144:  	requires !(this instanceof long[]); 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof long[]	 === false
+			VALUE: (this instanceof long[])	 === false
+			VALUE: !(this instanceof long[])	 === true
+StackQueue.java:157:  	requires this instanceof int[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof int[]	 === true
+StackQueue.java:165:  	requires this instanceof long[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof long[]	 === false
+StackQueue.java:176:  	requires this instanceof short[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof short[]	 === false
+StackQueue.java:188:  	requires this instanceof byte[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof byte[]	 === false
+StackQueue.java:198:  	requires this instanceof boolean[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof boolean[]	 === false
+StackQueue.java:210:  	requires this instanceof char[]; 
+			VALUE: this	 === REF!val!22
+			VALUE: this instanceof char[]	 === false
+StackQueue.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__33
+			VALUE: _$CPRE__33	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 99
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 99
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!22
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:210:  	PossiblyNullInitialization assertion: _JML__tmp1761 != null
+			VALUE: null	 === NULL
+StackQueue.java:211:  	int i = 0
+			VALUE: 0	 === 0
+			VALUE: i	 === 0
+StackQueue.java:212:  	//@ loop_invariant (\forall int j; 0 <= j && j < i; queue[j] == temp[j + 1]);
+			VALUE: \forall int j; 0 <= j && j < i; queue[j] == temp[j + 1]	 === true
+StackQueue.java:212:  	LoopInvariantBeforeLoop assertion: (_JML__tmp1883)
+StackQueue.java:213:  	//@ loop_invariant 0 <= i && i < rear;
+			VALUE: 0	 === 0
+			VALUE: i	 === 0
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 0
+			VALUE: rear	 === 99
+			VALUE: i < rear	 === true
+StackQueue.java:213:  	LoopInvariantBeforeLoop assertion: `conditionalResult_1886
+StackQueue.java:212:  	//@ loop_invariant (\forall int j; 0 <= j && j < i; queue[j] == temp[j + 1]);
+			VALUE: \forall int j; 0 <= j && j < i; queue[j] == temp[j + 1]	 === true
+			VALUE: (\forall int j; 0 <= j && j < i; queue[j] == temp[j + 1])	 === true
+StackQueue.java:213:  	//@ loop_invariant 0 <= i && i < rear;
+			VALUE: 0	 === 0
+			VALUE: i	 === 98
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 98
+			VALUE: rear	 === 99
+			VALUE: i < rear	 === true
+			VALUE: 0 <= i && i < rear	 === true
+StackQueue.java:215:  	Loop test
+			VALUE: i	 === 98
+			VALUE: rear	 === 99
+			VALUE: 0	 === 0
+			VALUE: rear - 0	 === 99
+			VALUE: i < rear - 0	 === true
+			VALUE: (i < rear - 0)	 === true
+StackQueue.java:215:  	ArithmeticOperationRange assertion: !(0 < `THIS.rear && 0 < 0) || `THIS.rear <= 2147483647 + 0
+			VALUE: !(0 < `THIS.rear_4969_0___1 && 0 < 0) || `THIS.rear_4969_0___1 <= 2147483647 + 0	 === true
+StackQueue.java:215:  	ArithmeticOperationRange assertion: !(`THIS.rear < 0 && 0 < 0) || -2147483648 + 0 <= `THIS.rear
+			VALUE: !(`THIS.rear_4969_0___1 < 0 && 0 < 0) || -2147483648 + 0 <= `THIS.rear_4969_0___1	 === true
+StackQueue.java:216:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:216:  	UndefinedNegativeIndex assertion: !(`THIS.queue != null) || 0 <= _JML__tmp1909
+StackQueue.java:216:  	UndefinedTooLargeIndex assertion: !(`THIS.queue != null) || `THIS.queue.length > _JML__tmp1909
+StackQueue.java:216:  	UndefinedNullDeReference assertion: !(`THIS.queue != null && temp != null) || temp != null
+StackQueue.java:216:  	UndefinedNegativeIndex assertion: !(`THIS.queue != null && temp != null) || 0 <= _JML__tmp1911
+StackQueue.java:216:  	UndefinedTooLargeIndex assertion: !(`THIS.queue != null && temp != null) || temp.length > _JML__tmp1911
+StackQueue.java:217:  	queue[i] = queue[i + 1]
+			VALUE: queue	 === REF!val!22
+			VALUE: i	 === 98
+			VALUE: queue	 === REF!val!22
+			VALUE: i	 === 98
+			VALUE: 1	 === 1
+			VALUE: i + 1	 === 99
+			VALUE: queue[i + 1]	 === 30
+			VALUE: queue[i] = queue[i + 1]	 === 30
+StackQueue.java:217:  	PossiblyNullDeReference assertion: `THIS.queue != null
+			VALUE: `THIS.queue	 === REF!val!22
+			VALUE: null	 === NULL
+StackQueue.java:217:  	PossiblyNegativeIndex assertion: i >= 0
+StackQueue.java:217:  	PossiblyTooLargeIndex assertion: `THIS.queue.length > i
+			VALUE: `THIS.queue	 === REF!val!22
+StackQueue.java:217:  	UndefinedNullDeReference assertion: !(`THIS != null) || `THIS != null
+StackQueue.java:217:  	Assignable assertion: _JML__tmp1917 || (!Pre_19 || (_JML__tmp1914.`alloc__ > 0 || _JML__tmp1915 == \old(_JML__tmp1916, \Old) && 0 <= i))
+StackQueue.java:217:  	PossiblyNullDeReference assertion: `THIS.queue != null
+StackQueue.java:217:  	ArithmeticOperationRange assertion: !(0 < i && 0 < 1) || i <= 2147483647 - 1
+			VALUE: !(0 < i_6629_6987___72 && 0 < 1) || i_6629_6987___72 <= 2147483647 - 1	 === true
+StackQueue.java:217:  	ArithmeticOperationRange assertion: !(i < 0 && 1 < 0) || -2147483648 - 1 <= i
+			VALUE: !(i_6629_6987___72 < 0 && 1 < 0) || -2147483648 - 1 <= i_6629_6987___72	 === true
+StackQueue.java:217:  	PossiblyNegativeIndex assertion: 0 <= _JML__tmp1923
+StackQueue.java:217:  	PossiblyTooLargeIndex assertion: `THIS.queue.length > _JML__tmp1923
+StackQueue.java:218:  	i++
+			VALUE: i++	 === 98
+StackQueue.java:218:  	ArithmeticOperationRange assertion: !(0 < i && 0 < 1) || i <= 2147483647 - 1
+			VALUE: !(0 < i_6629_6987___72 && 0 < 1) || i_6629_6987___72 <= 2147483647 - 1	 === true
+StackQueue.java:218:  	ArithmeticOperationRange assertion: !(i < 0 && 1 < 0) || -2147483648 - 1 <= i
+			VALUE: !(i_6629_6987___72 < 0 && 1 < 0) || -2147483648 - 1 <= i_6629_6987___72	 === true
+StackQueue.java:212:  	//@ loop_invariant (\forall int j; 0 <= j && j < i; queue[j] == temp[j + 1]);
+			VALUE: \forall int j; 0 <= j && j < i; queue[j] == temp[j + 1]	 === true
+StackQueue.java:212:  	LoopInvariant assertion: (_JML__tmp1934)
+StackQueue.java:213:  	//@ loop_invariant 0 <= i && i < rear;
+			VALUE: 0	 === 0
+			VALUE: i	 === 99
+			VALUE: 0 <= i	 === true
+			VALUE: i	 === 99
+			VALUE: rear	 === 99
+			VALUE: i < rear	 === false
+StackQueue.java:213:  	LoopInvariant assertion: `conditionalResult_1937
+StackQueue.java:213:  Invalid assertion (LoopInvariant)
+
+StackQueue.java:308: warning: The prover cannot establish an assertion (Postcondition: StackQueue.java:305: ) in method getFront
+       			return search(front) == 0 ? 1 : 0; // return front == 0 ? 1 : 0; // return front; 
+       			^
+StackQueue.java:305: warning: Associated declaration: StackQueue.java:308: 
+  		//@   ensures \result == front;
+  		      ^
+
+TRACE of StackQueue.Queue.getFront()
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 1
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 1
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!15
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:308:  	return search(front) == 0 ? 1 : 0;
+			VALUE: front	 === 0
+			VALUE: search(front)	 === 0
+			VALUE: 0	 === 0
+			VALUE: search(front) == 0	 === true
+			VALUE: 1	 === 1
+			VALUE: search(front) == 0 ? 1 : 0	 === 1
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 1
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 1
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+StackQueue.java:160:  	InvariantLeaveCaller assertion: `conditionalResult_2620
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:161:  	InvariantLeaveCaller assertion: _JML__tmp2627
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!15
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:162:  	InvariantLeaveCaller assertion: _JML__tmp2631
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 1
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 1
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+StackQueue.java:160:  	InvariantEntrance assertion: `conditionalResult_2635
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:161:  	InvariantEntrance assertion: _JML__tmp2642
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!15
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:162:  	InvariantEntrance assertion: _JML__tmp2646
+StackQueue.java:1:  	Precondition assertion: _$CPRE__45
+			VALUE: _$CPRE__45	 === true
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 1
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 1
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!15
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:264:  	UndefinedNullDeReference assertion: !(`conditionalResult_2666 && `conditionalResult_2666 && `THIS.queue != null) || `THIS.queue != null
+StackQueue.java:264:  	UndefinedNegativeIndex assertion: !(`conditionalResult_2666 && `conditionalResult_2666 && `THIS.queue != null) || 0 <= _JML__tmp2647
+StackQueue.java:264:  	UndefinedTooLargeIndex assertion: !(`conditionalResult_2666 && `conditionalResult_2666 && `THIS.queue != null) || `THIS.queue.length > _JML__tmp2647
+StackQueue.java:159:  	NullField assertion: _JML__tmp2686
+StackQueue.java:305:  	ensures \result == front; 
+StackQueue.java:308:  Invalid assertion (Postcondition)
+: StackQueue.java:305:  Associated location
+
+4 warnings

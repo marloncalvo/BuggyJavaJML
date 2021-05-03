@@ -1,4 +1,0 @@
-Fibonacci.java:49: warning: The prover cannot establish an assertion (PossiblyTooLargeIndex) in method fibCompute
-			fib[index] = fib[index - 2] + fib[index - 1];
-			   ^
-1 warning

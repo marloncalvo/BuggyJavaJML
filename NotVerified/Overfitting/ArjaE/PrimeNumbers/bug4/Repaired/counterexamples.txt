@@ -1,0 +1,347 @@
+
+
+PrimeNumbers.java:58: warning: The prover cannot establish an assertion (Postcondition: PrimeNumbers.java:17: ) in method primeList
+	return primeArray; 
+	^
+PrimeNumbers.java:17: warning: Associated declaration: PrimeNumbers.java:58: 
+	  @ ensures primeArray.length == n; @*/
+	    ^
+
+TRACE of PrimeNumbers.primeList(int)
+PrimeNumbers.java:12:  	requires 0 < n && n <= 105102357; 
+			VALUE: 0	 === 0
+			VALUE: n	 === 2
+			VALUE: 0 < n	 === true
+			VALUE: n	 === 2
+			VALUE: 105102357	 === 105102357
+			VALUE: n <= 105102357	 === true
+			VALUE: 0 < n && n <= 105102357	 === true
+PrimeNumbers.java:20:  	int status = 1
+			VALUE: 1	 === 1
+			VALUE: status	 === 1
+PrimeNumbers.java:20:  	int num = 3
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+PrimeNumbers.java:20:  	int count
+PrimeNumbers.java:20:  	int j
+PrimeNumbers.java:21:  	primeArray = new int[status]
+			VALUE: new int[status]	 === REF!val!20
+			VALUE: primeArray = new int[status]	 === REF!val!20
+PrimeNumbers.java:1:  	PossiblyNegativeSize assertion: 0 <= status
+			VALUE: status	 === 1
+PrimeNumbers.java:21:  	Assignable assertion: _JML__tmp35 || (!Pre_3 || (_JML__tmp34.`alloc__ > 0 || `THIS == `THIS))
+PrimeNumbers.java:22:  	primeArray[0] = 2
+			VALUE: primeArray	 === REF!val!20
+			VALUE: 0	 === 0
+			VALUE: 2	 === 2
+			VALUE: primeArray[0] = 2	 === 2
+PrimeNumbers.java:22:  	PossiblyNullDeReference assertion: `THIS.primeArray != null
+			VALUE: null	 === NULL
+PrimeNumbers.java:22:  	PossiblyNegativeIndex assertion: 0 >= 0
+			VALUE: 0	 === 0
+PrimeNumbers.java:22:  	PossiblyTooLargeIndex assertion: `THIS.primeArray.length > 0
+			VALUE: 0	 === 0
+PrimeNumbers.java:22:  	Assignable assertion: _JML__tmp40 || (!Pre_3 || _JML__tmp39.`alloc__ > 0)
+PrimeNumbers.java:24:  	/*@ ghost */  int maxnumber = Integer.MAX_VALUE
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: maxnumber	 === 2147483647
+PrimeNumbers.java:25:  	/*@ ghost */  int count_counter = 2
+			VALUE: 2	 === 2
+			VALUE: count_counter	 === 2
+PrimeNumbers.java:33:  	count = 2
+			VALUE: 2	 === 2
+			VALUE: count = 2	 === 2
+PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+PrimeNumbers.java:26:  	LoopInvariantBeforeLoop assertion: (_JML__tmp53)
+PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+PrimeNumbers.java:27:  	LoopInvariantBeforeLoop assertion: (_JML__tmp58)
+PrimeNumbers.java:28:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === true
+PrimeNumbers.java:28:  	LoopInvariantBeforeLoop assertion: (_JML__tmp61)
+PrimeNumbers.java:29:  	//@ loop_invariant 2 <= count && count <= n + 1 && 3 <= num;
+			VALUE: 2	 === 2
+			VALUE: count	 === 2
+			VALUE: 2 <= count	 === true
+			VALUE: count	 === 2
+			VALUE: n	 === 2
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 3
+			VALUE: count <= n + 1	 === true
+			VALUE: 2 <= count && count <= n + 1	 === true
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+			VALUE: 3 <= num	 === true
+PrimeNumbers.java:29:  	LoopInvariantBeforeLoop assertion: `conditionalResult_69
+PrimeNumbers.java:30:  	//@ loop_invariant count_counter == count;
+			VALUE: count_counter	 === 2
+			VALUE: count	 === 2
+			VALUE: count_counter == count	 === true
+PrimeNumbers.java:30:  	LoopInvariantBeforeLoop assertion: _JML__tmp73
+PrimeNumbers.java:31:  	//@ loop_invariant status == 1;
+			VALUE: status	 === 1
+			VALUE: 1	 === 1
+			VALUE: status == 1	 === true
+PrimeNumbers.java:31:  	LoopInvariantBeforeLoop assertion: _JML__tmp75
+PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k)))	 === true
+PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k])	 === true
+PrimeNumbers.java:28:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num)	 === true
+PrimeNumbers.java:29:  	//@ loop_invariant 2 <= count && count <= n + 1 && 3 <= num;
+			VALUE: 2	 === 2
+			VALUE: count	 === 2
+			VALUE: 2 <= count	 === true
+			VALUE: count	 === 2
+			VALUE: n	 === 2
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 3
+			VALUE: count <= n + 1	 === true
+			VALUE: 2 <= count && count <= n + 1	 === true
+			VALUE: 3	 === 3
+			VALUE: num	 === 4
+			VALUE: 3 <= num	 === true
+			VALUE: 2 <= count && count <= n + 1 && 3 <= num	 === true
+PrimeNumbers.java:30:  	//@ loop_invariant count_counter == count;
+			VALUE: count_counter	 === 2
+			VALUE: count	 === 2
+			VALUE: count_counter == count	 === true
+PrimeNumbers.java:31:  	//@ loop_invariant status == 1;
+			VALUE: status	 === 1
+			VALUE: 1	 === 1
+			VALUE: status == 1	 === true
+PrimeNumbers.java:32:  	//@ loop_decreases maxnumber - num;
+			VALUE: maxnumber	 === 2147483647
+			VALUE: num	 === 4
+			VALUE: maxnumber - num	 === 2147483643
+				Initial value of Loop Decreases expression = 2147483643
+PrimeNumbers.java:33:  	Loop test
+			VALUE: count	 === 2
+			VALUE: n	 === 2
+			VALUE: count > n	 === false
+PrimeNumbers.java:58:  	return primeArray;
+			VALUE: primeArray	 === REF!val!20
+PrimeNumbers.java:18:  	ensures \result != null; 
+			VALUE: \result	 === REF!val!20
+			VALUE: null	 === NULL
+			VALUE: \result != null	 === true
+PrimeNumbers.java:14:  	ensures \forall int i; 0 <= i && i < primeArray.length; \forall int j; 2 <= j && j <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], j); 
+			VALUE: \forall int i; 0 <= i && i < primeArray.length; \forall int j; 2 <= j && j <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], j)	 === true
+PrimeNumbers.java:15:  	ensures (\forall int i, int j; 0 <= i && i < primeArray.length && 0 <= j && j < primeArray.length && i != j; primeArray[i] != primeArray[j]); 
+			VALUE: \forall int i, int j; 0 <= i && i < primeArray.length && 0 <= j && j < primeArray.length && i != j; primeArray[i] != primeArray[j]	 === true
+PrimeNumbers.java:16:  	ensures \forall int i; 0 <= i && i < primeArray.length; \forall int j; 0 <= j && j < primeArray.length && i != j; primeArray[i] != primeArray[j]; 
+			VALUE: \forall int i; 0 <= i && i < primeArray.length; \forall int j; 0 <= j && j < primeArray.length && i != j; primeArray[i] != primeArray[j]	 === true
+PrimeNumbers.java:17:  	UndefinedNullDeReference assertion: !Pre_3 || `THIS.primeArray != null
+PrimeNumbers.java:17:  	ensures primeArray.length == n; 
+			VALUE: primeArray	 === REF!val!20
+			VALUE: primeArray.length	 === 1
+			VALUE: n	 === 2
+			VALUE: primeArray.length == n	 === false
+PrimeNumbers.java:58:  Invalid assertion (Postcondition)
+: PrimeNumbers.java:17:  Associated location
+
+
+
+PrimeNumbers.java:50: warning: The prover cannot establish an assertion (PossiblyTooLargeIndex) in method primeList
+                primeArray[count - 1] = num;
+                          ^
+
+TRACE of PrimeNumbers.primeList(int)
+PrimeNumbers.java:12:  	requires 0 < n && n <= 105102357; 
+			VALUE: 0	 === 0
+			VALUE: n	 === 11629
+			VALUE: 0 < n	 === true
+			VALUE: n	 === 11629
+			VALUE: 105102357	 === 105102357
+			VALUE: n <= 105102357	 === true
+			VALUE: 0 < n && n <= 105102357	 === true
+PrimeNumbers.java:20:  	int status = 1
+			VALUE: 1	 === 1
+			VALUE: status	 === 1
+PrimeNumbers.java:20:  	int num = 3
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+PrimeNumbers.java:20:  	int count
+PrimeNumbers.java:20:  	int j
+PrimeNumbers.java:21:  	primeArray = new int[status]
+			VALUE: new int[status]	 === REF!val!20
+			VALUE: primeArray = new int[status]	 === REF!val!20
+PrimeNumbers.java:1:  	PossiblyNegativeSize assertion: 0 <= status
+			VALUE: status	 === 1
+PrimeNumbers.java:21:  	Assignable assertion: _JML__tmp35 || (!Pre_3 || (_JML__tmp34.`alloc__ > 0 || `THIS == `THIS))
+PrimeNumbers.java:22:  	primeArray[0] = 2
+			VALUE: primeArray	 === REF!val!20
+			VALUE: 0	 === 0
+			VALUE: 2	 === 2
+			VALUE: primeArray[0] = 2	 === 2
+PrimeNumbers.java:22:  	PossiblyNullDeReference assertion: `THIS.primeArray != null
+			VALUE: null	 === NULL
+PrimeNumbers.java:22:  	PossiblyNegativeIndex assertion: 0 >= 0
+			VALUE: 0	 === 0
+PrimeNumbers.java:22:  	PossiblyTooLargeIndex assertion: `THIS.primeArray.length > 0
+			VALUE: 0	 === 0
+PrimeNumbers.java:22:  	Assignable assertion: _JML__tmp40 || (!Pre_3 || _JML__tmp39.`alloc__ > 0)
+PrimeNumbers.java:24:  	/*@ ghost */  int maxnumber = Integer.MAX_VALUE
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: maxnumber	 === 2147483647
+PrimeNumbers.java:25:  	/*@ ghost */  int count_counter = 2
+			VALUE: 2	 === 2
+			VALUE: count_counter	 === 2
+PrimeNumbers.java:33:  	count = 2
+			VALUE: 2	 === 2
+			VALUE: count = 2	 === 2
+PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+PrimeNumbers.java:26:  	LoopInvariantBeforeLoop assertion: (_JML__tmp53)
+PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+PrimeNumbers.java:27:  	LoopInvariantBeforeLoop assertion: (_JML__tmp58)
+PrimeNumbers.java:28:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === true
+PrimeNumbers.java:28:  	LoopInvariantBeforeLoop assertion: (_JML__tmp61)
+PrimeNumbers.java:29:  	//@ loop_invariant 2 <= count && count <= n + 1 && 3 <= num;
+			VALUE: 2	 === 2
+			VALUE: count	 === 2
+			VALUE: 2 <= count	 === true
+			VALUE: count	 === 2
+			VALUE: n	 === 11629
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 11630
+			VALUE: count <= n + 1	 === true
+			VALUE: 2 <= count && count <= n + 1	 === true
+			VALUE: 3	 === 3
+			VALUE: num	 === 3
+			VALUE: 3 <= num	 === true
+PrimeNumbers.java:29:  	LoopInvariantBeforeLoop assertion: `conditionalResult_69
+PrimeNumbers.java:30:  	//@ loop_invariant count_counter == count;
+			VALUE: count_counter	 === 2
+			VALUE: count	 === 2
+			VALUE: count_counter == count	 === true
+PrimeNumbers.java:30:  	LoopInvariantBeforeLoop assertion: _JML__tmp73
+PrimeNumbers.java:31:  	//@ loop_invariant status == 1;
+			VALUE: status	 === 1
+			VALUE: 1	 === 1
+			VALUE: status == 1	 === true
+PrimeNumbers.java:31:  	LoopInvariantBeforeLoop assertion: _JML__tmp75
+PrimeNumbers.java:26:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !div(primeArray[i], k)));
+			VALUE: \forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k))	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; (\forall int k; 2 <= k && k <= primeArray[i] / 2; !PrimeNumbers.div(primeArray[i], k)))	 === true
+PrimeNumbers.java:27:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]);
+			VALUE: \forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k]	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; \forall int k; 0 <= k && k < count - 1 && i != k; primeArray[i] != primeArray[k])	 === true
+PrimeNumbers.java:28:  	//@ loop_invariant (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num);
+			VALUE: \forall int i; 0 <= i && i < count - 1; primeArray[i] < num	 === true
+			VALUE: (\forall int i; 0 <= i && i < count - 1; primeArray[i] < num)	 === true
+PrimeNumbers.java:29:  	//@ loop_invariant 2 <= count && count <= n + 1 && 3 <= num;
+			VALUE: 2	 === 2
+			VALUE: count	 === 11630
+			VALUE: 2 <= count	 === true
+			VALUE: count	 === 11630
+			VALUE: n	 === 11629
+			VALUE: 1	 === 1
+			VALUE: n + 1	 === 11630
+			VALUE: count <= n + 1	 === true
+			VALUE: 2 <= count && count <= n + 1	 === true
+			VALUE: 3	 === 3
+			VALUE: num	 === 6
+			VALUE: 3 <= num	 === true
+			VALUE: 2 <= count && count <= n + 1 && 3 <= num	 === true
+PrimeNumbers.java:30:  	//@ loop_invariant count_counter == count;
+			VALUE: count_counter	 === 11630
+			VALUE: count	 === 11630
+			VALUE: count_counter == count	 === true
+PrimeNumbers.java:31:  	//@ loop_invariant status == 1;
+			VALUE: status	 === 1
+			VALUE: 1	 === 1
+			VALUE: status == 1	 === true
+PrimeNumbers.java:32:  	//@ loop_decreases maxnumber - num;
+			VALUE: maxnumber	 === 2147483647
+			VALUE: num	 === 6
+			VALUE: maxnumber - num	 === 2147483641
+				Initial value of Loop Decreases expression = 2147483641
+PrimeNumbers.java:33:  	Loop test
+			VALUE: count	 === 11630
+			VALUE: n	 === 11629
+			VALUE: count > n	 === true
+PrimeNumbers.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp108
+PrimeNumbers.java:39:  	j = 2
+			VALUE: 2	 === 2
+			VALUE: j = 2	 === 2
+PrimeNumbers.java:35:  	//@ loop_invariant j > 1 && j <= num / 2 + 1;
+			VALUE: j	 === 2
+			VALUE: 1	 === 1
+			VALUE: j > 1	 === true
+			VALUE: j	 === 2
+			VALUE: num	 === 6
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 3
+			VALUE: 1	 === 1
+			VALUE: num / 2 + 1	 === 4
+			VALUE: j <= num / 2 + 1	 === true
+PrimeNumbers.java:35:  	LoopInvariantBeforeLoop assertion: `conditionalResult_115
+PrimeNumbers.java:36:  	//@ loop_invariant (\forall int k; 0 <= k && k < count - 1; num != primeArray[k]);
+			VALUE: \forall int k; 0 <= k && k < count - 1; num != primeArray[k]	 === true
+PrimeNumbers.java:36:  	LoopInvariantBeforeLoop assertion: (_JML__tmp124)
+PrimeNumbers.java:37:  	//@ loop_invariant (\forall int k; 2 <= k && k < j; !div(num, k));
+			VALUE: \forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k)	 === true
+PrimeNumbers.java:37:  	LoopInvariantBeforeLoop assertion: (_JML__tmp126)
+PrimeNumbers.java:35:  	//@ loop_invariant j > 1 && j <= num / 2 + 1;
+			VALUE: j	 === 4
+			VALUE: 1	 === 1
+			VALUE: j > 1	 === true
+			VALUE: j	 === 4
+			VALUE: num	 === 6
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 3
+			VALUE: 1	 === 1
+			VALUE: num / 2 + 1	 === 4
+			VALUE: j <= num / 2 + 1	 === true
+			VALUE: j > 1 && j <= num / 2 + 1	 === true
+PrimeNumbers.java:36:  	//@ loop_invariant (\forall int k; 0 <= k && k < count - 1; num != primeArray[k]);
+			VALUE: \forall int k; 0 <= k && k < count - 1; num != primeArray[k]	 === true
+			VALUE: (\forall int k; 0 <= k && k < count - 1; num != primeArray[k])	 === true
+PrimeNumbers.java:37:  	//@ loop_invariant (\forall int k; 2 <= k && k < j; !div(num, k));
+			VALUE: \forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k)	 === true
+			VALUE: (\forall int k; 2 <= k && k < j; !PrimeNumbers.div(num, k))	 === true
+PrimeNumbers.java:38:  	//@ loop_decreases num - j;
+			VALUE: num	 === 6
+			VALUE: j	 === 4
+			VALUE: num - j	 === 2
+				Initial value of Loop Decreases expression = 2
+PrimeNumbers.java:39:  	Loop test
+			VALUE: j	 === 4
+			VALUE: num	 === 6
+			VALUE: 2	 === 2
+			VALUE: num / 2	 === 3
+			VALUE: j <= num / 2	 === false
+PrimeNumbers.java:39:  	ArithmeticOperationRange assertion: !(num == -2147483648 && 2 == -1)
+			VALUE: !(num_1092_2632___52 == -2147483648 && 2 == -1)	 === true
+PrimeNumbers.java:1:  	if (status != 0) ...
+			VALUE: status	 === 1
+			VALUE: 0	 === 0
+			VALUE: status != 0	 === true
+			VALUE: (status != 0)	 === true
+				Condition = true
+PrimeNumbers.java:50:  	primeArray[count - 1] = num
+			VALUE: primeArray	 === REF!val!20
+			VALUE: count	 === 11630
+			VALUE: 1	 === 1
+			VALUE: count - 1	 === 11629
+			VALUE: num	 === 6
+			VALUE: primeArray[count - 1] = num	 === 12
+PrimeNumbers.java:50:  	PossiblyNullDeReference assertion: `THIS.primeArray != null
+			VALUE: null	 === NULL
+PrimeNumbers.java:50:  	ArithmeticOperationRange assertion: !(0 < count && 1 < 0) || count <= 2147483647 + 1
+			VALUE: !(0 < count_1101_2478___49 && 1 < 0) || count_1101_2478___49 <= 2147483647 + 1	 === true
+PrimeNumbers.java:50:  	ArithmeticOperationRange assertion: !(count < 0 && 0 < 1) || -2147483648 + 1 <= count
+			VALUE: !(count_1101_2478___49 < 0 && 0 < 1) || -2147483648 + 1 <= count_1101_2478___49	 === true
+PrimeNumbers.java:50:  	PossiblyNegativeIndex assertion: _JML__tmp192 >= 0
+PrimeNumbers.java:50:  	PossiblyTooLargeIndex assertion: `THIS.primeArray.length > _JML__tmp192
+PrimeNumbers.java:50:  Invalid assertion (PossiblyTooLargeIndex)
+
+3 warnings

@@ -1,0 +1,73 @@
+FindInArray.java:61: warning: The prover cannot establish an assertion (Precondition: FindInArray.java:38: ) in method findLast
+	if (getArr(index) == getKey()) return index;
+	          ^
+FindInArray.java:38: warning: Associated declaration: FindInArray.java:61: 
+    /*@ pure @*/ int getArr(int i) 
+                     ^
+FindInArray.java:36: warning: Precondition conjunct is false: 0 <= i
+    //@ requires 0 <= i && i <arr.length;
+                   ^
+
+TRACE of FindInArray.findLast()
+FindInArray.java:48:  	requires 0 < arr.length; 
+			VALUE: arr	 === REF!val!13
+			VALUE: arr.length	 === 1
+			VALUE: 0 < arr.length	 === true
+FindInArray.java:48:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+FindInArray.java:53:  	int index = size() - 1
+			VALUE: size()	 === 1
+			VALUE: 1	 === 1
+			VALUE: size() - 1	 === 0
+			VALUE: index	 === 0
+FindInArray.java:1:  	Precondition assertion: _$CPRE__8
+			VALUE: _$CPRE__8	 === true
+FindInArray.java:43:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+FindInArray.java:53:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp344 && 1 < 0) || _JML__tmp344 <= 2147483647 + 1
+			VALUE: !(0 < _JML__tmp344 && 1 < 0) || _JML__tmp344 <= 2147483647 + 1	 === true
+FindInArray.java:53:  	ArithmeticOperationRange assertion: !(_JML__tmp344 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp344
+			VALUE: !(_JML__tmp344 < 0 && 0 < 1) || -2147483648 + 1 <= _JML__tmp344	 === true
+FindInArray.java:54:  	//@ loop_invariant -1 <= index && index < arr.length;
+			VALUE: -1	 === ( - 1 )
+			VALUE: index	 === 0
+			VALUE: -1 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: arr	 === REF!val!13
+			VALUE: arr.length	 === 1
+			VALUE: index < arr.length	 === true
+FindInArray.java:54:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+FindInArray.java:54:  	LoopInvariantBeforeLoop assertion: `conditionalResult_356
+FindInArray.java:55:  	//@ loop_invariant (\forall int i; index < i && i < arr.length; arr[i] != key);
+			VALUE: \forall int i; index < i && i < arr.length; arr[i] != key	 === true
+FindInArray.java:55:  	LoopInvariantBeforeLoop assertion: (_JML__tmp361)
+FindInArray.java:54:  	//@ loop_invariant -1 <= index && index < arr.length;
+			VALUE: -1	 === ( - 1 )
+			VALUE: index	 === ( - 1 )
+			VALUE: -1 <= index	 === true
+			VALUE: index	 === ( - 1 )
+			VALUE: arr	 === REF!val!13
+			VALUE: arr.length	 === 1
+			VALUE: index < arr.length	 === true
+			VALUE: -1 <= index && index < arr.length	 === true
+FindInArray.java:54:  	UndefinedNullDeReference assertion: !(`THIS.arr != null) || `THIS.arr != null
+FindInArray.java:55:  	//@ loop_invariant (\forall int i; index < i && i < arr.length; arr[i] != key);
+			VALUE: \forall int i; index < i && i < arr.length; arr[i] != key	 === true
+			VALUE: (\forall int i; index < i && i < arr.length; arr[i] != key)	 === true
+FindInArray.java:56:  	Loop test
+			VALUE: 0	 === 0
+			VALUE: index	 === ( - 1 )
+			VALUE: 0 < index	 === false
+			VALUE: (0 < index)	 === false
+FindInArray.java:1:  	if (getArr(index) == getKey()) ...
+			VALUE: index	 === ( - 1 )
+			VALUE: getArr(index)	 === ( - 2147474225 )
+			VALUE: getKey()	 === ( - 2147474226 )
+			VALUE: getArr(index) == getKey()	 === false
+			VALUE: (getArr(index) == getKey())	 === false
+				Condition = false
+FindInArray.java:36:  	requires 0 <= i && i < arr.length; 
+FindInArray.java:36:  	Precondition assertion: _$CPRE__11
+			VALUE: _$CPRE__11	 === false
+FindInArray.java:61:  Invalid assertion (Precondition)
+: FindInArray.java:38:  Associated location
+
+3 warnings

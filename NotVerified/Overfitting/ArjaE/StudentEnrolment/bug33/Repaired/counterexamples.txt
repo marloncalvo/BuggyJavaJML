@@ -1,0 +1,1507 @@
+
+StudentEnrollment.java:42: warning: The prover cannot establish an assertion (Assignable: StudentEnrollment.java:33: ) in method setTuitionBalance:  this.tuitionBalance
+ 	else regularEnrollment();
+ 	                      ^
+StudentEnrollment.java:33: warning: Associated declaration: StudentEnrollment.java:42: 
+      @     public exceptional_behavior
+                   ^
+
+TRACE of StudentEnrollment.setTuitionBalance(int)
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 20
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 20
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:29:  	requires tuitionBalance <= maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6); 
+			VALUE: tuitionBalance	 === 4241
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === false
+StudentEnrollment.java:34:  	requires maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6) < tuitionBalance; 
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 4240
+			VALUE: tuitionBalance	 === 4241
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6) < tuitionBalance	 === true
+StudentEnrollment.java:40:  	int maxTuitionBalance = maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 4240
+			VALUE: maxTuitionBalance	 === 4240
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: |#mul32ok#|(StudentEnrollment.maxSemesterCredits, StudentEnrollment.costPerCredit)
+			VALUE: |#mul32ok#|(StudentEnrollment_maxSemesterCredits, StudentEnrollment_costPerCredit)	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: !(StudentEnrollment.costPerCredit == -2147483648 && 100 == -1)
+			VALUE: !(StudentEnrollment_costPerCredit == -2147483648 && 100 == -1)	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: |#mul32ok#|((_JML__tmp558), 6)
+			VALUE: 6	 === 6
+			VALUE: |#mul32ok#|((_JML__tmp558), 6)	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: |#mul32ok#|(StudentEnrollment.maxSemesterCredits, (_JML__tmp561))
+			VALUE: |#mul32ok#|(StudentEnrollment_maxSemesterCredits, (_JML__tmp561))	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp553 && 0 < _JML__tmp563) || _JML__tmp553 <= 2147483647 - _JML__tmp563
+			VALUE: !(0 < _JML__tmp553 && 0 < _JML__tmp563) || _JML__tmp553 <= 2147483647 - _JML__tmp563	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: !(_JML__tmp553 < 0 && _JML__tmp563 < 0) || -2147483648 - _JML__tmp563 <= _JML__tmp553
+			VALUE: !(_JML__tmp553 < 0 && _JML__tmp563 < 0) || -2147483648 - _JML__tmp563 <= _JML__tmp553	 === true
+StudentEnrollment.java:1:  	if (getLateRegistrations()) ...
+			VALUE: getLateRegistrations()	 === false
+			VALUE: (getLateRegistrations())	 === false
+				Condition = false
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 20
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 20
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantLeaveCaller assertion: `conditionalResult_570
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: _JML__tmp587
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 20
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 20
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantEntrance assertion: `conditionalResult_591
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantEntrance assertion: _JML__tmp608
+StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__64
+			VALUE: _$CPRE__64	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 20
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 20
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:1:  	UndefinedNullDeReference assertion: `THIS != null
+StudentEnrollment.java:42:  	regularEnrollment()
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 20
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 20
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantLeaveCaller assertion: `conditionalResult_861
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: _JML__tmp878
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 20
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 20
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantEntrance assertion: `conditionalResult_882
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantEntrance assertion: _JML__tmp899
+StudentEnrollment.java:151:  	requires registrationPermission(); 
+			VALUE: registrationPermission()	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 20
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 20
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantEntrance assertion: `conditionalResult_904
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantEntrance assertion: _JML__tmp921
+StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__69
+			VALUE: _$CPRE__69	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 20
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 20
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:152:  	requires this.tuitionBalance + maxSemesterCredits * costPerCredit <= Integer.MAX_VALUE; 
+			VALUE: this.tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit	 === ( - 2147477211 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit <= Integer.MAX_VALUE	 === true
+StudentEnrollment.java:1:  	UndefinedNullDeReference assertion: `THIS != null
+StudentEnrollment.java:157:  	requires !registrationPermission(); 
+			VALUE: registrationPermission()	 === true
+			VALUE: !registrationPermission()	 === false
+StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__70
+			VALUE: _$CPRE__70	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 20
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 20
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:152:  	Precondition assertion: _$CPRE__68
+			VALUE: _$CPRE__68	 === true
+StudentEnrollment.java:153:  	Assignable assertion: _JML__tmp995 || (!Pre_3 || _JML__tmp994.`alloc__ > 0)
+StudentEnrollment.java:42:  Invalid assertion (Assignable)
+: StudentEnrollment.java:33:  Associated location
+
+
+StudentEnrollment.java:41: warning: The prover cannot establish an assertion (Assignable: StudentEnrollment.java:33: ) in method setTuitionBalance:  this.tuitionBalance
+	if (getLateRegistrations()) lateEnrollment();
+	                                          ^
+StudentEnrollment.java:33: warning: Associated declaration: StudentEnrollment.java:41: 
+      @     public exceptional_behavior
+                   ^
+
+TRACE of StudentEnrollment.setTuitionBalance(int)
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:29:  	requires tuitionBalance <= maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6); 
+			VALUE: tuitionBalance	 === 4241
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === false
+StudentEnrollment.java:34:  	requires maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6) < tuitionBalance; 
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 4240
+			VALUE: tuitionBalance	 === 4241
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6) < tuitionBalance	 === true
+StudentEnrollment.java:40:  	int maxTuitionBalance = maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 4240
+			VALUE: maxTuitionBalance	 === 4240
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: |#mul32ok#|(StudentEnrollment.maxSemesterCredits, StudentEnrollment.costPerCredit)
+			VALUE: |#mul32ok#|(StudentEnrollment_maxSemesterCredits, StudentEnrollment_costPerCredit)	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: !(StudentEnrollment.costPerCredit == -2147483648 && 100 == -1)
+			VALUE: !(StudentEnrollment_costPerCredit == -2147483648 && 100 == -1)	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: |#mul32ok#|((_JML__tmp558), 6)
+			VALUE: 6	 === 6
+			VALUE: |#mul32ok#|((_JML__tmp558), 6)	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: |#mul32ok#|(StudentEnrollment.maxSemesterCredits, (_JML__tmp561))
+			VALUE: |#mul32ok#|(StudentEnrollment_maxSemesterCredits, (_JML__tmp561))	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp553 && 0 < _JML__tmp563) || _JML__tmp553 <= 2147483647 - _JML__tmp563
+			VALUE: !(0 < _JML__tmp553 && 0 < _JML__tmp563) || _JML__tmp553 <= 2147483647 - _JML__tmp563	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: !(_JML__tmp553 < 0 && _JML__tmp563 < 0) || -2147483648 - _JML__tmp563 <= _JML__tmp553
+			VALUE: !(_JML__tmp553 < 0 && _JML__tmp563 < 0) || -2147483648 - _JML__tmp563 <= _JML__tmp553	 === true
+StudentEnrollment.java:1:  	if (getLateRegistrations()) ...
+			VALUE: getLateRegistrations()	 === true
+			VALUE: (getLateRegistrations())	 === true
+				Condition = true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantLeaveCaller assertion: `conditionalResult_570
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: _JML__tmp587
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantEntrance assertion: `conditionalResult_591
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantEntrance assertion: _JML__tmp608
+StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__64
+			VALUE: _$CPRE__64	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:1:  	UndefinedNullDeReference assertion: `THIS != null
+StudentEnrollment.java:41:  	lateEnrollment()
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantLeaveCaller assertion: `conditionalResult_638
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: _JML__tmp655
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantEntrance assertion: `conditionalResult_659
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantEntrance assertion: _JML__tmp676
+StudentEnrollment.java:171:  	old int latePerCredit = (costPerCredit / 100) * 6
+StudentEnrollment.java:172:  	requires registrationPermission(); 
+			VALUE: registrationPermission()	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantEntrance assertion: `conditionalResult_687
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantEntrance assertion: _JML__tmp704
+StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__66
+			VALUE: _$CPRE__66	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:173:  	requires this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit <= Integer.MAX_VALUE; 
+			VALUE: this.tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit	 === ( - 2147477211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: latePerCredit	 === 12
+			VALUE: maxSemesterCredits * latePerCredit	 === 240
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit	 === ( - 2147476971 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit <= Integer.MAX_VALUE	 === true
+StudentEnrollment.java:1:  	UndefinedNullDeReference assertion: `THIS != null
+StudentEnrollment.java:178:  	requires !registrationPermission(); 
+			VALUE: registrationPermission()	 === true
+			VALUE: !registrationPermission()	 === false
+StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__67
+			VALUE: _$CPRE__67	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 0
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 0
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147481211 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:173:  	Precondition assertion: _$CPRE__65
+			VALUE: _$CPRE__65	 === true
+StudentEnrollment.java:174:  	Assignable assertion: _JML__tmp781 || (!Pre_3 || _JML__tmp780.`alloc__ > 0)
+StudentEnrollment.java:41:  Invalid assertion (Assignable)
+: StudentEnrollment.java:33:  Associated location
+
+
+StudentEnrollment.java:44: warning: The prover cannot establish an assertion (ExceptionalPostcondition: StudentEnrollment.java:37: ) in method setTuitionBalance
+                throw new IllegalArgumentException();
+                ^
+StudentEnrollment.java:37: warning: Associated declaration: StudentEnrollment.java:44: 
+      @   	signals(IllegalArgumentException) this.tuitionBalance == \old (this.tuitionBalance); @*/
+          	^
+
+TRACE of StudentEnrollment.setTuitionBalance(int)
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147476722 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:29:  	requires tuitionBalance <= maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6); 
+			VALUE: tuitionBalance	 === 4241
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === false
+StudentEnrollment.java:34:  	requires maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6) < tuitionBalance; 
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 4240
+			VALUE: tuitionBalance	 === 4241
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6) < tuitionBalance	 === true
+StudentEnrollment.java:40:  	int maxTuitionBalance = maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 4240
+			VALUE: maxTuitionBalance	 === 4240
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: |#mul32ok#|(StudentEnrollment.maxSemesterCredits, StudentEnrollment.costPerCredit)
+			VALUE: |#mul32ok#|(StudentEnrollment_maxSemesterCredits, StudentEnrollment_costPerCredit)	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: !(StudentEnrollment.costPerCredit == -2147483648 && 100 == -1)
+			VALUE: !(StudentEnrollment_costPerCredit == -2147483648 && 100 == -1)	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: |#mul32ok#|((_JML__tmp558), 6)
+			VALUE: 6	 === 6
+			VALUE: |#mul32ok#|((_JML__tmp558), 6)	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: |#mul32ok#|(StudentEnrollment.maxSemesterCredits, (_JML__tmp561))
+			VALUE: |#mul32ok#|(StudentEnrollment_maxSemesterCredits, (_JML__tmp561))	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp553 && 0 < _JML__tmp563) || _JML__tmp553 <= 2147483647 - _JML__tmp563
+			VALUE: !(0 < _JML__tmp553 && 0 < _JML__tmp563) || _JML__tmp553 <= 2147483647 - _JML__tmp563	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: !(_JML__tmp553 < 0 && _JML__tmp563 < 0) || -2147483648 - _JML__tmp563 <= _JML__tmp553
+			VALUE: !(_JML__tmp553 < 0 && _JML__tmp563 < 0) || -2147483648 - _JML__tmp563 <= _JML__tmp553	 === true
+StudentEnrollment.java:1:  	if (getLateRegistrations()) ...
+			VALUE: getLateRegistrations()	 === true
+			VALUE: (getLateRegistrations())	 === true
+				Condition = true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantLeaveCaller assertion: `conditionalResult_570
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147476722 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: _JML__tmp587
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantEntrance assertion: `conditionalResult_591
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147476722 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantEntrance assertion: _JML__tmp608
+StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__64
+			VALUE: _$CPRE__64	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147476722 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:1:  	UndefinedNullDeReference assertion: `THIS != null
+StudentEnrollment.java:41:  	lateEnrollment()
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantLeaveCaller assertion: `conditionalResult_638
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147476722 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: _JML__tmp655
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantEntrance assertion: `conditionalResult_659
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147476722 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantEntrance assertion: _JML__tmp676
+StudentEnrollment.java:171:  	old int latePerCredit = (costPerCredit / 100) * 6
+StudentEnrollment.java:172:  	requires registrationPermission(); 
+			VALUE: registrationPermission()	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantEntrance assertion: `conditionalResult_687
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147476722 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantEntrance assertion: _JML__tmp704
+StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__66
+			VALUE: _$CPRE__66	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147476722 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:173:  	requires this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit <= Integer.MAX_VALUE; 
+			VALUE: this.tuitionBalance	 === ( - 2147476722 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit	 === ( - 2147472722 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: latePerCredit	 === 12
+			VALUE: maxSemesterCredits * latePerCredit	 === 240
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit	 === ( - 2147472482 )
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit + maxSemesterCredits * latePerCredit <= Integer.MAX_VALUE	 === true
+StudentEnrollment.java:1:  	UndefinedNullDeReference assertion: `THIS != null
+StudentEnrollment.java:178:  	requires !registrationPermission(); 
+			VALUE: registrationPermission()	 === true
+			VALUE: !registrationPermission()	 === false
+StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__67
+			VALUE: _$CPRE__67	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147476722 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:173:  	Precondition assertion: _$CPRE__65
+			VALUE: _$CPRE__65	 === true
+StudentEnrollment.java:174:  	Assignable assertion: _JML__tmp781 || (!Pre_3 || _JML__tmp780.`alloc__ > 0)
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147476510 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147476510 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:175:  	UndefinedNullDeReference assertion: !_JML__tmp732 || `THIS != null
+StudentEnrollment.java:1:  	if (maxTuitionBalance < tuitionBalance) ...
+			VALUE: maxTuitionBalance	 === 4240
+			VALUE: tuitionBalance	 === 4241
+			VALUE: maxTuitionBalance < tuitionBalance	 === true
+			VALUE: (maxTuitionBalance < tuitionBalance)	 === true
+				Condition = true
+StudentEnrollment.java:44:  	throw new IllegalArgumentException();
+			VALUE: new IllegalArgumentException()	 === REF!val!36
+StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__71
+			VALUE: _$CPRE__71	 === true
+StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__72
+			VALUE: _$CPRE__72	 === true
+StudentEnrollment.java:51:  	UndefinedNullDeReference assertion: !(_JML__tmp1072._throwables != null) || _JML__tmp1072._throwables != null
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 1
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantExceptionExit assertion: `conditionalResult_1128
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === ( - 2147476510 )
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantExceptionExit assertion: _JML__tmp1145
+StudentEnrollment.java:28:  	Terminated with exception
+			VALUE: `exception	 === REF!val!36
+StudentEnrollment.java:1:  	signals () false; 
+StudentEnrollment.java:28:  	ExceptionalPostcondition assertion: !Pre_2 || false
+StudentEnrollment.java:38:  	ExceptionList assertion: !(`exception instanceof java.lang.Exception) || (!Pre_2 || false)
+StudentEnrollment.java:36:  	ExceptionList assertion: !(`exception instanceof java.lang.Exception) || (!Pre_3 || (false || `exception instanceof IllegalArgumentException))
+StudentEnrollment.java:37:  	Terminated with exception
+			VALUE: `exception	 === REF!val!36
+StudentEnrollment.java:37:  	signals (IllegalArgumentException) this.tuitionBalance == \old(this.tuitionBalance); 
+			VALUE: this.tuitionBalance	 === ( - 2147476510 )
+			VALUE: this	 === |`THIS|
+			VALUE: this.tuitionBalance	 === ( - 2147476722 )
+			VALUE: \old(this.tuitionBalance)	 === ( - 2147476722 )
+			VALUE: this.tuitionBalance == \old(this.tuitionBalance)	 === false
+StudentEnrollment.java:37:  	UndefinedNullDeReference assertion: !Pre_3 || `THIS != null
+StudentEnrollment.java:37:  	UndefinedNullDeReference assertion: !Pre_3 || \old(_JML__tmp1159 != null, \Old)
+StudentEnrollment.java:37:  	ExceptionalPostcondition assertion: !Pre_3 || _JML__tmp1161
+StudentEnrollment.java:44:  Invalid assertion (ExceptionalPostcondition)
+: StudentEnrollment.java:37:  Associated location
+
+
+StudentEnrollment.java:42: warning: The prover cannot establish an assertion (ExceptionalPostcondition: StudentEnrollment.java:28: ) in method setTuitionBalance
+ 	else regularEnrollment();
+ 	                      ^
+StudentEnrollment.java:28: warning: Associated declaration: StudentEnrollment.java:42: 
+    /*@     public normal_behavior
+                   ^
+
+TRACE of StudentEnrollment.setTuitionBalance(int)
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 17
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 17
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:29:  	requires tuitionBalance <= maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6); 
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === true
+StudentEnrollment.java:34:  	requires maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6) < tuitionBalance; 
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 4240
+			VALUE: tuitionBalance	 === 4240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6) < tuitionBalance	 === false
+StudentEnrollment.java:40:  	int maxTuitionBalance = maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 4240
+			VALUE: maxTuitionBalance	 === 4240
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: |#mul32ok#|(StudentEnrollment.maxSemesterCredits, StudentEnrollment.costPerCredit)
+			VALUE: |#mul32ok#|(StudentEnrollment_maxSemesterCredits, StudentEnrollment_costPerCredit)	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: !(StudentEnrollment.costPerCredit == -2147483648 && 100 == -1)
+			VALUE: !(StudentEnrollment_costPerCredit == -2147483648 && 100 == -1)	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: |#mul32ok#|((_JML__tmp558), 6)
+			VALUE: 6	 === 6
+			VALUE: |#mul32ok#|((_JML__tmp558), 6)	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: |#mul32ok#|(StudentEnrollment.maxSemesterCredits, (_JML__tmp561))
+			VALUE: |#mul32ok#|(StudentEnrollment_maxSemesterCredits, (_JML__tmp561))	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: !(0 < _JML__tmp553 && 0 < _JML__tmp563) || _JML__tmp553 <= 2147483647 - _JML__tmp563
+			VALUE: !(0 < _JML__tmp553 && 0 < _JML__tmp563) || _JML__tmp553 <= 2147483647 - _JML__tmp563	 === true
+StudentEnrollment.java:40:  	ArithmeticOperationRange assertion: !(_JML__tmp553 < 0 && _JML__tmp563 < 0) || -2147483648 - _JML__tmp563 <= _JML__tmp553
+			VALUE: !(_JML__tmp553 < 0 && _JML__tmp563 < 0) || -2147483648 - _JML__tmp563 <= _JML__tmp553	 === true
+StudentEnrollment.java:1:  	if (getLateRegistrations()) ...
+			VALUE: getLateRegistrations()	 === false
+			VALUE: (getLateRegistrations())	 === false
+				Condition = false
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 17
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 17
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantLeaveCaller assertion: `conditionalResult_570
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: _JML__tmp587
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 17
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 17
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantEntrance assertion: `conditionalResult_591
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantEntrance assertion: _JML__tmp608
+StudentEnrollment.java:1:  	Precondition assertion: _$CPRE__64
+			VALUE: _$CPRE__64	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 17
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 17
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:1:  	UndefinedNullDeReference assertion: `THIS != null
+StudentEnrollment.java:42:  	regularEnrollment()
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 17
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 17
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantLeaveCaller assertion: `conditionalResult_861
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantLeaveCaller assertion: _JML__tmp878
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 17
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 17
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantEntrance assertion: `conditionalResult_882
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantEntrance assertion: _JML__tmp899
+StudentEnrollment.java:151:  	requires registrationPermission(); 
+			VALUE: registrationPermission()	 === false
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 17
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 17
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantEntrance assertion: `conditionalResult_904
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantEntrance assertion: _JML__tmp921
+StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__69
+			VALUE: _$CPRE__69	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 17
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 17
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:152:  	requires this.tuitionBalance + maxSemesterCredits * costPerCredit <= Integer.MAX_VALUE; 
+			VALUE: this.tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit	 === 4001
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: this.tuitionBalance + maxSemesterCredits * costPerCredit <= Integer.MAX_VALUE	 === true
+StudentEnrollment.java:157:  	requires !registrationPermission(); 
+			VALUE: registrationPermission()	 === false
+			VALUE: !registrationPermission()	 === true
+StudentEnrollment.java:1:  	UndefinedCalledMethodPrecondition assertion: _$CPRE__70
+			VALUE: _$CPRE__70	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 17
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 17
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:152:  	Precondition assertion: _$CPRE__68
+			VALUE: _$CPRE__68	 === true
+StudentEnrollment.java:1:  	Assignable assertion: _JML__tmp998 || true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 17
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 17
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 17
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 17
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+			VALUE: 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:42:  	Exception thrown by regularEnrollment()
+			VALUE: `exceptionCall	 === REF!val!33
+StudentEnrollment.java:10:  	//@ public invariant 0 <= enrollmentCredits && enrollmentCredits <= maxSemesterCredits; 
+			VALUE: 0	 === 0
+			VALUE: enrollmentCredits	 === 17
+			VALUE: 0 <= enrollmentCredits	 === true
+			VALUE: enrollmentCredits	 === 17
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: enrollmentCredits <= maxSemesterCredits	 === true
+StudentEnrollment.java:10:  	InvariantExceptionExit assertion: `conditionalResult_1128
+StudentEnrollment.java:12:  	//@ public invariant tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6)); 
+			VALUE: tuitionBalance	 === 1
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: maxSemesterCredits * costPerCredit	 === 4000
+			VALUE: maxSemesterCredits	 === 20
+			VALUE: costPerCredit	 === 200
+			VALUE: 100	 === 100
+			VALUE: costPerCredit / 100	 === 2
+			VALUE: (costPerCredit / 100)	 === 2
+			VALUE: 6	 === 6
+			VALUE: (costPerCredit / 100) * 6	 === 12
+			VALUE: ((costPerCredit / 100) * 6)	 === 12
+			VALUE: maxSemesterCredits * ((costPerCredit / 100) * 6)	 === 240
+			VALUE: (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 240
+			VALUE: maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === 4240
+			VALUE: tuitionBalance <= maxSemesterCredits * costPerCredit + (maxSemesterCredits * ((costPerCredit / 100) * 6))	 === true
+StudentEnrollment.java:12:  	InvariantExceptionExit assertion: _JML__tmp1145
+StudentEnrollment.java:28:  	Terminated with exception
+			VALUE: `exception	 === REF!val!33
+StudentEnrollment.java:1:  	signals () false; 
+StudentEnrollment.java:28:  	ExceptionalPostcondition assertion: !Pre_2 || false
+StudentEnrollment.java:42:  Invalid assertion (ExceptionalPostcondition)
+: StudentEnrollment.java:28:  Associated location
+
+8 warnings

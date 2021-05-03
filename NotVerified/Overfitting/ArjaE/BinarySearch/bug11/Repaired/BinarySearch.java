@@ -24,6 +24,8 @@ public class BinarySearch {
                 mid = low + (high - low) / 2;
             }
 	    low=mid + 1;
+        System.out.println(low);
+        System.out.println(high);
             if (low > high) { // if (low >= high) {
                 return -1;
             }

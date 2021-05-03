@@ -1,1 +1,0 @@
-This program is correct if we only use the "driver" method for calling the "isVowel()" method. However, the "isVowel()" method is a public method that can be called alone by the tester, and it is still buggy because it does not change the value of the "vowel_set" to "true."

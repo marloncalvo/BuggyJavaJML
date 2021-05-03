@@ -1,0 +1,121 @@
+
+StackQueue.java:267: warning: The prover cannot establish an assertion (Assignable: StackQueue.java:266: ) in method search:  rear
+    		{	rear++;
+    		 	    ^
+StackQueue.java:266: warning: Associated declaration: StackQueue.java:267: 
+    		public /*@ pure @*/ int search(int key)
+    		           ^
+
+TRACE of StackQueue.Queue.search(int)
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 66
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 66
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!15
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:267:  	rear++
+			VALUE: rear	 === 66
+			VALUE: rear++	 === 66
+StackQueue.java:267:  	PossiblyNullDeReference assertion: `THIS != null
+			VALUE: null	 === NULL
+StackQueue.java:267:  	Assignable assertion: _JML__tmp2317 || (!Pre_24 || _JML__tmp2316.`alloc__ > 0)
+StackQueue.java:267:  Invalid assertion (Assignable)
+: StackQueue.java:266:  Associated location
+
+
+StackQueue.java:272: warning: The prover cannot establish an assertion (InvariantLeaveCaller: StackQueue.java:160: ) in method search:  (Caller: StackQueue.Queue.search(int), Callee: StackQueue.Queue.getElem(int))
+				if (getElem(index) == key) {
+				           ^
+StackQueue.java:160: warning: Associated declaration: StackQueue.java:272: 
+    		//@ public invariant 0 <= rear && rear <= MAX;
+    		           ^
+
+TRACE of StackQueue.Queue.search(int)
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 100
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 100
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === true
+			VALUE: 0 <= rear && rear <= MAX	 === true
+StackQueue.java:161:  	//@ public invariant front == 0; 
+			VALUE: front	 === 0
+			VALUE: 0	 === 0
+			VALUE: front == 0	 === true
+StackQueue.java:162:  	//@ public invariant queue.length == MAX; 
+			VALUE: queue	 === REF!val!15
+			VALUE: queue.length	 === 100
+			VALUE: MAX	 === 100
+			VALUE: queue.length == MAX	 === true
+StackQueue.java:162:  	UndefinedNullDeReference assertion: !(`THIS.queue != null) || `THIS.queue != null
+StackQueue.java:267:  	rear++
+			VALUE: rear	 === 100
+			VALUE: rear++	 === 100
+StackQueue.java:267:  	PossiblyNullDeReference assertion: `THIS != null
+			VALUE: null	 === NULL
+StackQueue.java:267:  	Assignable assertion: _JML__tmp2317 || (!Pre_24 || _JML__tmp2316.`alloc__ > 0)
+StackQueue.java:267:  	ArithmeticOperationRange assertion: !(0 < `THIS.rear && 0 < 1) || `THIS.rear <= 2147483647 - 1
+			VALUE: !(0 < `THIS.rear_4969_0___3 && 0 < 1) || `THIS.rear_4969_0___3 <= 2147483647 - 1	 === true
+StackQueue.java:267:  	ArithmeticOperationRange assertion: !(`THIS.rear < 0 && 1 < 0) || -2147483648 - 1 <= `THIS.rear
+			VALUE: !(`THIS.rear_4969_0___3 < 0 && 1 < 0) || -2147483648 - 1 <= `THIS.rear_4969_0___3	 === true
+StackQueue.java:268:  	int index = 0
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+StackQueue.java:269:  	//@ loop_invariant 0 <= index && index <= rear;
+			VALUE: 0	 === 0
+			VALUE: index	 === 0
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 0
+			VALUE: rear	 === 101
+			VALUE: index <= rear	 === true
+StackQueue.java:269:  	LoopInvariantBeforeLoop assertion: `conditionalResult_2325
+StackQueue.java:270:  	//@ loop_invariant \forall int i; 0 <= i && i < index; queue[i] != key;
+			VALUE: \forall int i; 0 <= i && i < index; queue[i] != key	 === true
+StackQueue.java:270:  	LoopInvariantBeforeLoop assertion: _JML__tmp2330
+StackQueue.java:269:  	//@ loop_invariant 0 <= index && index <= rear;
+			VALUE: 0	 === 0
+			VALUE: index	 === 100
+			VALUE: 0 <= index	 === true
+			VALUE: index	 === 100
+			VALUE: rear	 === 101
+			VALUE: index <= rear	 === true
+			VALUE: 0 <= index && index <= rear	 === true
+StackQueue.java:270:  	//@ loop_invariant \forall int i; 0 <= i && i < index; queue[i] != key;
+			VALUE: \forall int i; 0 <= i && i < index; queue[i] != key	 === true
+StackQueue.java:271:  	Loop test
+			VALUE: index	 === 100
+			VALUE: rear	 === 101
+			VALUE: index < rear	 === true
+			VALUE: (index < rear)	 === true
+StackQueue.java:1:  	if (getElem(index) == key) ...
+			VALUE: index	 === 100
+			VALUE: getElem(index)	 === ( - 2147481201 )
+			VALUE: key	 === ( - 2147481202 )
+			VALUE: getElem(index) == key	 === false
+			VALUE: (getElem(index) == key)	 === false
+				Condition = false
+StackQueue.java:160:  	//@ public invariant 0 <= rear && rear <= MAX; 
+			VALUE: 0	 === 0
+			VALUE: rear	 === 101
+			VALUE: 0 <= rear	 === true
+			VALUE: rear	 === 101
+			VALUE: MAX	 === 100
+			VALUE: rear <= MAX	 === false
+StackQueue.java:160:  	InvariantLeaveCaller assertion: `conditionalResult_2346
+StackQueue.java:272:  Invalid assertion (InvariantLeaveCaller)
+: StackQueue.java:160:  Associated location
+
+4 warnings

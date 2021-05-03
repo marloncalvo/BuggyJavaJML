@@ -1,1 +1,0 @@
-The repaired program has a bug that can happen rarely. If the length of the "str" argument is equal to "Integer.MAX_VALUE," then "length + 1" will be equal to "Integer.MIN_VALUE," and the repaired program cannot work correctly. 
