@@ -1,7 +1,7 @@
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-public class Counterexample {
+public class AlphabetTest {
 	@Test
 	/**
 	 * It seems that it only complains for this case, since case2 fails.
