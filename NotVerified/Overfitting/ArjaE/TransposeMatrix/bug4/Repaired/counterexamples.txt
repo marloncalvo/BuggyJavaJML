@@ -1,3 +1,348 @@
-openjml: invalid flag: <bound
-Usage: openjml <options> <source files>
-use -help for a list of possible options
+TransposeMatrix.java:30: warning: JML internal problem: Double rewriting of ident: c c_1418_1418___33
+			transpose[c][d]=matrix[d][c];
+			          ^
+TransposeMatrix.java:28: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method transposeMat:  overflow in int sum
+              for (int d = 0; d <= m; d++) {//for (int d = 0; d < m; d++) {
+                                       ^
+
+TRACE of TransposeMatrix.transposeMat(int[][])
+TransposeMatrix.java:10:  	requires matrix != null; 
+			VALUE: matrix	 === REF!val!15
+			VALUE: null	 === NULL
+			VALUE: matrix != null	 === true
+TransposeMatrix.java:3:  	requires 0 < matrix.length && matrix.length <= Integer.MAX_VALUE; 
+			VALUE: 0	 === 0
+			VALUE: matrix.length	 === 2147483647
+			VALUE: 0 < matrix.length	 === true
+			VALUE: matrix.length	 === 2147483647
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: matrix.length <= Integer.MAX_VALUE	 === true
+			VALUE: 0 < matrix.length && matrix.length <= Integer.MAX_VALUE	 === true
+TransposeMatrix.java:3:  	UndefinedNullDeReference assertion: !(matrix != null) || matrix != null
+TransposeMatrix.java:3:  	UndefinedNullDeReference assertion: !(matrix != null && matrix != null) || matrix != null
+TransposeMatrix.java:4:  	requires 0 < matrix[0].length && matrix[0].length <= Integer.MAX_VALUE; 
+			VALUE: 0	 === 0
+			VALUE: matrix	 === REF!val!15
+			VALUE: 0	 === 0
+			VALUE: matrix[0]	 === REF!val!19
+			VALUE: matrix[0].length	 === 2147483647
+			VALUE: 0 < matrix[0].length	 === true
+			VALUE: matrix	 === REF!val!15
+			VALUE: 0	 === 0
+			VALUE: matrix[0]	 === REF!val!19
+			VALUE: matrix[0].length	 === 2147483647
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: matrix[0].length <= Integer.MAX_VALUE	 === true
+			VALUE: 0 < matrix[0].length && matrix[0].length <= Integer.MAX_VALUE	 === true
+TransposeMatrix.java:4:  	UndefinedNullDeReference assertion: !(matrix != null) || matrix != null
+TransposeMatrix.java:4:  	UndefinedTooLargeIndex assertion: !(matrix != null) || matrix.length > 0
+			VALUE: 0	 === 0
+TransposeMatrix.java:4:  	UndefinedNullDeReference assertion: !(matrix != null && matrix != null) || matrix != null
+TransposeMatrix.java:4:  	UndefinedTooLargeIndex assertion: !(matrix != null && matrix != null) || matrix.length > 0
+			VALUE: 0	 === 0
+TransposeMatrix.java:5:  	requires (\forall int k; 0 <= k && k < matrix.length; matrix[k] != null); 
+			VALUE: \forall int k; 0 <= k && k < matrix.length; matrix[k] != null	 === true
+			VALUE: (\forall int k; 0 <= k && k < matrix.length; matrix[k] != null)	 === true
+TransposeMatrix.java:6:  	requires (\forall int k; 0 <= k && k < matrix.length; matrix[0].length == matrix[k].length); 
+			VALUE: \forall int k; 0 <= k && k < matrix.length; matrix[0].length == matrix[k].length	 === true
+			VALUE: (\forall int k; 0 <= k && k < matrix.length; matrix[0].length == matrix[k].length)	 === true
+TransposeMatrix.java:12:  	int m
+TransposeMatrix.java:12:  	int n
+TransposeMatrix.java:12:  	int p
+TransposeMatrix.java:12:  	int q
+TransposeMatrix.java:13:  	m = matrix.length
+			VALUE: matrix.length	 === 2147483647
+			VALUE: m = matrix.length	 === 2147483647
+TransposeMatrix.java:13:  	PossiblyNullDeReference assertion: matrix != null
+TransposeMatrix.java:14:  	n = matrix[0].length
+			VALUE: matrix	 === REF!val!15
+			VALUE: 0	 === 0
+			VALUE: matrix[0]	 === REF!val!19
+			VALUE: matrix[0].length	 === 2147483647
+			VALUE: n = matrix[0].length	 === 2147483647
+TransposeMatrix.java:14:  	PossiblyNullDeReference assertion: matrix != null
+TransposeMatrix.java:14:  	PossiblyTooLargeIndex assertion: matrix.length > 0
+			VALUE: 0	 === 0
+TransposeMatrix.java:15:  	/*@ non_null */  int[][] transpose = new int[n][m]
+			VALUE: m	 === 2147483647
+			VALUE: new int[n][m]	 === REF!val!20
+			VALUE: transpose	 === REF!val!20
+TransposeMatrix.java:1:  	PossiblyNegativeSize assertion: 0 <= n
+			VALUE: n	 === 2147483647
+TransposeMatrix.java:1:  	PossiblyNegativeSize assertion: 0 <= m
+TransposeMatrix.java:15:  	PossiblyNullInitialization assertion: `NEWARRAY_828 != null
+			VALUE: null	 === NULL
+TransposeMatrix.java:24:  	int c = 0
+			VALUE: 0	 === 0
+			VALUE: c	 === 0
+TransposeMatrix.java:21:  	//@ loop_invariant 0 <= c && c <= n;
+			VALUE: 0	 === 0
+			VALUE: c	 === 0
+			VALUE: 0 <= c	 === true
+			VALUE: c	 === 0
+			VALUE: n	 === 2147483647
+			VALUE: c <= n	 === true
+TransposeMatrix.java:21:  	LoopInvariantBeforeLoop assertion: `conditionalResult_50
+TransposeMatrix.java:22:  	//@ loop_invariant \forall int i; 0 <= i && i < c; (\forall int j; 0 <= j && j < m; transpose[i][j] == matrix[j][i]);
+			VALUE: \forall int i; 0 <= i && i < c; (\forall int j; 0 <= j && j < m; transpose[i][j] == matrix[j][i])	 === true
+TransposeMatrix.java:22:  	LoopInvariantBeforeLoop assertion: _JML__tmp55
+TransposeMatrix.java:30:  	UndefinedNullDeReference assertion: !(transpose != null) || transpose != null
+TransposeMatrix.java:30:  	UndefinedNegativeIndex assertion: !(transpose != null) || 0 <= c
+TransposeMatrix.java:30:  	UndefinedTooLargeIndex assertion: !(transpose != null) || transpose.length > c
+TransposeMatrix.java:21:  	//@ loop_invariant 0 <= c && c <= n;
+			VALUE: 0	 === 0
+			VALUE: c	 === 2147483646
+			VALUE: 0 <= c	 === true
+			VALUE: c	 === 2147483646
+			VALUE: n	 === 2147483647
+			VALUE: c <= n	 === true
+			VALUE: 0 <= c && c <= n	 === true
+TransposeMatrix.java:22:  	//@ loop_invariant \forall int i; 0 <= i && i < c; (\forall int j; 0 <= j && j < m; transpose[i][j] == matrix[j][i]);
+			VALUE: \forall int i; 0 <= i && i < c; (\forall int j; 0 <= j && j < m; transpose[i][j] == matrix[j][i])	 === true
+TransposeMatrix.java:23:  	//@ loop_decreases n - c;
+			VALUE: n	 === 2147483647
+			VALUE: c	 === 2147483646
+			VALUE: n - c	 === 1
+				Initial value of Loop Decreases expression = 1
+TransposeMatrix.java:24:  	Loop test
+			VALUE: c	 === 2147483646
+			VALUE: n	 === 2147483647
+			VALUE: c < n	 === true
+TransposeMatrix.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp65
+TransposeMatrix.java:28:  	int d = 0
+			VALUE: 0	 === 0
+			VALUE: d	 === 0
+TransposeMatrix.java:25:  	//@ loop_invariant 0 <= d && d <= m;
+			VALUE: 0	 === 0
+			VALUE: d	 === 0
+			VALUE: 0 <= d	 === true
+			VALUE: d	 === 0
+			VALUE: m	 === 2147483647
+			VALUE: d <= m	 === true
+TransposeMatrix.java:25:  	LoopInvariantBeforeLoop assertion: `conditionalResult_72
+TransposeMatrix.java:26:  	//@ loop_invariant (\forall int j; 0 <= j && j < d; transpose[c][j] == matrix[j][c]);
+			VALUE: \forall int j; 0 <= j && j < d; transpose[c][j] == matrix[j][c]	 === true
+TransposeMatrix.java:26:  	LoopInvariantBeforeLoop assertion: (_JML__tmp76)
+TransposeMatrix.java:30:  	UndefinedNullDeReference assertion: !(transpose != null) || transpose != null
+TransposeMatrix.java:30:  	UndefinedNegativeIndex assertion: !(transpose != null) || 0 <= c
+TransposeMatrix.java:30:  	UndefinedTooLargeIndex assertion: !(transpose != null) || transpose.length > c
+TransposeMatrix.java:25:  	//@ loop_invariant 0 <= d && d <= m;
+			VALUE: 0	 === 0
+			VALUE: d	 === 2147483647
+			VALUE: 0 <= d	 === true
+			VALUE: d	 === 2147483647
+			VALUE: m	 === 2147483647
+			VALUE: d <= m	 === true
+			VALUE: 0 <= d && d <= m	 === true
+TransposeMatrix.java:26:  	//@ loop_invariant (\forall int j; 0 <= j && j < d; transpose[c][j] == matrix[j][c]);
+			VALUE: \forall int j; 0 <= j && j < d; transpose[c][j] == matrix[j][c]	 === true
+			VALUE: (\forall int j; 0 <= j && j < d; transpose[c][j] == matrix[j][c])	 === true
+TransposeMatrix.java:27:  	//@ loop_decreases m - d;
+			VALUE: m	 === 2147483647
+			VALUE: d	 === 2147483647
+			VALUE: m - d	 === 0
+				Initial value of Loop Decreases expression = 0
+TransposeMatrix.java:28:  	Loop test
+			VALUE: d	 === 2147483647
+			VALUE: m	 === 2147483647
+			VALUE: d <= m	 === true
+TransposeMatrix.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp85
+TransposeMatrix.java:1:  	if (d < transpose[c].length && c < transpose.length && c < matrix[d].length && d < matrix.length) ...
+			VALUE: d	 === 2147483647
+			VALUE: transpose	 === REF!val!20
+			VALUE: c	 === 2147483646
+			VALUE: transpose[c]	 === REF!val!21
+			VALUE: transpose[c].length	 === 2147483647
+			VALUE: d < transpose[c].length	 === false
+			VALUE: d < transpose[c].length && c < transpose.length	 === false
+			VALUE: d < transpose[c].length && c < transpose.length && c < matrix[d].length	 === false
+			VALUE: d < transpose[c].length && c < transpose.length && c < matrix[d].length && d < matrix.length	 === false
+			VALUE: (d < transpose[c].length && c < transpose.length && c < matrix[d].length && d < matrix.length)	 === false
+				Condition = false
+TransposeMatrix.java:29:  	PossiblyNullDeReference assertion: transpose != null
+TransposeMatrix.java:29:  	PossiblyNegativeIndex assertion: 0 <= c
+TransposeMatrix.java:29:  	PossiblyTooLargeIndex assertion: transpose.length > c
+TransposeMatrix.java:28:  	d++
+			VALUE: d++	 === 2147483647
+TransposeMatrix.java:28:  	ArithmeticOperationRange assertion: !(0 < d && 0 < 1) || d <= 2147483647 - 1
+			VALUE: !(0 < d_1646_1661___53 && 0 < 1) || d_1646_1661___53 <= 2147483647 - 1	 === false
+TransposeMatrix.java:28:  Invalid assertion (ArithmeticOperationRange)
+
+TransposeMatrix.java:25: warning: The prover cannot establish an assertion (LoopInvariant) in method transposeMat
+              //@ maintaining 0 <= d && d <= m;
+                  ^
+
+TRACE of TransposeMatrix.transposeMat(int[][])
+TransposeMatrix.java:10:  	requires matrix != null; 
+			VALUE: matrix	 === REF!val!15
+			VALUE: null	 === NULL
+			VALUE: matrix != null	 === true
+TransposeMatrix.java:3:  	requires 0 < matrix.length && matrix.length <= Integer.MAX_VALUE; 
+			VALUE: 0	 === 0
+			VALUE: matrix.length	 === 2147483092
+			VALUE: 0 < matrix.length	 === true
+			VALUE: matrix.length	 === 2147483092
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: matrix.length <= Integer.MAX_VALUE	 === true
+			VALUE: 0 < matrix.length && matrix.length <= Integer.MAX_VALUE	 === true
+TransposeMatrix.java:3:  	UndefinedNullDeReference assertion: !(matrix != null) || matrix != null
+TransposeMatrix.java:3:  	UndefinedNullDeReference assertion: !(matrix != null && matrix != null) || matrix != null
+TransposeMatrix.java:4:  	requires 0 < matrix[0].length && matrix[0].length <= Integer.MAX_VALUE; 
+			VALUE: 0	 === 0
+			VALUE: matrix	 === REF!val!15
+			VALUE: 0	 === 0
+			VALUE: matrix[0]	 === REF!val!19
+			VALUE: matrix[0].length	 === 2147483647
+			VALUE: 0 < matrix[0].length	 === true
+			VALUE: matrix	 === REF!val!15
+			VALUE: 0	 === 0
+			VALUE: matrix[0]	 === REF!val!19
+			VALUE: matrix[0].length	 === 2147483647
+			VALUE: Integer.MAX_VALUE	 === 2147483647
+			VALUE: matrix[0].length <= Integer.MAX_VALUE	 === true
+			VALUE: 0 < matrix[0].length && matrix[0].length <= Integer.MAX_VALUE	 === true
+TransposeMatrix.java:4:  	UndefinedNullDeReference assertion: !(matrix != null) || matrix != null
+TransposeMatrix.java:4:  	UndefinedTooLargeIndex assertion: !(matrix != null) || matrix.length > 0
+			VALUE: 0	 === 0
+TransposeMatrix.java:4:  	UndefinedNullDeReference assertion: !(matrix != null && matrix != null) || matrix != null
+TransposeMatrix.java:4:  	UndefinedTooLargeIndex assertion: !(matrix != null && matrix != null) || matrix.length > 0
+			VALUE: 0	 === 0
+TransposeMatrix.java:5:  	requires (\forall int k; 0 <= k && k < matrix.length; matrix[k] != null); 
+			VALUE: \forall int k; 0 <= k && k < matrix.length; matrix[k] != null	 === true
+			VALUE: (\forall int k; 0 <= k && k < matrix.length; matrix[k] != null)	 === true
+TransposeMatrix.java:6:  	requires (\forall int k; 0 <= k && k < matrix.length; matrix[0].length == matrix[k].length); 
+			VALUE: \forall int k; 0 <= k && k < matrix.length; matrix[0].length == matrix[k].length	 === true
+			VALUE: (\forall int k; 0 <= k && k < matrix.length; matrix[0].length == matrix[k].length)	 === true
+TransposeMatrix.java:12:  	int m
+TransposeMatrix.java:12:  	int n
+TransposeMatrix.java:12:  	int p
+TransposeMatrix.java:12:  	int q
+TransposeMatrix.java:13:  	m = matrix.length
+			VALUE: matrix.length	 === 2147483092
+			VALUE: m = matrix.length	 === 2147483092
+TransposeMatrix.java:13:  	PossiblyNullDeReference assertion: matrix != null
+TransposeMatrix.java:14:  	n = matrix[0].length
+			VALUE: matrix	 === REF!val!15
+			VALUE: 0	 === 0
+			VALUE: matrix[0]	 === REF!val!19
+			VALUE: matrix[0].length	 === 2147483647
+			VALUE: n = matrix[0].length	 === 2147483647
+TransposeMatrix.java:14:  	PossiblyNullDeReference assertion: matrix != null
+TransposeMatrix.java:14:  	PossiblyTooLargeIndex assertion: matrix.length > 0
+			VALUE: 0	 === 0
+TransposeMatrix.java:15:  	/*@ non_null */  int[][] transpose = new int[n][m]
+			VALUE: m	 === 2147483092
+			VALUE: new int[n][m]	 === REF!val!20
+			VALUE: transpose	 === REF!val!20
+TransposeMatrix.java:1:  	PossiblyNegativeSize assertion: 0 <= n
+			VALUE: n	 === 2147483647
+TransposeMatrix.java:1:  	PossiblyNegativeSize assertion: 0 <= m
+TransposeMatrix.java:15:  	PossiblyNullInitialization assertion: `NEWARRAY_828 != null
+			VALUE: null	 === NULL
+TransposeMatrix.java:24:  	int c = 0
+			VALUE: 0	 === 0
+			VALUE: c	 === 0
+TransposeMatrix.java:21:  	//@ loop_invariant 0 <= c && c <= n;
+			VALUE: 0	 === 0
+			VALUE: c	 === 0
+			VALUE: 0 <= c	 === true
+			VALUE: c	 === 0
+			VALUE: n	 === 2147483647
+			VALUE: c <= n	 === true
+TransposeMatrix.java:21:  	LoopInvariantBeforeLoop assertion: `conditionalResult_50
+TransposeMatrix.java:22:  	//@ loop_invariant \forall int i; 0 <= i && i < c; (\forall int j; 0 <= j && j < m; transpose[i][j] == matrix[j][i]);
+			VALUE: \forall int i; 0 <= i && i < c; (\forall int j; 0 <= j && j < m; transpose[i][j] == matrix[j][i])	 === true
+TransposeMatrix.java:22:  	LoopInvariantBeforeLoop assertion: _JML__tmp55
+TransposeMatrix.java:30:  	UndefinedNullDeReference assertion: !(transpose != null) || transpose != null
+TransposeMatrix.java:30:  	UndefinedNegativeIndex assertion: !(transpose != null) || 0 <= c
+TransposeMatrix.java:30:  	UndefinedTooLargeIndex assertion: !(transpose != null) || transpose.length > c
+TransposeMatrix.java:21:  	//@ loop_invariant 0 <= c && c <= n;
+			VALUE: 0	 === 0
+			VALUE: c	 === 2147474701
+			VALUE: 0 <= c	 === true
+			VALUE: c	 === 2147474701
+			VALUE: n	 === 2147483647
+			VALUE: c <= n	 === true
+			VALUE: 0 <= c && c <= n	 === true
+TransposeMatrix.java:22:  	//@ loop_invariant \forall int i; 0 <= i && i < c; (\forall int j; 0 <= j && j < m; transpose[i][j] == matrix[j][i]);
+			VALUE: \forall int i; 0 <= i && i < c; (\forall int j; 0 <= j && j < m; transpose[i][j] == matrix[j][i])	 === true
+TransposeMatrix.java:23:  	//@ loop_decreases n - c;
+			VALUE: n	 === 2147483647
+			VALUE: c	 === 2147474701
+			VALUE: n - c	 === 8946
+				Initial value of Loop Decreases expression = 8946
+TransposeMatrix.java:24:  	Loop test
+			VALUE: c	 === 2147474701
+			VALUE: n	 === 2147483647
+			VALUE: c < n	 === true
+TransposeMatrix.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp65
+TransposeMatrix.java:28:  	int d = 0
+			VALUE: 0	 === 0
+			VALUE: d	 === 0
+TransposeMatrix.java:25:  	//@ loop_invariant 0 <= d && d <= m;
+			VALUE: 0	 === 0
+			VALUE: d	 === 0
+			VALUE: 0 <= d	 === true
+			VALUE: d	 === 0
+			VALUE: m	 === 2147483092
+			VALUE: d <= m	 === true
+TransposeMatrix.java:25:  	LoopInvariantBeforeLoop assertion: `conditionalResult_72
+TransposeMatrix.java:26:  	//@ loop_invariant (\forall int j; 0 <= j && j < d; transpose[c][j] == matrix[j][c]);
+			VALUE: \forall int j; 0 <= j && j < d; transpose[c][j] == matrix[j][c]	 === true
+TransposeMatrix.java:26:  	LoopInvariantBeforeLoop assertion: (_JML__tmp76)
+TransposeMatrix.java:30:  	UndefinedNullDeReference assertion: !(transpose != null) || transpose != null
+TransposeMatrix.java:30:  	UndefinedNegativeIndex assertion: !(transpose != null) || 0 <= c
+TransposeMatrix.java:30:  	UndefinedTooLargeIndex assertion: !(transpose != null) || transpose.length > c
+TransposeMatrix.java:25:  	//@ loop_invariant 0 <= d && d <= m;
+			VALUE: 0	 === 0
+			VALUE: d	 === 2147483092
+			VALUE: 0 <= d	 === true
+			VALUE: d	 === 2147483092
+			VALUE: m	 === 2147483092
+			VALUE: d <= m	 === true
+			VALUE: 0 <= d && d <= m	 === true
+TransposeMatrix.java:26:  	//@ loop_invariant (\forall int j; 0 <= j && j < d; transpose[c][j] == matrix[j][c]);
+			VALUE: \forall int j; 0 <= j && j < d; transpose[c][j] == matrix[j][c]	 === true
+			VALUE: (\forall int j; 0 <= j && j < d; transpose[c][j] == matrix[j][c])	 === true
+TransposeMatrix.java:27:  	//@ loop_decreases m - d;
+			VALUE: m	 === 2147483092
+			VALUE: d	 === 2147483092
+			VALUE: m - d	 === 0
+				Initial value of Loop Decreases expression = 0
+TransposeMatrix.java:28:  	Loop test
+			VALUE: d	 === 2147483092
+			VALUE: m	 === 2147483092
+			VALUE: d <= m	 === true
+TransposeMatrix.java:1:  	LoopDecreasesNonNegative assertion: 0 <= _JML__tmp85
+TransposeMatrix.java:1:  	if (d < transpose[c].length && c < transpose.length && c < matrix[d].length && d < matrix.length) ...
+			VALUE: d	 === 2147483092
+			VALUE: transpose	 === REF!val!20
+			VALUE: c	 === 2147474701
+			VALUE: transpose[c]	 === REF!val!21
+			VALUE: transpose[c].length	 === 2147483092
+			VALUE: d < transpose[c].length	 === false
+			VALUE: d < transpose[c].length && c < transpose.length	 === false
+			VALUE: d < transpose[c].length && c < transpose.length && c < matrix[d].length	 === false
+			VALUE: d < transpose[c].length && c < transpose.length && c < matrix[d].length && d < matrix.length	 === false
+			VALUE: (d < transpose[c].length && c < transpose.length && c < matrix[d].length && d < matrix.length)	 === false
+				Condition = false
+TransposeMatrix.java:29:  	PossiblyNullDeReference assertion: transpose != null
+TransposeMatrix.java:29:  	PossiblyNegativeIndex assertion: 0 <= c
+TransposeMatrix.java:29:  	PossiblyTooLargeIndex assertion: transpose.length > c
+TransposeMatrix.java:28:  	d++
+			VALUE: d++	 === 2147483092
+TransposeMatrix.java:28:  	ArithmeticOperationRange assertion: !(0 < d && 0 < 1) || d <= 2147483647 - 1
+			VALUE: !(0 < d_1646_1661___53 && 0 < 1) || d_1646_1661___53 <= 2147483647 - 1	 === true
+TransposeMatrix.java:28:  	ArithmeticOperationRange assertion: !(d < 0 && 1 < 0) || -2147483648 - 1 <= d
+			VALUE: !(d_1646_1661___53 < 0 && 1 < 0) || -2147483648 - 1 <= d_1646_1661___53	 === true
+TransposeMatrix.java:25:  	//@ loop_invariant 0 <= d && d <= m;
+			VALUE: 0	 === 0
+			VALUE: d	 === 2147483093
+			VALUE: 0 <= d	 === true
+			VALUE: d	 === 2147483093
+			VALUE: m	 === 2147483092
+			VALUE: d <= m	 === false
+TransposeMatrix.java:25:  	LoopInvariant assertion: `conditionalResult_115
+TransposeMatrix.java:25:  Invalid assertion (LoopInvariant)
+
+3 warnings
