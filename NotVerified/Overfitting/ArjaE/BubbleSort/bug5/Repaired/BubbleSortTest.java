@@ -6,6 +6,8 @@ public class BubbleSortTest {
 
     /**
      * Large array, needs 6GB of heap space. OpenJML false negative.
+     * Issue is overflow, but it requires large array size, which cannot
+     * be replicated due to memory requirement.
      */
     @Test
     public void test() {

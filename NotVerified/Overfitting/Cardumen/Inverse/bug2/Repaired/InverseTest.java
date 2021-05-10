@@ -6,8 +6,8 @@ public class InverseTest {
 	/**
 	 * Out of heap memory for all cases.
 	 */
-	void test() {
-		int len = 2147481210;
+	public void test() {
+		int len = 214748121;
 		int [] x = new int[len];
 		int [] y = new int[len];
 		

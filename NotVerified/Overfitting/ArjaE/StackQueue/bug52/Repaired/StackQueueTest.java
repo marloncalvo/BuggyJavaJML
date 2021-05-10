@@ -12,8 +12,15 @@ public class StackQueueTest {
 	 * Cannot insert to queue without illegal arg exception
 	 */
 	@Test
-	void test0() {
+	public void test0() {
 		fail("The function queue_isFull() is not testable for this case");
+	}
+
+	@Test
+	public void manual() {
+		StackQueue stackQueue = new StackQueue();
+		StackQueue.Queue queue = stackQueue.new Queue();
+		assertFalse(queue.isFull());
 	}
 
 }
