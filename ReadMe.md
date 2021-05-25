@@ -1,3 +1,42 @@
+# Counterexamples of Overfitted Programs
+
+The overfitted programs and their test cases can be found in the `NotVerified` folder. Specifically, you will find a split of `Overfitting` and `JMLFalseNegative` programs. `Overfitting` programs are __subdivided by the APR tool__ which generated the patch. `JMLFalseNegative` programs are first __subdivided by categories__ `Modular`, `Overflow`, and `Structural`; which then are __subdivided by APR tool__. The APR tools' subdirectories contains each of the __incorrectly verfied programs__ for each bug introduced. Please see below for an example:
+
+```text
+NotVerified/
+├── JMLFalseNegatives          
+│   ├── Modular                
+│   │   └── ArjaE              
+│   │       ├── Alphabet       
+│   │       │   └── bug34
+│   │       │       ├── Bug
+│   │       │       │   ├── Alphabet.java
+│   │       │       │   └── esc.txt
+│   │       │       └── Repaired 
+│   │       │           ├── Alphabet.java (Repaired Buggy Program)
+│   │       │           ├── AlphabetTest.java (Counterexamples test cases)
+│   │       │           ├── ESC_Repaired.txt
+│   │       │           ├── ReadMe.txt
+│   │       │           └── counterexamples.txt (Counterexamples)
+│   ...
+├── Overfitting
+│   ├── ArjaE
+│   │   ├── Alphabet
+│   │   │   ├── bug1
+│   │   │   │   ├── Bug
+│   │   │   │   │   ├── Alphabet.java
+│   │   │   │   │   └── esc.txt
+│   │   │   │   └── Repaired
+│   │   │   │       ├── Alphabet.java (Repaired Buggy Program)
+│   │   │   │       ├── AlphabetTest.java (Counterexamples test cases)
+│   │   │   │       ├── ESC_Repaired.txt
+│   │   │   │       ├── ReadMe.txt
+│   │   │   │       └── counterexamples.txt (Counterexamples)
+...
+```
+
+ Each individual bug includes the __original buggy program__ in `Bug`. The `Repaired` directory contains the APR tool's __repaired program__, __OpenJML's counterexamples__, and manually generated __test cases__. Each of the counterexamples and their associated test cases are provided for a double-blind conference. You can find one unverified program and its counterexample [here](NotVerified/Overfitting/ArjaE/Alphabet/bug1/Repaired), and the original program [here](NotVerified/Overfitting/ArjaE/Alphabet/bug1/Bug).
+
 # BuggyJava+JML
 
 The BuggyJava+JML dataset has 597 buggy programs, and each program has one bug. This dataset is created based on the [Java+JML dataset](https://github.com/Amirfarhad-Nilizadeh/Java-JML) by using [PITest](https://pitest.org/). PITest generates bugs by changing control conditions, changing assignment expressions, removing a method call, and changing return values. Only two bugs in this dataset are real bugs (from [QuixBug](https://github.com/jkoppel/QuixBugs)) that we add JML specification to their correct versions. 
@@ -5,10 +44,6 @@ The BuggyJava+JML dataset has 597 buggy programs, and each program has one bug. 
 Each buggy program has a formal specification in JML that describes the correct behavior of the program. Also, [OpenJML](http://www.openjml.org/) does verify the correctness of the correct versions of these programs. We used OpenJML 8.46 for this study, and you can find warnings besides each buggy program with the name "esc.txt" in the dataset. 
 
 Among the 597 buggy programs, 40 have a bug that is not be detected with the JUnitTests dataset, and 10 of them go to an infinite loop during testing. Thus, for our APR study, we used 547 buggy programs.
-
-# Overfitted Program Test Cases
-
-All of the test cases for the overfitted programs can be found in the `NotVerified` folder. Specifically, you will find a split of `Overfitting` and `FalseNegative` test cases. From here, you will find not verified programs for each of the APR tools. As you navigate down to the program's bugs, you can find the tests against the repaired, wrong program, in the `Repaired` folder for that bug. The `Repaired` directory contains the falsy repair, the counter examples, and the test cases for the counter examples.
 
 # JUnitTests
 
